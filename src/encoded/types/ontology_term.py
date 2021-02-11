@@ -191,14 +191,14 @@ class OntologyTerm(SharedItem):
 
 
     @staticmethod
-    def _get_ontology_slims(registry, term_id, anc_list, slimTerms):
+    def _get_ontology_slims(registry, term_id, slimTerms):
         if term_id not in registry['ontology']:
             return []
-        ancestor_list = registry['ontology'][term_id][anc_list]
+        ancestor_list = registry['ontology'][term_id]['ancestors']
         slims = []
-        for slimTerm in slimTerms:
-            if slimTerm in ancestor_list:
-                slims.append(slimTerms[slimTerm])
+        for s in slimTerms:
+            if s in ancestor_list:
+                slims.append(slimTerms[s])
         return slims
 
 
@@ -212,7 +212,7 @@ class OntologyTerm(SharedItem):
         },
     })
     def organ_slims(self, registry, term_id):
-        return self._get_ontology_slims(registry, term_id, 'closure', organ_slims)
+        return self._get_ontology_slims(registry, term_id, organ_slims)
 
 
     @calculated_property(condition='term_id', schema={
@@ -225,7 +225,7 @@ class OntologyTerm(SharedItem):
         },
     })
     def cell_slims(self, registry, term_id):
-        return self._get_ontology_slims(registry, term_id, 'closure', cell_slims)
+        return self._get_ontology_slims(registry, term_id, cell_slims)
 
 
     @calculated_property(condition='term_id', schema={
@@ -238,7 +238,7 @@ class OntologyTerm(SharedItem):
         },
     })
     def developmental_slims(self, registry, term_id):
-        return self._get_ontology_slims(registry, term_id, 'closure_with_develops_from', developmental_slims)
+        return self._get_ontology_slims(registry, term_id, developmental_slims)
 
 
     @calculated_property(condition='term_id', schema={
@@ -251,7 +251,7 @@ class OntologyTerm(SharedItem):
         },
     })
     def system_slims(self, registry, term_id):
-        return self._get_ontology_slims(registry, term_id, 'closure', system_slims)
+        return self._get_ontology_slims(registry, term_id, system_slims)
 
 
     @calculated_property(condition='term_id', schema={
@@ -264,7 +264,7 @@ class OntologyTerm(SharedItem):
         },
     })
     def disease_slims(self, registry, term_id):
-        return self._get_ontology_slims(registry, term_id, 'closure', disease_slims)
+        return self._get_ontology_slims(registry, term_id, disease_slims)
 
 
     @calculated_property(condition='term_id', schema={

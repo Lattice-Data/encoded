@@ -3,9 +3,7 @@ import requests
 
 EPILOG = __doc__
 
-# add UBERON, CL, EFO, MONDO
-# see if UBERON will include CL terms
-# may add a check if t['ontology_prefix'] == db
+# ont_dbs = ['UBERON', 'CL', 'EFO', 'MONDO', 'HANCESTRO']
 ont_dbs = ['UBERON']
 
 

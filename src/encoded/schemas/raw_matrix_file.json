@@ -179,6 +179,7 @@
             "comment":  "Do not submit. This will be filled in during checkfiles validation.",
             "type": "array",
             "uniqueItems": true,
+            "required": ["feature_type","feature_count"],
             "items": {
                 "title": "Feature count",
                 "type": "object",

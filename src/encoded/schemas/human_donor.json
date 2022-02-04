@@ -35,6 +35,8 @@
             "description": "Ancestry of the donor, as determined by genotype.",
             "type": "array",
             "uniqueItems": true,
+            "additionalProperties": false,
+            "required": ["ancestry_group"],
             "items": {
                 "type": "object",
                 "properties": {

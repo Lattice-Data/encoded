@@ -25,6 +25,11 @@
                 "pattern": "^(LATHD\\d{3}[A-Z]{3})$"
             }
         },
+        "ancestry_method" : {
+            "title": "Ancestry method",
+            "description": "The method used to determine the ancestry of the donor.",
+            "type": "string"
+        },
         "ancestry": {
             "title": "Ancestry",
             "description": "Ancestry of the donor, as determined by genotype.",

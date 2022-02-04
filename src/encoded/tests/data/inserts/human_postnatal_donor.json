@@ -36,7 +36,8 @@
             {
                 "ancestry_group":  "HANCESTRO_0014", "percentage": 60 
             }
-        ]
+        ],
+        "ancestry_method": "DOI:10.1007/978-1-4939-6442-0_5"
     },
     {
         "accession": "LATHD080DDD",

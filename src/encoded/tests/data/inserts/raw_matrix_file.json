@@ -42,7 +42,8 @@
         "validated": true,
         "cellranger_assay_chemistry": "SC3Pv2",
         "accession": "LATDF633JNH",
-        "background_barcodes_included": true
+        "background_barcodes_included": true,
+        "value_units": ["UMI"]
     },
     {
         "aliases": [
@@ -88,7 +89,8 @@
         "md5sum": "30c7622f6007434c37f4c6d30e42d465",
         "validated": true,
         "accession": "LATDF671HHT",
-        "background_barcodes_included": false
+        "background_barcodes_included": false,
+        "value_units": ["UMI","fragment ends"]
     },
     {
         "aliases": [

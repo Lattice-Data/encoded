@@ -36,3 +36,9 @@ def processed_matrix_file_6_7(value, system):
 		for l in value['layers']:
 			if 'is_primary_data' in l:
 				del l['is_primary_data']
+
+
+@upgrade_step('raw_matrix_file', '3', '4')
+def raw_matrix_file_3_4(value, system):
+	if 'value_units' in value:
+		value['value_units'] = [value['value_units']]

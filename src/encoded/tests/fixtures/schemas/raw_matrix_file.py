@@ -9,7 +9,7 @@ def raw_matrix_file_base(testapp, dataset_base, raw_sequence_file_base):
         'derivation_process': ['alignment','quantification'],
         'output_types': ['gene quantifications'],
         'derived_from': [raw_sequence_file_base['uuid']],
-        'value_units': 'RPKM',
+        'value_units': ['RPKM'],
         'background_barcodes_included': True,
         'uuid': 'cf607222-a08a-4172-a3e6-b45be9ec0700'
     }

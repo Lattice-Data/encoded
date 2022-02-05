@@ -519,17 +519,201 @@
       "uuid": "0f541271-bb31-43f0-86af-e39159c8d5c7"
     },
     {
-      "name": "HCA100RSP",
+      "name": "CZI103FRS",
       "project": "HCA Pediatric Networks",
-      "title": "Generic pediatric grant",
-      "focus": "respiratory system",
-      "uuid": "48bc6290-614c-4f7d-bee3-7fb4f9e36b9f"
+      "title": "A Single-Cell Map of the Pediatric Ovary in 3D",
+      "uuid": "50555773-f402-4cdb-afc9-9388e3cd9d8b"
     },
     {
-      "name": "HCA111MUS",
+      "name": "CZI104ADI",
       "project": "HCA Pediatric Networks",
-      "title": "Generic pediatric muscle grant",
-      "focus": "muscle",
-      "uuid": "31df6c27-9902-4a3f-bec1-544780d1c67f"
+      "title": "Adipose Tissue Diversity in Infants, Children, and Adolescents",
+      "uuid": "730705e9-4e87-45e3-964f-8724c08683b1"
+    },
+    {
+      "name": "CZI111CNS",
+      "project": "HCA Pediatric Networks",
+      "title": "Pediatric Brain Map Consortium",
+      "uuid": "3c8177ec-38d5-40c1-b7f1-e268a9f2fe27"
+    },
+    {
+      "name": "CZI105GIT",
+      "project": "HCA Pediatric Networks",
+      "title": "An Open Access Spatiotemporal Atlas of Childhood Intestinal Development",
+      "uuid": "bb7d3ecb-c0bd-4b5e-a629-d93ba1c598f2"
+    },
+    {
+      "name": "CZI115CNS",
+      "project": "HCA Pediatric Networks",
+      "title": "Single-Cell Epigenomics and Transcriptomics of the Childhood Brain",
+      "uuid": "d91b8304-b681-4113-b928-4c1c311d3af5"
+    },
+    {
+      "name": "CZI116SKN",
+      "project": "HCA Pediatric Networks",
+      "title": "Single-Cell Multi-omic and Spatial Cell Atlas of Pediatric Skin",
+      "uuid": "f93eb686-ea5d-45c1-a1d5-7ac98c979664"
+    },
+    {
+      "name": "CZI107RSP",
+      "project": "HCA Pediatric Networks",
+      "title": "Developing an Immune and Epithelial Cell Atlas of the Pediatric Airway",
+      "uuid": "9aa49eca-75f2-4e75-b538-e836ddc65e25"
+    },
+    {
+      "name": "CZI102RSP",
+      "project": "HCA Pediatric Networks",
+      "title": "A Global Pediatric Cell Atlas of Nasal and Oral Mucosa",
+      "uuid": "42773df2-899c-4c4b-81ed-bd84e9c2a583"
+    },
+    {
+      "name": "CZI109GIT",
+      "project": "HCA Pediatric Networks",
+      "title": "Mapping the Early Childhood Gut Across Ancestry, Geography and Environment",
+      "uuid": "a20109f3-db98-4abf-aade-432b590a1530"
+    },
+    {
+      "name": "CZI113EYE",
+      "project": "HCA Pediatric Networks",
+      "title": "Pediatric Network for the Human Cell Atlas of the Eye",
+      "uuid": "20c47fd0-a135-433f-ae6e-a5c1c99787b1"
+    },
+    {
+      "name": "CZI114LIV",
+      "project": "HCA Pediatric Networks",
+      "title": "Single-Cell Atlas of Human Pediatric Livers Across Diverse Ancestry",
+      "uuid": "a07201db-c770-4192-84f8-143c1439ee45"
+    },
+    {
+      "name": "CZI117IMM",
+      "project": "HCA Pediatric Networks",
+      "title": "The Childhood Hematopoiesis and Immune Development Atlas",
+      "uuid": "e65ab44c-8497-4ef6-9d7c-36d40c73b4bb"
+    },
+    {
+      "name": "CZI112MUS",
+      "project": "HCA Pediatric Networks",
+      "title": "Pediatric Cell Atlas of Skeletal Muscle",
+      "uuid": "6331a7b2-5f85-468b-a1bb-88b3c9af9cd0"
+    },
+    {
+      "name": "CZI110RSP",
+      "project": "HCA Pediatric Networks",
+      "title": "Mapping the Pediatric Inhalation Interface: Nose, Mouth, and Airways",
+      "uuid": "6feb85ba-2d48-4f41-b934-6c9258602f9b"
+    },
+    {
+      "name": "CZI101IMM",
+      "project": "HCA Pediatric Networks",
+      "title": "A Cell Atlas of Trained Immunity in Bacillus Calmette-Gu√©rin Vaccinated African Infants",
+      "uuid": "cc959f90-9896-4029-b88e-89dbe84bb928"
+    },
+    {
+      "name": "CZI108MOG",
+      "project": "HCA Pediatric Networks",
+      "title": "Mapping Stem Cell Maturation in a Multi-Organ Endoderm Pediatric Cell Atlas",
+      "uuid": "55519222-772a-4536-be6e-d097eb71d56b"
+    },
+    {
+      "name": "CZI106CVS",
+      "project": "HCA Pediatric Networks",
+      "title": "Building a Pediatric Healthy Heart Cell Atlas Across Ancestries",
+      "uuid": "eba9fb5b-c8bb-4868-9fc7-2892e932d9c5"
+    },
+    {
+      "name": "CZI201LAT",
+      "project": "HCA Ancestry Networks",
+      "title": "A Human Cell Map of Latin American Diversity",
+      "uuid": "cba93451-683c-4881-87c6-9e4a9bfbbc88"
+    },
+    {
+      "name": "CZI202AFI",
+      "project": "HCA Ancestry Networks",
+      "title": "African Ancestry Immune Cell Atlas",
+      "uuid": "5e365249-97fa-45ad-8b8a-5f669ebf1a21"
+    },
+    {
+      "name": "CZI203REP",
+      "project": "HCA Ancestry Networks",
+      "title": "African Caribbean Single-Cell Network",
+      "uuid": "76b3cea4-cfd2-4b8e-aaec-2bf813b51054"
+    },
+    {
+      "name": "CZI204MUS",
+      "project": "HCA Ancestry Networks",
+      "title": "An Ancestrally Inclusive Atlas of Healthy Musculoskeletal Tissues",
+      "uuid": "46012caa-6765-4fe6-8e72-99f611683811"
+    },
+    {
+      "name": "CZI205PRO",
+      "project": "HCA Ancestry Networks",
+      "title": "An Atlas of the Human Prostate Across Ancestries",
+      "uuid": "1561aedb-1ef7-4c33-94a0-610064acc240"
+    },
+    {
+      "name": "CZI206SKN",
+      "project": "HCA Ancestry Networks",
+      "title": "Ancestrally Diverse Single-Cell Skin Tissue Atlas",
+      "uuid": "e253370d-dcbb-4789-8c42-24c61e163366"
+    },
+    {
+      "name": "CZI207EYE",
+      "project": "HCA Ancestry Networks",
+      "title": "Ancestry Network for the Human Cell Atlas of the Eye",
+      "uuid": "14ff3149-623b-40ed-8ede-8ac537004d7d"
+    },
+    {
+      "name": "CZI208MFI",
+      "project": "HCA Ancestry Networks",
+      "title": "Determining Pregnancy Complications Across Diverse Ancestries",
+      "uuid": "66c88344-ed4e-4c39-934c-b31102a9adc0"
+    },
+    {
+      "name": "CZI209CVS",
+      "project": "HCA Ancestry Networks",
+      "title": "Human Heart Atlas of Diverse Ancestry",
+      "uuid": "9bf750ca-b2b7-4593-9f95-5a901e81ea66"
+    },
+    {
+      "name": "CZI210ASI",
+      "project": "HCA Ancestry Networks",
+      "title": "Immune Cell Atlas of Asian Populations",
+      "uuid": "0534b7ce-d51a-4fa3-a61a-1fc8a3b7684f"
+    },
+    {
+      "name": "CZI211IDI",
+      "project": "HCA Ancestry Networks",
+      "title": "Immune Cell Atlas of Environmental and Ancestral Diversity in Indonesia",
+      "uuid": "5ff8a4e9-1d93-4471-a5d3-d712e4ba6f3e"
+    },
+    {
+      "name": "CZI212SAI",
+      "project": "HCA Ancestry Networks",
+      "title": "Immune Cell Atlas of Indigenous South American Populations",
+      "uuid": "aa5393a6-6eab-4712-a8c5-030687eeb03d"
+    },
+    {
+      "name": "CZI213LYN",
+      "project": "HCA Ancestry Networks",
+      "title": "Lymph Node Single-Cell Genomics Ancestry (LEGACY) Network",
+      "uuid": "d3c80392-4fd2-46fd-92d8-99f506469ca2"
+    },
+    {
+      "name": "CZI214LAI",
+      "project": "HCA Ancestry Networks",
+      "title": "Mapping Immune Cell Diversity Across Latin America",
+      "uuid": "0f817c9f-c71b-4834-ac71-0053eb9abd72"
+    },
+    {
+      "name": "CZI215FRS",
+      "project": "HCA Ancestry Networks",
+      "title": "Multi-omics Maps of the Human Endometrium Across Diverse Ancestries",
+      "uuid": "3ea888cd-8f99-4307-8ae1-2cd225347ba7"
+    },
+    {
+      "name": "CZI216MFI",
+      "project": "HCA Ancestry Networks",
+      "title": "Nigerian Maternal Atlas to Improve Birth Outcomes",
+      "uuid": "d3cda021-d258-4d6e-a948-1e81e85f9450"
     }
 ]

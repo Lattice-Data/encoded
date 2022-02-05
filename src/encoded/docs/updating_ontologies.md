@@ -9,14 +9,14 @@ Ontologies used
 | Ontology |  File used | Version in use |
 |:--|:--|:--|
 | [Uber-anatomy ontology (UBERON)] | `uberon.owl` from [OLS-UBERON] | 2021-11-28 |
-| [Cell Ontology (CL)] | `cl.ow` from [OLS-CL] | 2021-12-07 |
-| [Experimental Factor Ontology (EFO)] | `efo.owl` from [OLS-EFO] | 3.36.0 |
-| [Mondo Disease Ontology (MONDO)] | `mondo.owl` from [OLS-MONDO] | 2021-12-01 |
+| [Cell Ontology (CL)] | `cl.ow` from [OLS-CL] | 2022-01-05 |
+| [Experimental Factor Ontology (EFO)] | `efo.owl` from [OLS-EFO] | 3.38.0 |
+| [Mondo Disease Ontology (MONDO)] | `mondo.owl` from [OLS-MONDO] | 2021-12-30 |
 | [Human Ancestry Ontology (HANCESTRO)] | `hancestro.owl` from [OLS-HANCESTRO] | 2.5 |
 | [Human Developmental Stage Ontology (HsapDv)] | `hsapdv.owl` from [OLS-HsapDv] | 2020-03-10 |
 | [Mouse Developmental Stage Ontology (MmusDv)] | `mmusdv.owl` from [OLS-MmusDv] | 2020-03-10 |
 
-**Current ontology.json:** `ontology-2021-12-08.json`
+**Current ontology.json:** `ontology-2022-02-04.json`
 
 How to update the ontology versions
 ---------------- 
@@ -31,7 +31,7 @@ How to update the ontology versions
 
 3. Load new ontology file into the latticed-build/ontology directory on S3
 
-	`$ aws s3 cp ontology-YYYY-MM-DD.json s3://latticed-build/ontology/`
+	`$ aws s3 cp ontology-YYYY-MM-DD.json s3://latticed-build/ontology/ --acl public-read`
 
 4.  Update the ontology.json file in [buildout.cfg]
 

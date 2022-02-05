@@ -71,6 +71,7 @@
             "enum": [
                 "HCA Seed Networks",
                 "HCA Pediatric Networks",
+                "HCA Ancestry Networks",
                 "HCA Pilot Projects",
                 "HCA General Community"
             ]

@@ -27,3 +27,10 @@ def test_processed_matrix_file_upgrade_6_7(upgrader, processed_matrix_file_base)
 	value = upgrader.upgrade('processed_matrix_file', processed_matrix_file_base, current_version='6', target_version='7')
 	assert value['schema_version'] == '7'
 	assert 'is_primary_data' not in value['layers'][0]
+
+
+def test_raw_matrix_file_upgrade_3_4(upgrader, raw_matrix_file_base):
+	raw_matrix_file_base['value_units'] = 'UMI'
+	value = upgrader.upgrade('raw_matrix_file', raw_matrix_file_base, current_version='3', target_version='4')
+	assert value['schema_version'] == '4'
+	assert value['value_units'] == ['UMI']

@@ -12,6 +12,9 @@
         "aliases": [
             "lattice:pooled_lib",
             "charlotte-scott:test_lib"
+        ],
+        "references": [
+            "lattice:Greka_Clark_2019_large_dataset"
         ]
     },
     {

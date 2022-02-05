@@ -94,7 +94,8 @@
         "weight_unit": ["weight"],
         "height": ["height_unit"],
         "height_unit": ["height"],
-        "disease_state": ["diseases"]
+        "disease_state": ["diseases"],
+        "ancestry_method": ["ancestry"]
     },
     "properties": {
         "schema_version": {

@@ -1,0 +1,15 @@
+[
+    {
+        "uuid": "869118fb-759a-4e0f-a9ef-047fa249f7ab",
+        "status": "released",
+        "quality_metric_of": "anna-greka:donorA1_filtered_feature_bc_matrix",
+        "total_spots_under_tissue": 5527,
+        "mean_reads_per_spot": 30853,
+        "mean_reads_under_tissue_per_spot": 1836,
+        "frac_spots_under_tissue": 0.34,
+        "median_genes_per_spot": 97,
+        "median_umi_counts_per_spot": 95,
+        "frac_reads_in_spots_under_tissue": 0.91,
+        "aliases": ["lattice:test_spatialmetrics"]
+    }
+]

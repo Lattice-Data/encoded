@@ -1,0 +1,44 @@
+{
+    "title": "Multiome metrics",
+    "description": "Schema for submitting metadata for processing metrics of a RNA/ATAC co-assay.",
+    "id": "/profiles/multiome_metrics.json",
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "required": ["quality_metric_of"],
+    "identifyingProperties": ["uuid"],
+    "additionalProperties": false,
+    "mixinProperties": [
+        {"$ref": "mixins.json#/aliases"},
+        {"$ref": "mixins.json#/documents"},
+        {"$ref": "mixins.json#/notes"},
+        {"$ref": "mixins.json#/submitted"},
+        {"$ref": "mixins.json#/schema_version"},
+        {"$ref": "mixins.json#/uuid"},
+        {"$ref": "mixins.json#/standard_status"},
+        {"$ref": "mixins.json#/quality_metric_of"}
+    ],
+    "properties": {
+        "schema_version": {
+            "default": "1"
+        },
+        "total_feature_linkages_detected": {
+            "title": "Feature linkages detected",
+            "description": "Total number of gene-to-peak and peak-to-peak linkages detected.",
+            "type": "integer",
+            "minimum": 0
+        },
+        "total_genes_linked": {
+            "title": "Total genes linked",
+            "description": "Total number of genes that are linked to peaks.",
+            "type": "integer",
+            "minimum": 0
+        },
+        "total_peaks_linked":{
+            "title": "Total peaks linked",
+            "description": "Total number of peaks that are linked to genes or other peaks.",
+            "type": "integer",
+            "minimum": 0
+        }
+    },
+    "changelog": "/profiles/changelogs/multiome_metrics.md"
+}

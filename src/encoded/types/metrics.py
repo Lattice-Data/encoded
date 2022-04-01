@@ -78,6 +78,28 @@ class AtacMetrics(Metrics):
     embedded = Metrics.embedded + []
 
 @collection(
+    name='mulitome-metrics',
+    properties={
+        'title': "Multiome Metrics",
+        'description': "",
+    })
+class MultiomeMetrics(Metrics):
+    item_type = 'multiome_metrics'
+    schema = load_schema('encoded:schemas/multiome_metrics.json')
+    embedded = Metrics.embedded + []
+
+@collection(
+    name='spatial-metrics',
+    properties={
+        'title': "Spatial Metrics",
+        'description': "",
+    })
+class SpatialMetrics(Metrics):
+    item_type = 'spatial_metrics'
+    schema = load_schema('encoded:schemas/spatial_metrics.json')
+    embedded = Metrics.embedded + []
+
+@collection(
     name='atac-aggregate-metrics',
     properties={
         'title': "ATAC Aggregate Metrics",

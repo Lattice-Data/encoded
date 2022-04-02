@@ -1,341 +1,3338 @@
 [
     {
-        "uuid": "e99862c3-4bd8-4f77-a944-e8febdafef02",
-        "term_name": "10x 3' v2",
-        "term_id": "EFO:0009899",
-        "status": "released"
+        "status": "in progress",
+        "term_id": "UBERON:0001555",
+        "term_name": "digestive tract",
+        "uuid": "ef07cf2d-f261-4ca8-83af-229d18406a83"
     },
     {
-        "uuid": "b2ff9473-7f72-4803-826f-3b206b2126f2",
-        "term_name": "10x 5' v2",
-        "term_id": "EFO:0009900",
-        "status": "released"
+        "status": "in progress",
+        "term_id": "CL:0000576",
+        "term_name": "monocyte",
+        "uuid": "829c82dc-ad17-437c-92c7-0bd757169e7b"
     },
     {
-        "uuid": "147d4022-0af5-4243-877a-caffb5ec3115",
-        "term_name": "10x 3' v3",
-        "term_id": "EFO:0009922",
-        "status": "released"
+        "status": "in progress",
+        "term_id": "HsapDv:0000126",
+        "term_name": "32-year-old human stage",
+        "uuid": "a8911380-5ce7-4a97-a475-8fa044014543"
     },
     {
-        "uuid": "9ccb9d0b-1747-4ad1-969a-769286937021",
-        "term_name": "unknown",
-        "term_id": "NCIT:C17998",
-        "status": "released"
+        "status": "in progress",
+        "term_id": "UBERON:0000990",
+        "term_name": "reproductive system",
+        "uuid": "4ca68df2-1989-4012-81f2-d80f7e688970"
     },
     {
-        "uuid": "9a69c3a9-f88c-49db-8b6b-fc69ec3623a5",
-        "term_name": "epithelium of left lung",
-        "term_id": "UBERON:0003365",
-        "status": "released"
+        "status": "in progress",
+        "term_id": "UBERON:0002182",
+        "term_name": "main bronchus",
+        "uuid": "330679da-73e7-4105-8629-88c98b9e1781"
     },
     {
-        "uuid": "03322386-af14-4d83-9063-855d0bef1876",
-        "term_name": "epithelial cell of distal tubule",
-        "term_id": "CL:0002305",
-        "status": "released"
+        "status": "in progress",
+        "term_id": "UBERON:0001690",
+        "term_name": "ear",
+        "uuid": "a3aa86ee-fb90-4e78-bc2e-a168ba7e25ff"
     },
     {
-        "uuid": "a8bd74b7-7967-4f64-8efa-b1f1bd3321ac",
-        "term_name": "epithelial cell of proximal tubule",
-        "term_id": "CL:0002306",
-        "status": "released"
+        "status": "in progress",
+        "term_id": "CL:0002319",
+        "term_name": "neural cell",
+        "uuid": "10a3d713-df8a-452f-ae7c-2ac3d4fe5517"
     },
     {
-        "uuid": "64bf7eff-ba4f-47a9-b320-c9a9a31bba75",
-        "term_name": "parietal epithelial cell",
-        "term_id": "CL:1000452",
-        "status": "released"
+        "status": "in progress",
+        "term_id": "HsapDv:0000098",
+        "term_name": "4-year-old human stage",
+        "uuid": "b879ca03-9b10-48dd-a7ee-645e54263f92"
     },
     {
-        "uuid": "817ae3ce-906d-49cc-ba8b-f952b59b55b9",
-        "term_name": "kidney loop of Henle thick ascending limb epithelial cell",
-        "term_id": "CL:1001106",
-        "status": "released"
+        "status": "in progress",
+        "term_id": "UBERON:0000991",
+        "term_name": "gonad",
+        "uuid": "fa7898dd-0d22-4a5c-8def-3d9e955792b1"
     },
     {
-        "uuid": "bb788244-d4f9-49ab-99e3-ddb49897239f",
-        "term_name": "kidney distal convoluted tubule epithelial cell",
-        "term_id": "CL:1000849",
-        "status": "released"
+        "status": "in progress",
+        "term_id": "UBERON:0002185",
+        "term_name": "bronchus",
+        "uuid": "68c99d56-6144-4c06-8f1f-d1ed279e7121"
     },
     {
-        "uuid": "73f1c401-8ae3-41ef-a258-dc6ee765eea5",
-        "term_name": "kidney connecting tubule epithelial cell",
-        "term_id": "CL:1000768",
-        "status": "released"
+        "status": "in progress",
+        "term_id": "UBERON:0001820",
+        "term_name": "sweat gland",
+        "uuid": "6b6e5261-783a-4d95-861d-04824acf176c"
     },
     {
-        "uuid": "f1d479db-0640-4199-bfe5-b34625a554f5",
-        "term_name": "renal principal cell",
-        "term_id": "CL:0005009",
-        "status": "released"
+        "status": "in progress",
+        "term_id": "EFO:0004905",
+        "term_name": "induced pluripotent stem cell",
+        "uuid": "5c9e995c-ec48-4c42-889a-88d1013141c9"
     },
     {
-        "uuid": "5e700854-68de-45e0-ae9a-b3939d4339fe",
-        "term_name": "renal alpha-intercalated cell",
-        "term_id": "CL:0005011",
-        "status": "released"
+        "status": "in progress",
+        "term_id": "HsapDv:0000135",
+        "term_name": "41-year-old human stage",
+        "uuid": "53851022-ef0a-404d-aaec-ee934b1b68a2"
     },
     {
-        "uuid": "08d6b66c-96e9-485c-a789-96e1f05bd7d4",
-        "term_name": "renal beta-intercalated cell",
-        "term_id": "CL:0002201",
-        "status": "released"
+        "status": "in progress",
+        "term_id": "UBERON:0000992",
+        "term_name": "ovary",
+        "uuid": "ffee8d36-526d-43f7-88be-85f1043894f2"
     },
     {
-        "uuid": "66488f7d-ae6d-4317-9930-7630cdc28aea",
-        "term_name": "glomerular visceral epithelial cell",
-        "term_id": "CL:0000653",
-        "status": "released"
+        "status": "in progress",
+        "term_id": "UBERON:0002330",
+        "term_name": "exocrine system",
+        "uuid": "5c44f227-13bf-4c44-b937-c85880ca4e8e"
     },
     {
-        "uuid": "3fd757af-fcbc-412d-b799-de9bcef2278b",
-        "term_name": "mesangial cell",
-        "term_id": "CL:0000650",
-        "status": "released"
+        "status": "in progress",
+        "term_id": "UBERON:0001829",
+        "term_name": "major salivary gland",
+        "uuid": "4712cc4b-ea18-4550-93fd-6e38a28050f6"
     },
     {
-        "uuid": "8de59200-074e-479a-b943-f6f8f651f562",
-        "term_name": "fibroblast",
-        "term_id": "CL:0000057",
-        "status": "released"
+        "status": "in progress",
+        "term_id": "MONDO:0002280",
+        "term_name": "anemia (disease)",
+        "uuid": "335539af-0c34-4040-9201-909c301ed42a"
     },
     {
-        "uuid": "dbfd9d95-8027-43ff-88b1-aa5189d0f584",
-        "term_name": "leukocyte",
-        "term_id": "CL:0000738",
-        "status": "released"
+        "status": "in progress",
+        "term_id": "HsapDv:0000136",
+        "term_name": "42-year-old human stage",
+        "uuid": "2ece16b0-46fc-4437-b6d4-060769518cf4"
     },
     {
-        "uuid": "80d34e68-3c23-4ac0-ae46-8bfcbcd9fbbc",
-        "term_name": "kidney capillary endothelial cell",
-        "term_id": "CL:1000892",
-        "status": "released"
+        "status": "in progress",
+        "term_id": "UBERON:0001004",
+        "term_name": "respiratory system",
+        "uuid": "231af109-3f6e-48e0-afc9-a2034c5f955e"
     },
     {
-        "uuid": "ff3240a5-9e2c-467d-81d5-a16f3f3f8ca0",
-        "term_name": "GM06990",
-        "term_id": "EFO:0002783",
-        "status": "released",
-        "dbxrefs": [
-            "Cellosaurus:CVCL_9587"
-        ]
+        "status": "in progress",
+        "term_id": "UBERON:0002390",
+        "term_name": "hematopoietic system",
+        "uuid": "86dd72f1-1878-4238-af45-9da3542b0fa8"
     },
     {
-        "uuid": "5d0a236f-7128-49a2-a46b-64b1e2ad7219",
-        "term_name": "pluripotent stem cell",
-        "term_id": "CL:0002248",
-        "status": "released"
+        "status": "in progress",
+        "term_id": "UBERON:0001987",
+        "term_name": "placenta",
+        "uuid": "e3f97676-4cc1-4b9b-ad32-34d13bedc0ad"
     },
     {
-        "uuid": "27df96b4-46c1-4d1a-97cb-42d4216edacb",
-        "term_name": "cortex of kidney",
-        "term_id": "UBERON:0001225",
-        "status": "released"
+        "status": "in progress",
+        "term_id": "MONDO:0004335",
+        "term_name": "digestive system disease",
+        "uuid": "9f27ecca-2bfb-486a-baae-e8530013752b"
     },
     {
-        "uuid": "1b4b480c-2267-4101-8703-26fe09c7a6e9",
-        "term_name": "kidney",
-        "term_id": "UBERON:0002113",
-        "status": "released"
+        "status": "in progress",
+        "term_id": "HsapDv:0000137",
+        "term_name": "43-year-old human stage",
+        "uuid": "0eb570ce-34fa-4b22-bf47-99ebafde842f"
     },
     {
-        "uuid": "ba4bd27f-fe66-49d5-b56c-c99693d77e74",
-        "term_name": "Taiwanese",
-        "term_id": "HANCESTRO:0020",
-        "status": "released"
+        "status": "in progress",
+        "term_id": "UBERON:0001008",
+        "term_name": "renal system",
+        "uuid": "01038e21-bfc2-4471-8d50-cc16c42da1bf"
     },
     {
-        "uuid": "d61c53bc-5a6a-4cb5-a07a-8eefc1c0dbde",
-        "term_name": "Korean",
-        "term_id": "HANCESTRO:0022",
-        "status": "released"
+        "status": "in progress",
+        "term_id": "UBERON:0002407",
+        "term_name": "pericardium",
+        "uuid": "dbc7d160-15df-4d38-be21-5d4c0dd43514"
     },
     {
-        "uuid": "2802237f-d5c4-4838-ae83-b0b7ddb10360",
-        "term_name": "Hispanic or Latin American",
-        "term_id": "HANCESTRO:0014",
-        "status": "released"
+        "status": "in progress",
+        "term_id": "UBERON:0002073",
+        "term_name": "hair follicle",
+        "uuid": "2807383b-d662-422e-9e86-dee6da7838a2"
     },
     {
-        "uuid": "e04d9d87-b9aa-4fe1-988a-e24630265fee",
-        "term_name": "European",
-        "term_id": "HANCESTRO:0005",
-        "status": "released"
+        "status": "in progress",
+        "term_id": "UBERON:0000007",
+        "term_name": "pituitary gland",
+        "uuid": "aa189b7c-764d-4040-a192-6f67b92b67ac"
     },
     {
-        "uuid": "ddcdc2d0-aa58-4dcb-94fb-a3c27e8fcc37",
-        "term_name": "ciliated cell",
-        "term_id": "CL:0000064",
-        "status": "released"
+        "status": "in progress",
+        "term_id": "HsapDv:0000140",
+        "term_name": "46-year-old human stage",
+        "uuid": "9a25c994-fdd7-4ee6-9eb4-9d88d0a69247"
     },
     {
-        "uuid": "563767bc-5cc3-4260-8e1b-2e89ac551969",
-        "term_name": "lung",
-        "term_id": "UBERON:0002048",
-        "status": "released"
+        "status": "in progress",
+        "term_id": "UBERON:0001009",
+        "term_name": "circulatory system",
+        "uuid": "0c1095df-7775-4e98-8d5c-ca38bc1be88a"
     },
     {
-        "uuid": "b6bf197c-0e54-451b-80d8-7cae1d7a36fa",
-        "term_name": "vascular endothelial growth factor",
-        "term_id": "EFO:0003276",
-        "status": "released"
+        "status": "in progress",
+        "term_id": "UBERON:0003547",
+        "term_name": "brain meninx",
+        "uuid": "bf234508-fa4d-45b9-b702-5686db62eba6"
     },
     {
-        "uuid": "fd528ec9-bcad-4945-89f5-1e3e06bc8999",
-        "term_name": "basic fibroblast growth factor",
-        "term_id": "EFO:0003316",
-        "status": "released"
+        "status": "in progress",
+        "term_id": "UBERON:0002097",
+        "term_name": "skin of body",
+        "uuid": "ac1db5a2-f6d2-4166-a3d0-6d1b5c023187"
     },
     {
-        "uuid": "962bd10b-a7d2-440c-8aa9-92afafe04900",
-        "term_name": "fetal liver hematopoietic progenitor cell",
-        "term_id": "CL:0002353",
-        "status": "released"
+        "status": "in progress",
+        "term_id": "MONDO:0005129",
+        "term_name": "cataract",
+        "uuid": "e309fd6c-6cff-487b-a937-ad8faf5d8421"
     },
     {
-        "uuid": "1b85f88c-8b52-4deb-8144-30d25bdb01a5",
-        "term_name": "liver dendritic cell",
-        "term_id": "CL:2000055",
-        "status": "released"
+        "status": "in progress",
+        "term_id": "HsapDv:0000141",
+        "term_name": "47-year-old human stage",
+        "uuid": "e9619a66-c352-41c9-bdae-c48d06982b80"
     },
     {
-        "uuid": "caada0f4-db84-11ea-87d0-0242ac130003",
-        "term_name": "amygdala",
-        "term_id": "UBERON:0001876",
-        "status": "released"
+        "status": "in progress",
+        "term_id": "UBERON:0001255",
+        "term_name": "urinary bladder",
+        "uuid": "b8220fba-137f-4139-a26a-87297da630bd"
     },
     {
-        "uuid": "cee0e280-db84-11ea-87d0-0242ac130003",
-        "term_name": "embryonic head",
-        "term_id": "UBERON:0008816",
-        "status": "released"
+        "status": "in progress",
+        "term_id": "UBERON:0007844",
+        "term_name": "cartilage element",
+        "uuid": "f2ba75fc-5154-4db9-b9ca-b79896ba6f87"
     },
     {
-        "uuid": "f2896bfc-d914-11ea-87d0-0242ac130003",
-        "term_name": "Asian",
+        "status": "in progress",
+        "term_id": "UBERON:0002110",
+        "term_name": "gall bladder",
+        "uuid": "74aa32f5-2bcf-4448-a9d8-863b92f20519"
+    },
+    {
+        "status": "in progress",
+        "term_id": "MONDO:0006604",
+        "term_name": "rosacea",
+        "uuid": "b6899889-ea69-43cf-ad74-97f8d2de3d84"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0001473",
+        "term_name": "lymphatic vessel",
+        "uuid": "fa5b1545-3327-4bde-971c-b9a60a9b10f1"
+    },
+    {
+        "status": "in progress",
+        "term_id": "CL:0000763",
+        "term_name": "myeloid cell",
+        "uuid": "110c93ae-948a-4647-ab71-1026c231ec93"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0004456",
+        "term_name": "entire sense organ system",
+        "uuid": "c963e2ef-5ef6-49e8-b70d-21d61ee2698b"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0002204",
+        "term_name": "musculoskeletal system",
+        "uuid": "bdde7e18-5b0b-42e0-85b0-4075edf6c5a1"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0000966",
+        "term_name": "retina",
+        "uuid": "bece0c22-0dff-404d-b86e-ab3028cbd4ec"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0001474",
+        "term_name": "bone element",
+        "uuid": "a7237c06-66d8-4d59-90a0-8e798af8b992"
+    },
+    {
+        "status": "in progress",
+        "term_id": "MONDO:0004992",
+        "term_name": "cancer",
+        "uuid": "7f02bf0b-eea4-48ab-a2bf-341fe170ba9a"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0016887",
+        "term_name": "entire extraembryonic component",
+        "uuid": "b8abe61e-d90a-42c2-9a8c-61831631e8d4"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0002371",
+        "term_name": "bone marrow",
+        "uuid": "dc1c8567-a79b-4f34-a8ac-8ecc548a119d"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0019207",
+        "term_name": "chorioretinal region",
+        "uuid": "91651304-de28-4dab-84fd-1fd43016e2bd"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0001817",
+        "term_name": "lacrimal gland",
+        "uuid": "0bd33502-962c-4a96-92c6-9c5c71af2d37"
+    },
+    {
+        "status": "in progress",
+        "term_id": "MONDO:0005015",
+        "term_name": "diabetes mellitus (disease)",
+        "uuid": "7dee24e4-d160-48b1-995c-f90936735bb8"
+    },
+    {
+        "status": "in progress",
+        "term_id": "MONDO:0005231",
+        "term_name": "hepatitis C virus infection",
+        "uuid": "7882a586-df0e-427c-85b6-8245e2652d75"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0002384",
+        "term_name": "connective tissue",
+        "uuid": "4e1ce554-f9f7-4966-ae2d-5e232a8079ab"
+    },
+    {
+        "status": "in progress",
+        "term_id": "CL:1001432",
+        "term_name": "kidney collecting duct intercalated cell",
+        "uuid": "978c3314-c266-495e-b978-742c7769bbbc"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0001981",
+        "term_name": "blood vessel",
+        "uuid": "6a102ec4-2927-463a-bc4e-7fe293e99e0d"
+    },
+    {
+        "status": "in progress",
+        "term_id": "MONDO:0005084",
+        "term_name": "mental disorder",
+        "uuid": "beeab421-1220-47b3-9f70-4f1d48f1dd3a"
+    },
+    {
+        "status": "in progress",
+        "term_id": "MONDO:0005420",
+        "term_name": "hypothyroidism",
+        "uuid": "57707f5b-7129-49c9-bb02-bfea373ccc8e"
+    },
+    {
+        "status": "in progress",
+        "term_id": "CL:0000542",
+        "term_name": "lymphocyte",
+        "uuid": "5f7e2f04-6c96-448f-9b5e-1e85edd63afa"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0001434",
+        "term_name": "skeletal system",
+        "uuid": "c60496f9-077e-454b-8895-ca11cc7c24ca"
+    },
+    {
+        "status": "in progress",
         "term_id": "HANCESTRO:0008",
-        "status": "released"
+        "term_name": "Asian",
+        "uuid": "d73dfbf1-af58-43f8-a01f-68d4195169e6"
     },
     {
-        "uuid": "2d745ae2-d915-11ea-87d0-0242ac130003",
-        "term_name": "type 1 diabetes mellitus",
-        "term_id": "MONDO:0005147",
-        "status": "released"
+        "status": "in progress",
+        "term_id": "UBERON:0000004",
+        "term_name": "nose",
+        "uuid": "b6ba83cc-fa66-40f3-ab0b-6f09714e9a33"
     },
     {
-        "uuid": "c27f21a5-3ef4-407d-80ef-6de84bd6bd83",
-        "term_name": "type 2 diabetes mellitus",
-        "term_id": "MONDO:0005148",
-        "status": "released"
+        "status": "in progress",
+        "term_id": "CL:0000988",
+        "term_name": "hematopoietic cell",
+        "uuid": "d8adde3c-c0ba-4616-a7ca-8efef544c21e"
     },
     {
-        "uuid": "979e8378-e5c3-41f3-8376-c6c7ad8a7812",
-        "term_name": "right lobe of liver",
-        "term_id": "UBERON:0001114",
-        "status": "released"
+        "status": "in progress",
+        "term_id": "CL:0000669",
+        "term_name": "pericyte cell",
+        "uuid": "3103b04e-1da2-455f-b2dd-0a97bbaa0090"
     },
     {
-        "uuid": "7ca3b814-fc91-41bc-a6f5-6326c210b726",
-        "term_name": "54-year-old human stage",
-        "term_id": "HsapDv:0000148",
-        "status": "released"
+        "status": "in progress",
+        "term_id": "UBERON:0001723",
+        "term_name": "tongue",
+        "uuid": "2d675e71-217b-489d-95ce-22e5de278fde"
     },
     {
-        "uuid": "d72824b3-c289-450e-8910-ecea4c017298",
-        "term_name": "human adult stage",
-        "term_id": "HsapDv:0000087",
-        "status": "released"
+        "status": "in progress",
+        "term_id": "MONDO:0004981",
+        "term_name": "atrial fibrillation",
+        "uuid": "ed89117c-6340-4dd6-add9-eb75d49ba134"
     },
     {
-        "uuid": "b94a4c6b-125a-47c3-9c75-dfc688cda0b6",
-        "term_name": "30-year-old human stage",
-        "term_id": "HsapDv:0000124",
-        "status": "released"
+        "status": "in progress",
+        "term_id": "UBERON:0000010",
+        "term_name": "peripheral nervous system",
+        "uuid": "4470bff3-b180-4520-8a79-a2ee714c5921"
     },
     {
-        "uuid": "13d5b05c-445e-4600-92a6-0f4284601216",
-        "term_name": "16-year-old human stage",
+        "status": "in progress",
+        "term_id": "CL:0002321",
+        "term_name": "embryonic cell (metazoa)",
+        "uuid": "4799cff0-816d-4e95-b193-e02f68d653ef"
+    },
+    {
+        "status": "in progress",
+        "term_id": "MONDO:0100081",
+        "term_name": "sleep disorder",
+        "uuid": "3ad41361-8e5d-4e4e-864c-fae4758fcb35"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0001821",
+        "term_name": "sebaceous gland",
+        "uuid": "685b245e-465c-4b46-95ce-e8ce8030fdb9"
+    },
+    {
+        "status": "in progress",
+        "term_id": "MONDO:0005291",
+        "term_name": "brain aneurysm",
+        "uuid": "08c13938-c619-47ce-81f1-5f81184bd613"
+    },
+    {
+        "status": "in progress",
+        "term_id": "MONDO:0004979",
+        "term_name": "asthma",
+        "uuid": "1506d645-3cf7-4f27-845d-420e94ce83fd"
+    },
+    {
+        "status": "in progress",
+        "term_id": "CL:0002494",
+        "term_name": "cardiocyte",
+        "uuid": "d08f485d-dc88-4c57-ad1e-2f08e168cc9b"
+    },
+    {
+        "status": "in progress",
+        "term_id": "MONDO:0015111",
+        "term_name": "gastroesophageal disease",
+        "uuid": "62771108-ad48-49cf-8851-d4663eade1bb"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0001911",
+        "term_name": "mammary gland",
+        "uuid": "858cf0e0-1ae5-42f3-9597-648788aa220c"
+    },
+    {
+        "status": "in progress",
+        "term_id": "MONDO:0008558",
+        "term_name": "autoimmune thrombocytopenic purpura",
+        "uuid": "6e4ee546-ca20-47ab-99fa-6a13ad8dc776"
+    },
+    {
+        "status": "in progress",
+        "term_id": "MONDO:0005041",
+        "term_name": "glaucoma",
+        "uuid": "a3b430e2-2c7c-468c-bb1c-cb2512f5f00f"
+    },
+    {
+        "status": "in progress",
+        "term_id": "MONDO:0005240",
+        "term_name": "kidney disease",
+        "uuid": "cbb5197c-2021-4f27-8eaa-fb4c9635b43a"
+    },
+    {
+        "status": "in progress",
+        "term_id": "MONDO:0007179",
+        "term_name": "autoimmune disease",
+        "uuid": "c53c7f59-2037-4692-a262-d69690db68fa"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0002101",
+        "term_name": "limb",
+        "uuid": "73b655f4-cc71-4206-9c0d-33812120464e"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0000383",
+        "term_name": "musculature of body",
+        "uuid": "77fab35b-ef92-42e2-b56b-2421036e01e7"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0003902",
+        "term_name": "retinal neural layer",
+        "uuid": "0112168a-b790-4943-a76e-d454ab97a974"
+    },
+    {
+        "status": "in progress",
+        "term_id": "MONDO:0005105",
+        "term_name": "melanoma",
+        "uuid": "0f1657f6-d9bb-4b27-9992-18e9d586df7e"
+    },
+    {
+        "status": "in progress",
+        "term_id": "CL:0000235",
+        "term_name": "macrophage",
+        "uuid": "8a30c8b1-1de2-44e9-9792-4ee96e41052a"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0002106",
+        "term_name": "spleen",
+        "uuid": "cdc6a410-bce7-4d31-9787-ecbd36ed4553"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0000922",
+        "term_name": "embryo",
+        "uuid": "6ab16f6d-d200-48a8-a446-025b4e91d743"
+    },
+    {
+        "status": "in progress",
+        "term_id": "CL:1001431",
+        "term_name": "kidney collecting duct principal cell",
+        "uuid": "11b6c1a1-8333-411d-9a3c-0db5780dfe60"
+    },
+    {
+        "status": "in progress",
+        "term_id": "MONDO:0007915",
+        "term_name": "systemic lupus erythematosus",
+        "uuid": "1ddb68be-c4fe-4233-bf81-c705d0d128c6"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0000996",
+        "term_name": "vagina",
+        "uuid": "bd80eee9-0c6c-4d9e-991e-d63ff62a710d"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0002368",
+        "term_name": "endocrine gland",
+        "uuid": "6271ded6-1af4-45c9-80e4-c9c4efa74c74"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0000949",
+        "term_name": "endocrine system",
+        "uuid": "7e25d73b-a540-42b0-8982-d29d42bd6d99"
+    },
+    {
+        "status": "in progress",
+        "term_id": "CL:0000648",
+        "term_name": "kidney granular cell",
+        "uuid": "9ebed765-ec40-4196-9f27-400debc577ac"
+    },
+    {
+        "status": "in progress",
+        "term_id": "CL:0019018",
+        "term_name": "blood vessel smooth muscle cell",
+        "uuid": "c9a911d1-d182-4f92-aad4-3f654607f345"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0001013",
+        "term_name": "adipose tissue",
+        "uuid": "174b15a8-3cec-4003-9ebd-a14e13504dcc"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0002369",
+        "term_name": "adrenal gland",
+        "uuid": "22a2893f-be64-411f-9fad-7715c4283a7f"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0000955",
+        "term_name": "brain",
+        "uuid": "f6b50dd6-118e-4ec8-8f40-b719d552b0ef"
+    },
+    {
+        "status": "in progress",
+        "term_id": "EFO:0009900",
+        "term_name": "10x 5' v2",
+        "uuid": "7c6e5556-e5ee-4e4f-ad03-51fa93ef59e6"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000104",
+        "term_name": "10-year-old human stage",
+        "uuid": "5143081c-25ac-4555-b15d-78cc9c782114"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0001350",
+        "term_name": "coccyx",
+        "uuid": "b5803497-555d-49b9-b6f6-d5c6aa9ec995"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0002370",
+        "term_name": "thymus",
+        "uuid": "2086585f-8808-4d21-bab3-58e55bb7c8b3"
+    },
+    {
+        "status": "in progress",
+        "term_id": "MONDO:0044753",
+        "term_name": "lumbar spinal stenosis",
+        "uuid": "dd14d765-fc7f-4d0d-8d96-72bb10011714"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000107",
+        "term_name": "13-year-old human stage",
+        "uuid": "056a5015-095d-4f21-a8f6-902f61f90856"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000105",
+        "term_name": "11-year-old human stage",
+        "uuid": "8dd9d4f4-f334-4329-963f-ef9fc390369e"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0004288",
+        "term_name": "skeleton",
+        "uuid": "1f10aa81-b003-461b-bfe2-75d249155ede"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0002405",
+        "term_name": "immune system",
+        "uuid": "c9f0ef1a-48d7-4687-8c58-66d114d88600"
+    },
+    {
+        "status": "in progress",
+        "term_id": "CL:1000692",
+        "term_name": "kidney interstitial fibroblast",
+        "uuid": "9c869d86-a2ab-4f31-a634-5ea636014d04"
+    },
+    {
+        "status": "in progress",
         "term_id": "HsapDv:0000110",
-        "status": "released"
+        "term_name": "16-year-old human stage",
+        "uuid": "d09cc00f-6b02-4664-a2f5-6a6e31ab782f"
     },
     {
-        "uuid": "7374f41a-4751-4514-974a-dfd86c01f58f",
-        "term_name": "4 month-old stage",
-        "term_id": "MmusDv:0000064",
-        "status": "released"
+        "status": "in progress",
+        "term_id": "HsapDv:0000106",
+        "term_name": "12-year-old human stage",
+        "uuid": "b10dadc6-ac61-43b1-9713-b1774f969754"
     },
     {
-        "uuid": "5e0b8935-55f2-48be-bf18-96df107d84f4",
-        "term_name": "19 month-old stage",
-        "term_id": "MmusDv:0000090",
-        "status": "released"
+        "status": "in progress",
+        "term_id": "MONDO:0005362",
+        "term_name": "erectile dysfunction",
+        "uuid": "741dfb01-b90e-4baa-85e4-a008706b17c4"
     },
     {
-        "uuid": "cee746c8-894f-4186-a727-4c2a6b05987b",
-        "term_name": "Theiler stage 22",
-        "term_id": "MmusDv:0000029",
-        "status": "released"
+        "status": "in progress",
+        "term_id": "UBERON:0000998",
+        "term_name": "seminal vesicle",
+        "uuid": "2d6720b5-1ec6-488f-ba6a-677deb1b5453"
     },
     {
-        "uuid": "6abad271-8087-448f-a331-f75829ae4fcf",
-        "term_name": "Theiler stage 21",
-        "term_id": "MmusDv:0000028",
-        "status": "released"
+        "status": "in progress",
+        "term_id": "CL:1000850",
+        "term_name": "macula densa epithelial cell",
+        "uuid": "6c626bf5-9be2-402e-946a-44538224a965"
     },
     {
-        "uuid": "d5d24d27-3879-48bf-8866-21727f1a0e86",
-        "term_name": "Carnegie stage 19",
-        "term_id": "HsapDv:0000026",
-        "status": "released"
+        "status": "in progress",
+        "term_id": "HsapDv:0000116",
+        "term_name": "22-year-old human stage",
+        "uuid": "530fc01a-a17b-44dd-9183-927aba4b8419"
     },
     {
-        "uuid": "eca26cc4-9ed8-4575-bc6e-e26fdb2fc08c",
-        "term_name": "15th week post-fertilization human stage",
-        "term_id": "HsapDv:0000052",
-        "status": "released"
+        "status": "in progress",
+        "term_id": "HsapDv:0000113",
+        "term_name": "19-year-old human stage",
+        "uuid": "7c40a2fb-5555-4343-b43d-981215e5b23f"
     },
     {
-        "uuid": "b08331cf-b0c0-4361-88b2-4972a88ff42a",
-        "term_name": "fifth LMP month human stage",
-        "term_id": "HsapDv:0000199",
-        "status": "released"
+        "status": "in progress",
+        "term_id": "MONDO:0007972",
+        "term_name": "Meniere disease",
+        "uuid": "cbb8f7b5-6939-4664-934f-d683563e33f2"
     },
     {
-        "uuid": "886c4a80-95cc-44e5-a67e-28128c129bdb",
-        "term_name": "12th week post-fertilization human stage",
-        "term_id": "HsapDv:0000049",
-        "status": "released"
+        "status": "in progress",
+        "term_id": "UBERON:0001016",
+        "term_name": "nervous system",
+        "uuid": "30b9ad98-151c-4320-83dd-9feb478d1dec"
     },
     {
-        "uuid": "37eb1274-47ef-4634-95ad-a90fcef867be",
-        "status": "released",
-        "term_id": "CL:2000001",
-        "term_name": "peripheral blood mononuclear cell"
+        "status": "in progress",
+        "term_id": "EFO:0002886",
+        "term_name": "stem cell derived cell line",
+        "uuid": "09fc8ebf-e1ee-4d50-988e-d3c1a658ef95"
     },
     {
-        "uuid": "3906a0fd-c6ee-46f7-a8c5-72a21c84ddf4",
-        "status": "released",
-        "term_id": "NCIT:C54166",
-        "term_name": "variable"
+        "status": "in progress",
+        "term_id": "HsapDv:0000117",
+        "term_name": "23-year-old human stage",
+        "uuid": "2118e7b0-b588-4198-a94f-f8b5146a5b38"
     },
     {
-        "uuid": "448da572-f974-4ff0-abf4-3f5873b60c3b",
-        "status": "released",
+        "status": "in progress",
+        "term_id": "HsapDv:0000120",
+        "term_name": "26-year-old human stage",
+        "uuid": "8736641b-385a-48ce-9847-774d29561e02"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HANCESTRO:0487",
+        "term_name": "Indian",
+        "uuid": "91318a85-ccf7-4ab9-bec9-16b0f7572f71"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0001032",
+        "term_name": "sensory system",
+        "uuid": "ba72b596-9236-4764-8c4c-c937822a1758"
+    },
+    {
+        "status": "in progress",
+        "term_id": "MONDO:0005066",
+        "term_name": "metabolic disease",
+        "uuid": "b93c9c72-5b8b-445d-aeae-e8df2f7c11c2"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000118",
+        "term_name": "24-year-old human stage",
+        "uuid": "c040a96e-73a3-4fea-be95-ddeab2f872d6"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0001017",
+        "term_name": "central nervous system",
+        "uuid": "f9cb3976-1153-4ac0-aca8-6cf6bbee2bb9"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000108",
+        "term_name": "14-year-old human stage",
+        "uuid": "6377477b-4989-49cb-a83d-b527d88449a3"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0001103",
+        "term_name": "diaphragm",
+        "uuid": "32ab556e-5231-44a7-8e1b-e49c85c9c22d"
+    },
+    {
+        "status": "in progress",
+        "term_id": "MONDO:0005113",
+        "term_name": "bacterial infectious disease",
+        "uuid": "7ae2aeab-f117-44cf-bda9-589c947c1b1c"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000119",
+        "term_name": "25-year-old human stage",
+        "uuid": "c20c5edc-08a1-4f3e-a29f-b3d11a8af8fc"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0001021",
+        "term_name": "nerve",
+        "uuid": "97fe0378-6aac-41e2-8092-fe92e5eb1e6e"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000109",
+        "term_name": "15-year-old human stage",
+        "uuid": "558fba29-30d3-402b-b4d7-75b24035b522"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000097",
+        "term_name": "3-year-old human stage",
+        "uuid": "4962b5a0-6d81-4db8-bf93-81e82248a2ef"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0000995",
+        "term_name": "uterus",
+        "uuid": "659669bf-4421-4837-a78f-afac4bef5763"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000122",
+        "term_name": "28-year-old human stage",
+        "uuid": "4a58d902-e958-4944-97da-38a18d82be42"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0001132",
+        "term_name": "parathyroid gland",
+        "uuid": "b0c17f59-b659-4799-9127-fcaebe992209"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000112",
+        "term_name": "18-year-old human stage",
+        "uuid": "13c4854f-9301-4206-9c2f-8a25b6759e63"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000125",
+        "term_name": "31-year-old human stage",
+        "uuid": "8ac2e6fc-7192-4c75-aabb-4972b3574a54"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0001007",
+        "term_name": "digestive system",
+        "uuid": "44040765-e0f0-4a86-aefa-1e041774b573"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0000059",
+        "term_name": "large intestine",
+        "uuid": "f273bab2-707c-4add-89ab-f92a0f041acc"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0001737",
+        "term_name": "larynx",
+        "uuid": "b256f8b3-0f9a-49bd-96aa-50b0f315c658"
+    },
+    {
+        "status": "in progress",
+        "term_id": "CL:0000148",
+        "term_name": "melanocyte",
+        "uuid": "9dcab25e-a752-4db8-8605-bb0baee42e2a"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000134",
+        "term_name": "40-year-old human stage",
+        "uuid": "38cacf39-ddb6-493c-aae8-bc3b76b0c87b"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0001264",
+        "term_name": "pancreas",
+        "uuid": "3d1fa418-a78b-4a08-a24b-0e6ca1aae0e8"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0000363",
+        "term_name": "reticuloendothelial system",
+        "uuid": "be423c88-282c-4998-a8be-ca63340204e9"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0001744",
+        "term_name": "lymphoid tissue",
+        "uuid": "81a50437-3c2c-47ed-9b9b-a41b21c5d3b0"
+    },
+    {
+        "status": "in progress",
+        "term_id": "CL:0000312",
+        "term_name": "keratinocyte",
+        "uuid": "b8491680-e6fe-47cc-b1fc-3c00f042ba37"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000138",
+        "term_name": "44-year-old human stage",
+        "uuid": "4bee051a-8183-4c4b-960a-212239fc4a5d"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0002240",
+        "term_name": "spinal cord",
+        "uuid": "987bf07e-8403-44b5-9225-f4fd48ad33d6"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0000414",
+        "term_name": "mucous gland",
+        "uuid": "d801a5b4-17d5-4451-bc58-7bb13e16c3cb"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0002049",
+        "term_name": "vasculature",
+        "uuid": "ff1ef35c-4b30-4430-96ad-dae696f23d91"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0000948",
+        "term_name": "heart",
+        "uuid": "513cd1a8-f01a-422f-83a5-b95fed7d9bb5"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0004535",
+        "term_name": "cardiovascular system",
+        "uuid": "156f006f-eac7-4cf2-9147-e9188cb41c4c"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0003126",
+        "term_name": "trachea",
+        "uuid": "4199cc5d-5054-416e-b0ac-dd6985cdd077"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0000483",
+        "term_name": "epithelium",
+        "uuid": "5593b4a6-a388-4557-9da5-6eb33aa7899c"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000144",
+        "term_name": "50-year-old human stage",
+        "uuid": "5f0f4f02-10a0-49ce-93d2-8749bb0e231a"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0000029",
+        "term_name": "lymph node",
+        "uuid": "d3c1e31b-d87a-41d4-8725-8e3e287b3add"
+    },
+    {
+        "status": "in progress",
+        "term_id": "MONDO:0017604",
+        "term_name": "marginal zone lymphoma",
+        "uuid": "497ec9bc-7bd1-4c0e-bbc9-7f7906cd8ee7"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000096",
+        "term_name": "2-year-old human stage",
+        "uuid": "ace4f88c-6c83-4c29-89b5-e4149070d60d"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0000970",
+        "term_name": "eye",
+        "uuid": "87c75191-af3b-4759-9fc9-f9368abcfe38"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000147",
+        "term_name": "53-year-old human stage",
+        "uuid": "eb7559db-6ad3-484e-9748-4dd37ccc77ac"
+    },
+    {
+        "status": "in progress",
+        "term_id": "CL:0000097",
+        "term_name": "mast cell",
+        "uuid": "7eff45cc-cb13-4393-a1ed-73aa07423c0d"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0000165",
+        "term_name": "mouth",
+        "uuid": "8f397937-02d0-4701-90b9-924dfed4a544"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000114",
+        "term_name": "20-year-old human stage",
+        "uuid": "8d41c878-3fb1-4ae2-9dc3-569620d96a18"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0005057",
+        "term_name": "immune organ",
+        "uuid": "2d49351c-b6e1-4052-94dc-f63b0f2464b7"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000153",
+        "term_name": "59-year-old human stage",
+        "uuid": "9396f521-c3ca-4625-8525-71dc0b95c20c"
+    },
+    {
+        "status": "in progress",
+        "term_id": "EFO:0030007",
+        "term_name": "10x scATAC-seq",
+        "uuid": "d614449f-0848-441e-ba99-29dc7b164be7"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0000989",
+        "term_name": "penis",
+        "uuid": "ddf7888c-c40c-4f5b-bc48-ddf4e599010c"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000121",
+        "term_name": "27-year-old human stage",
+        "uuid": "aae9aa69-3266-47c7-86e2-d3e3441a86d6"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0006314",
+        "term_name": "bodily fluid",
+        "uuid": "6389365a-bdd8-4f8d-abb3-0d01d978f936"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000124",
+        "term_name": "30-year-old human stage",
+        "uuid": "fafadfae-e4ef-4b55-a07c-be1fc35610bc"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0035818",
+        "term_name": "visceral fat",
+        "uuid": "337fa4f8-c849-4c0c-9f97-af3ee5d4dbef"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000111",
+        "term_name": "17-year-old human stage",
+        "uuid": "8a3f0c12-0192-428d-8dab-05265a1cce99"
+    },
+    {
+        "status": "in progress",
+        "term_id": "CL:0000192",
+        "term_name": "smooth muscle cell",
+        "uuid": "8aabf26c-7ce1-4129-a048-4e165a3f05ab"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0006562",
+        "term_name": "pharynx",
+        "uuid": "8c2fe1d1-c79d-4541-bf6e-2c2d6036b2bd"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000133",
+        "term_name": "39-year-old human stage",
+        "uuid": "d1656293-71c0-41e7-a6cc-fa4c2af7db4e"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0002190",
+        "term_name": "subcutaneous adipose tissue",
+        "uuid": "bb525998-f469-4eb2-948d-87594c6286be"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000115",
+        "term_name": "21-year-old human stage",
+        "uuid": "4dfbfefa-f59d-43c7-a674-085f941aa8d0"
+    },
+    {
+        "status": "in progress",
+        "term_id": "CL:0000557",
+        "term_name": "granulocyte monocyte progenitor cell",
+        "uuid": "d5e452e1-2e2d-4731-afe3-d94836e44875"
+    },
+    {
+        "status": "in progress",
+        "term_id": "MONDO:0005296",
+        "term_name": "sleep apnea syndrome",
+        "uuid": "ff298d4b-9a8a-4824-881a-1e07508b766c"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0000473",
+        "term_name": "testis",
+        "uuid": "708aff1d-be86-4c6b-94cf-f4261009670b"
+    },
+    {
+        "status": "in progress",
+        "term_id": "CL:0000573",
+        "term_name": "retinal cone cell",
+        "uuid": "763a4969-18c4-49a4-a13e-5f83355695f3"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0000057",
+        "term_name": "urethra",
+        "uuid": "f5740bd5-ec19-41c3-8aa3-71a852fb5845"
+    },
+    {
+        "status": "in progress",
+        "term_id": "CL:0000827",
+        "term_name": "pro-T cell",
+        "uuid": "5fdcad0b-5600-4c0d-bdf7-cd3cae2bfe76"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0002365",
+        "term_name": "exocrine gland",
+        "uuid": "504ec8e8-6096-4a4b-9fcb-07f50b828494"
+    },
+    {
+        "status": "in progress",
+        "term_id": "CL:0000091",
+        "term_name": "Kupffer cell",
+        "uuid": "1a4ed9e9-a489-4e91-9d13-adf2c0579fdf"
+    },
+    {
+        "status": "in progress",
+        "term_id": "CL:0000127",
+        "term_name": "astrocyte",
+        "uuid": "dcd20a0c-19a3-4dd4-b694-215305437b9c"
+    },
+    {
+        "status": "in progress",
+        "term_id": "CL:0000784",
+        "term_name": "plasmacytoid dendritic cell",
+        "uuid": "cd02f1bd-43d6-4fde-bb39-b8a519f45c93"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000240",
+        "term_name": "sixth decade human stage",
+        "uuid": "7cdc1a11-0694-479f-a61a-fce0f99684ce"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0002367",
+        "term_name": "prostate gland",
+        "uuid": "6f50aa19-b0f3-490b-83b9-089c3f9bf83d"
+    },
+    {
+        "status": "in progress",
+        "term_id": "CL:0000789",
+        "term_name": "alpha-beta T cell",
+        "uuid": "42544ee4-dfac-424f-a320-ee3cc7fc100d"
+    },
+    {
+        "status": "in progress",
+        "term_id": "CL:0000749",
+        "term_name": "ON-bipolar cell",
+        "uuid": "6fed8e20-2f7c-42a0-940c-06ea9fbc4ab3"
+    },
+    {
+        "status": "in progress",
+        "term_id": "CL:0000764",
+        "term_name": "erythroid lineage cell",
+        "uuid": "1d020943-484f-466c-96cd-25509639b780"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000238",
+        "term_name": "fourth decade human stage",
+        "uuid": "0878a174-0033-41b2-85ed-7968a9b78bee"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0002416",
+        "term_name": "integumental system",
+        "uuid": "486e6646-44d5-45d3-9603-a7fd10e438ce"
+    },
+    {
+        "status": "in progress",
         "term_id": "CL:0000842",
-        "term_name": "mononuclear cell"
+        "term_name": "mononuclear cell",
+        "uuid": "f4bc201b-a0f7-416a-a63c-7439badd140a"
     },
     {
-        "uuid": "da14be15-6c48-4b31-87b3-5b6a3dce0e01",
-        "status": "released",
-        "term_id": "CL:0000236",
-        "term_name": "B cell"
+        "status": "in progress",
+        "term_id": "CL:0000826",
+        "term_name": "pro-B cell",
+        "uuid": "4b1b3092-fbef-468a-8b12-cc4dac768131"
     },
     {
-        "uuid": "1f575b49-7c2b-40b9-b38e-e56aa343bec0",
-        "status": "released",
+        "status": "in progress",
+        "term_id": "CL:0000936",
+        "term_name": "early lymphoid progenitor",
+        "uuid": "b143edc2-2797-431f-af7b-49cff1a533c3"
+    },
+    {
+        "status": "in progress",
+        "term_id": "CL:0000860",
+        "term_name": "classical monocyte",
+        "uuid": "04274789-b8a7-40fb-8495-c60b7353ff83"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0003509",
+        "term_name": "arterial blood vessel",
+        "uuid": "3addd645-fb7b-496a-910f-6176d9bdd4ca"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0002098",
+        "term_name": "apex of heart",
+        "uuid": "a6e24429-0158-40da-bc21-76ed9899b97d"
+    },
+    {
+        "status": "in progress",
+        "term_id": "CL:0000990",
+        "term_name": "conventional dendritic cell",
+        "uuid": "ec690249-90b2-4c5c-8ac3-a987e443adf2"
+    },
+    {
+        "status": "in progress",
+        "term_id": "CL:0000786",
+        "term_name": "plasma cell",
+        "uuid": "de290be6-cbe0-4e9d-8a32-6f44e49136b6"
+    },
+    {
+        "status": "in progress",
+        "term_id": "CL:1000488",
+        "term_name": "cholangiocyte",
+        "uuid": "38a0cf6a-2fe4-402b-b599-dd2fbaef72ee"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0002046",
+        "term_name": "thyroid gland",
+        "uuid": "2a3ff10e-ed2a-4a76-aea3-4cfb662618e6"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0002079",
+        "term_name": "left cardiac atrium",
+        "uuid": "762b18b8-fe63-4b33-b647-ca8a75eed380"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000162",
+        "term_name": "68-year-old human stage",
+        "uuid": "ddbcae99-318a-4b69-af33-7218bdd7bcc3"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0000053",
+        "term_name": "macula lutea",
+        "uuid": "a1d7ca28-e9ba-42f5-8b0d-e1509bbdb7e8"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0003889",
+        "term_name": "fallopian tube",
+        "uuid": "0770af71-7caf-4ad7-8ea0-81ece8e78161"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0000043",
+        "term_name": "tendon",
+        "uuid": "4f4e3dc7-80eb-409e-bfc3-237e56353b37"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0002094",
+        "term_name": "interventricular septum",
+        "uuid": "13d200d9-45fd-4c13-b6f7-c5a56a6334e8"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000163",
+        "term_name": "69-year-old human stage",
+        "uuid": "02cf1560-6808-4e36-8d45-8a3f47588566"
+    },
+    {
+        "status": "in progress",
+        "term_id": "CL:0000624",
+        "term_name": "CD4-positive, alpha-beta T cell",
+        "uuid": "233d2993-6a41-4209-9263-f65c4b125126"
+    },
+    {
+        "status": "in progress",
+        "term_id": "CL:0000893",
+        "term_name": "thymocyte",
+        "uuid": "0f4df2fe-519f-4ede-aad2-b75333ba20e8"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000130",
+        "term_name": "36-year-old human stage",
+        "uuid": "9bec7903-1135-4e11-aa5f-d95b2c185c5d"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000239",
+        "term_name": "fifth decade human stage",
+        "uuid": "e21bfee7-9a5b-41f0-a186-9fa4fdf65b11"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000167",
+        "term_name": "73-year-old human stage",
+        "uuid": "a2188eb0-b364-44ca-a016-fa3f189316d2"
+    },
+    {
+        "status": "in progress",
+        "term_id": "CL:0000875",
+        "term_name": "non-classical monocyte",
+        "uuid": "297efd32-a131-4044-a361-8256ec57c6ad"
+    },
+    {
+        "status": "in progress",
+        "term_id": "CL:0000748",
+        "term_name": "retinal bipolar neuron",
+        "uuid": "cb6dfe17-15fb-4310-923d-9aa078736f2d"
+    },
+    {
+        "status": "in progress",
+        "term_id": "CL:0000863",
+        "term_name": "inflammatory macrophage",
+        "uuid": "ba3be0fd-484e-4df2-9fac-ca69a6c1934f"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000237",
+        "term_name": "third decade human stage",
+        "uuid": "a6528498-fa16-4882-9288-36d5076d4501"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000170",
+        "term_name": "76-year-old human stage",
+        "uuid": "d4947a7e-43dd-43e0-ba60-cd22b6e0733e"
+    },
+    {
+        "status": "in progress",
+        "term_id": "CL:0019029",
+        "term_name": "centrilobular region hepatocyte",
+        "uuid": "331c6e0b-6e92-4c4c-83c9-9cc81760fafe"
+    },
+    {
+        "status": "in progress",
+        "term_id": "CL:0000125",
+        "term_name": "glial cell",
+        "uuid": "613d0842-df85-49a4-bda1-14e1b6d65323"
+    },
+    {
+        "status": "in progress",
+        "term_id": "CL:0019026",
+        "term_name": "periportal region hepatocyte",
+        "uuid": "a0ec86fe-1ad6-4f61-9ea0-809dce21fad9"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0001117",
+        "term_name": "caudate lobe of liver",
+        "uuid": "66bc3630-adf6-4f82-a7a2-9e1350ca3491"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000173",
+        "term_name": "79-year-old human stage",
+        "uuid": "7ddcbe86-a3d9-43aa-b107-76e7da7bbdff"
+    },
+    {
+        "status": "in progress",
+        "term_id": "NTR:0000242",
+        "term_name": "South and Central Asian",
+        "uuid": "4105f91e-1927-4860-ac51-f33e53df8715"
+    },
+    {
+        "status": "in progress",
+        "term_id": "CL:0000745",
+        "term_name": "retina horizontal cell",
+        "uuid": "f0979286-688a-4d14-bc01-0d1954a9aa70"
+    },
+    {
+        "status": "in progress",
+        "term_id": "CL:0019021",
+        "term_name": "endothelial cell of periportal hepatic sinusoid",
+        "uuid": "6ecb0e48-5673-4437-866e-6ad03343cac9"
+    },
+    {
+        "status": "in progress",
+        "term_id": "CL:0019022",
+        "term_name": "endothelial cell of pericentral hepatic sinusoid",
+        "uuid": "55d64466-d8f9-4492-9a5d-0b59c0a5d25e"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000207",
+        "term_name": "81-year-old human stage",
+        "uuid": "cad7c18e-019a-4992-b4f4-b32370fdb2bb"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:8410010",
+        "term_name": "fimbria of uterine tube",
+        "uuid": "3197aa79-1aff-4050-8a6c-af7b9e86a153"
+    },
+    {
+        "status": "in progress",
+        "term_id": "CL:0002586",
+        "term_name": "retinal pigment epithelial cell",
+        "uuid": "11041776-1a76-4ea6-9299-28c75a4ab1af"
+    },
+    {
+        "status": "in progress",
+        "term_id": "CL:1001111",
+        "term_name": "kidney loop of Henle thin descending limb epithelial cell",
+        "uuid": "dcb75560-99eb-4a09-ae5e-087e551dd694"
+    },
+    {
+        "status": "in progress",
+        "term_id": "MmusDv:0000036",
+        "term_name": "Theiler stage 27",
+        "uuid": "8b170094-633e-4296-b7c0-c36bc69395ec"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000208",
+        "term_name": "82-year-old human stage",
+        "uuid": "90ca0f3a-80ee-4968-9664-cbb73eaaad52"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0016632",
+        "term_name": "isthmus of fallopian tube",
+        "uuid": "b95c1785-4a3e-45cd-b89f-335ec431426d"
+    },
+    {
+        "status": "in progress",
+        "term_id": "MmusDv:0000112",
+        "term_name": "premature stage",
+        "uuid": "f722158c-f7c2-41b1-8ccd-94c3e50fb7e4"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0002084",
+        "term_name": "heart left ventricle",
+        "uuid": "718f49d0-8dac-4f8e-a9f8-c1aa305b0e6c"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000091",
+        "term_name": "human late adulthood stage",
+        "uuid": "ee1206a4-cb7d-460c-927b-7ec7e4bbc4f6"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000209",
+        "term_name": "83-year-old human stage",
+        "uuid": "97e4af64-8146-4de3-80f7-8f71867a748d"
+    },
+    {
+        "status": "in progress",
+        "term_id": "CL:0000071",
+        "term_name": "blood vessel endothelial cell",
+        "uuid": "615b58f2-a0f9-4187-97e9-ef019f1820ba"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HANCESTRO:0010",
+        "term_name": "African",
+        "uuid": "8ee245e7-90e8-4e68-8028-706e91ea71fd"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0002080",
+        "term_name": "heart right ventricle",
+        "uuid": "bc39be14-6529-4988-b16d-d70beac8f80a"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000095",
+        "term_name": "80 year-old and over human stage",
+        "uuid": "301c354d-1856-4589-8f1c-286bed0e840f"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000210",
+        "term_name": "84-year-old human stage",
+        "uuid": "edccf6b7-ead6-47b8-8d98-e332932d7778"
+    },
+    {
+        "status": "in progress",
+        "term_id": "CL:0002419",
+        "term_name": "mature T cell",
+        "uuid": "2e782dce-9319-4d39-9680-968df49704b2"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HANCESTRO:0009",
+        "term_name": "East Asian",
+        "uuid": "69ae4252-1bd6-411c-b533-bd693243b9eb"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0002078",
+        "term_name": "right cardiac atrium",
+        "uuid": "10d3f1a2-23fb-4a9f-a6aa-1b6f0e0e3213"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HANCESTRO:0017",
+        "term_name": "Oceanian",
+        "uuid": "352b4a88-b13c-4df6-8b46-242b6acfadff"
+    },
+    {
+        "status": "in progress",
+        "term_id": "CL:0000785",
+        "term_name": "mature B cell",
+        "uuid": "55c5256c-e1ca-4dca-af6e-4d51b4e6788d"
+    },
+    {
+        "status": "in progress",
+        "term_id": "CL:0000623",
+        "term_name": "natural killer cell",
+        "uuid": "c329eac1-0945-42ce-b593-743f0812416d"
+    },
+    {
+        "status": "in progress",
+        "term_id": "NTR:0000243",
+        "term_name": "fimbria of uterine tube and ampulla of uterine tube",
+        "uuid": "0a52ec0f-e90e-4765-8e58-8b54beb9f024"
+    },
+    {
+        "status": "in progress",
+        "term_id": "EFO:0030060",
+        "term_name": "mCT-seq",
+        "uuid": "668faffe-d8f2-49d9-b0ca-f6f4ecef8704"
+    },
+    {
+        "status": "in progress",
+        "term_id": "CL:0000151",
+        "term_name": "secretory cell",
+        "uuid": "88b9b35a-84e9-4ed0-96d6-4eb261cc6b8e"
+    },
+    {
+        "status": "in progress",
+        "term_id": "CL:0002010",
+        "term_name": "pre-conventional dendritic cell",
+        "uuid": "4bb5d340-395e-423b-afae-c7346e4002dc"
+    },
+    {
+        "status": "in progress",
+        "term_id": "CL:0000561",
+        "term_name": "amacrine cell",
+        "uuid": "3492c47d-b5c9-4cc2-a7e6-3e5955efcb98"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000215",
+        "term_name": "89-year-old human stage",
+        "uuid": "6d686341-be5b-43ed-8349-694f1e000e62"
+    },
+    {
+        "status": "in progress",
+        "term_id": "CL:0000894",
+        "term_name": "DN1 thymic pro-T cell",
+        "uuid": "72087bc3-fb24-4f88-9229-0844c29af845"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000065",
+        "term_name": "28th week post-fertilization human stage",
+        "uuid": "359c0647-3d09-4f0f-b5f1-afc1646db86e"
+    },
+    {
+        "status": "in progress",
+        "term_id": "EFO:0005740",
+        "term_name": "iPSC derived cell line",
+        "uuid": "6c5e5019-e97c-4493-8d94-09f1ba460bf0"
+    },
+    {
+        "status": "in progress",
+        "term_id": "CL:0000750",
+        "term_name": "OFF-bipolar cell",
+        "uuid": "99da35bf-56d4-42a3-8aee-5b0ad64b4b97"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000048",
+        "term_name": "11th week post-fertilization human stage",
+        "uuid": "0920a396-838f-42bb-95cf-603d069afc3b"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000242",
+        "term_name": "eighth decade human stage",
+        "uuid": "176dc205-7a75-4b1e-8eb6-9d4426e3a6b0"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000068",
+        "term_name": "31st week post-fertilization human stage",
+        "uuid": "0dbce8d1-d174-4717-a3b6-6e4fe827cdd8"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000241",
+        "term_name": "seventh decade human stage",
+        "uuid": "33392af5-5731-4832-9045-8859a63c5de9"
+    },
+    {
+        "status": "in progress",
+        "term_id": "CL:0000838",
+        "term_name": "lymphoid lineage restricted progenitor cell",
+        "uuid": "ba3068cd-dbd7-4721-910d-985b577cf530"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000053",
+        "term_name": "16th week post-fertilization human stage",
+        "uuid": "bd4d13a5-57d4-4fa7-8585-fb2a0edab90e"
+    },
+    {
+        "status": "in progress",
+        "term_id": "CL:0000625",
+        "term_name": "CD8-positive, alpha-beta T cell",
+        "uuid": "0308a1e4-e625-4cae-9216-86a4fb4a7c3c"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000070",
+        "term_name": "33rd week post-fertilization human stage",
+        "uuid": "84b3fbce-6b13-4a4d-9320-6bbef4b3828c"
+    },
+    {
+        "status": "in progress",
+        "term_id": "NCIT:C54166",
+        "term_name": "variable",
+        "uuid": "0c2e4d5b-075d-4020-89d6-210caa73f434"
+    },
+    {
+        "status": "in progress",
+        "term_id": "CL:0000632",
+        "term_name": "hepatic stellate cell",
+        "uuid": "1facd3a6-a59b-4c67-8ea7-a07d70ffb115"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000056",
+        "term_name": "19th week post-fertilization human stage",
+        "uuid": "7a157978-ccaf-4c48-9fe7-3241dadb6696"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000204",
+        "term_name": "mature stage",
+        "uuid": "e3fa272a-0be9-4df7-8cc6-b24dde046f67"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000072",
+        "term_name": "35th week post-fertilization human stage",
+        "uuid": "e1903d01-ad03-4833-8205-31a64582adea"
+    },
+    {
+        "status": "in progress",
+        "term_id": "CL:0000980",
+        "term_name": "plasmablast",
+        "uuid": "55ee0695-1b2e-459b-a91b-4796fa921836"
+    },
+    {
+        "status": "in progress",
+        "term_id": "CL:1000547",
+        "term_name": "kidney inner medulla collecting duct epithelial cell",
+        "uuid": "779f7af3-1035-4925-b510-249a6449d457"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000061",
+        "term_name": "24th week post-fertilization human stage",
+        "uuid": "0ea30927-a7fc-4be8-a152-8825d307acea"
+    },
+    {
+        "status": "in progress",
+        "term_id": "MONDO:0000001",
+        "term_name": "disease or disorder",
+        "uuid": "7a007d46-bc8a-42ef-93dc-4d3f7242450b"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000174",
+        "term_name": "1-month-old human stage",
+        "uuid": "80f4e028-58cc-4849-8360-b931e5108ada"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HANCESTRO:0015",
+        "term_name": "Middle Eastern/North African",
+        "uuid": "4cd12b48-9f99-4b8f-9788-b7f710e96203"
+    },
+    {
+        "status": "in progress",
+        "term_id": "CL:0000003",
+        "term_name": "native cell",
+        "uuid": "380b4b81-2036-4ee3-abe3-9db774e6185f"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000063",
+        "term_name": "26th week post-fertilization human stage",
+        "uuid": "7bdcb03d-e325-4da2-b8ec-d497b01d2162"
+    },
+    {
+        "status": "in progress",
+        "term_id": "CL:0000636",
+        "term_name": "Mueller cell",
+        "uuid": "8b6383e0-4bf4-488c-bb11-57b067aa4698"
+    },
+    {
+        "status": "in progress",
+        "term_id": "CL:0008001",
+        "term_name": "hematopoietic precursor cell",
+        "uuid": "0b8a6aec-4397-47d3-bf42-bd5b5e4cb281"
+    },
+    {
+        "status": "in progress",
+        "term_id": "MONDO:0600025",
+        "term_name": "hydrosalpinx",
+        "uuid": "472452d4-1ea1-4dee-9e6c-992c8e38c2f3"
+    },
+    {
+        "status": "in progress",
+        "term_id": "CL:0000731",
+        "term_name": "urothelial cell",
+        "uuid": "f06eb17f-d5ab-49fe-be41-3f7807575237"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000165",
+        "term_name": "71-year-old human stage",
+        "uuid": "a9881aab-f35e-48e2-b38c-ac09b090ccd2"
+    },
+    {
+        "status": "in progress",
+        "term_id": "CL:0002425",
+        "term_name": "early T lineage precursor",
+        "uuid": "c381b52e-9db2-4403-92e1-904a879449f6"
+    },
+    {
+        "status": "in progress",
+        "term_id": "MONDO:0005021",
+        "term_name": "dilated cardiomyopathy",
+        "uuid": "377c406c-98fa-4bf0-8091-9fcb6001f9bb"
+    },
+    {
+        "status": "in progress",
+        "term_id": "NTR:0000244",
+        "term_name": "isthmus of fallopian tube and ampulla of uterine tube",
+        "uuid": "389bc66a-791d-4007-9993-be11e879bc74"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000183",
+        "term_name": "10-month-old human stage",
+        "uuid": "47aaeafc-0e58-413b-9556-3f63cbe18a20"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000169",
+        "term_name": "75-year-old human stage",
+        "uuid": "fa761a97-ca6d-4d73-a05b-b8fa855de31e"
+    },
+    {
+        "status": "in progress",
+        "term_id": "CL:0000816",
+        "term_name": "immature B cell",
+        "uuid": "a132f08c-27cb-49f2-abd7-5d417b8d8b58"
+    },
+    {
+        "status": "in progress",
+        "term_id": "MONDO:0005418",
+        "term_name": "non-compaction cardiomyopathy",
+        "uuid": "7a969fa9-2093-4386-89d6-e135acaa5be8"
+    },
+    {
+        "status": "in progress",
+        "term_id": "CL:0000067",
+        "term_name": "ciliated epithelial cell",
+        "uuid": "758faf36-ade7-4d39-98ac-09837fb13eb3"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000083",
+        "term_name": "infant stage",
+        "uuid": "28b5ba17-eb15-4630-bd76-7ce96498ad0c"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000206",
+        "term_name": "80-year-old human stage",
+        "uuid": "87c5ab08-8bdb-4185-bf9c-44c5264dba21"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0012648",
+        "term_name": "ampulla of uterine tube",
+        "uuid": "8072ebdc-40ab-4e3b-96dd-a4cfe8bb9e53"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000001",
+        "term_name": "human life cycle",
+        "uuid": "d217d141-4471-4ace-9c61-5c32761af662"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000099",
+        "term_name": "5-year-old human stage",
+        "uuid": "98600ce6-cb64-41dd-9a37-f3d15927aa27"
+    },
+    {
+        "status": "in progress",
+        "term_id": "MmusDv:0000031",
+        "term_name": "fetal stage",
+        "uuid": "1b97bbfa-33c5-465d-b738-66658cf86270"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000212",
+        "term_name": "86-year-old human stage",
+        "uuid": "250efe35-43be-44a1-a732-5973fe346397"
+    },
+    {
+        "status": "in progress",
+        "term_id": "CL:0000186",
+        "term_name": "myofibroblast cell",
+        "uuid": "c9002f7a-d721-4ff8-87a9-7b5da34d8d6b"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000164",
+        "term_name": "70-year-old human stage",
+        "uuid": "fa36beae-74e9-4f0b-b56d-5915bf1ad1a2"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000145",
+        "term_name": "51-year-old human stage",
+        "uuid": "83891a20-ac23-4361-b3be-b53a617a133b"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000191",
+        "term_name": "18-month-old human stage",
+        "uuid": "0745e02a-d164-45e1-b60e-edf0d4f0dc97"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000213",
+        "term_name": "87-year-old human stage",
+        "uuid": "7cf8180b-87fc-43c8-b2db-116eee60a31e"
+    },
+    {
+        "status": "in progress",
+        "term_id": "CL:0000814",
+        "term_name": "mature NK T cell",
+        "uuid": "8f849139-38d5-43ee-9946-c33be6044255"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000166",
+        "term_name": "72-year-old human stage",
+        "uuid": "b74089a6-c7cc-40ff-af23-cf352ee100f1"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000151",
+        "term_name": "57-year-old human stage",
+        "uuid": "252a9574-b04e-4126-83ff-23bc79c0d829"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000081",
+        "term_name": "child stage",
+        "uuid": "750d2db1-b05c-4db3-9e13-eb622e8d6883"
+    },
+    {
+        "status": "in progress",
+        "term_id": "MmusDv:0000110",
+        "term_name": "mature stage",
+        "uuid": "404120ef-fedf-4be6-a197-34c0962a7f72"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000071",
+        "term_name": "34th week post-fertilization human stage",
+        "uuid": "cdeed1de-68e0-482b-a2d5-dfcf7058c221"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000168",
+        "term_name": "74-year-old human stage",
+        "uuid": "ad9962f9-03d6-4204-b4b1-03cdd00f6725"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000100",
+        "term_name": "6-year-old human stage",
+        "uuid": "f484f3d5-7549-47e6-b681-818cd90d2cb4"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000067",
+        "term_name": "30th week post-fertilization human stage",
+        "uuid": "18ca02c0-9efa-4603-a4cb-a8f92373df2f"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000189",
+        "term_name": "16-month-old human stage",
+        "uuid": "6845a2b2-70e1-4c8b-a690-0ba55053c146"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000073",
+        "term_name": "36th week post-fertilization human stage",
+        "uuid": "cd6d093d-3721-410d-a5e1-89df487f700c"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000171",
+        "term_name": "77-year-old human stage",
+        "uuid": "84adf086-9b1e-4c5d-9206-757b5547df33"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000156",
+        "term_name": "62-year-old human stage",
+        "uuid": "dc01b2cc-1cc8-4ed1-bf3f-2e4e48ba507d"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000069",
+        "term_name": "32nd week post-fertilization human stage",
+        "uuid": "68ee88d4-01ac-4042-a339-8e57e7ccc2f3"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000086",
+        "term_name": "adolescent stage",
+        "uuid": "81f642b8-a562-42e5-828f-504ba3cb93fd"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000046",
+        "term_name": "9th week post-fertilization human stage",
+        "uuid": "e51c5f96-bf20-4a74-b2ae-4c1fe2aa94e9"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000211",
+        "term_name": "85-year-old human stage",
+        "uuid": "a262aa59-2e01-4c4a-8dc6-8c58a190eabe"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000157",
+        "term_name": "63-year-old human stage",
+        "uuid": "6a296f2d-7a25-494c-a08b-ed2d170cb9cd"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000177",
+        "term_name": "4-month-old human stage",
+        "uuid": "19ecf6a5-ced8-414a-9d89-fe7cd34e58f4"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000087",
+        "term_name": "human adult stage",
+        "uuid": "6d9a1b32-4752-41c7-9b98-5e5b11048667"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000179",
+        "term_name": "6-month-old human stage",
+        "uuid": "fa3e4041-8a2e-4208-9557-31bf2e698965"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000187",
+        "term_name": "14-month-old human stage",
+        "uuid": "9b8f7cc8-205c-4eb9-9c4c-5755975a1739"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000159",
+        "term_name": "65-year-old human stage",
+        "uuid": "c4ec6d58-da97-45a3-8460-5082e790a323"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000180",
+        "term_name": "7-month-old human stage",
+        "uuid": "975d02f9-3541-4062-a7a1-62be902a3151"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000066",
+        "term_name": "29th week post-fertilization human stage",
+        "uuid": "d56f8ca0-eaec-461f-ac45-dc25e92d359e"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000181",
+        "term_name": "8-month-old human stage",
+        "uuid": "84208886-4230-4f8c-9eae-4c111687036d"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000188",
+        "term_name": "15-month-old human stage",
+        "uuid": "30984d91-d047-4eae-9c40-2f42b38c3943"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000160",
+        "term_name": "66-year-old human stage",
+        "uuid": "9a85007a-e962-4247-8ed6-d007f2031e81"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000186",
+        "term_name": "13-month-old human stage",
+        "uuid": "354f9bb6-48df-4c5f-8b7a-df81ddcb4264"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000074",
+        "term_name": "37th week post-fertilization human stage",
+        "uuid": "ddbaf581-1a80-4856-9406-46265f7701c9"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000047",
+        "term_name": "10th week post-fertilization human stage",
+        "uuid": "a83cc44f-d4bb-47e2-850b-ca5fcdda231d"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000082",
+        "term_name": "newborn human stage",
+        "uuid": "6cc3ba93-9fd2-4e71-bf6f-7a2fb44f4a1b"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000123",
+        "term_name": "29-year-old human stage",
+        "uuid": "8c6601d7-a9ac-4563-b457-e950c2c0b457"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000142",
+        "term_name": "48-year-old human stage",
+        "uuid": "f9acf0d7-7ce3-4996-ad2e-977d7ed9040b"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000176",
+        "term_name": "3-month-old human stage",
+        "uuid": "3308be3a-20f8-49da-b32e-5923db207cc0"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000049",
+        "term_name": "12th week post-fertilization human stage",
+        "uuid": "15f21cb1-c099-4214-9b78-db165427b9b7"
+    },
+    {
+        "status": "in progress",
+        "term_id": "MmusDv:0000002",
+        "term_name": "embryonic mouse stage",
+        "uuid": "157fedc8-9522-48de-9b8e-77dd997f8d04"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000127",
+        "term_name": "33-year-old human stage",
+        "uuid": "e31514d2-55a6-4cb2-864a-10b73c7fac13"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000146",
+        "term_name": "52-year-old human stage",
+        "uuid": "1712d186-c608-4ffa-9a14-a5118b3cb7d9"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000182",
+        "term_name": "9-month-old human stage",
+        "uuid": "68889d91-e509-4ddb-b511-95297873364b"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000052",
+        "term_name": "15th week post-fertilization human stage",
+        "uuid": "cae42bb8-9ba7-4bb6-8495-9084e6d34f1a"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000051",
+        "term_name": "14th week post-fertilization human stage",
+        "uuid": "65555e35-e56a-45f8-ab7f-93c8d447dc95"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000128",
+        "term_name": "34-year-old human stage",
+        "uuid": "6cdc627a-2bcd-4664-b594-3009b2cd8d06"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000150",
+        "term_name": "56-year-old human stage",
+        "uuid": "b2a32250-4c73-4671-a5ad-39c9bbeb39ad"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000143",
+        "term_name": "49-year-old human stage",
+        "uuid": "73d696f9-40ed-4408-8d98-e1e1eafa1f05"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000059",
+        "term_name": "22nd week post-fertilization human stage",
+        "uuid": "27141d1c-0f0d-4e95-912b-1453fe914514"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000055",
+        "term_name": "18th week post-fertilization human stage",
+        "uuid": "5bcec39b-e27a-4b3c-b0e9-07d61fc56c4a"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000129",
+        "term_name": "35-year-old human stage",
+        "uuid": "cb4a35c1-bb24-4d54-958f-72a3f75fa503"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000155",
+        "term_name": "61-year-old human stage",
+        "uuid": "018ab22d-2691-418a-82e4-b419d1efca6e"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000148",
+        "term_name": "54-year-old human stage",
+        "uuid": "a777d234-69f6-434a-ba78-8455749b7e36"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000185",
+        "term_name": "12-month-old human stage",
+        "uuid": "2d1c8ccb-3d86-46cd-8472-8af3c3a6ab72"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000060",
+        "term_name": "23rd week post-fertilization human stage",
+        "uuid": "73b24dde-cc5d-4bbb-87c4-3f553af1815e"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000131",
+        "term_name": "37-year-old human stage",
+        "uuid": "d958e667-9b99-4c8d-bce9-1afc8b22e6f0"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000158",
+        "term_name": "64-year-old human stage",
+        "uuid": "dc2eebaf-8793-4936-91ff-9b9af7b2fb60"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000149",
+        "term_name": "55-year-old human stage",
+        "uuid": "9feb4f06-ffc3-4f9c-9c9e-204ec3a98ecb"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000196",
+        "term_name": "23-month-old human stage",
+        "uuid": "8d51f194-5102-4052-817a-6b2bda4754fb"
+    },
+    {
+        "status": "in progress",
+        "term_id": "CL:0000129",
+        "term_name": "microglial cell",
+        "uuid": "9c5d5a4b-3675-4c9f-ae09-743977ab1b9c"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000132",
+        "term_name": "38-year-old human stage",
+        "uuid": "6ba62d1b-55dd-4e3d-be9d-0d8daf47777b"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000214",
+        "term_name": "88-year-old human stage",
+        "uuid": "22b1ab96-5409-4781-a5ed-99ecf83d1711"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000152",
+        "term_name": "58-year-old human stage",
+        "uuid": "3e01480b-93c4-4293-9626-7c3be396048c"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000002",
+        "term_name": "embryonic human stage",
+        "uuid": "d4d99bbb-18df-4f15-bc32-177c95de958f"
+    },
+    {
+        "status": "in progress",
+        "term_id": "NTR:0000124",
+        "term_name": "subfoveal retinal pigment epithelium and choroid",
+        "uuid": "65afc6e0-48c0-4292-824f-14435f2b4439"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000139",
+        "term_name": "45-year-old human stage",
+        "uuid": "d049a43f-7e59-4d07-be52-376b22eba74d"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000103",
+        "term_name": "9-year-old human stage",
+        "uuid": "88ca21f6-1119-440a-ad62-caf69e198361"
+    },
+    {
+        "status": "in progress",
+        "term_id": "CL:0000182",
+        "term_name": "hepatocyte",
+        "uuid": "a7488360-6b1c-4ee4-b010-ea619e3d3fff"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000172",
+        "term_name": "78-year-old human stage",
+        "uuid": "542bfca4-0688-4e25-9645-fb09a5cbd798"
+    },
+    {
+        "status": "in progress",
+        "term_id": "NTR:0000125",
+        "term_name": "peripheral retinal pigment epithelium and choroid",
+        "uuid": "43d005a0-e27d-47e0-9fc9-012472dbdb93"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000190",
+        "term_name": "17-month-old human stage",
+        "uuid": "bb3628a5-a141-4b60-860b-9f366ff0ec7d"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000054",
+        "term_name": "17th week post-fertilization human stage",
+        "uuid": "c4e92e23-cc78-4133-b25a-4bdcc9782f7e"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0000178",
+        "term_name": "blood",
+        "uuid": "71fb8552-b882-4889-ac25-0f3c50dce9ed"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000102",
+        "term_name": "8-year-old human stage",
+        "uuid": "8b1c0b79-c9b9-49fc-b9ff-3aebcf8831e2"
+    },
+    {
+        "status": "in progress",
+        "term_id": "EFO:0008931",
+        "term_name": "Smart-seq2",
+        "uuid": "76da83e6-4b44-439d-81f4-541fe432d2bd"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000193",
+        "term_name": "20-month-old human stage",
+        "uuid": "25f8a518-7bf1-4ad8-b83d-665d2b1efa1d"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000062",
+        "term_name": "25th week post-fertilization human stage",
+        "uuid": "9f5be915-0d9e-489e-b643-8698272bd023"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HANCESTRO:0022",
+        "term_name": "Korean",
+        "uuid": "f0819438-21fd-4537-a0e6-f5e20a34b031"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000154",
+        "term_name": "60-year-old human stage",
+        "uuid": "2023aad2-76bc-4ed5-b769-da1d6420f792"
+    },
+    {
+        "status": "in progress",
+        "term_id": "EFO:0009920",
+        "term_name": "Slide-seq",
+        "uuid": "877e7e23-41cb-4b26-a173-d151566d0960"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000192",
+        "term_name": "19-month-old human stage",
+        "uuid": "4034e680-56e5-4bf3-818d-e9f8f916813c"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000101",
+        "term_name": "7-year-old human stage",
+        "uuid": "369c0edd-0cf2-4afd-97cf-9745ad8f2ba9"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HANCESTRO:0496",
+        "term_name": "Malaysian",
+        "uuid": "903ec6fb-5365-40c2-88f4-25ecf9d86671"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000161",
+        "term_name": "67-year-old human stage",
+        "uuid": "738892c6-6a15-422a-9518-495484b546d2"
+    },
+    {
+        "status": "in progress",
+        "term_id": "CL:0000056",
+        "term_name": "myoblast",
+        "uuid": "6af34000-c237-4ab3-97a2-fc9005172ee1"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000194",
+        "term_name": "21-month-old human stage",
+        "uuid": "b8c916ab-9c28-4da8-8644-6d36fc3b2a9e"
+    },
+    {
+        "status": "in progress",
+        "term_id": "CL:0000223",
+        "term_name": "endodermal cell",
+        "uuid": "58ea18f9-9cf4-4def-9ffe-2264b35ef750"
+    },
+    {
+        "status": "in progress",
+        "term_id": "CL:0000646",
+        "term_name": "basal cell",
+        "uuid": "0aaa5a3c-f9b1-45f4-be0a-9a46a28a7832"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0008346",
+        "term_name": "duodenal epithelium",
+        "uuid": "92c31bd6-3c07-4861-973b-868f278e068f"
+    },
+    {
+        "status": "in progress",
+        "term_id": "CL:0000094",
+        "term_name": "granulocyte",
+        "uuid": "4946a1c5-25ee-406a-9959-5af6c3f7ae0e"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000195",
+        "term_name": "22-month-old human stage",
+        "uuid": "dc85306b-1979-46a1-9451-90dc9c4f34f3"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0002113",
+        "term_name": "kidney",
+        "uuid": "f2f9f9c9-855f-4112-a349-ff19f6f2a460"
+    },
+    {
+        "status": "in progress",
+        "term_id": "MONDO:0008903",
+        "term_name": "lung cancer",
+        "uuid": "a314cdd5-8a60-4194-9a47-700ad545317f"
+    },
+    {
+        "status": "in progress",
+        "term_id": "EFO:0002451",
+        "term_name": "human umbilical vein endothelial cell",
+        "uuid": "4ecebf00-5905-4f69-8a3c-8ad77c1d6903"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0001277",
+        "term_name": "intestinal epithelium",
+        "uuid": "7b653801-ce19-4b7a-ae58-a074eaa9037e"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000037",
+        "term_name": "fetal stage",
+        "uuid": "305566ec-cb8a-4bcb-91fb-edbb333bbcb6"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0000118",
+        "term_name": "lung bud",
+        "uuid": "a6ab8f63-ba69-46bf-868d-47ce0c250c3b"
+    },
+    {
+        "status": "in progress",
+        "term_id": "MONDO:0015925",
+        "term_name": "interstitial lung disease",
+        "uuid": "a6de6548-cc48-4f50-a6d8-619a950eca17"
+    },
+    {
+        "status": "in progress",
+        "term_id": "MONDO:0005005",
+        "term_name": "clear cell renal carcinoma",
+        "uuid": "3f9506e4-b4ba-49f9-a894-b8fb1946de2c"
+    },
+    {
+        "status": "in progress",
+        "term_id": "EFO:0001641",
+        "term_name": "epithelial cell derived cell line",
+        "uuid": "d6e9a6da-9551-4e7b-93d8-8b85f61e0bcf"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000075",
+        "term_name": "38th week post-fertilization and over human stage",
+        "uuid": "4901ddfb-af0b-4baa-9b38-700164f15179"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0005616",
+        "term_name": "mesenteric artery",
+        "uuid": "e5f87664-d078-441e-8ba4-f86f29395e6c"
+    },
+    {
+        "status": "in progress",
+        "term_id": "MONDO:0005098",
+        "term_name": "stroke disorder",
+        "uuid": "27eb08f3-2bc5-4a39-a438-d30ba2b08155"
+    },
+    {
+        "status": "in progress",
+        "term_id": "MONDO:0017885",
+        "term_name": "chromophobe renal cell carcinoma",
+        "uuid": "69733d14-1b64-4a27-b022-8875139decfa"
+    },
+    {
+        "status": "in progress",
+        "term_id": "MONDO:0005027",
+        "term_name": "epilepsy",
+        "uuid": "e70dfb32-cd4a-4710-8877-884f199f0caf"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000175",
+        "term_name": "2-month-old human stage",
+        "uuid": "2d0dea65-2b38-4838-813e-82c03bb32522"
+    },
+    {
+        "status": "in progress",
+        "term_id": "MONDO:0004784",
+        "term_name": "allergic asthma",
+        "uuid": "3b7239dc-bd28-4c96-93ee-7d089792f4e5"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0000056",
+        "term_name": "ureter",
+        "uuid": "085ae7fd-ac0b-452c-8169-7a3fec7ce3e2"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0002822",
+        "term_name": "macula lutea proper",
+        "uuid": "197e052b-1b94-4a3d-81ce-88fed21e25ab"
+    },
+    {
+        "status": "in progress",
+        "term_id": "MONDO:0021631",
+        "term_name": "brain astrocytoma",
+        "uuid": "fbdd0803-031f-4e0d-9c5a-f312345747cc"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000178",
+        "term_name": "5-month-old human stage",
+        "uuid": "8f1634b8-d46c-4845-9559-62d7993e4c6d"
+    },
+    {
+        "status": "in progress",
+        "term_id": "MONDO:0019004",
+        "term_name": "kidney Wilms tumor",
+        "uuid": "bec2ea14-410b-47ff-96d0-55e8279f5ea5"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0000362",
+        "term_name": "renal medulla",
+        "uuid": "3e3945b5-cd4d-480b-a13b-78c135bd33c0"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HANCESTRO:0568",
+        "term_name": "African American",
+        "uuid": "8df83aaa-8017-4e47-b203-5991b111060c"
+    },
+    {
+        "status": "in progress",
+        "term_id": "MONDO:0017884",
+        "term_name": "papillary renal cell carcinoma",
+        "uuid": "7b200e44-739e-4ef4-8e29-ba2a8c518319"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000184",
+        "term_name": "11-month-old human stage",
+        "uuid": "519cb3c1-4edc-4212-a4f6-ff8dd494a6c6"
+    },
+    {
+        "status": "in progress",
+        "term_id": "MONDO:0000745",
+        "term_name": "cardiac arrest",
+        "uuid": "bced47ea-b72d-4e9a-bc5d-36dc2df1f701"
+    },
+    {
+        "status": "in progress",
+        "term_id": "CL:1000849",
+        "term_name": "kidney distal convoluted tubule epithelial cell",
+        "uuid": "994a95c9-b708-4669-9fa0-20069c4f26da"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0002114",
+        "term_name": "duodenum",
+        "uuid": "985badff-bc43-418a-9332-4ef6e34e945a"
+    },
+    {
+        "status": "in progress",
+        "term_id": "MONDO:0017291",
+        "term_name": "reversible cerebral vasoconstriction syndrome",
+        "uuid": "dc89b9d0-2c2e-4053-a0a1-535bdf0adf34"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000050",
+        "term_name": "13th week post-fertilization human stage",
+        "uuid": "7551647f-2699-4370-a688-3b290afba06b"
+    },
+    {
+        "status": "in progress",
+        "term_id": "CL:1000838",
+        "term_name": "kidney proximal convoluted tubule epithelial cell",
+        "uuid": "dbad6575-7514-44ee-88e7-6c9b66a15002"
+    },
+    {
+        "status": "in progress",
+        "term_id": "CL:0002563",
+        "term_name": "intestinal epithelial cell",
+        "uuid": "14b7ad2f-146f-41d7-a81e-f52e7704c081"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0002116",
+        "term_name": "ileum",
+        "uuid": "9ef83b81-769e-4c23-9faf-fc5fdced162a"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0001224",
+        "term_name": "renal pelvis",
+        "uuid": "566f4e7c-69db-4362-9916-d1cb06a0b833"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000057",
+        "term_name": "20th week post-fertilization human stage",
+        "uuid": "86a5f5ff-9391-4af1-bfe6-7c6eb0574a3c"
+    },
+    {
+        "status": "in progress",
+        "term_id": "CL:1000839",
+        "term_name": "kidney proximal straight tubule epithelial cell",
+        "uuid": "8288a96e-33d2-4ac2-806e-a94384bad623"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HANCESTRO:0019",
+        "term_name": "Japanese",
+        "uuid": "a77bc120-7701-408f-8e7b-9e66c0a89acd"
+    },
+    {
+        "dbxrefs": [
+            "Cellosaurus:CVCL_9773"
+        ],
+        "status": "in progress",
+        "term_id": "EFO:0003045",
+        "term_name": "H9",
+        "uuid": "aad2e0d6-865e-4323-8998-00ffc4d83181"
+    },
+    {
+        "status": "in progress",
+        "term_id": "CL:0002306",
+        "term_name": "epithelial cell of proximal tubule",
+        "uuid": "34095992-75e6-4744-b301-3fdb463048f1"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000058",
+        "term_name": "21st week post-fertilization human stage",
+        "uuid": "98789081-cd35-46a6-ae10-08f5823d792c"
+    },
+    {
+        "status": "in progress",
+        "term_id": "CL:0002320",
+        "term_name": "connective tissue cell",
+        "uuid": "f83191a5-a656-4cc5-bca4-35044cfe2530"
+    },
+    {
+        "status": "in progress",
+        "term_id": "CL:1000413",
+        "term_name": "endothelial cell of artery",
+        "uuid": "fa2cafd9-4755-4dd6-b5ce-4ffba3d4f6c2"
+    },
+    {
+        "status": "in progress",
+        "term_id": "MONDO:0001569",
+        "term_name": "acoustic neuroma",
+        "uuid": "3493cbae-9e73-4aae-8e15-1c7a30a80911"
+    },
+    {
+        "status": "in progress",
+        "term_id": "CL:1001106",
+        "term_name": "kidney loop of Henle thick ascending limb epithelial cell",
+        "uuid": "f4e1bc5a-95f3-4259-bee8-e9ddc756cb98"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000064",
+        "term_name": "27th week post-fertilization human stage",
+        "uuid": "9b14bdf2-52b0-45a6-a22c-55e2c1a93274"
+    },
+    {
+        "status": "in progress",
+        "term_id": "CL:0011026",
+        "term_name": "progenitor cell",
+        "uuid": "edcdf93c-a34f-4e5f-a979-e16d147979e1"
+    },
+    {
+        "status": "in progress",
+        "term_id": "MONDO:0018492",
+        "term_name": "hereditary clear cell renal cell carcinoma",
+        "uuid": "12921529-d262-47ee-9b0c-41edba388e68"
+    },
+    {
+        "status": "in progress",
+        "term_id": "MONDO:0002050",
+        "term_name": "depressive disorder",
+        "uuid": "65618149-75ba-44f9-8f44-7de28d826572"
+    },
+    {
+        "status": "in progress",
+        "term_id": "CL:0000653",
+        "term_name": "glomerular visceral epithelial cell",
+        "uuid": "276fa4c6-79d7-482a-8e75-42a230188ccb"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0001786",
+        "term_name": "fovea centralis",
+        "uuid": "6455fdca-ed4b-4cac-b8e1-aa28a4b998be"
+    },
+    {
+        "status": "in progress",
+        "term_id": "CL:0002138",
+        "term_name": "endothelial cell of lymphatic vessel",
+        "uuid": "e6356712-6e50-439c-9044-239f06a2ef8e"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0005969",
+        "term_name": "eye trabecular meshwork",
+        "uuid": "37615a8f-e01a-491c-839f-150b9ad918dd"
+    },
+    {
+        "status": "in progress",
+        "term_id": "MONDO:0005148",
+        "term_name": "type 2 diabetes mellitus",
+        "uuid": "c27f21a5-3ef4-407d-80ef-6de84bd6bd83"
+    },
+    {
+        "status": "in progress",
+        "term_id": "CL:0000650",
+        "term_name": "mesangial cell",
+        "uuid": "0f02bf61-2407-44e6-ad4e-4d10623879ea"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HANCESTRO:0021",
+        "term_name": "Chinese",
+        "uuid": "35aae95d-d7fe-4a94-bfa2-902109f793d1"
+    },
+    {
+        "status": "in progress",
+        "term_id": "MONDO:0018905",
+        "term_name": "diffuse large B-cell lymphoma",
+        "uuid": "76947160-9011-45ef-8b04-dfeb011d323a"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0001638",
+        "term_name": "vein",
+        "uuid": "40d01504-a162-4b14-84fb-0e2f435b28d8"
+    },
+    {
+        "status": "in progress",
+        "term_id": "MONDO:0015905",
+        "term_name": "syndromic dyslipidemia",
+        "uuid": "491cb4b0-2ff5-474b-b58c-c49fb0e3f0e6"
+    },
+    {
+        "status": "in progress",
+        "term_id": "MONDO:0005578",
+        "term_name": "arthritic joint disease",
+        "uuid": "cacb5da9-3fed-4a8d-9692-3ee544040947"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0001043",
+        "term_name": "esophagus",
+        "uuid": "48d18065-7055-47ec-b52d-6ded42466530"
+    },
+    {
+        "status": "in progress",
+        "term_id": "CL:0000738",
+        "term_name": "leukocyte",
+        "uuid": "91ef40f3-13c6-45eb-ad69-4f2cf176785e"
+    },
+    {
+        "status": "in progress",
         "term_id": "CL:0000084",
-        "term_name": "T cell"
+        "term_name": "T cell",
+        "uuid": "d68a1f48-38cc-4f16-a790-c94f6a402a18"
+    },
+    {
+        "status": "in progress",
+        "term_id": "MONDO:0007186",
+        "term_name": "gastroesophageal reflux disease",
+        "uuid": "c2ed18b2-35ab-4d41-93e5-70ebabcd0476"
+    },
+    {
+        "status": "in progress",
+        "term_id": "MONDO:0019632",
+        "term_name": "Lyme disease",
+        "uuid": "683b7c52-5a87-45ad-b419-bd7eac53cf90"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0001155",
+        "term_name": "colon",
+        "uuid": "7504df9a-2ed4-4128-958f-5b2595628511"
+    },
+    {
+        "status": "in progress",
+        "term_id": "MONDO:0024644",
+        "term_name": "myocardial ischemia",
+        "uuid": "1f23b63b-784a-4bae-9fc8-62bc12170b9a"
+    },
+    {
+        "status": "in progress",
+        "term_id": "MONDO:0018608",
+        "term_name": "pure autonomic failure",
+        "uuid": "9e4af2d7-9b97-49ec-bff4-98f50f2cd392"
+    },
+    {
+        "status": "in progress",
+        "term_id": "MONDO:0007147",
+        "term_name": "obstructive sleep apnea syndrome",
+        "uuid": "08514507-7205-4ee6-b1f1-055248c83953"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0002107",
+        "term_name": "liver",
+        "uuid": "52568356-9fbf-4f5c-9b95-61a04c3bc9db"
+    },
+    {
+        "status": "in progress",
+        "term_id": "CL:1000452",
+        "term_name": "parietal epithelial cell",
+        "uuid": "828a3f16-acd6-442c-b0f0-a01537394815"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0002115",
+        "term_name": "jejunum",
+        "uuid": "42f9f9d2-773e-46a6-955a-381f8b611816"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0001225",
+        "term_name": "cortex of kidney",
+        "uuid": "e6388c92-be36-4399-bbda-27523c178b34"
+    },
+    {
+        "status": "in progress",
+        "term_id": "MONDO:0008315",
+        "term_name": "prostate cancer",
+        "uuid": "5dce797f-78d2-4ae0-ab5f-793b5c29f95e"
+    },
+    {
+        "dbxrefs": [
+            "Cellosaurus:CVCL_Y803"
+        ],
+        "status": "in progress",
+        "term_id": "EFO:0009747",
+        "term_name": "GM25256",
+        "uuid": "99c5fc60-2e58-47c2-aa4f-4cbc399298be"
+    },
+    {
+        "status": "in progress",
+        "term_id": "CL:0005009",
+        "term_name": "renal principal cell",
+        "uuid": "be4384ee-6fa8-4b53-b1f7-4668f7ee1f01"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0002108",
+        "term_name": "small intestine",
+        "uuid": "43c89be2-6d6d-41c1-8627-e9b58ee4421b"
+    },
+    {
+        "status": "in progress",
+        "term_id": "EFO:0009294",
+        "term_name": "CITE-seq",
+        "uuid": "8cea3772-4617-441e-a38d-e8f3e68fad6f"
+    },
+    {
+        "status": "in progress",
+        "term_id": "MONDO:0021187",
+        "term_name": "hyperlipidemia",
+        "uuid": "ae924167-d339-4c2c-b248-0c7f870f69d3"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0001161",
+        "term_name": "body of stomach",
+        "uuid": "c4030765-f97a-4bec-a07a-d7a6056c2037"
+    },
+    {
+        "status": "in progress",
+        "term_id": "CL:0002201",
+        "term_name": "renal beta-intercalated cell",
+        "uuid": "8e72d2d6-9374-48df-8d21-c29600c4aeac"
+    },
+    {
+        "status": "in progress",
+        "term_id": "MONDO:0006637",
+        "term_name": "acute kidney tubular necrosis",
+        "uuid": "33a0eda4-8350-49e8-9af6-074a485d18fb"
+    },
+    {
+        "status": "in progress",
+        "term_id": "CL:0000034",
+        "term_name": "stem cell",
+        "uuid": "362b1a7f-f0b1-4ef6-92ed-3d570e779c17"
+    },
+    {
+        "status": "in progress",
+        "term_id": "NCIT:C17998",
+        "term_name": "unknown",
+        "uuid": "9ccb9d0b-1747-4ad1-969a-769286937021"
+    },
+    {
+        "status": "in progress",
+        "term_id": "EFO:0009922",
+        "term_name": "10x 3' v3",
+        "uuid": "987805c5-0415-4986-a033-f9f3061fab13"
+    },
+    {
+        "status": "in progress",
+        "term_id": "CL:0000057",
+        "term_name": "fibroblast",
+        "uuid": "f663c1e1-3fcd-4f50-8258-a517a31c451a"
+    },
+    {
+        "status": "in progress",
+        "term_id": "MONDO:0005618",
+        "term_name": "anxiety disorder",
+        "uuid": "d1b527d2-1836-43a0-86b8-878b3b282c33"
+    },
+    {
+        "status": "in progress",
+        "term_id": "CL:0000115",
+        "term_name": "endothelial cell",
+        "uuid": "d87d9e08-be8a-4df1-9990-1c2c67e64fd0"
+    },
+    {
+        "status": "in progress",
+        "term_id": "CL:0002326",
+        "term_name": "luminal epithelial cell of mammary gland",
+        "uuid": "9c72c86d-d773-4e0e-a339-b49f613caf81"
+    },
+    {
+        "status": "in progress",
+        "term_id": "EFO:0009899",
+        "term_name": "10x 3' v2",
+        "uuid": "40023c06-0ca8-49f8-8983-0ba848b2647f"
+    },
+    {
+        "status": "in progress",
+        "term_id": "MONDO:0003924",
+        "term_name": "adrenal cortex adenoma",
+        "uuid": "edd071fa-3e44-45ce-9373-28fa93569dfd"
+    },
+    {
+        "status": "in progress",
+        "term_id": "MONDO:0005201",
+        "term_name": "restrictive cardiomyopathy",
+        "uuid": "970a3fb5-2a01-47f5-a50c-de36c8e909c7"
+    },
+    {
+        "status": "in progress",
+        "term_id": "EFO:0030059",
+        "term_name": "10x multiome",
+        "uuid": "27a15f3d-22b5-42c5-ab3e-079f09479030"
+    },
+    {
+        "status": "in progress",
+        "term_id": "CL:0000163",
+        "term_name": "endocrine cell",
+        "uuid": "0bcc261a-8607-481c-99ce-9b4b812b70bc"
+    },
+    {
+        "status": "in progress",
+        "term_id": "EFO:0010891",
+        "term_name": "scATAC-seq",
+        "uuid": "082c2de8-a4d6-419c-bc4a-c79bdcc88879"
+    },
+    {
+        "status": "in progress",
+        "term_id": "MONDO:0005121",
+        "term_name": "Enterococcus faecalis infection",
+        "uuid": "8556db89-e375-4e6f-bfbb-83b87ca2d025"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HANCESTRO:0006",
+        "term_name": "South Asian",
+        "uuid": "e599da2f-7751-4308-b869-7fb88b3d00b9"
+    },
+    {
+        "status": "in progress",
+        "term_id": "EFO:0010714",
+        "term_name": "10x TCR enrichment",
+        "uuid": "baecfdf1-6c59-44b9-9b3f-91cb189a1e05"
+    },
+    {
+        "status": "in progress",
+        "term_id": "CL:0000740",
+        "term_name": "retinal ganglion cell",
+        "uuid": "5dd133d0-543f-4995-a03b-79587d1c581d"
+    },
+    {
+        "status": "in progress",
+        "term_id": "CL:0000548",
+        "term_name": "animal cell",
+        "uuid": "8f9980be-bf8b-417a-9ce2-9015d6b4b4f1"
+    },
+    {
+        "status": "in progress",
+        "term_id": "MONDO:0004235",
+        "term_name": "diverticulitis",
+        "uuid": "1f638bad-eb3b-478b-9510-71025ac02e93"
+    },
+    {
+        "status": "in progress",
+        "term_id": "CL:0002617",
+        "term_name": "adipocyte of breast",
+        "uuid": "8253f9d9-12fd-4fcf-bf79-0c69fb84eeda"
+    },
+    {
+        "status": "in progress",
+        "term_id": "MONDO:0016587",
+        "term_name": "arrhythmogenic right ventricular cardiomyopathy",
+        "uuid": "2ca83da3-cee3-4d3b-866e-91e893dc6b93"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0035328",
+        "term_name": "upper outer quadrant of breast",
+        "uuid": "dc941e81-5038-4d50-9ba4-ead9b4073ae3"
+    },
+    {
+        "status": "in progress",
+        "term_id": "CL:0002618",
+        "term_name": "endothelial cell of umbilical vein",
+        "uuid": "9c9f8953-7849-4d26-aceb-3e8dc571b25f"
+    },
+    {
+        "status": "in progress",
+        "term_id": "CL:0000604",
+        "term_name": "retinal rod cell",
+        "uuid": "6def04cb-95d3-4577-80c0-982393c4041d"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HANCESTRO:0014",
+        "term_name": "Hispanic or Latin American",
+        "uuid": "facb3cb4-e992-4cf3-a63b-b60ba58cef6a"
+    },
+    {
+        "status": "in progress",
+        "term_id": "CL:1000768",
+        "term_name": "kidney connecting tubule epithelial cell",
+        "uuid": "6b1577e8-0c30-49c2-9170-62ba0289706f"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0001901",
+        "term_name": "epithelium of trachea",
+        "uuid": "04b20978-71ef-4edb-bed3-23effd7cafa2"
+    },
+    {
+        "status": "in progress",
+        "term_id": "EFO:0010961",
+        "term_name": "Visium Spatial Gene Expression",
+        "uuid": "7e87921f-155c-4b45-aa03-bac47b76f10d"
+    },
+    {
+        "status": "in progress",
+        "term_id": "EFO:0011025",
+        "term_name": "10x 5' v1",
+        "uuid": "5380f530-6d8f-4b73-b77b-93abbec7f12f"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0001496",
+        "term_name": "ascending aorta",
+        "uuid": "f7d684ce-673f-4fa5-809e-6e7bed0c2b84"
+    },
+    {
+        "status": "in progress",
+        "term_id": "CL:1000892",
+        "term_name": "kidney capillary endothelial cell",
+        "uuid": "deaceeab-1e59-4cb4-9ac7-17b1e2aa81e4"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0000945",
+        "term_name": "stomach",
+        "uuid": "72aa471a-289c-4820-bcbe-a5c415606fac"
+    },
+    {
+        "status": "in progress",
+        "term_id": "CL:0019028",
+        "term_name": "midzonal region hepatocyte",
+        "uuid": "dd16f6c4-24da-47b9-9510-69d430f76977"
+    },
+    {
+        "status": "in progress",
+        "term_id": "CL:0000066",
+        "term_name": "epithelial cell",
+        "uuid": "7fa50f18-5959-4f76-a538-6c71272175ac"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0000310",
+        "term_name": "breast",
+        "uuid": "1d34f88d-6b72-4b05-90de-1815e97685b5"
+    },
+    {
+        "status": "in progress",
+        "term_id": "MONDO:0007254",
+        "term_name": "breast cancer",
+        "uuid": "be6d97a8-bc99-4f38-b35c-2aa8831df704"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0001165",
+        "term_name": "pyloric antrum",
+        "uuid": "5ac5ee53-bcf3-4644-a4c5-c66b9167f5b8"
+    },
+    {
+        "status": "in progress",
+        "term_id": "CL:0000798",
+        "term_name": "gamma-delta T cell",
+        "uuid": "a964aae8-51b1-486e-bea0-5f36aaa1c57b"
+    },
+    {
+        "status": "in progress",
+        "term_id": "MONDO:0002367",
+        "term_name": "kidney cancer",
+        "uuid": "1e59d802-e0d3-416e-ab13-9c896100ff18"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0005609",
+        "term_name": "iliac artery",
+        "uuid": "45e40cc9-ea5a-4d93-9a59-77fdd5055ca6"
+    },
+    {
+        "status": "in progress",
+        "term_id": "MONDO:0005477",
+        "term_name": "ventricular tachycardia",
+        "uuid": "d929fa29-dc0f-4246-8031-0950ff7cb7d7"
+    },
+    {
+        "status": "in progress",
+        "term_id": "CL:0000359",
+        "term_name": "vascular associated smooth muscle cell",
+        "uuid": "1d1ea2e9-4679-40ce-a3a2-67886ae70bf7"
+    },
+    {
+        "status": "in progress",
+        "term_id": "MONDO:0006507",
+        "term_name": "hereditary hemochromatosis",
+        "uuid": "2a97ded1-3c93-4b42-b675-f92f7b370978"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0001508",
+        "term_name": "arch of aorta",
+        "uuid": "7599fce4-230c-4f3c-898e-733c9d6c0308"
+    },
+    {
+        "status": "in progress",
+        "term_id": "MONDO:0010811",
+        "term_name": "benign prostatic hyperplasia",
+        "uuid": "f19e9786-053e-49b8-8349-21baf0ac90c7"
+    },
+    {
+        "status": "in progress",
+        "term_id": "CL:1000909",
+        "term_name": "kidney loop of Henle epithelial cell",
+        "uuid": "5f91c7e8-cec6-4311-9dcb-bc3bd0802b7d"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HANCESTRO:0005",
+        "term_name": "European",
+        "uuid": "e0b5b44d-3f78-41b0-8717-a0136d651602"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HANCESTRO:0498",
+        "term_name": "Filipino",
+        "uuid": "bd93d7ae-1fa7-424b-a81b-30da2f721358"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0001516",
+        "term_name": "abdominal aorta",
+        "uuid": "e2980f56-12e5-4c44-8afa-84cf432d09b3"
+    },
+    {
+        "status": "in progress",
+        "term_id": "EFO:0030061",
+        "term_name": "mcSCRB-seq",
+        "uuid": "463541c1-962b-4216-ae31-3a47214b8f7c"
+    },
+    {
+        "status": "in progress",
+        "term_id": "EFO:0010715",
+        "term_name": "10x Ig enrichment",
+        "uuid": "b6a67e44-720c-45f3-9fca-57601d65077a"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0001625",
+        "term_name": "right coronary artery",
+        "uuid": "3d69bbcf-a648-4596-a95a-08e0da2d8ea1"
+    },
+    {
+        "status": "in progress",
+        "term_id": "CL:2000001",
+        "term_name": "peripheral blood mononuclear cell",
+        "uuid": "5e7db5ad-f1cc-47e7-8dbd-40a7f99274c4"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000094",
+        "term_name": "65-79 year-old human stage",
+        "uuid": "3c9b744a-73f9-4620-ab20-940e80448ed0"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0010172",
+        "term_name": "bulb of aorta",
+        "uuid": "acaec13e-8890-44ce-8523-97eea6486054"
+    },
+    {
+        "status": "in progress",
+        "term_id": "CL:0000236",
+        "term_name": "B cell",
+        "uuid": "3cb2e78e-104c-4b89-b4a1-13dc83823c77"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0002012",
+        "term_name": "pulmonary artery",
+        "uuid": "0a8aeeeb-9b95-4a10-aeda-5c1e90e1bca1"
+    },
+    {
+        "status": "in progress",
+        "term_id": "MONDO:0019087",
+        "term_name": "cholangiocarcinoma",
+        "uuid": "212e1858-193c-46c1-bccb-a4423f8d1373"
+    },
+    {
+        "status": "in progress",
+        "term_id": "MONDO:0005191",
+        "term_name": "metastatic melanoma",
+        "uuid": "c875c51b-092f-48f4-b67e-99227d80d148"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0002048",
+        "term_name": "lung",
+        "uuid": "170cf23d-f617-4b0c-857c-ece838a4a43b"
+    },
+    {
+        "status": "in progress",
+        "term_id": "MONDO:0006470",
+        "term_name": "tonsillar squamous cell carcinoma",
+        "uuid": "d58d7e2f-cb4d-425d-8996-2a7ea4b9050e"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0005396",
+        "term_name": "carotid artery segment",
+        "uuid": "61f7b526-8a1c-4337-afd8-78fadda9a23b"
+    },
+    {
+        "status": "in progress",
+        "term_id": "MONDO:0001370",
+        "term_name": "pericardial effusion",
+        "uuid": "c82e2164-0175-4634-b110-377b9fd9bdc0"
+    },
+    {
+        "status": "in progress",
+        "term_id": "MONDO:0005052",
+        "term_name": "irritable bowel syndrome",
+        "uuid": "ebc7c155-b2ad-489d-8b21-2f054054a81b"
+    },
+    {
+        "status": "in progress",
+        "term_id": "CL:0000540",
+        "term_name": "neuron",
+        "uuid": "15d7a3dc-aa4a-4266-a781-04b2a4fca869"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0013682",
+        "term_name": "peripheral region of retina",
+        "uuid": "761401d5-0148-4bf1-8d44-82fd97784b56"
+    },
+    {
+        "status": "in progress",
+        "term_id": "MONDO:0019543",
+        "term_name": "acquired aneurysmal subarachnoid hemorrhage",
+        "uuid": "dd413f79-407d-4a18-b5f3-0ced8a67e1e0"
+    },
+    {
+        "status": "in progress",
+        "term_id": "CL:1000497",
+        "term_name": "kidney cell",
+        "uuid": "e637da20-b252-4d48-8d33-7bca2f8476e7"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0003517",
+        "term_name": "kidney blood vessel",
+        "uuid": "36ec04f3-f1b8-4997-99f0-56f9c3841f6f"
+    },
+    {
+        "status": "in progress",
+        "term_id": "CL:0005011",
+        "term_name": "renal alpha-intercalated cell",
+        "uuid": "3b49452f-465f-43c5-967e-8a8034ba828c"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0000160",
+        "term_name": "intestine",
+        "uuid": "093dc101-0ee4-4e9b-9621-4c5b9ec47fa3"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0001005",
+        "term_name": "respiratory airway",
+        "uuid": "9133ecf1-7e68-4e08-8da3-ac471e2c742e"
+    },
+    {
+        "status": "in progress",
+        "term_id": "MONDO:0005044",
+        "term_name": "hypertensive disorder",
+        "uuid": "0f583921-6938-4312-a881-d40defbda1d0"
+    },
+    {
+        "status": "in progress",
+        "term_id": "MONDO:0007721",
+        "term_name": "hiatus hernia",
+        "uuid": "3fb8f821-4337-4a6a-9fe7-6f4494129a63"
+    },
+    {
+        "status": "in progress",
+        "term_id": "MONDO:0013209",
+        "term_name": "non-alcoholic fatty liver disease",
+        "uuid": "97600c11-faa1-45ca-8a52-ab663e5d33b3"
+    },
+    {
+        "status": "in progress",
+        "term_id": "MONDO:0001134",
+        "term_name": "essential hypertension",
+        "uuid": "4abcb328-0b86-4732-8736-f8701968ca48"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000092",
+        "term_name": "human middle aged stage",
+        "uuid": "9efe0509-92ef-47bc-a13e-fac965495148"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000090",
+        "term_name": "25-44 year-old human stage",
+        "uuid": "6679da83-e787-4b05-8967-c562e918546a"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HsapDv:0000080",
+        "term_name": "immature stage",
+        "uuid": "085621ef-4eb6-45eb-8587-c94ae2751908"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0001514",
+        "term_name": "descending aorta",
+        "uuid": "c14bb5f1-f4d9-45a9-b3a9-d2e3b55e1862"
+    },
+    {
+        "status": "in progress",
+        "term_id": "UBERON:0001621",
+        "term_name": "coronary artery",
+        "uuid": "201dc480-225f-497c-a214-4cc5d4ec0104"
+    },
+    {
+        "status": "in progress",
+        "term_id": "MONDO:0041448",
+        "term_name": "metastasis from malignant tumor of colon",
+        "uuid": "099c3b8e-f8b5-464f-88f7-ae985462e45a"
+    },
+    {
+        "status": "in progress",
+        "term_id": "HANCESTRO:0013",
+        "term_name": "Native American",
+        "uuid": "3aaa6a84-7beb-4d2a-a998-a3221fb390a9"
     }
 ]

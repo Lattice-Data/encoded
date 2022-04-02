@@ -21,7 +21,7 @@
         "cell_viability_method": "acridine orange and propidium iodide",
         "percent_cell_viability": "95",
         "depleted_cell_types": [
-            "CL_0002305"
+            "CL_0000540"
         ],
         "cell_depletion_factors": "SLC12A3",
         "single_cell_isolation_method": "10x",
@@ -71,7 +71,7 @@
         "cell_viability_method": "trypan blue staining",
         "percent_cell_viability": "95",
         "depleted_cell_types": [
-            "CL_0002305"
+            "CL_0000540"
         ],
         "cell_depletion_factors": "SLC12A3",
         "single_cell_isolation_method": "10x",
@@ -116,7 +116,7 @@
         "cell_viability_method": "annexin V",
         "percent_cell_viability": "95.5",
         "depleted_cell_types": [
-            "CL_0002305"
+            "CL_0000540"
         ],
         "cell_depletion_factors": "SLC12A3",
         "single_cell_isolation_method": "10x",
@@ -154,7 +154,7 @@
         "cell_viability_method": "trypan blue staining",
         "percent_cell_viability": "95",
         "depleted_cell_types": [
-            "CL_0002305"
+            "CL_0000540"
         ],
         "cell_depletion_factors": "SLC12A3",
         "single_cell_isolation_method": "10x",
@@ -499,7 +499,7 @@
         "cell_viability_method": "trypan blue staining",
         "percent_cell_viability": "95",
         "depleted_cell_types": [
-            "CL_0002305"
+            "CL_0000540"
         ],
         "cell_depletion_factors": "SLC12A3",
         "single_cell_isolation_method": "10x",
@@ -544,7 +544,7 @@
         "cell_viability_method": "trypan blue staining",
         "percent_cell_viability": "95",
         "depleted_cell_types": [
-            "CL_0002305"
+            "CL_0000540"
         ],
         "cell_depletion_factors": "SLC12A3",
         "single_cell_isolation_method": "10x",
@@ -589,7 +589,7 @@
         "cell_viability_method": "trypan blue staining",
         "percent_cell_viability": "95",
         "depleted_cell_types": [
-            "CL_0002305"
+            "CL_0000540"
         ],
         "cell_depletion_factors": "SLC12A3",
         "single_cell_isolation_method": "10x",
@@ -634,7 +634,7 @@
         "cell_viability_method": "trypan blue staining",
         "percent_cell_viability": "95",
         "depleted_cell_types": [
-            "CL_0002305"
+            "CL_0000540"
         ],
         "cell_depletion_factors": "SLC12A3",
         "single_cell_isolation_method": "10x",
@@ -679,7 +679,7 @@
         "cell_viability_method": "trypan blue staining",
         "percent_cell_viability": "95",
         "depleted_cell_types": [
-            "CL_0002305"
+            "CL_0000540"
         ],
         "cell_depletion_factors": "SLC12A3",
         "single_cell_isolation_method": "10x",
@@ -717,7 +717,7 @@
         "cell_viability_method": "trypan blue staining",
         "percent_cell_viability": "95",
         "depleted_cell_types": [
-            "CL_0002305"
+            "CL_0000540"
         ],
         "cell_depletion_factors": "SLC12A3",
         "single_cell_isolation_method": "10x",
@@ -755,7 +755,7 @@
         "cell_viability_method": "trypan blue staining",
         "percent_cell_viability": "95",
         "depleted_cell_types": [
-            "CL_0002305"
+            "CL_0000540"
         ],
         "cell_depletion_factors": "SLC12A3",
         "single_cell_isolation_method": "10x",
@@ -793,7 +793,7 @@
         "cell_viability_method": "trypan blue staining",
         "percent_cell_viability": "95",
         "depleted_cell_types": [
-            "CL_0002305"
+            "CL_0000540"
         ],
         "cell_depletion_factors": "SLC12A3",
         "single_cell_isolation_method": "10x",
@@ -863,7 +863,7 @@
         "single_cell_isolation_method": "10x",
         "single_cell_isolation_method_version": 3,
         "enriched_cell_types": [
-            "CL_2000055"
+            "CL_0000127"
         ],
         "enrichment_factors": "ATF3"
     },
@@ -890,7 +890,7 @@
         "single_cell_isolation_method": "10x",
         "single_cell_isolation_method_version": 3,
         "enriched_cell_types": [
-            "CL_2000055"
+            "CL_0000127"
         ],
         "enrichment_factors": "ATF3"
     },
@@ -917,7 +917,7 @@
         "single_cell_isolation_method": "10x",
         "single_cell_isolation_method_version": 3,
         "enriched_cell_types": [
-            "CL_2000055"
+            "CL_0000127"
         ],
         "enrichment_factors": "ATF3"
     },

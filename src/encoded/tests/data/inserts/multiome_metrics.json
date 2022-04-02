@@ -1,0 +1,11 @@
+[
+    {
+        "uuid": "643037bb-e40c-40ea-aa3d-2d17f720ee36",
+        "status": "released",
+        "quality_metric_of": "anna-greka:donorA1_filtered_feature_bc_matrix",
+        "total_feature_linkages_detected": 5527,
+        "total_genes_linked": 30853,
+        "total_peaks_linked": 18360,
+        "aliases": ["lattice:test_multiomemetrics"]
+    }
+]

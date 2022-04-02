@@ -62,7 +62,8 @@
         ],
         "software": [
             "cellranger count 4.0"
-        ]
+        ],
+        "cellranger_assay_chemistry": "SCMuv1"
     },
     {
         "aliases": [
@@ -94,7 +95,8 @@
         "software": [
             "cellranger count 4.0"
         ],
-        "md5sum": "d3f1a2b3780d7428589f6ce679564d36"
+        "md5sum": "d3f1a2b3780d7428589f6ce679564d36",
+        "cellranger_assay_chemistry": "Sp3Pv1"
     },
     {
         "aliases": [

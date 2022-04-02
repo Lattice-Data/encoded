@@ -15,11 +15,13 @@
 		{"$ref": "mixins.json#/schema_version"},
 		{"$ref": "mixins.json#/uuid"},
 		{"$ref": "mixins.json#/standard_status"},
-		{"$ref": "mixins.json#/quality_metric_of"}
+		{"$ref": "mixins.json#/quality_metric_of"},
+        {"$ref": "metrics_shared_rna_atac.json#/properties"},
+		{"$ref": "metrics_shared_rna_atac_ac.json#/properties"}
 	],
 	"properties": {
 		"schema_version": {
-			"default": "1"
+			"default": "2"
 		},
 		"median_fragments_per_cell": {
 			"title": "Median fragments per cell",
@@ -93,13 +95,6 @@
 			"type": "number",
 			"minimum": 0
 		},
-		"frac_q30_bases_in_barcode": {
-			"title": "Fraction of q30 bases in barcode",
-			"description": "Fraction of Q30 bases in barcode read",
-			"type": "number",
-			"minimum": 0,
-			"maximum": 1
-		},
 		"frac_q30_bases_in_read1": {
 			"title": "Fraction of q30 bases in Read1",
 			"desciption": "Fraction of Q30 bases in Read 1",
@@ -110,13 +105,6 @@
 		"frac_q30_bases_in_read2": {
 			"title": "Fraction of q30 bases in Read2",
 			"description": "Fraction of Q30 bases in Read 2",
-			"type": "number",
-			"minimum": 0,
-			"maximum": 1
-		},
-		"frac_q30_bases_in_sample_index": {
-			"title": "Fraction of q30 bases in sample index",
-			"description": "Fraction of Q30 bases in Sample Index",
 			"type": "number",
 			"minimum": 0,
 			"maximum": 1
@@ -170,13 +158,6 @@
 			"minimum": 0,
 			"maximum": 1
 		},
-		"frac_waste_dup": {
-			"title": "Fraction of duplicate read pairs",
-			"description": "Fraction of all the sequenced read pairs that come from cell barcodes and are deemed to be PCR duplicates due to alignment to the same genomic position as another read pair in the library.",
-			"type": "number",
-			"minimum": 0,
-			"maximum": 1
-		},
 		"frac_waste_total": {
 			"title": "Fraction of total wasted read pairs",
 			"description": "Fraction of total read pairs wasted (either have invalid barcodes or in non cell barcodes, or did not pass filters).",
@@ -190,27 +171,14 @@
 			"type": "integer",
 			"minimum": 0
 		},
-		"frac_mapped_confidently": {
-			"title": "Fraction of mapped confidently read pairs",
-			"description": "Fraction of all the sequenced read pairs that mapped to the genome with high mapping quality (>30 mapq). Includes unique and duplicate read pairs from any barcode",
-			"type": "number",
-			"minimum": 0,
-			"maximum": 1
-		},
-		"number_fragments": {
-			"title": "Number of fragments",
+		"total_fragments": {
+			"title": "Total fragments",
 			"description": "Total number of read pairs that were assigned to this library in demultiplexing.",
 			"type": "integer",
 			"minimum": 0
 		},
-		"cells_detected": {
-			"title": "Cells detected",
-			"description": "The total number of barcodes identified as cells",
-			"type": "integer",
-			"minimum": 0
-		},
-		"bases_in_peaks":{
-			"title": "Bases in peaks",
+		"total_bases_in_peaks":{
+			"title": "Total bases in peaks",
 			"type": "integer",
 			"minimum": 0
 		},
@@ -234,8 +202,8 @@
 			"type": "number",
 			"minimum": 0
 		},
-		"bulk_unique_fragments_at_30000000_reads":{
-			"title": "Bulk unique fragments at 30000000 reads",
+		"bulk_total_unique_fragments_at_30000000_reads":{
+			"title": "Bulk total unique fragments at 30000000 reads",
 			"type": "number",
 			"minimum": 0
 		},
@@ -253,8 +221,8 @@
 			"title": "Downsample succeeded",
 			"type": "boolean"
 		},
-		"estimated_cells_present":{
-			"title": "Estimated cells present",
+		"estimated_total_cells_present":{
+			"title": "Estimated total cells present",
 			"type": "integer",
 			"minimum": 0
 		},
@@ -319,12 +287,6 @@
 			"minimum": 0,
 			"maximum": 1
 		},
-		"frac_valid_barcodes":{
-			"title": "Fraction valid barcodes",
-			"type": "number",
-			"minimum": 0,
-			"maximum": 1
-		},
 		"frac_valid_noncells":{
 			"title": "Fraction valid noncells",
 			"type": "number",
@@ -349,7 +311,7 @@
 			"minimum": 0,
 			"maximum": 1
 		},
-		"frac_of_genome_within_2000bp_of_peaks":{
+		"frac_genome_within_2000bp_of_peaks":{
 			"title": "Fraction of genome within 2000bp of peaks",
 			"type": "number",
 			"minimum": 0,
@@ -415,13 +377,8 @@
 			"type": "integer",
 			"minimum": 0
 		},
-		"number_reads":{
-			"title": "Number of reads",
-			"type": "integer",
-			"minimum": 0
-		},
-		"number_of_low_targeting_barcodes":{
-			"title": "Number of low targeting barcodes",
+		"total_low_targeting_barcodes":{
+			"title": "Total low targeting barcodes",
 			"type": "integer",
 			"minimum": 0
 		},
@@ -461,13 +418,13 @@
 			"type": "number",
 			"minimum": 0
 		},
-		"putative_barcode_multiplets_found":{
-			"title": "Putative barcode multiplets found",
+		"putative_total_barcode_multiplets_found":{
+			"title": "Putative total barcode multiplets found",
 			"type": "integer",
 			"minimum": 0
 		},
-		"putative_gelbead_doublets_found":{
-			"title": "Putative gelbead doublets found",
+		"putative_total_gelbead_doublets_found":{
+			"title": "Putative total gelbead doublets found",
 			"type": "integer",
 			"minimum": 0
 		},
@@ -595,6 +552,53 @@
 			"title": "Waste unmapped fragments",
 			"type": "integer",
 			"minimum": 0
+		},
+		"frac_waste_nonnuclear":{
+			"title": "Fraction non-nuclear read pairs",
+			"description": "Fraction of sequenced read pairs that have a valid barcode and map to non-nuclear genome contigs, including mitochondria,with mapping quality > 30.",
+			"type": "number",
+			"minimum": 0,
+			"maximum": 1
+		},
+		"median_high-quality_fragments_per_cell":{
+			"title": "Median high-quality fragments per cell",
+			"description": "The median number of high-quality fragments per cell barcode",
+			"type": "integer",
+			"minimum": 0
+		},
+		"frac_high-quality_fragments_in_cells":{
+			"title": "Fraction of high-quality fragments in cells",
+			"description": "Fraction of high-quality fragments with a valid barcode that are associated with cell-containing partitions. High-quality fragments are defined as read pairs with a valid barcode that map to the nuclear genome with mapping quality > 30, are not chimeric and not duplicate.",
+			"type": "number",
+			"minimum": 0,
+			"maximum": 1
+		},
+		"frac_high-quality_fragments_overlapping_tss":{
+			"title": "Fraction of high-quality fragments overlapping TSS",
+			"description": "Fraction of high-quality fragments in cell barcodes that overlap transcription start sites (TSS).",
+			"type": "number",
+			"minimum": 0,
+			"maximum": 1
+		},
+		"frac_high-quality_fragments_overlapping_peaks":{
+			"title": "Fraction of high-quality fragments overlapping peaks",
+			"description": "Fraction of high-quality fragments in cell barcodes that overlap called peaks.",
+			"type": "number",
+			"minimum": 0,
+			"maximum": 1
+		},
+		"frac_genome_in_peaks":{
+			"title": "Fraction of genome in peaks",
+			"description": "Fraction of bases in primary contigs that are defined as peaks.",
+			"type": "number",
+			"minimum": 0,
+			"maximum": 1
+		},
+		"frac_cut_fragments_in_peaks_in_cells":{
+			"title": "Fraction of cut fragments in peaks in cells",
+			"type": "number",
+			"minimum": 0,
+			"maximum": 1
 		}
 	},
 	"changelog": "/profiles/changelogs/atac_metrics.md"

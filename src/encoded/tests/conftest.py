@@ -20,6 +20,7 @@ pytest_plugins = [
 
     'encoded.tests.fixtures.schemas.access_key',
     'encoded.tests.fixtures.schemas.antibody_lot',
+    'encoded.tests.fixtures.schemas.atac_metrics',
     'encoded.tests.fixtures.schemas.award',
     'encoded.tests.fixtures.schemas.dataset',
     'encoded.tests.fixtures.schemas.document',
@@ -36,6 +37,7 @@ pytest_plugins = [
     'encoded.tests.fixtures.schemas.page',
     'encoded.tests.fixtures.schemas.publication',
     'encoded.tests.fixtures.schemas.raw_sequence_file',
+    'encoded.tests.fixtures.schemas.rna_metrics',
     'encoded.tests.fixtures.schemas.sequence_alignment_file',
     'encoded.tests.fixtures.schemas.sequencing_run',
     'encoded.tests.fixtures.schemas.suspension',

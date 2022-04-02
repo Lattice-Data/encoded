@@ -16,17 +16,13 @@
         {"$ref": "mixins.json#/uuid"},
         {"$ref": "mixins.json#/standard_status"},
         {"$ref": "mixins.json#/quality_metric_of"},
-        {"$ref": "metrics.json#/properties"}
+        {"$ref": "metrics_shared_rna_ac.json#/properties"},
+        {"$ref": "metrics_shared_rna_atac.json#/properties"},
+        {"$ref": "metrics_shared_rna_atac_ac.json#/properties"}
     ],
     "properties": {
         "schema_version": {
-            "default": "1"
-        },
-        "estimated_number_of_cells": {
-            "title": "Estimated number of cells",
-            "description": "Number of barcodes associated with cell-containing partitions, estimated from UMI counts.",
-            "type": "integer",
-            "minimum": 0
+            "default": "2"
         },
         "median_genes_per_cell": {
             "title": "Median genes per cell",
@@ -34,69 +30,84 @@
             "type": "integer",
             "minimum": 0
         },
-        "percent_reads_mapped_to_genome":{
-            "title": "Percent reads mapped to the genome",
-            "description": "Percentage of reads that mapped to genome",
+        "frac_reads_mapped_to_genome":{
+            "title": "Fraction of reads mapped to the genome",
+            "description": "Fraction of reads that mapped to genome",
             "type": "number",
             "minimum": 0,
-            "maximum": 100
+            "maximum": 1
         },
-        "percent_reads_mapped_confidently_to_genome": {
-            "title": "Percent rreads mapped confidently to genome",
-            "description": "Percentage of reads that mapped confidently to genome",
+        "frac_reads_mapped_antisense_to_gene": {
+            "title": "Fraction of reads mapped antisense to a gene",
+            "description": "Fraction of reads that mapped antisense to a gene",
             "type": "number",
             "minimum": 0,
-            "maximum": 100
+            "maximum": 1
         },
-        "percent_reads_mapped_antisense_to_gene": {
-            "title": "Percent reads mapped antisense to a gene",
-            "description": "Percentage of reads that mapped antisense to a gene",
+        "frac_reads_mapped_confidently_to_transcriptome": {
+            "title": "Fraction of reads mapped confidently to the transcriptome",
+            "description": "Fraction of reads mapped to a unique gene in the transcriptome with high mapping quality score.",
             "type": "number",
             "minimum": 0,
-            "maximum": 100
+            "maximum": 1
         },
-        "percent_reads_mapped_confidently_to_transcriptome": {
-            "title": "Percent reads mapped confidently to the transcriptome",
-            "description": "Percentage of reads mapped to a unique gene in the transcriptome with high mapping quality score.",
+        "frac_reads_mapped_confidently_to_exonic_regions": {
+            "title": "Fraction of reads mapped confidently to exonic regions",
+            "description": "Fraction of reads that mapped to the exonic regions of the genome with high mapping quality score.",
             "type": "number",
             "minimum": 0,
-            "maximum": 100
+            "maximum": 1
         },
-        "percent_reads_mapped_confidently_to_exonic_regions": {
-            "title": "Percent reads mapped confidently to exonic regions",
-            "description": "Percentage of reads that mapped to the exonic regions of the genome with high mapping quality score.",
+        "frac_reads_mapped_confidently_to_intronic_regions": {
+            "title": "Fraction of reads mapped confidently to intronic regions",
+            "description": "Fraction of reads that mapped to the intronic regions of genome with a high mapping quality score.",
             "type": "number",
             "minimum": 0,
-            "maximum": 100
+            "maximum": 1
         },
-        "percent_reads_mapped_confidently_to_intronic_regions": {
-            "title": "Percent reads mapped confidently to intronic regions",
-            "description": "Percentage of reads that mapped to the intronic regions of genome with a high mapping quality score.",
+        "frac_reads_mapped_confidently_to_intergenic_regions": {
+            "title": "Fraction of reads mapped confidently to intergenic regions",
+            "description": "Fraction of reads that mapped to the intergenic regions of the genome with a high mapping quality score.",
             "type": "number",
             "minimum": 0,
-            "maximum": 100
+            "maximum": 1
         },
-        "percent_reads_mapped_confidently_to_intergenic_regions": {
-            "title": "Percent reads mapped confidently to intergenic regions",
-            "description": "Percentage of reads that mapped to the intergenic regions of the genome with a high mapping quality score.",
+        "frac_q30_bases_in_rna_read": {
+            "title": "Fraction of Q30 bases in rna read",
+            "description": "Fraction of bases with Q-score of at least 30 in the RNA read sequence",
             "type": "number",
             "minimum": 0,
-            "maximum": 100
+            "maximum": 1
         },
-        "percent_q30_bases_in_rna_read": {
-            "title": "Percent Q30 bases in rna read",
-            "description": "Percentage of bases with Q-score of at least 30 in the RNA read sequence",
-            "type": "number",
-            "minimum": 0,
-            "maximum": 100
-        },
-        "percent_q30_bases_in_rna_read_2": {
-            "title": "Percent Q30 bases in rna read2",
-            "description": "Percentage of bases with Q-score of at least 30 in the RNA read2 sequence",
+        "frac_q30_bases_in_rna_read2": {
+            "title": "Fraction of Q30 bases in rna read2",
+            "description": "Fraction of bases with Q-score of at least 30 in the RNA read2 sequence",
             "comment": "Output only if cellranger assay chemistry is SC5P-PE, as a result of R1 being sequenced longer than 28 bases",
             "type": "number",
             "minimum": 0,
-            "maximum": 100
+            "maximum": 1
+        },
+        "frac_reads_with_tso": {
+            "title": "Fraction of reads with TSO",
+            "description": "Fraction of reads with an alignment score of ≥ 20 for the template switch oligo (TSO) sequence.",
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+        },
+        "frac_valid_umis": {
+            "title": "Fraction of reads with valid UMIs",
+            "description": "Fraction of read pairs with valid UMIs i.e. without Ns and are not homopolymers.",
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+        },
+        "frac_transcriptomic_reads_in_cells": {
+            "title": "Fraction of transcriptomic reads in cells",
+            "description": "Fraction of transcriptomic reads with a valid barcode that are associated with cell-containing partitions.",
+            "comment": "Transcriptomic reads are defined as reads with mapping quality = 255 that map to a unique gene, including intronic alignments (default mode). When excluding introns the transcriptome is restricted to alignments that are consistent with annotated splice junctions. Note that transcriptomic reads include UMI reads, duplicate reads, and reads marked as low-support molecules.",
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
         },
         "total_genes_detected": {
             "title": "Total genes detected",
@@ -105,10 +116,7 @@
             "minimum": 0
         },
         "median_umi_counts_per_cell": {
-            "title": "Median umi counts per cell",
-            "description": "The median number of total UMI counts across all cell-associated barcodes.",
-            "type": "integer",
-            "minimum": 0
+            "description": "The median number of total UMI counts across all cell-associated barcodes."
         }
     },
     "changelog": "/profiles/changelogs/rna_metrics.md"

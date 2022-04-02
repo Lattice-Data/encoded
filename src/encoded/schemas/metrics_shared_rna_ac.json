@@ -1,0 +1,42 @@
+{
+    "title": "Metrics shared rna antibody-capture",
+    "description": "Schema for submitting metadata for various processing metrics.",
+    "id": "/profiles/metrics_shared_rna_ac.json",
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+        "mean_reads_per_cell": {
+            "title": "Mean reads per cell",
+            "description": "Total number of reads divided by estimated number of cells.",
+            "type": "number",
+            "minimum": 0
+        },
+        "frac_sequencing_saturation": {
+            "title": "Fraction of sequencing saturation",
+            "description": "Percentage of reads originating from an already-observed UMI.",
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+        },
+        "frac_q30_bases_in_umi": {
+            "title": "Fraction of Q30 bases in umi",
+            "description": "Percentage of bases with Q-score of at least 30 in the UMI sequences.",
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+        },
+        "frac_reads_in_cells": {
+            "title": "Fraction of reads in cells",
+            "description": "Percentage of cell-barcoded, confidently mapped reasds with cell-associated barcodes.",
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+        },
+        "median_umi_counts_per_cell": {
+            "title": "Median UMI counts per cell",
+            "type": "integer",
+            "minimum": 0
+        }
+    }
+}

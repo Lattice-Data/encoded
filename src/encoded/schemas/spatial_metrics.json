@@ -1,0 +1,68 @@
+{
+    "title": "Spatial metrics",
+    "description": "Schema for submitting metadata for processing metrics of an assay that includes sequences linked to spatial coordinates.",
+    "id": "/profiles/spatial_metrics.json",
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "required": ["quality_metric_of"],
+    "identifyingProperties": ["uuid"],
+    "additionalProperties": false,
+    "mixinProperties": [
+        {"$ref": "mixins.json#/aliases"},
+        {"$ref": "mixins.json#/documents"},
+        {"$ref": "mixins.json#/notes"},
+        {"$ref": "mixins.json#/submitted"},
+        {"$ref": "mixins.json#/schema_version"},
+        {"$ref": "mixins.json#/uuid"},
+        {"$ref": "mixins.json#/standard_status"},
+        {"$ref": "mixins.json#/quality_metric_of"}
+    ],
+    "properties": {
+        "schema_version": {
+            "default": "1"
+        },
+        "total_spots_under_tissue": {
+            "title": "Number of spots under tissue",
+            "description": "The number of barcodes associated with a spot under tissue.",
+            "type": "integer",
+            "minimum": 0
+        },
+        "mean_reads_per_spot": {
+            "title": "Mean reads per spot",
+            "description": "The number of reads, both under and outside of tissue, divided by the number of barcodes associated with a spot under tissue.",
+            "type": "number",
+            "minimum": 0
+        },
+        "mean_reads_under_tissue_per_spot": {
+            "title": "Mean reads under tissue per spot",
+            "type": "number",
+            "minimum": 0
+        },
+        "frac_spots_under_tissue": {
+            "title": "Fraction spots under tissue",
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+        },
+        "median_genes_per_spot": {
+            "title": "Median genes per spot",
+            "description": "The median number of genes detected per spot under tissue-associated barcode. Detection is defined as the presence of at least 1 UMI count.",
+            "type": "integer",
+            "minimum": 0
+        },
+        "median_umi_counts_per_spot": {
+            "title": "Median UMI counts per spot",
+            "description": "The median number of UMI counts per tissue covered spot.",
+            "type": "integer",
+            "minimum": 0
+        },
+        "frac_reads_in_spots_under_tissue": {
+            "title": "Fraction reads in spots under tissue",
+            "description": "The fraction of valid-barcode, confidently-mapped-to-transcriptome reads with spot-associated barcodes.",
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+        }
+    },
+    "changelog": "/profiles/changelogs/spatial_metrics.md"
+}

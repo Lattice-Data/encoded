@@ -16,72 +16,70 @@
         {"$ref": "mixins.json#/uuid"},
         {"$ref": "mixins.json#/standard_status"},
         {"$ref": "mixins.json#/quality_metric_of"},
-        {"$ref": "metrics.json#/properties"}
+        {"$ref": "metrics_shared_rna_ac.json#/properties"},
+        {"$ref": "metrics_shared_rna_atac_ac.json#/properties"}
     ],
     "properties": {
         "schema_version": {
             "default": "1"
         },
-        "percent_reads_in_barcodes_with_high_umi_counts": {
-            "title": "Percent reads in barcodes with high umi counts",
-            "description": "Percentage of reads lost after removeing barcodes with unusually high UMI counts, which may have been formed by antibody aggregates.",
+        "frac_reads_in_barcodes_with_high_umi_counts": {
+            "title": "Fraction of reads in barcodes with high umi counts",
+            "description": "Fraction of reads lost after removeing barcodes with unusually high UMI counts, which may have been formed by antibody aggregates.",
             "type": "number",
             "minimum": 0,
-            "maximum": 100
+            "maximum": 1
         },
-        "percent_q30_bases_in_antibody_read": {
-            "title": "Percent Q30 bases in antibody read",
-            "description": "Percentage of bases from read containing the antibody barcode with Q-score >= 30, excluding very low quality/no-call (Q <= 2) bases from denominator.",
+        "frac_q30_bases_in_antibody_read": {
+            "title": "Fraction of Q30 bases in antibody read",
+            "description": "Fraction of bases from read containing the antibody barcode with Q-score >= 30, excluding very low quality/no-call (Q <= 2) bases from denominator.",
             "type": "number",
             "minimum": 0,
-            "maximum": 100
+            "maximum": 1
         },
-        "percent_q30_bases_in_antibody_read_2": {
-            "title": "Percent Q30 bases in antibody read 2",
+        "frac_q30_bases_in_antibody_read2": {
+            "title": "Fraction of Q30 bases in antibody read2",
             "description": "",
             "type": "number",
             "minimum": 0,
-            "maximum": 100
+            "maximum": 1
         },
-        "percent_reads_in_aggregate_barcodes": {
-            "title": "Percent antibody reads in aggregate barcodes",
-            "description": "Percentage of reads lost after removing aggregate barcodes.",
+        "frac_reads_in_aggregate_barcodes": {
+            "title": "Fraction of antibody reads in aggregate barcodes",
+            "description": "Fraction of reads lost after removing aggregate barcodes.",
             "type": "number",
             "minimum": 0,
-            "maximum": 100
+            "maximum": 1
         },
-        "percent_reads_recognized_antibody": {
-            "title": "Percent antibody reads",
-            "description": "Percentage of reads that contain a recognized antibody barcode.",
+        "frac_reads_recognized_antibody": {
+            "title": "Fraction of antibody reads",
+            "description": "Fraction of reads that contain a recognized antibody barcode.",
             "type": "number",
             "minimum": 0,
-            "maximum": 100
+            "maximum": 1
         },
-        "percent_reads_usable": {
-            "title": "Percent antibody reads usable",
-            "description": "Percentage of reads that contain a recognized antibody barcode, a valid UMI, and a cell-associated barcode.",
+        "frac_reads_usable": {
+            "title": "Fraction of antibody reads usable",
+            "description": "Fraction of reads that contain a recognized antibody barcode, a valid UMI, and a cell-associated barcode.",
             "type": "number",
             "minimum": 0,
-            "maximum": 100
+            "maximum": 1
         },
-        "antibody_reads_usable_per_cell": {
-            "title": "Antibody reads",
+        "mean_antibody_reads_usable_per_cell": {
+            "title": "Mean antibody reads usable per cell",
             "description": "Number of antibody reads usable divided by the number of cell-associated barcodes.",
-            "type": "integer",
+            "type": "number",
             "minimum": 0
         },
-        "percent_reads_unrecognized_antibody": {
-            "title": "Percent reads unrecognized antibody",
+        "frac_reads_unrecognized_antibody": {
+            "title": "Fraction of reads unrecognized antibody",
             "description": "Among all reads, the percentage with an unrecognizable antibody barcode.",
             "type": "number",
             "minimum": 0,
-            "maximum": 100
+            "maximum": 1
         },
-        "median_umis_per_cell": {
-            "title": "Median umis per cell",
-            "description": "Median UMIs per cell (summed over all recognized antibody barcodes).",
-            "type": "integer",
-            "minimum": 0
+        "median_umi_counts_per_cell": {
+            "description": "Median UMI counts per cell summed over all recognized antibody barcodes."
         }
     },
     "changelog": "/profiles/changelogs/antibody_capture_metrics.md"

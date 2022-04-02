@@ -1,0 +1,30 @@
+{
+    "title": "Metrics shared rna atac",
+    "description": "Schema for submitting metadata for various processing metrics.",
+    "id": "/profiles/metrics_shared_rna_atac.json",
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+        "total_cells_detected": {
+            "title": "Total cells detected",
+            "description": "The total number of barcodes identified as cells",
+            "type": "integer",
+            "minimum": 0
+        },
+        "frac_reads_mapped_confidently_to_genome": {
+            "title": "Fraction of reads mapped confidently to genome",
+            "description": "Fraction of reads that mapped confidently to genome",
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+        },
+        "frac_waste_dup": {
+            "title": "Fraction of duplicate read pairs",
+            "description": "Fraction of all the sequenced read pairs that come from cell barcodes and are deemed to be PCR duplicates due to alignment to the same genomic position as another read pair in the library.",
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+        }
+    }
+}

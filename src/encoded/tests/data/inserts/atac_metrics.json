@@ -1,14 +1,10 @@
 [
     {
-        "bases_in_peaks": 110773558,
         "bulk_estimated_saturation": 0.3622507517004286,
         "bulk_total_library_complexity": 473866563.9594224,
-        "bulk_unique_fragments_at_30000000_reads": 14657172.527531318,
         "cell_threshold": 299,
-        "cells_detected": 8356,
         "ctcf_enrichment_score": 1.1388714044121553,
         "downsample_succeeded": true,
-        "estimated_cells_present": 9492,
         "fitted_dispersion_noise": 0.9475101014774829,
         "fitted_dispersion_signal": 1.1104480281526803,
         "fitted_mean_noise": 15.717834321790514,
@@ -24,7 +20,6 @@
         "frac_fragments_overlapping_promoter": 0.2588697896014283,
         "frac_fragments_overlapping_targets": 0.6463886395275307,
         "frac_fragments_overlapping_tss": 0.2948516098713217,
-        "frac_mapped_confidently": 0.7275537166307927,
         "frac_waste_cell_nondup": 0.2388927230041242,
         "frac_waste_chimeric": 0.0073958889782901795,
         "frac_waste_lowmapq": 0.08027179802888121,
@@ -45,7 +40,6 @@
         "median_per_cell_unique_fragments_at_30000_RRPC": 5970.0176973436955,
         "median_per_cell_unique_fragments_at_50000_RRPC": 9220.402697896923,
         "min_fragments_per_cell": 448,
-        "number_of_low_targeting_barcodes": 279596,
         "peakcaller_alpha_bg_noise": 0.26292081775891657,
         "peakcaller_frac_bg_noise": 0.6813060747219258,
         "peakcaller_frac_zero_noise": 0.28635405237845984,
@@ -80,9 +74,6 @@
         "frac_waste_mito": 0.06615298595842378,
         "frac_waste_noncell_barcode": 0.3202603393655031,
         "frac_cell_calling_noise": 0.8188607728103943,
-        "frac_of_genome_within_2000bp_of_peaks": 0.15931720016879666,
-        "number_fragments": 343687555,
-        "number_reads": 687375110,
         "q30_bases_in_read1": 15765377908,
         "frac_q30_bases_in_read1": 0.9517696011408205,
         "total_bases_in_read1": 16564279726,
@@ -98,7 +89,16 @@
         "uuid": "40079d9e-bb73-4cac-a2fc-1f464a1dfa01",
         "aliases": [
             "lattice:test_atacmetrics"
-        ]
+        ],
+        "total_bases_in_peaks": 110773558,
+        "bulk_total_unique_fragments_at_30000000_reads": 14657172.527531318,
+        "total_cells_detected": 8356,
+        "estimated_total_cells_present": 9492,
+        "frac_reads_mapped_confidently_to_genome": 0.7275537166307927,
+        "total_low_targeting_barcodes": 279596,
+        "frac_genome_within_2000bp_of_peaks": 0.15931720016879666,
+        "total_fragments": 343687555,
+        "total_reads": 687375110
     },
     {
         "uuid": "b89de45d-5946-40e7-b35e-b4ba7c33342b",
@@ -129,12 +129,12 @@
         "frac_waste_dup": 0.5495514424,
         "frac_waste_total": 0.7326755882,
         "total_usable_fragments": 55882,
-        "frac_mapped_confidently": 0.8899750386,
-        "number_fragments": 3184572,
-        "cells_detected": 934,
         "aliases": [
             "jun-li:test_atacmetrics"
-        ]
+        ],
+        "frac_reads_mapped_confidently_to_genome": 0.8899750386,
+        "total_fragments": 3184572,
+        "total_cells_detected": 934
     },
     {
         "uuid": "c7c16cda-92d7-403f-8f2b-c9685b2eab83",
@@ -165,12 +165,12 @@
         "frac_waste_dup": 0.5495514424,
         "frac_waste_total": 0.7326755882,
         "total_usable_fragments": 6755882,
-        "frac_mapped_confidently": 0.8899750386,
-        "number_fragments": 34785952,
-        "cells_detected": 1247,
         "aliases": [
             "nir-yosef:test_atacmetrics"
-        ]
+        ],
+        "frac_reads_mapped_confidently_to_genome": 0.8899750386,
+        "total_fragments": 34785952,
+        "total_cells_detected": 1247
     },
     {
         "uuid": "d646bb7e-670c-4be4-b16b-fec194505164",
@@ -201,12 +201,12 @@
         "frac_waste_dup": 0.5495514424,
         "frac_waste_total": 0.7326755882,
         "total_usable_fragments": 55882,
-        "frac_mapped_confidently": 0.8899750386,
-        "number_fragments": 35824765,
-        "cells_detected": 742,
         "aliases": [
             "shalev-itzkovitz:test_atacmetrics"
-        ]
+        ],
+        "frac_reads_mapped_confidently_to_genome": 0.8899750386,
+        "total_fragments": 35824765,
+        "total_cells_detected": 742
     },
     {
         "uuid": "f9af6ba1-eccf-479e-bbdf-f54fec0d7be3",
@@ -237,12 +237,12 @@
         "frac_waste_dup": 0.5495514424,
         "frac_waste_total": 0.7326755882,
         "total_usable_fragments": 755882,
-        "frac_mapped_confidently": 0.8899750386,
-        "number_fragments": 20375931,
-        "cells_detected": 2174,
         "aliases": [
             "ronald-germain:test_atacmetrics"
-        ]
+        ],
+        "frac_reads_mapped_confidently_to_genome": 0.8899750386,
+        "total_fragments": 20375931,
+        "total_cells_detected": 2174
     },
     {
         "uuid": "24912317-477c-4975-8f32-8e90e1587be5",
@@ -273,12 +273,12 @@
         "frac_waste_dup": 0.5495514424,
         "frac_waste_total": 0.7326755882,
         "total_usable_fragments": 755882,
-        "frac_mapped_confidently": 0.8899750386,
-        "number_fragments": 29247842,
-        "cells_detected": 1124,
         "aliases": [
             "tom-taghon:test_atacmetrics"
-        ]
+        ],
+        "frac_reads_mapped_confidently_to_genome": 0.8899750386,
+        "total_fragments": 29247842,
+        "total_cells_detected": 1124
     },
     {
         "uuid": "0b75bce9-c381-48e5-966e-bff3c3862eb1",
@@ -309,9 +309,9 @@
         "frac_waste_dup": 0.5495514424,
         "frac_waste_total": 0.7326755882,
         "total_usable_fragments": 55882,
-        "frac_mapped_confidently": 0.8899750386,
-        "number_fragments": 30623673,
-        "cells_detected": 2053
+        "frac_reads_mapped_confidently_to_genome": 0.8899750386,
+        "total_fragments": 30623673,
+        "total_cells_detected": 2053
     },
     {
         "uuid": "b0518668-eab3-423e-b24b-a04d6bd6b174",
@@ -342,9 +342,9 @@
         "frac_waste_dup": 0.5495514424,
         "frac_waste_total": 0.7326755882,
         "total_usable_fragments": 5882,
-        "frac_mapped_confidently": 0.8899750386,
-        "number_fragments": 23673576,
-        "cells_detected": 971
+        "frac_reads_mapped_confidently_to_genome": 0.8899750386,
+        "total_fragments": 23673576,
+        "total_cells_detected": 971
     },
     {
         "uuid": "1f62d7d3-1335-4211-a15f-b37b07cc9559",
@@ -375,9 +375,9 @@
         "frac_waste_dup": 0.5495514424,
         "frac_waste_total": 0.7326755882,
         "total_usable_fragments": 55882,
-        "frac_mapped_confidently": 0.8899750386,
-        "number_fragments": 32674243,
-        "cells_detected": 1032
+        "frac_reads_mapped_confidently_to_genome": 0.8899750386,
+        "total_fragments": 32674243,
+        "total_cells_detected": 1032
     },
     {
         "uuid": "af14aba8-ddd6-49ee-b272-2b57744d7a99",
@@ -408,9 +408,9 @@
         "frac_waste_dup": 0.5495514424,
         "frac_waste_total": 0.7326755882,
         "total_usable_fragments": 755882,
-        "frac_mapped_confidently": 0.8899750386,
-        "number_fragments": 33535381,
-        "cells_detected": 456
+        "frac_reads_mapped_confidently_to_genome": 0.8899750386,
+        "total_fragments": 33535381,
+        "total_cells_detected": 456
     },
     {
         "uuid": "5709b29e-9e78-4281-be18-c9c0808f3338",
@@ -441,9 +441,9 @@
         "frac_waste_dup": 0.5495514424,
         "frac_waste_total": 0.7326755882,
         "total_usable_fragments": 55882,
-        "frac_mapped_confidently": 0.8899750386,
-        "number_fragments": 33535381,
-        "cells_detected": 599
+        "frac_reads_mapped_confidently_to_genome": 0.8899750386,
+        "total_fragments": 33535381,
+        "total_cells_detected": 599
     },
     {
         "uuid": "09a92c3f-113d-48cc-a59a-62b4e3a70a22",
@@ -474,9 +474,9 @@
         "frac_waste_dup": 0.5495514424,
         "frac_waste_total": 0.7326755882,
         "total_usable_fragments": 6755882,
-        "frac_mapped_confidently": 0.8899750386,
-        "number_fragments": 33535381,
-        "cells_detected": 459
+        "frac_reads_mapped_confidently_to_genome": 0.8899750386,
+        "total_fragments": 33535381,
+        "total_cells_detected": 459
     },
     {
         "uuid": "7a466ff3-372c-40eb-a49a-3a7a0da97408",
@@ -507,9 +507,9 @@
         "frac_waste_dup": 0.5495514424,
         "frac_waste_total": 0.7326755882,
         "total_usable_fragments": 55882,
-        "frac_mapped_confidently": 0.8899750386,
-        "number_fragments": 33535381,
-        "cells_detected": 756
+        "frac_reads_mapped_confidently_to_genome": 0.8899750386,
+        "total_fragments": 33535381,
+        "total_cells_detected": 756
     },
     {
         "uuid": "fbece0aa-b9aa-4612-9297-564ce84bdcb9",
@@ -540,9 +540,9 @@
         "frac_waste_dup": 0.5495514424,
         "frac_waste_total": 0.7326755882,
         "total_usable_fragments": 6755882,
-        "frac_mapped_confidently": 0.8899750386,
-        "number_fragments": 33535381,
-        "cells_detected": 688
+        "frac_reads_mapped_confidently_to_genome": 0.8899750386,
+        "total_fragments": 33535381,
+        "total_cells_detected": 688
     },
     {
         "uuid": "8fa2be08-c5fc-47bf-97d7-f6db62cbb276",
@@ -573,9 +573,9 @@
         "frac_waste_dup": 0.5495514424,
         "frac_waste_total": 0.7326755882,
         "total_usable_fragments": 755882,
-        "frac_mapped_confidently": 0.8899750386,
-        "number_fragments": 33535381,
-        "cells_detected": 695
+        "frac_reads_mapped_confidently_to_genome": 0.8899750386,
+        "total_fragments": 33535381,
+        "total_cells_detected": 695
     },
     {
         "uuid": "010270bc-ab65-42cb-aa28-05fdaa1c472f",
@@ -606,9 +606,9 @@
         "frac_waste_dup": 0.5495514424,
         "frac_waste_total": 0.7326755882,
         "total_usable_fragments": 55882,
-        "frac_mapped_confidently": 0.8899750386,
-        "number_fragments": 33535381,
-        "cells_detected": 556
+        "frac_reads_mapped_confidently_to_genome": 0.8899750386,
+        "total_fragments": 33535381,
+        "total_cells_detected": 556
     },
     {
         "uuid": "d455d2c7-6440-4600-b48b-b2ee2aa1d903",
@@ -639,9 +639,9 @@
         "frac_waste_dup": 0.5495514424,
         "frac_waste_total": 0.7326755882,
         "total_usable_fragments": 755882,
-        "frac_mapped_confidently": 0.8899750386,
-        "number_fragments": 33535381,
-        "cells_detected": 837
+        "frac_reads_mapped_confidently_to_genome": 0.8899750386,
+        "total_fragments": 33535381,
+        "total_cells_detected": 837
     },
     {
         "uuid": "fe5ee7fe-8a7f-4aee-b72c-a107321b1fad",
@@ -672,9 +672,9 @@
         "frac_waste_dup": 0.5495514424,
         "frac_waste_total": 0.7326755882,
         "total_usable_fragments": 55882,
-        "frac_mapped_confidently": 0.8899750386,
-        "number_fragments": 33535381,
-        "cells_detected": 783
+        "frac_reads_mapped_confidently_to_genome": 0.8899750386,
+        "total_fragments": 33535381,
+        "total_cells_detected": 783
     },
     {
         "uuid": "00d92d26-a351-471d-864a-88d549be3de9",
@@ -705,9 +705,9 @@
         "frac_waste_dup": 0.5495514424,
         "frac_waste_total": 0.7326755882,
         "total_usable_fragments": 882,
-        "frac_mapped_confidently": 0.8899750386,
-        "number_fragments": 33535381,
-        "cells_detected": 984
+        "frac_reads_mapped_confidently_to_genome": 0.8899750386,
+        "total_fragments": 33535381,
+        "total_cells_detected": 984
     },
     {
         "uuid": "a6da4cee-1da5-47e0-a8bb-ec96e0cc3161",
@@ -738,9 +738,9 @@
         "frac_waste_dup": 0.5495514424,
         "frac_waste_total": 0.7326755882,
         "total_usable_fragments": 755882,
-        "frac_mapped_confidently": 0.8899750386,
-        "number_fragments": 33535381,
-        "cells_detected": 865
+        "frac_reads_mapped_confidently_to_genome": 0.8899750386,
+        "total_fragments": 33535381,
+        "total_cells_detected": 865
     },
     {
         "uuid": "6f7c1018-84e4-40eb-93d7-36be2b01e435",
@@ -771,9 +771,9 @@
         "frac_waste_dup": 0.5495514424,
         "frac_waste_total": 0.7326755882,
         "total_usable_fragments": 55882,
-        "frac_mapped_confidently": 0.8899750386,
-        "number_fragments": 33535381,
-        "cells_detected": 775
+        "frac_reads_mapped_confidently_to_genome": 0.8899750386,
+        "total_fragments": 33535381,
+        "total_cells_detected": 775
     },
     {
         "uuid": "a2d19398-3890-469b-8c8a-ea1e15608b2d",
@@ -804,9 +804,9 @@
         "frac_waste_dup": 0.5495514424,
         "frac_waste_total": 0.7326755882,
         "total_usable_fragments": 755882,
-        "frac_mapped_confidently": 0.8899750386,
-        "number_fragments": 33535381,
-        "cells_detected": 645
+        "frac_reads_mapped_confidently_to_genome": 0.8899750386,
+        "total_fragments": 33535381,
+        "total_cells_detected": 645
     },
     {
         "uuid": "293fa2af-c3aa-46cc-a859-da9701029534",
@@ -837,9 +837,9 @@
         "frac_waste_dup": 0.5495514424,
         "frac_waste_total": 0.7326755882,
         "total_usable_fragments": 755882,
-        "frac_mapped_confidently": 0.8899750386,
-        "number_fragments": 33535381,
-        "cells_detected": 855
+        "frac_reads_mapped_confidently_to_genome": 0.8899750386,
+        "total_fragments": 33535381,
+        "total_cells_detected": 855
     },
     {
         "uuid": "feedcb68-fbfb-4979-af2e-30f844a6a360",
@@ -870,9 +870,9 @@
         "frac_waste_dup": 0.5495514424,
         "frac_waste_total": 0.7326755882,
         "total_usable_fragments": 55882,
-        "frac_mapped_confidently": 0.8899750386,
-        "number_fragments": 33535381,
-        "cells_detected": 705
+        "frac_reads_mapped_confidently_to_genome": 0.8899750386,
+        "total_fragments": 33535381,
+        "total_cells_detected": 705
     },
     {
         "uuid": "a1104f97-9480-4814-884f-074617fb450f",
@@ -903,8 +903,8 @@
         "frac_waste_dup": 0.5495514424,
         "frac_waste_total": 0.7326755882,
         "total_usable_fragments": 5882,
-        "frac_mapped_confidently": 0.8899750386,
-        "number_fragments": 33535381,
-        "cells_detected": 694
+        "frac_reads_mapped_confidently_to_genome": 0.8899750386,
+        "total_fragments": 33535381,
+        "total_cells_detected": 694
     }
 ]

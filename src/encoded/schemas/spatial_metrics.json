@@ -22,47 +22,47 @@
             "default": "1"
         },
         "total_spots_under_tissue": {
-            "title": "Number of Spots Under Tissue",
+            "title": "Number of spots under tissue",
             "description": "The number of barcodes associated with a spot under tissue.",
             "type": "integer",
             "minimum": 0
         },
         "mean_reads_per_spot": {
-            "title": "Mean Reads per Spot",
+            "title": "Mean reads per spot",
             "description": "The number of reads, both under and outside of tissue, divided by the number of barcodes associated with a spot under tissue.",
             "type": "number",
             "minimum": 0
         },
         "mean_reads_under_tissue_per_spot": {
-            "title": "Mean Reads Under Tissue per Spot",
+            "title": "Mean reads under tissue per spot",
             "type": "number",
             "minimum": 0
         },
         "frac_spots_under_tissue": {
-            "title": "Fraction Spots Under Tissue",
+            "title": "Fraction spots under tissue",
             "type": "number",
             "minimum": 0,
             "maximum": 1
         },
         "median_genes_per_spot": {
-            "title": "Median Genes per Spot",
+            "title": "Median genes per spot",
             "description": "The median number of genes detected per spot under tissue-associated barcode. Detection is defined as the presence of at least 1 UMI count.",
             "type": "integer",
             "minimum": 0
         },
         "median_umi_counts_per_spot": {
-            "title": "Median UMI Counts per Spot",
+            "title": "Median UMI counts per spot",
             "description": "The median number of UMI counts per tissue covered spot.",
             "type": "integer",
             "minimum": 0
         },
         "frac_reads_in_spots_under_tissue": {
-            "title": "Fraction Reads in Spots Under Tissue",
+            "title": "Fraction reads in spots under tissue",
             "description": "The fraction of valid-barcode, confidently-mapped-to-transcriptome reads with spot-associated barcodes.",
             "type": "number",
             "minimum": 0,
             "maximum": 1
         }
     },
-    "changelog": "/profiles/changelogs/multiome_metrics.md"
+    "changelog": "/profiles/changelogs/spatial_metrics.md"
 }

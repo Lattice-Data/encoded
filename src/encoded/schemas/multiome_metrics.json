@@ -22,7 +22,7 @@
             "default": "1"
         },
         "total_feature_linkages_detected": {
-            "title": "Feature linkages detected",
+            "title": "Total feature linkages detected",
             "description": "Total number of gene-to-peak and peak-to-peak linkages detected.",
             "type": "integer",
             "minimum": 0

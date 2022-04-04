@@ -55,7 +55,7 @@
         ],
         "conceptional_age": "16-17",
         "conceptional_age_units": "week",
-        "development_ontology": "HsapDv_0000199",
+        "development_ontology": "HsapDv_0000046",
         "crown_rump_length": 108,
         "crown_rump_length_units": "mm"
     },
@@ -71,7 +71,7 @@
         "conceptional_age_units": "day",
         "carnegie_stage": 19,
         "carnegie_stage_basis": "straightening of trunk",
-        "development_ontology": "HsapDv_0000026",
+        "development_ontology": "HsapDv_0000072",
         "weight": "0.32",
         "weight_unit": "oz",
         "sex": "unknown",
@@ -90,7 +90,7 @@
         "conceptional_age_units": "day",
         "carnegie_stage": 19,
         "carnegie_stage_basis": "straightening of trunk",
-        "development_ontology": "HsapDv_0000026",
+        "development_ontology": "HsapDv_0000052",
         "weight": "0.32",
         "weight_unit": "oz",
         "sex": "unknown",
@@ -109,7 +109,7 @@
     	"conceptional_age_units": "day",
         "development_ontology": "HsapDv_0000049",
         "diseases": [
-            "MONDO_0005147"
+            "MONDO_0021631"
         ],
     	"sex": "unknown",
     	"crown_rump_length": 54,

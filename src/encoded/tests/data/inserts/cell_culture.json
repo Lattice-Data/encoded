@@ -13,7 +13,7 @@
         "derivation_process": [
             "cell isolation", "differentiation", "expansion"
         ],
-        "biosample_ontology": "CL_0002248",
+        "biosample_ontology": "CL_0000235",
         "passage_number": "10",
         "is_immortalized": false,
         "mycoplasma_testing_method": "qPCR",
@@ -40,7 +40,7 @@
         "derivation_process": [
             "cell isolation", "differentiation", "expansion"
         ],
-        "biosample_ontology": "CL_0002248",
+        "biosample_ontology": "CL_0000235",
         "passage_number": "9",
         "is_immortalized": false,
         "mycoplasma_testing_method": "qPCR",
@@ -67,7 +67,7 @@
         "derivation_process": [
             "cell isolation", "expansion"
         ],
-        "biosample_ontology": "CL_0002353",
+        "biosample_ontology": "CL_0000980",
         "treatments": [
             "jimmie-ye:FGF7_media"
         ],
@@ -91,7 +91,7 @@
         "derivation_process": [
             "cell isolation", "expansion"
         ],
-        "biosample_ontology": "CL_0002353",
+        "biosample_ontology": "CL_0000980",
         "treatments": [
             "jimmie-ye:FGF7_media"
         ],
@@ -115,7 +115,7 @@
         "derivation_process": [
             "cell isolation", "expansion"
         ],
-        "biosample_ontology": "CL_0002353",
+        "biosample_ontology": "CL_0000980",
         "treatments": [
             "jimmie-ye:FGF7_media"
         ],
@@ -138,7 +138,7 @@
         "derivation_process": [
             "cell isolation"
         ],
-        "biosample_ontology": "EFO_0002783",
+        "biosample_ontology": "EFO_0009747",
         "is_immortalized": true,
         "genetic_modifications": [
             "CDX2 knockout"

@@ -70,7 +70,7 @@
         },
         "ancestry": [
             {
-                "ancestry_group":  "HANCESTRO_0020", "percentage": 45  
+                "ancestry_group":  "HANCESTRO_0021", "percentage": 45  
             },
             {
                 "ancestry_group":  "HANCESTRO_0022", "percentage": 50 
@@ -92,7 +92,7 @@
         "menopausal_status": "premenopausal",
         "ethnicity": "HANCESTRO_0008",
         "diseases": [
-            "MONDO_0005147"
+            "MONDO_0005296"
         ],
         "treatments": [
             "lattice:insulin"

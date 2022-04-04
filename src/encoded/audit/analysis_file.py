@@ -32,10 +32,10 @@ def audit_read_count_compare(value, system):
             in_reads += v
         for qc in value.get('quality_metrics'):
             if 'snATAC-seq' in value.get('assays'):
-                out_reads = qc.get('number_fragments')
+                out_reads = qc.get('total_fragments')
             else:
-                out_reads = qc.get('number_of_reads')
-            if in_reads != out_reads:
+                out_reads = qc.get('total_reads')
+            if (out_reads and in_reads != out_reads):
                 detail = ('File {} has {} reads but input objects total {} reads.'.format(
                     audit_link(path_to_text(value['@id']), value['@id']),
                     out_reads,

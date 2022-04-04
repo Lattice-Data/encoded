@@ -81,6 +81,15 @@
                 "pattern": "^((EGA:EGAN\\d+)|(BioSample:SAM(E|N|D)(A|G)?\\d+)|(SRA:SRS\\d+)|(ENA:ERS\\d+))$"
             }
         },
+        "preservation_method": {
+            "enum": [
+                "cryopreservation",
+                "flash-freezing",
+                "n/a (fresh)",
+                "paraffin embedding",
+                "OCT embedding"
+            ]
+        },
         "thickness": {
             "title": "Thickness",
             "description": "The distance from the top, or imaged side, of the tissue section, to the bottom.",

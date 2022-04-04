@@ -105,7 +105,7 @@
         "ischemic_temperature": "cold",
         "ischemic_time": "5",
         "ischemic_time_units": "hour",
-        "preservation_method": "cryopreservation",
+        "preservation_method": "OCT embedding",
         "fixed": false,
         "starting_quantity": "45",
         "starting_quantity_units": "g"

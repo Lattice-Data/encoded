@@ -70,7 +70,8 @@
             "enum": [
                 "RNA-seq",
                 "CITE-seq",
-                "ATAC-seq"
+                "ATAC-seq",
+                "Methyl-seq"
             ]
         },
         "biological_macromolecule": {

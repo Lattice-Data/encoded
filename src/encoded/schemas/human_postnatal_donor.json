@@ -69,6 +69,15 @@
             }
         },
         "cause_of_death": {
+            "required": ["living_at_sample_collection"],
+            "properties": {
+                "living_at_sample_collection": {
+                    "enum": [false]
+                }
+            }
+        },
+        "death_type": {
+            "required": ["living_at_sample_collection"],
             "properties": {
                 "living_at_sample_collection": {
                     "enum": [false]
@@ -124,6 +133,15 @@
             "title": "Living at sample collection",
             "description": "If true, the donor was alive at the time of sample collection.",
             "type": "boolean"
+        },
+        "death_type": {
+            "title": "Death type",
+            "description": "The type of death",
+            "type": "string",
+            "enum": [
+                "brain stem death",
+                "circulatory death"
+            ]
         },
         "family_members_history_breast_cancer": {
             "title": "Family members history breast cancer",

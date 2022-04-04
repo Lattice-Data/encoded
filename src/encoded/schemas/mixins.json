@@ -31,24 +31,18 @@
     "preservation": {
         "preservation_method": {
             "title": "Preservation method",
-            "description": "The method by which the sample was preserved: cryopreservation (slow-freeze) or flash-freezing.",
-            "type": "string",
-            "enum": [
-                "cryopreservation",
-                "flash-freezing",
-                "n/a (fresh)",
-                "paraffin embedding"
-            ]
+            "description": "The method by which this object was preserved.",
+            "type": "string"
         },
         "preservation_time": {
             "title": "Preservation time",
-            "description": "The length of time that the sample was preserved",
+            "description": "The length of time that this object was preserved",
             "type": "string",
             "pattern": "(^[<>]?[0-9]+(.[0-9]+)?$)|(^[0-9]+(.[0-9]+)-[0-9]+(.[0-9]+)$)"
         },
         "preservation_time_units": {
             "title": "Preservation time units",
-            "description": "The units of time that the sample was preserved",
+            "description": "The units of time that this object was preserved",
             "type": "string",
             "enum": [
                 "minute",
@@ -464,6 +458,7 @@
                 "pattern": ["^(?:",
                     "aaron-streets|",
                     "abbas-rizvi|",
+                    "allon-klein|",
                     "andrew-mcmahon|",
                     "anindita-basu|",
                     "anna-greka|",

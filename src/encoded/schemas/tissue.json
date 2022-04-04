@@ -121,6 +121,15 @@
                 "ml"
             ]
         },
+        "preservation_method": {
+            "enum": [
+                "cryopreservation",
+                "flash-freezing",
+                "n/a (fresh)",
+                "paraffin embedding",
+                "OCT embedding"
+            ]
+        },
         "death_to_preservation_interval": {
             "title": "Death to preservation interval",
             "description": "The amount of time elapsed since death until the tissue was preserved.",

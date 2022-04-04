@@ -67,6 +67,15 @@
                 "cells"
             ]
         },
+        "preservation_method": {
+            "enum": [
+                "cryopreservation",
+                "flash-freezing",
+                "n/a (fresh)",
+                "paraffin embedding",
+                "OCT embedding"
+            ]
+        },
         "embedded_in_matrigel": {
             "title": "Embedded in matrigel",
             "description": "Whether or not the organoids were grown in embedded in matrigel.",

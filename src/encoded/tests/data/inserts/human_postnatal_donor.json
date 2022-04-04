@@ -7,7 +7,8 @@
             "sheng-zhong:donor1",
             "aaron-streets:donorA",
             "matthias-heinig:donorA",
-            "gray-camp:donorA"
+            "gray-camp:donorA",
+            "allon-klein:donorA"
         ],
         "status": "released",
         "description": "Healthy kidney donorB",
@@ -37,7 +38,8 @@
                 "ancestry_group":  "HANCESTRO_0014", "percentage": 60 
             }
         ],
-        "ancestry_method": "DOI:10.1007/978-1-4939-6442-0_5"
+        "ancestry_method": "DOI:10.1007/978-1-4939-6442-0_5",
+        "death_type": "circulatory death"
     },
     {
         "accession": "LATHD080DDD",
@@ -115,7 +117,8 @@
             "HIV-1/HBV/HCV": "negative"
         },
         "url":"https://virtualtissuebank.iu.edu/data/barcode/K108949/",
-        "notes": "Some notes"
+        "notes": "Some notes",
+        "living_at_sample_collection": false
     },
     {
         "accession": "LATHD654GGG",
@@ -133,6 +136,7 @@
         "ethnicity": "HANCESTRO_0008",
         "uuid": "f9b6ee3f-22f0-4544-9b69-d396b0425371",
         "cause_of_death": "kidney failure",
+        "living_at_sample_collection": false,
         "body_mass_index": "24.3",
         "weight": "158",
         "weight_unit": "lb",

@@ -12,6 +12,24 @@ ntrs = [
         "child_of": ['UBERON:0001776', 'UBERON:0001782']
     },
     {
+        "term_id": "NTR:0000442",
+        "name": "Baka",
+        "synonyms": [],
+        "child_of": ["HANCESTRO:0011"]
+    },
+    {
+        "term_id": "NTR:0000443",
+        "name": "Fulani Mbororo",
+        "synonyms": [],
+        "child_of": ["HANCESTRO:0011"]
+    },
+    {
+        "term_id": "NTR:0000444",
+        "name": "Tikari",
+        "synonyms": [],
+        "child_of": ["HANCESTRO:0011"]
+    },
+    {
         "term_id": "NCIT:C17998",
         "name": "unknown",
         "synonyms": [],

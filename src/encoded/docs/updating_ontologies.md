@@ -9,14 +9,14 @@ Ontologies used
 | Ontology |  File used | Version in use |
 |:--|:--|:--|
 | [Uber-anatomy ontology (UBERON)] | `uberon.owl` from [OLS-UBERON] | 2021-11-28 |
-| [Cell Ontology (CL)] | `cl.ow` from [OLS-CL] | 2022-01-05 |
-| [Experimental Factor Ontology (EFO)] | `efo.owl` from [OLS-EFO] | 3.38.0 |
-| [Mondo Disease Ontology (MONDO)] | `mondo.owl` from [OLS-MONDO] | 2021-12-30 |
+| [Cell Ontology (CL)] | `cl.ow` from [OLS-CL] | 2022-02-16 |
+| [Experimental Factor Ontology (EFO)] | `efo.owl` from [OLS-EFO] | 3.40.0 |
+| [Mondo Disease Ontology (MONDO)] | `mondo.owl` from [OLS-MONDO] | 2022-04-04 |
 | [Human Ancestry Ontology (HANCESTRO)] | `hancestro.owl` from [OLS-HANCESTRO] | 2.5 |
 | [Human Developmental Stage Ontology (HsapDv)] | `hsapdv.owl` from [OLS-HsapDv] | 2020-03-10 |
 | [Mouse Developmental Stage Ontology (MmusDv)] | `mmusdv.owl` from [OLS-MmusDv] | 2020-03-10 |
 
-**Current ontology.json:** `ontology-2022-02-04.json`
+**Current ontology.json:** `ontology-2022-04-19.json`
 
 How to update the ontology versions
 ---------------- 

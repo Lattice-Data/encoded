@@ -215,6 +215,7 @@
                             "cell barcode",
                             "feature barcode",
                             "spatial barcode",
+                            "well barcode",
                             "UMI",
                             "Spacer"
                         ]
@@ -333,6 +334,7 @@
                                 "feature barcode",
                                 "cell barcode",
                                 "spatial barcode",
+                                "well barcode",
                                 "sample index",
                                 "UMI",
                                 "fragment",

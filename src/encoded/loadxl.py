@@ -24,6 +24,7 @@ ORDER = [
     'library_protocol',
     'target',
     'antibody_lot',
+    'antibody',
     'treatment',
     'human_postnatal_donor',
     'human_prenatal_donor',

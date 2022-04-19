@@ -140,7 +140,7 @@
                  "title": "Treatment antibody",
                  "description": "Antibody used in this treatment.",
                  "type":  "string",
-                 "linkTo": "AntibodyLot"
+                 "linkTo": "Antibody"
              }
         },
         "treatment_type": {

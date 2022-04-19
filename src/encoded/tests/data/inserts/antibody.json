@@ -1,14 +1,16 @@
 [
     {
         "aliases": [
-            "lattice:totalseq_C0051_CD14_alot"
+            "lattice:totalseq_C0051_CD14"
         ],
         "status": "released",
+        "uuid": "0c9a9fe2-f5a4-4be3-8fa3-456579989327",
         "source": "Biolegend",
         "format": "TotalSeq-C",
         "product_id": "367137",
         "clonality": "monoclonal",
         "host_organism": "mouse",
+        "application": "ADT",
         "isotype": "IgG1",
         "purification_methods": [
             "chromatography"
@@ -21,14 +23,16 @@
     },
     {
         "aliases": [
-            "lattice:totalseq_C0034_CD3_alot"
+            "lattice:totalseq_C0034_CD3"
         ],
         "status": "released",
+        "uuid": "05f8236a-6c4d-4e4d-9614-9bd63ec7a33c",
         "source": "Biolegend",
         "format": "TotalSeq-C",
         "product_id": "300479",
         "clonality": "monoclonal",
         "host_organism": "mouse",
+        "application": "ADT",
         "isotype": "IgG1",
         "purification_methods": [
             "chromatography"
@@ -41,13 +45,15 @@
     },
     {
         "aliases": [
-            "lattice:totalseq_C0050_CD19_alot"
+            "lattice:totalseq_C0050_CD19"
         ],
         "status": "released",
+        "uuid": "773430e9-a92b-4a71-af3e-ab998839da11",
         "source": "Biolegend",
         "format": "TotalSeq-C",
         "product_id": "302265",
         "clonality": "monoclonal",
+        "application": "ADT",
         "host_organism": "mouse",
         "isotype": "IgG1",
         "purification_methods": [
@@ -61,13 +67,15 @@
     },
     {
         "aliases": [
-            "lattice:totalseq_C0161_CD11b_alot"
+            "lattice:totalseq_C0161_CD11b"
         ],
         "status": "released",
+        "uuid": "e090e806-b352-4147-b5f1-7c791d415e3f",
         "source": "Biolegend",
         "format": "TotalSeq-C",
         "product_id": "301359",
         "clonality": "monoclonal",
+        "application": "ADT",
         "host_organism": "mouse",
         "isotype": "IgG1",
         "purification_methods": [
@@ -81,13 +89,15 @@
     },
     {
         "aliases": [
-            "lattice:totalseq_C0046_CD8_alot"
+            "lattice:totalseq_C0046_CD8"
         ],
         "status": "released",
+        "uuid": "21036e16-175e-470b-aceb-42ffa5f850a7",
         "source": "Biolegend",
         "format": "TotalSeq-C",
         "product_id": "344753",
         "clonality": "monoclonal",
+        "application": "ADT",
         "host_organism": "mouse",
         "isotype": "IgG1",
         "purification_methods": [
@@ -101,13 +111,15 @@
     },
     {
         "aliases": [
-            "lattice:totalseq_C0002_CD8a_alot"
+            "lattice:totalseq_C0002_CD8a"
         ],
         "status": "released",
+        "uuid": "7f42aa06-ead9-4966-8810-68448c5ac218",
         "source": "Biolegend",
         "format": "TotalSeq-C",
         "product_id": "100785",
         "clonality": "monoclonal",
+        "application": "ADT",
         "host_organism": "mouse",
         "isotype": "IgG2a",
         "purification_methods": [
@@ -121,14 +133,16 @@
     },
     {
         "aliases": [
-            "lattice:totalseq_C0424_CD14_alot"
+            "lattice:totalseq_C0424_CD14"
         ],
         "status": "released",
+        "uuid": "d1a9f01c-51bb-48fd-902c-e76c94e16120",
         "source": "Biolegend",
         "format": "TotalSeq-C",
         "product_id": "123339",
         "clonality": "monoclonal",
         "host_organism": "mouse",
+        "application": "ADT",
         "isotype": "IgG2a",
         "purification_methods": [
             "chromatography"
@@ -141,14 +155,16 @@
     },
     {
         "aliases": [
-            "lattice:totalseq_C0182_CD3_alot"
+            "lattice:totalseq_C0182_CD3"
         ],
         "status": "released",
+        "uuid": "5cd9774c-839d-41dd-9672-20982a8b7a06",
         "source": "Biolegend",
         "format": "TotalSeq-C",
         "product_id": "100263",
         "clonality": "monoclonal",
         "host_organism": "mouse",
+        "application": "ADT",
         "isotype": "IgG2b",
         "purification_methods": [
             "chromatography"
@@ -161,14 +177,16 @@
     },
     {
         "aliases": [
-            "lattice:totalseq_C0092_CD19_alot"
+            "lattice:totalseq_C0092_CD19"
         ],
         "status": "released",
+        "uuid": "87567776-a10d-4110-a812-25defd4d45ae",
         "source": "Biolegend",
-        "format": "TotalSeq-C",
+        "format": "custom",
         "product_id": "115571",
         "clonality": "monoclonal",
         "host_organism": "mouse",
+        "application": "ADT",
         "isotype": "IgG2a",
         "purification_methods": [
             "chromatography"
@@ -184,15 +202,17 @@
     },
     {
         "aliases": [
-            "lattice:totalseq_C0014_CD11b_alot"
+            "lattice:totalseq_C0014_CD11b"
         ],
         "status": "released",
+        "uuid": "74a81d27-d4b3-49a2-b4c1-aea82e2e5a68",
         "source": "Biolegend",
-        "format": "TotalSeq-C",
+        "format": "TotalSeq-D",
         "product_id": "101275",
         "clonality": "monoclonal",
         "host_organism": "mouse",
         "isotype": "IgG2b",
+        "application": "HTO",
         "purification_methods": [
             "chromatography"
         ],

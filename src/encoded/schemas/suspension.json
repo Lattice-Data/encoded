@@ -300,7 +300,7 @@
                 "title": "Feature antibodies",
                 "description": "Antibodies used for cell surface protein detection in Feature Barcoding technologies (aka: CITEseq) during biosample preparation",
                 "type": "string",
-                "linkTo": "AntibodyLot"
+                "linkTo": ["AntibodyLot","Antibody"]
             }
         }
     },

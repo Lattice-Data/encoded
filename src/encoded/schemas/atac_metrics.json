@@ -560,27 +560,27 @@
 			"minimum": 0,
 			"maximum": 1
 		},
-		"median_high-quality_fragments_per_cell":{
+		"median_high_quality_fragments_per_cell":{
 			"title": "Median high-quality fragments per cell",
 			"description": "The median number of high-quality fragments per cell barcode",
 			"type": "integer",
 			"minimum": 0
 		},
-		"frac_high-quality_fragments_in_cells":{
+		"frac_high_quality_fragments_in_cells":{
 			"title": "Fraction of high-quality fragments in cells",
 			"description": "Fraction of high-quality fragments with a valid barcode that are associated with cell-containing partitions. High-quality fragments are defined as read pairs with a valid barcode that map to the nuclear genome with mapping quality > 30, are not chimeric and not duplicate.",
 			"type": "number",
 			"minimum": 0,
 			"maximum": 1
 		},
-		"frac_high-quality_fragments_overlapping_tss":{
+		"frac_high_quality_fragments_overlapping_tss":{
 			"title": "Fraction of high-quality fragments overlapping TSS",
 			"description": "Fraction of high-quality fragments in cell barcodes that overlap transcription start sites (TSS).",
 			"type": "number",
 			"minimum": 0,
 			"maximum": 1
 		},
-		"frac_high-quality_fragments_overlapping_peaks":{
+		"frac_high_quality_fragments_overlapping_peaks":{
 			"title": "Fraction of high-quality fragments overlapping peaks",
 			"description": "Fraction of high-quality fragments in cell barcodes that overlap called peaks.",
 			"type": "number",

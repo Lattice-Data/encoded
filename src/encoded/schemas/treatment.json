@@ -98,6 +98,7 @@
             "type": "string",
             "enum": [
                 "activation",
+                "control",
                 "deactivation",
                 "medication",
                 "intervention",

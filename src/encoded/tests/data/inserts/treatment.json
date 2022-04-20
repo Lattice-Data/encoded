@@ -34,5 +34,15 @@
         "treatment_type": "protein",
         "purpose": "stimulation",
         "frequency": "once daily"
+    },
+    {
+        "uuid": "eec42ad6-c03f-465b-a05f-cd3b1f924ce3",
+        "aliases": [
+            "lattice:cont_treatment"
+        ],
+        "status": "released",
+        "treatment_term_name": "mock epidermal growth factor",
+        "treatment_type": "protein",
+        "purpose": "control"
     }
 ]

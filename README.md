@@ -30,6 +30,9 @@ For issues see [Snovault OSX App Installation][] first.
     ```
     pip install -r requirements.osx.txt
     ```
+    ```
+    conda install -c anaconda psycopg2==2.8.4
+    ```
 
 1. Build Application
     ```

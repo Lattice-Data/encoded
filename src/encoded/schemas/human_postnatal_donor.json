@@ -225,6 +225,7 @@
             "properties": {
                 "eGFR": {
                     "title": "Estimated glomerular filtration rate",
+                    "comment": "Healthy values: > 60 ml/min/1.73m^2",
                     "type": "string"
                 },
                 "global_glomerulosclerosis": {

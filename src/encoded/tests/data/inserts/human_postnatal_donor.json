@@ -8,11 +8,14 @@
             "aaron-streets:donorA",
             "matthias-heinig:donorA",
             "gray-camp:donorA",
-            "allon-klein:donorA"
+            "allon-klein:donorA",
+            "sarah-tishkoff:donor1",
+            "sebastian-pott:donorA"
         ],
         "status": "released",
         "description": "Healthy kidney donorB",
         "ethnicity": "HANCESTRO_0014",
+        "reported_ethnicity": "Amerindian",
         "sex": "male",
         "age": "65-70",
         "age_units": "year",

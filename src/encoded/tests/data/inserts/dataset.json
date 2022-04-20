@@ -10,6 +10,9 @@
         "award": "CZI039LAT",
         "funding_organizations": [
             "Chan Zuckerberg Institute"
+        ],
+        "dbxrefs": [
+            "DUOS:DUOS-something"
         ]
     },
     {

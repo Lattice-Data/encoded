@@ -30,6 +30,18 @@
             "type": "integer",
             "minimum": 0
         },
+        "mean_genes_per_cell": {
+            "title": "Mean genes per cell",
+            "description": "Mean number of genes detected (with nonzero UMI counts) across cell-associated barcodes.",
+            "type": "number",
+            "minimum": 0
+        },
+        "total_reads_mapped_confidently_to_transcriptome":{
+            "title": "Total reads mapped confidently to the transcriptome",
+            "description": "The total number of reads that mapped confidently to the transcriptome",
+            "type": "integer",
+            "minimum": 0
+        },
         "frac_reads_mapped_to_genome":{
             "title": "Fraction of reads mapped to the genome",
             "description": "Fraction of reads that mapped to genome",
@@ -47,6 +59,13 @@
         "frac_reads_mapped_confidently_to_transcriptome": {
             "title": "Fraction of reads mapped confidently to the transcriptome",
             "description": "Fraction of reads mapped to a unique gene in the transcriptome with high mapping quality score.",
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+        },
+        "frac_reads_mapped_to_transcriptome": {
+            "title": "Fraction of reads mapped to the transcriptome",
+            "description": "Fraction of reads mapped to a unique gene or multiple genes in the transcriptome with high mapping quality score.",
             "type": "number",
             "minimum": 0,
             "maximum": 1
@@ -109,6 +128,20 @@
             "minimum": 0,
             "maximum": 1
         },
+        "frac_q30_bases_in_sample_index2": {
+            "title": "Fraction of Q30 bases in sample index 2",
+            "description": "Fraction of bases with Q-score of at least 30 in the sample index 2 sequences.",
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+        },
+        "frac_q30_bases_in_barcode_or_umi": {
+            "title": "Fraction of Q30 bases in barcode or umi",
+            "description": "Percentage of bases with Q-score of at least 30 in either the cell barcode or UMI sequences.",
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+        },
         "total_genes_detected": {
             "title": "Total genes detected",
             "description": "The number of genes with at least one UMI count in any cell.",
@@ -116,7 +149,25 @@
             "minimum": 0
         },
         "median_umi_counts_per_cell": {
-            "description": "The median number of total UMI counts across all cell-associated barcodes."
+            "description": "The median number of total UMI counts across all cell-associated barcodes.",
+            "type": "integer",
+            "minimum": 0
+        },
+        "mean_umi_counts_per_cell": {
+            "description": "The median number of total UMI counts across all cell-associated barcodes.",
+            "type": "number",
+            "minimum": 0
+        },
+        "total_umis_in_cells": {
+            "description": "The total number of UMIs across all cell-associated barcodes.",
+            "type": "integer",
+            "minimum": 0
+        },
+        "median_reads_per_cell": {
+            "title": "Mean reads per cell",
+            "description": "The median number of reads in each cell.",
+            "type": "integer",
+            "minimum": 0
         }
     },
     "changelog": "/profiles/changelogs/rna_metrics.md"

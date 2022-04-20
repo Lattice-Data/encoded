@@ -60,6 +60,12 @@
             "linkTo": "OntologyTerm",
             "default": "9ccb9d0b-1747-4ad1-969a-769286937021"
         },
+        "reported_ethnicity": {
+            "title": "Reported ethnicity",
+            "description": "Free text value recorded as the ethnic group to which the donor belongs.",
+            "comment": "Only adjusted from researcher's records by capitalization, correcting typos, or removing odd characters.",
+            "type": "string"
+        },
         "parents": {
             "title": "Parents",
             "description": "Biological parents of this donor",

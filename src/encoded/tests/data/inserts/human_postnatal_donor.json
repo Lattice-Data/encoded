@@ -15,6 +15,7 @@
         "status": "released",
         "description": "Healthy kidney donorB",
         "ethnicity": "HANCESTRO_0014",
+        "reported_ethnicity": "Amerindian",
         "sex": "male",
         "age": "65-70",
         "age_units": "year",

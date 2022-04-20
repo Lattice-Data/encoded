@@ -4,7 +4,7 @@
     "id": "/profiles/raw_sequence_file.json",
     "$schema": "http://json-schema.org/draft-04/schema#",
     "type": "object",
-    "required": ["dataset", "file_format", "output_types", "derived_from"],
+    "required": ["dataset", "derived_from"],
     "identifyingProperties": ["uuid", "accession", "aliases"],
     "additionalProperties": false,
     "mixinProperties": [
@@ -96,7 +96,8 @@
             "enum": [
                 "fastq",
                 "sra"
-            ]
+            ],
+            "default": "fastq"
         },
         "fastq_signature": {
             "title": "Fastq signature",
@@ -165,7 +166,8 @@
                     "undetermined reads",
                     "assigned reads"
                 ]
-            }
+            },
+            "default": ["assigned reads"]
         },
         "read_type": {
             "title": "Read type",

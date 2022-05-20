@@ -19,6 +19,8 @@
         {"$ref": "mixins.json#/uuid"},
         {"$ref": "mixins.json#/accessioned_status"},
         {"$ref": "mixins.json#/source"},
+        {"$ref": "mixins.json#/product_id"},
+        {"$ref": "mixins.json#/lot_id"},
         {"$ref": "mixins.json#/dbxrefs"},
         {"$ref": "mixins.json#/treatments"},
         {"$ref": "mixins.json#/references"},

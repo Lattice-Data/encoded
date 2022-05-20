@@ -16,6 +16,8 @@
         {"$ref": "mixins.json#/notes" },
         {"$ref": "mixins.json#/documents"},
         {"$ref": "mixins.json#/source"},
+        {"$ref": "mixins.json#/product_id"},
+        {"$ref": "mixins.json#/lot_id"},
         {"$ref": "mixins.json#/dbxrefs"}
     ],
     "dependencies": {

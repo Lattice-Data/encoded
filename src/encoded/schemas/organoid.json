@@ -18,7 +18,6 @@
         {"$ref": "mixins.json#/urls"},
         {"$ref": "mixins.json#/uuid"},
         {"$ref": "mixins.json#/accessioned_status"},
-        {"$ref": "mixins.json#/source"},
         {"$ref": "mixins.json#/dbxrefs"},
         {"$ref": "mixins.json#/treatments"},
         {"$ref": "mixins.json#/diseases"},
@@ -37,8 +36,6 @@
         "post_differentiation_time_units": ["post_differentiation_time"],
         "starting_quantity": ["starting_quantity_units"],
         "starting_quantity_units": ["starting_quantity"],
-        "product_id": ["source"],
-        "lot_id": ["source", "product_id"],
         "disease_state": ["diseases"]
     },
     "properties": {

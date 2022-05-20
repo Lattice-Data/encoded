@@ -154,24 +154,6 @@
                 "ADT"
             ]
         },
-        "format": {
-            "title": "Format",
-            "description": "The categories used to distinguish the oligonucleotide conjugated to the antibody in regards to the barcode flanking sequences (capture sequence and PCR handle) used.",
-            "type": "string",
-            "enum": [
-                "TotalSeq-A",
-                "TotalSeq-B",
-                "TotalSeq-C",
-                "TotalSeq-D",
-                "custom"
-            ]
-        },
-        "target_organism": {
-            "title": "Target organism",
-            "description": "The organism bearing the target which the antibody was designed to detect.",
-            "type": "string",
-            "linkTo": "Organism"
-        },
         "clone_id": {
             "title": "Clone ID",
             "description": "The clone identifier assigned by the vendor.",
@@ -182,8 +164,8 @@
         "host_organism": {
             "title": "Organism"
         },
-        "format": {
-            "title": "Format"
+        "target.organism": {
+            "title": "Target organism"
         },
         "target.label": {
             "title": "Target",
@@ -194,14 +176,14 @@
         "source": {
             "title": "Source"
         },
-        "product_id": {
-            "title": "Product ID"
-        },
-        "format": {
-            "title": "Format"
+        "product_ids": {
+            "title": "Product IDs"
         },
         "targets.label": {
             "title": "Targets"
+        },
+        "target.organism": {
+            "title": "Target organism"
         },
         "clonality": {
             "title": "Clonality"

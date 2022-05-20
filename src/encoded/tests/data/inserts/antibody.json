@@ -6,7 +6,6 @@
         "status": "released",
         "uuid": "0c9a9fe2-f5a4-4be3-8fa3-456579989327",
         "source": "Biolegend",
-        "format": "TotalSeq-C",
         "product_id": "367137",
         "clonality": "monoclonal",
         "host_organism": "mouse",
@@ -18,7 +17,6 @@
         "targets": ["lattice:CD14"],
         "oligo_sequence": "CAATCAGACCTATGA",
         "url": "https://www.biolegend.com/en-us/products/totalseq-c0051-anti-human-cd14-antibody-17583",
-        "target_organism": "human",
         "clone_id": "63D3"
     },
     {
@@ -28,7 +26,6 @@
         "status": "released",
         "uuid": "05f8236a-6c4d-4e4d-9614-9bd63ec7a33c",
         "source": "Biolegend",
-        "format": "TotalSeq-C",
         "product_id": "300479",
         "clonality": "monoclonal",
         "host_organism": "mouse",
@@ -40,7 +37,6 @@
         "targets": ["lattice:CD3E"],
         "oligo_sequence": "CTCATTGTAACTCCT",
         "url": "https://www.biolegend.com/en-us/products/totalseq-c0034-anti-human-cd3-antibody-16819",
-        "target_organism": "human",
         "clone_id": "UCHT1"
     },
     {
@@ -50,7 +46,6 @@
         "status": "released",
         "uuid": "773430e9-a92b-4a71-af3e-ab998839da11",
         "source": "Biolegend",
-        "format": "TotalSeq-C",
         "product_id": "302265",
         "clonality": "monoclonal",
         "application": "ADT",
@@ -62,7 +57,6 @@
         "targets": ["lattice:CD19"],
         "oligo_sequence": "CTGGGCAATTACTCG",
         "url": "https://www.biolegend.com/en-us/products/totalseq-c0050-anti-human-cd19-antibody-16832",
-        "target_organism": "human",
         "clone_id": "HIB19"
     },
     {
@@ -72,7 +66,6 @@
         "status": "released",
         "uuid": "e090e806-b352-4147-b5f1-7c791d415e3f",
         "source": "Biolegend",
-        "format": "TotalSeq-C",
         "product_id": "301359",
         "clonality": "monoclonal",
         "application": "ADT",
@@ -84,7 +77,6 @@
         "targets": ["lattice:HbA"],
         "oligo_sequence": "GACAAGTGATCTGCA",
         "url": "https://www.biolegend.com/en-us/products/totalseq-c0161-anti-human-cd11b-antibody-16826",
-        "target_organism": "human",
         "clone_id": "ICRF44"
     },
     {
@@ -94,7 +86,6 @@
         "status": "released",
         "uuid": "21036e16-175e-470b-aceb-42ffa5f850a7",
         "source": "Biolegend",
-        "format": "TotalSeq-C",
         "product_id": "344753",
         "clonality": "monoclonal",
         "application": "ADT",
@@ -106,7 +97,6 @@
         "targets": ["lattice:CD8A"],
         "oligo_sequence": "GCGCAACTTGATGAT",
         "url": "https://www.biolegend.com/en-us/products/totalseq-c0046-anti-human-cd8-antibody-17318",
-        "target_organism": "human",
         "clone_id": "SK1"
     },
     {
@@ -116,7 +106,6 @@
         "status": "released",
         "uuid": "7f42aa06-ead9-4966-8810-68448c5ac218",
         "source": "Biolegend",
-        "format": "TotalSeq-C",
         "product_id": "100785",
         "clonality": "monoclonal",
         "application": "ADT",
@@ -128,7 +117,6 @@
         "targets": ["lattice:CD8A"],
         "oligo_sequence": "TACCCGTAATAGCGT",
         "url": "https://www.biolegend.com/en-us/products/totalseq-c0002-anti-mouse-cd8a-antibody-18641",
-        "target_organism": "mouse",
         "clone_id": "53-6.7"
     },
     {
@@ -138,7 +126,6 @@
         "status": "released",
         "uuid": "d1a9f01c-51bb-48fd-902c-e76c94e16120",
         "source": "Biolegend",
-        "format": "TotalSeq-C",
         "product_id": "123339",
         "clonality": "monoclonal",
         "host_organism": "mouse",
@@ -150,7 +137,6 @@
         "targets": ["lattice:CD14"],
         "oligo_sequence": "AACCAACAGTCACGT",
         "url": "https://www.biolegend.com/en-us/products/totalseq-c0424-anti-mouse-cd14-antibody-18868",
-        "target_organism": "mouse",
         "clone_id": "Sa14-2"
     },
     {
@@ -160,7 +146,6 @@
         "status": "released",
         "uuid": "5cd9774c-839d-41dd-9672-20982a8b7a06",
         "source": "Biolegend",
-        "format": "TotalSeq-C",
         "product_id": "100263",
         "clonality": "monoclonal",
         "host_organism": "mouse",
@@ -172,7 +157,6 @@
         "targets": ["lattice:CD3G"],
         "oligo_sequence": "GTATGTCCGCTCGAT",
         "url": "https://www.biolegend.com/en-us/products/totalseq-c0182-anti-mouse-cd3-antibody-18764",
-        "target_organism": "mouse",
         "clone_id": "17A2"
     },
     {
@@ -182,7 +166,6 @@
         "status": "released",
         "uuid": "87567776-a10d-4110-a812-25defd4d45ae",
         "source": "Biolegend",
-        "format": "custom",
         "product_id": "115571",
         "clonality": "monoclonal",
         "host_organism": "mouse",
@@ -194,7 +177,6 @@
         "targets": ["lattice:CD19"],
         "oligo_sequence": "ATCAGCCATGTCAGT",
         "url": "https://www.biolegend.com/en-us/products/totalseq-c0093-anti-mouse-cd19-antibody-18761",
-        "target_organism": "mouse",
         "clone_id": "6D5",
         "dbxrefs": [
             "AR:AB_2832392"
@@ -207,7 +189,6 @@
         "status": "released",
         "uuid": "74a81d27-d4b3-49a2-b4c1-aea82e2e5a68",
         "source": "Biolegend",
-        "format": "TotalSeq-D",
         "product_id": "101275",
         "clonality": "monoclonal",
         "host_organism": "mouse",
@@ -219,7 +200,6 @@
         "targets": ["lattice:HbA"],
         "oligo_sequence": "TGAAGGCTCATTTGT",
         "url": "https://www.biolegend.com/en-us/products/totalseq-c0014-anti-mouse-human-cd11b-antibody-18762",
-        "target_organism": "mouse",
         "clone_id": "M1/70"
     }
 ]

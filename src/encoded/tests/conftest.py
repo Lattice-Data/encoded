@@ -19,7 +19,7 @@ pytest_plugins = [
     'encoded.tests.fixtures.testapp',
 
     'encoded.tests.fixtures.schemas.access_key',
-    'encoded.tests.fixtures.schemas.antibody_lot',
+    'encoded.tests.fixtures.schemas.antibody',
     'encoded.tests.fixtures.schemas.atac_metrics',
     'encoded.tests.fixtures.schemas.award',
     'encoded.tests.fixtures.schemas.dataset',

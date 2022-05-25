@@ -77,14 +77,14 @@
                     "properties": {
                         "antibody_format": {
                             "enum": ["TotalSeq-D"]
-                        }
-                    },
+                        },
                         "antibody_application": {
                             "enum": ["ADT"]
                         }
+                    }
                 }
             ]
-        },
+        }
     },
     "properties": {
         "schema_version": {

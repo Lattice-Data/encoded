@@ -79,13 +79,11 @@ class Document(ItemWithAttachment, Item):
 
 @collection(
     name='antibody',
-    unique_key='accession',
     properties={
         'title': 'Antibody',
         'description': 'Listing of all registered antibodies',
     })
 class Antibody(Item):
     item_type = 'antibody'
-    unique_key='oligo_sequence',
     schema = load_schema('encoded:schemas/antibody.json')
     embedded = ['targets']

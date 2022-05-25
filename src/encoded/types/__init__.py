@@ -86,5 +86,6 @@ class Document(ItemWithAttachment, Item):
     })
 class Antibody(Item):
     item_type = 'antibody'
+    unique_key='oligo_sequence',
     schema = load_schema('encoded:schemas/antibody.json')
     embedded = ['targets']

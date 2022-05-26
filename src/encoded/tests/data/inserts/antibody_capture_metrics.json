@@ -20,7 +20,8 @@
         "frac_reads_in_cells": 0.72,
         "median_umi_counts_per_cell": 2513,
         "frac_sequencing_saturation": 0.415,
-        "frac_q30_bases_in_barcode": 0.966
+        "frac_q30_bases_in_barcode": 0.966,
+        "total_cells_detected": 11010
     },
     {
         "uuid": "95f1d5ac-dd73-4885-a935-555fb18f8d33",

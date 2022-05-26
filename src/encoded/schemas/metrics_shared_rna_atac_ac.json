@@ -6,6 +6,12 @@
     "type": "object",
     "additionalProperties": false,
     "properties": {
+        "total_cells_detected": {
+            "title": "Total cells detected",
+            "description": "The total number of barcodes identified as cells",
+            "type": "integer",
+            "minimum": 0
+        },
         "total_reads": {
             "title": "Total number of reads",
             "description": "Total number of sequenced reads.",

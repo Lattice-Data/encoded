@@ -6,12 +6,6 @@
     "type": "object",
     "additionalProperties": false,
     "properties": {
-        "total_cells_detected": {
-            "title": "Total cells detected",
-            "description": "The total number of barcodes identified as cells",
-            "type": "integer",
-            "minimum": 0
-        },
         "frac_reads_mapped_confidently_to_genome": {
             "title": "Fraction of reads mapped confidently to genome",
             "description": "Fraction of reads that mapped confidently to genome",

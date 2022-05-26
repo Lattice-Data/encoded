@@ -28,7 +28,7 @@
         "fixed": false,
         "starting_quantity": "50",
         "starting_quantity_units": "cu mm",
-        "age_at_collection": "46",
+        "age_at_collection": "46.3",
         "age_at_collection_units": "year",
         "development_ontology_at_collection": "HsapDv_0000087"
     },

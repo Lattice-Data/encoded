@@ -90,7 +90,7 @@
         ],
         "status": "released",
         "description":"Heart failure female",
-        "age": "30",
+        "age": "30.4",
         "age_units": "year",
         "development_ontology": "HsapDv_0000124",
         "sex": "female",

@@ -140,7 +140,7 @@
             "description": "The age or age range of the donor when biological material was sampled.",
             "comment": "Only submit when the Donor age is 'variable'. For privacy purposes, any age 90 years or above is listed as '>89'.",
             "type": "string",
-            "pattern": "^(((\\d+)(\\-(\\d+))?)|(>89))$"
+            "pattern": "^(((\\d+(.\\d)?)(\\-(\\d+))?)|(>89))$"
         },
         "age_at_collection_units": {
             "title": "Age at collection units",

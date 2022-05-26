@@ -94,6 +94,10 @@
         }
     },
     "facets": {
+        "title": {
+            "title": "Title",
+            "type": "typeahead"
+        },
         "lab.title": {
             "title": "Lab"
         }

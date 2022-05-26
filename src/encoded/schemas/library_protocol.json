@@ -23,6 +23,67 @@
                     "enum": [true]
                 }
             }
+        },
+        "antibody_format": {
+            "properties": {
+                "library_type": {
+                    "enum": ["CITE-seq"]
+                }
+            }
+        },
+        "antibody_application": {
+            "properties": {
+                "library_type": {
+                    "enum": ["CITE-seq"]
+                }
+            }
+        },
+        "antibody_format": {
+            "oneOf": [
+                {
+                    "properties": {
+                        "antibody_format": {
+                            "enum": ["TotalSeq-A"]
+                        },
+                        "end_bias": {
+                            "enum": ["3'"]
+                        }
+                    }
+                },
+                {
+                    "properties": {
+                        "antibody_format": {
+                            "enum": ["TotalSeq-B"]
+                        },
+                        "end_bias": {
+                            "enum": ["3'"]
+                        },
+                        "construction_platform_version": {
+                            "enum": [3]
+                        }
+                    }
+                },
+                {
+                    "properties": {
+                        "antibody_format": {
+                            "enum": ["TotalSeq-C"]
+                        },
+                        "end_bias": {
+                            "enum": ["5'"]
+                        }
+                    }
+                },
+                {
+                    "properties": {
+                        "antibody_format": {
+                            "enum": ["TotalSeq-D"]
+                        },
+                        "antibody_application": {
+                            "enum": ["ADT"]
+                        }
+                    }
+                }
+            ]
         }
     },
     "properties": {
@@ -62,6 +123,26 @@
             "title": "Platform version",
             "description": "The version of the device used to construct the library.",
             "type": "number"
+        },
+        "antibody_format": {
+            "title": "Format",
+            "description": "The categories used to distinguish the oligonucleotide conjugated to the antibody in regards to the barcode flanking sequences (capture sequence and PCR handle) used.",
+            "type": "string",
+            "enum": [
+                "TotalSeq-A",
+                "TotalSeq-B",
+                "TotalSeq-C",
+                "TotalSeq-D"
+            ]
+        },
+        "antibody_application": {
+            "title": "Application",
+            "description": "The intended purpose of using the antibody.",
+            "type": "string",
+            "enum": [
+                "HTO",
+                "ADT"
+            ]
         },
         "library_type": {
             "title": "Library type",

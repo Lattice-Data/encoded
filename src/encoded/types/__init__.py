@@ -79,7 +79,6 @@ class Document(ItemWithAttachment, Item):
 
 @collection(
     name='antibody',
-    unique_key='accession',
     properties={
         'title': 'Antibody',
         'description': 'Listing of all registered antibodies',
@@ -87,18 +86,4 @@ class Document(ItemWithAttachment, Item):
 class Antibody(Item):
     item_type = 'antibody'
     schema = load_schema('encoded:schemas/antibody.json')
-    embedded = ['targets']
-
-
-@collection(
-    name='antibody-lots',
-    unique_key='accession',
-    properties={
-        'title': 'Antibody lot',
-        'description': 'Listing of ENCODE antibodies',
-    })
-class AntibodyLot(Item):
-    item_type = 'antibody_lot'
-    schema = load_schema('encoded:schemas/antibody_lot.json')
-    name_key = 'accession'
     embedded = ['targets']

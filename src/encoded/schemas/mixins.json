@@ -260,19 +260,23 @@
             }
         }
     },
-    "source": {
+    "product_id": {
         "product_id": {
             "title": "Product ID",
             "description": "The product identifier provided by the originating lab or vendor.",
             "type": "string",
             "pattern": "^(\\S+(\\s|\\S)*\\S+|\\S)$|^$"
-        },
+        }
+    },
+    "lot_id": {
         "lot_id":{
     	    "title": "Lot ID",
     	    "description": "The lot identifier provided by the originating lab or vendor.",
     	    "type": "string",
             "pattern": "^(\\S+(\\s|\\S)*\\S+|\\S)$|^$"
-        },
+        }
+    },
+    "source": {
         "source": {
             "title": "Source",
     	    "description": "The originating lab or vendor.",
@@ -493,6 +497,7 @@
                     "norbert-hübner|",
                     "peter-sims|",
                     "peter-smibert|",
+                    "purushothama-rao-tata|",
                     "rahul-satija|",
                     "ronald-germain|",
                     "rui-chen|",

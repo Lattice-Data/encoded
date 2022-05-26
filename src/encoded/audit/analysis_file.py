@@ -30,19 +30,22 @@ def audit_read_count_compare(value, system):
         in_reads = 0
         for v in input_reads.values():
             in_reads += v
+
+        out_reads = 0
         for qc in value.get('quality_metrics'):
-            if 'snATAC-seq' in value.get('assays'):
-                out_reads = qc.get('total_fragments')
-            else:
-                out_reads = qc.get('total_reads')
-            if (out_reads and in_reads != out_reads):
-                detail = ('File {} has {} reads but input objects total {} reads.'.format(
-                    audit_link(path_to_text(value['@id']), value['@id']),
-                    out_reads,
-                    in_reads
-                    )
+            if qc['@type'][0] == 'AtacMetrics':
+                out_reads += qc.get('total_fragments',0)
+            elif qc['@type'][0] == 'RnaMetrics':
+                out_reads += qc.get('total_reads',0)
+
+        if in_reads != out_reads:
+            detail = ('File {} has {} reads but input objects total {} reads.'.format(
+                audit_link(path_to_text(value['@id']), value['@id']),
+                out_reads,
+                in_reads
                 )
-                yield AuditFailure('inconsistent read counts', detail, level='ERROR')
+            )
+            yield AuditFailure('inconsistent read counts', detail, level='ERROR')
 
 
 def audit_validated(value, system):

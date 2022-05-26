@@ -4,7 +4,7 @@
     "id": "/profiles/antibody.json",
     "$schema": "http://json-schema.org/draft-04/schema#",
     "type": "object",
-    "required": ["source", "application", "oligo_sequence"],
+    "required": ["source", "application", "oligo_sequence", "control"],
     "identifyingProperties": ["uuid","aliases"],
     "additionalProperties": false,
     "mixinProperties": [
@@ -42,6 +42,11 @@
                 "monoclonal",
                 "polyclonal"
             ]
+        },
+        "control": {
+            "title": "Control",
+            "description": "True if the antibody is used as a control.",
+            "type": "boolean"
         },
         "dbxrefs": {
             "items": {
@@ -158,8 +163,8 @@
         }
     },
     "facets": {
-        "host_organism": {
-            "title": "Organism"
+        "control": {
+            "title": "Control"
         },
         "target.organism": {
             "title": "Target organism"

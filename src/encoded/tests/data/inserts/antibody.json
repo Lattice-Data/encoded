@@ -17,7 +17,8 @@
         "targets": ["lattice:CD14"],
         "oligo_sequence": "CAATCAGACCTATGA",
         "url": "https://www.biolegend.com/en-us/products/totalseq-c0051-anti-human-cd14-antibody-17583",
-        "clone_id": "63D3"
+        "clone_id": "63D3",
+        "control": true
     },
     {
         "aliases": [
@@ -37,7 +38,8 @@
         "targets": ["lattice:CD3E"],
         "oligo_sequence": "CTCATTGTAACTCCT",
         "url": "https://www.biolegend.com/en-us/products/totalseq-c0034-anti-human-cd3-antibody-16819",
-        "clone_id": "UCHT1"
+        "clone_id": "UCHT1",
+        "control": true
     },
     {
         "aliases": [
@@ -57,7 +59,8 @@
         "targets": ["lattice:CD19"],
         "oligo_sequence": "CTGGGCAATTACTCG",
         "url": "https://www.biolegend.com/en-us/products/totalseq-c0050-anti-human-cd19-antibody-16832",
-        "clone_id": "HIB19"
+        "clone_id": "HIB19",
+        "control": true
     },
     {
         "aliases": [
@@ -77,7 +80,8 @@
         "targets": ["lattice:HbA"],
         "oligo_sequence": "GACAAGTGATCTGCA",
         "url": "https://www.biolegend.com/en-us/products/totalseq-c0161-anti-human-cd11b-antibody-16826",
-        "clone_id": "ICRF44"
+        "clone_id": "ICRF44",
+        "control": true
     },
     {
         "aliases": [
@@ -97,7 +101,8 @@
         "targets": ["lattice:CD8A"],
         "oligo_sequence": "GCGCAACTTGATGAT",
         "url": "https://www.biolegend.com/en-us/products/totalseq-c0046-anti-human-cd8-antibody-17318",
-        "clone_id": "SK1"
+        "clone_id": "SK1",
+        "control": true
     },
     {
         "aliases": [
@@ -117,7 +122,8 @@
         "targets": ["lattice:CD8A"],
         "oligo_sequence": "TACCCGTAATAGCGT",
         "url": "https://www.biolegend.com/en-us/products/totalseq-c0002-anti-mouse-cd8a-antibody-18641",
-        "clone_id": "53-6.7"
+        "clone_id": "53-6.7",
+        "control": true
     },
     {
         "aliases": [
@@ -137,7 +143,8 @@
         "targets": ["lattice:CD14"],
         "oligo_sequence": "AACCAACAGTCACGT",
         "url": "https://www.biolegend.com/en-us/products/totalseq-c0424-anti-mouse-cd14-antibody-18868",
-        "clone_id": "Sa14-2"
+        "clone_id": "Sa14-2",
+        "control": true
     },
     {
         "aliases": [
@@ -157,7 +164,8 @@
         "targets": ["lattice:CD3G"],
         "oligo_sequence": "GTATGTCCGCTCGAT",
         "url": "https://www.biolegend.com/en-us/products/totalseq-c0182-anti-mouse-cd3-antibody-18764",
-        "clone_id": "17A2"
+        "clone_id": "17A2",
+        "control": true
     },
     {
         "aliases": [
@@ -180,7 +188,8 @@
         "clone_id": "6D5",
         "dbxrefs": [
             "AR:AB_2832392"
-        ]
+        ],
+        "control": true
     },
     {
         "aliases": [
@@ -200,6 +209,7 @@
         "targets": ["lattice:HbA"],
         "oligo_sequence": "TGAAGGCTCATTTGT",
         "url": "https://www.biolegend.com/en-us/products/totalseq-c0014-anti-mouse-human-cd11b-antibody-18762",
-        "clone_id": "M1/70"
+        "clone_id": "M1/70",
+        "control": false
     }
 ]

@@ -10,12 +10,11 @@
     "mixinProperties": [
         { "$ref": "mixins.json#/schema_version" },
         { "$ref": "mixins.json#/uuid" },
-        { "$ref": "mixins.json#/url" },
         { "$ref": "mixins.json#/shared_status" }
     ],
     "properties": {
         "schema_version": {
-            "default": "1"
+            "default": "2"
         },
         "name": {
             "title": "Name",
@@ -29,75 +28,13 @@
             "description": "A unique name for affiliation identification, current convention is comma separated PI's first & last name and institute label. (e.g. John Doe, UNI).",
             "type": "string",
             "uniqueKey": "lab:name"
-        },
-        "principal_investigators": {
-            "title": "Principal Investigators",
-            "description": "Principal Investigators of the lab.",
-            "type": "array",
-            "uniqueItems": true,
-            "items": {
-                "description": "A Principal Investigators of the lab",
-                "type": "string",
-                "linkTo": "User"
-            }
-        },
-        "institute_label": {
-            "title": "Institute label",
-            "description": "An abbreviation for the institute the lab is associated with.",
-            "type": "string",
-            "pattern": "^(\\S+(\\s|\\S)*\\S+|\\S)$|^$"
-        },
-        "institute_name": {
-            "title": "Institute",
-            "description": "The name for the institute the lab is associated with.",
-            "type": "string",
-            "pattern": "^(\\S+(\\s|\\S)*\\S+|\\S)$|^$"
-        },
-        "address1": {
-            "title": "Address line 1",
-            "description": "The first line of the address of the lab.",
-            "type": "string",
-            "pattern": "^(\\S+(\\s|\\S)*\\S+|\\S)$|^$"
-        },
-        "address2": {
-            "title": "Address line 2",
-            "description": "The second line of the address of the lab.",
-            "type": "string",
-            "pattern": "^(\\S+(\\s|\\S)*\\S+|\\S)$"
-        },
-        "city": {
-            "title": "City",
-            "description": "The city of the address of the lab.",
-            "type": "string",
-            "pattern": "^(\\S+(\\s|\\S)*\\S+|\\S)$|^$"
-        },
-        "state": {
-            "title": "State/Province/Region",
-            "description": "The state of the address of the lab.",
-            "type": "string",
-            "pattern": "^(\\S+(\\s|\\S)*\\S+|\\S)$|^$"
-        },
-        "country": {
-            "title": "Country",
-            "description": "The country of the address of the lab.",
-            "type": "string",
-            "pattern": "^(\\S+(\\s|\\S)*\\S+|\\S)$|^$"
-        },
-        "postal_code": {
-            "title": "ZIP/Postal code",
-            "description": "The zip code of the address of the lab.",
-            "type": "string",
-            "format": "postal-code",
-            "pattern": "^(\\S+(\\s|\\S)*\\S+|\\S)$|^$"
-        },
-        "phone": {
-            "title": "Primary phone number",
-            "description": "The lab's primary phone number (with country code).",
-            "type": "string",
-            "format": "phone"
         }
     },
     "facets": {
+        "title": {
+            "title": "Title",
+            "type": "typeahead"
+        },
         "status": {
             "title": "Status"
         }
@@ -108,12 +45,6 @@
         },
         "title": {
             "title": "Title"
-        },
-        "institute_name": {
-            "title": "Insitute"
-        },
-        "url": {
-            "title": "URL"
         }
     },
     "changelog": "/profiles/changelogs/lab.md"

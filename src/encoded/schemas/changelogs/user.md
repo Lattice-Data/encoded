@@ -1,5 +1,8 @@
 ## Changelog for user.json
 
+### Schema version 4
+* removed *lab*
+
 ### Schema version 3
 * *job_title* set to a string
 

@@ -101,12 +101,6 @@ def test_submitter_patch_lab_disallowed(submitter, lab_base, submitter_testapp):
     submitter_testapp.patch_json(res.json['@id'], lab, status=422)  # is that the right status?
 
 
-def test_wrangler_patch_lab_allowed(submitter, lab_base, wrangler_testapp):
-    res = wrangler_testapp.get(submitter['@id'])
-    lab = {'lab': lab_base['@id']}
-    wrangler_testapp.patch_json(res.json['@id'], lab, status=200)
-
-
 def test_submitter_patch_submits_for_disallowed(submitter, lab_base, submitter_testapp):
     res = submitter_testapp.get(submitter['@id'])
     submits_for = {'submits_for': res.json['submits_for'] + [lab_base['@id']]}

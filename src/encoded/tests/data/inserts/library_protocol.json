@@ -3,17 +3,10 @@
         "assay_ontology": "/ontology-terms/EFO_0009294/",
         "biological_macromolecule": "protein",
         "cell_barcode_whitelist": "737k-august-2016.txt",
-        "construction_platform": "10x",
-        "construction_platform_version": 1,
-        "documents": [],
-        "extraction_method": "10x GEM generation",
         "first_strand_primer": "TSO",
         "library_amplification_method": "PCR",
         "library_preamplification_method": "PCR",
-        "library_preparation_environment": "droplet",
-        "library_size_selection_method": "SPRIselect",
         "library_type": "CITE-seq",
-        "lysis_method": "10x GEM generation",
         "antibody_format": "TotalSeq-C",
         "antibody_application": "ADT",
         "name": "CITE-10x-5'-v1",
@@ -78,19 +71,12 @@
         "assay_ontology": "/ontology-terms/EFO_0009294/",
         "biological_macromolecule": "protein",
         "cell_barcode_whitelist": "3M-febrary-2018.txt",
-        "construction_platform": "10x",
-        "construction_platform_version": 3,
-        "documents": [],
-        "extraction_method": "10x GEM generation",
         "first_strand_primer": "capture sequence",
         "library_amplification_method": "PCR",
         "library_preamplification_method": "PCR",
-        "library_preparation_environment": "droplet",
-        "library_size_selection_method": "SPRIselect",
         "library_type": "CITE-seq",
         "antibody_format": "TotalSeq-A",
         "antibody_application": "ADT",
-        "lysis_method": "10x GEM generation",
         "name": "CITE-10x-3'-v3",
         "read_structure": [
             {
@@ -153,17 +139,10 @@
         "assay_ontology": "/ontology-terms/EFO_0030059/",
         "biological_macromolecule": "DNA",
         "cell_barcode_whitelist": "737k-arc-v1.txt",
-        "construction_platform": "10x",
-        "construction_platform_version": 1,
-        "extraction_method": "10x GEM generation",
         "first_strand_primer": "adapter",
-        "fragmentation_method": "enzymatic",
         "library_amplification_method": "PCR",
         "library_preamplification_method": "PCR",
-        "library_preparation_environment": "droplet",
-        "library_size_selection_method": "SPRIselect",
         "library_type": "ATAC-seq",
-        "lysis_method": "10x GEM generation",
         "name": "10x-multiome-ATAC-v1-reverse",
         "notes": "Reverse complement workflow",
         "read_structure": [
@@ -180,7 +159,6 @@
                 "sequence_element": "Spacer"
             }
         ],
-        "second_strand_primer": "adapter",
         "sequence_file_standards": [
             {
                 "read_type": "Read 1N",
@@ -233,22 +211,12 @@
         "assay_ontology": "/ontology-terms/EFO_0010715/",
         "biological_macromolecule": "RNA",
         "cell_barcode_whitelist": "737k-august-2016.txt",
-        "construction_platform": "10x",
-        "construction_platform_version": 1,
-        "documents": [],
         "end_bias": "5'",
-        "extraction_method": "10x GEM generation",
         "first_strand_primer": "poly(dT)",
-        "fragmentation_method": "enzymatic",
         "library_amplification_method": "PCR",
         "library_preamplification_method": "RT-PCR",
-        "library_preparation_environment": "droplet",
-        "library_size_selection_method": "SPRIselect",
         "library_type": "RNA-seq",
-        "lysis_method": "10x GEM generation",
         "name": "BCR-10x-5'-v1",
-        "polyA_selection": true,
-        "polyA_selection_method": "poly(dT)",
         "read_structure": [
             {
                 "start": 1,
@@ -263,7 +231,6 @@
                 "sequence_element": "UMI"
             }
         ],
-        "second_strand_primer": "TSO",
         "sequence_file_standards": [
             {
                 "read_type": "Read 1",
@@ -297,7 +264,6 @@
                 "required": false
             }
         ],
-        "size_range": "400-9000",
         "status": "in progress",
         "strand_specificity": "second",
         "title": "BCR 10x 5' v1",
@@ -307,22 +273,12 @@
         "assay_ontology": "/ontology-terms/EFO_0009899/",
         "biological_macromolecule": "RNA",
         "cell_barcode_whitelist": "737k-august-2016.txt",
-        "construction_platform": "10x",
-        "construction_platform_version": 2,
-        "documents": [],
         "end_bias": "3'",
-        "extraction_method": "10x GEM generation",
         "first_strand_primer": "poly(dT)",
-        "fragmentation_method": "enzymatic",
         "library_amplification_method": "PCR",
         "library_preamplification_method": "RT-PCR",
-        "library_preparation_environment": "droplet",
-        "library_size_selection_method": "SPRIselect",
         "library_type": "RNA-seq",
-        "lysis_method": "10x GEM generation",
         "name": "10x-3'-v2",
-        "polyA_selection": true,
-        "polyA_selection_method": "poly(dT)",
         "read_structure": [
             {
                 "start": 1,
@@ -337,7 +293,6 @@
                 "sequence_element": "UMI"
             }
         ],
-        "second_strand_primer": "TSO",
         "sequence_file_standards": [
             {
                 "read_type": "Read 1",
@@ -371,7 +326,6 @@
                 "required": false
             }
         ],
-        "size_range": "400-9000",
         "status": "in progress",
         "strand_specificity": "first",
         "title": "10x 3' v2",
@@ -384,11 +338,8 @@
         "first_strand_primer": "poly(dT)",
         "library_amplification_method": "PCR",
         "library_preamplification_method": "RT-PCR",
-        "library_preparation_environment": "slide",
         "library_type": "RNA-seq",
         "name": "Slide-seq2",
-        "polyA_selection": true,
-        "polyA_selection_method": "poly(dT)",
         "read_structure": [
             {
                 "start": 1,
@@ -403,7 +354,6 @@
                 "sequence_element": "UMI"
             }
         ],
-        "second_strand_primer": "TSO",
         "sequence_file_standards": [
             {
                 "read_type": "Read 1",
@@ -437,7 +387,6 @@
                 "required": false
             }
         ],
-        "size_range": "400-700",
         "status": "in progress",
         "strand_specificity": "first",
         "title": "Slide-seq2",
@@ -447,21 +396,12 @@
         "assay_ontology": "/ontology-terms/EFO_0010715/",
         "biological_macromolecule": "RNA",
         "cell_barcode_whitelist": "737k-august-2016.txt",
-        "construction_platform": "10x",
-        "construction_platform_version": 2.0,
         "end_bias": "5'",
-        "extraction_method": "10x GEM generation",
         "first_strand_primer": "poly(dT)",
-        "fragmentation_method": "enzymatic",
         "library_amplification_method": "PCR",
         "library_preamplification_method": "RT-PCR",
-        "library_preparation_environment": "droplet",
-        "library_size_selection_method": "SPRIselect",
         "library_type": "RNA-seq",
-        "lysis_method": "10x GEM generation",
         "name": "BCR-10x-5'-v2",
-        "polyA_selection": true,
-        "polyA_selection_method": "poly(dT)",
         "read_structure": [
             {
                 "start": 1,
@@ -476,7 +416,6 @@
                 "sequence_element": "UMI"
             }
         ],
-        "second_strand_primer": "TSO",
         "sequence_file_standards": [
             {
                 "read_type": "Read 1",
@@ -520,7 +459,6 @@
                 "required": false
             }
         ],
-        "size_range": "400-9000",
         "status": "in progress",
         "strand_specificity": "second",
         "title": "BCR 10x 5' v2",
@@ -532,13 +470,9 @@
         "first_strand_primer": "poly(dT)",
         "library_amplification_method": "PCR",
         "library_preamplification_method": "RT-PCR",
-        "library_preparation_environment": "plate",
-        "library_size_selection_method": "SPRIselect",
         "library_type": "RNA-seq",
         "name": "mcSCRB-seq",
         "notes": "PEG 8000 is used to induce molecular crowding conditions to increase cDNA yield",
-        "polyA_selection_method": "poly(dT)",
-        "second_strand_primer": "TSO",
         "status": "in progress",
         "strand_specificity": "first",
         "title": "mcSCRB-seq",
@@ -548,22 +482,12 @@
         "assay_ontology": "/ontology-terms/EFO_0009922/",
         "biological_macromolecule": "RNA",
         "cell_barcode_whitelist": "3M-febrary-2018.txt",
-        "construction_platform": "10x",
-        "construction_platform_version": 3,
-        "documents": [],
         "end_bias": "3'",
-        "extraction_method": "10x GEM generation",
         "first_strand_primer": "poly(dT)",
-        "fragmentation_method": "enzymatic",
         "library_amplification_method": "PCR",
         "library_preamplification_method": "RT-PCR",
-        "library_preparation_environment": "droplet",
-        "library_size_selection_method": "SPRIselect",
         "library_type": "RNA-seq",
-        "lysis_method": "10x GEM generation",
         "name": "10x-3'-v3",
-        "polyA_selection": true,
-        "polyA_selection_method": "poly(dT)",
         "read_structure": [
             {
                 "start": 1,
@@ -578,7 +502,6 @@
                 "sequence_element": "UMI"
             }
         ],
-        "second_strand_primer": "TSO",
         "sequence_file_standards": [
             {
                 "read_type": "Read 1",
@@ -622,7 +545,6 @@
                 "required": false
             }
         ],
-        "size_range": "400-9000",
         "status": "in progress",
         "strand_specificity": "first",
         "title": "10x 3' v3",
@@ -631,18 +553,12 @@
     {
         "assay_ontology": "/ontology-terms/EFO_0010961/",
         "biological_macromolecule": "RNA",
-        "construction_platform": "10x",
         "end_bias": "3'",
         "first_strand_primer": "poly(dT)",
-        "fragmentation_method": "enzymatic",
         "library_amplification_method": "PCR",
         "library_preamplification_method": "RT-PCR",
-        "library_preparation_environment": "slide",
-        "library_size_selection_method": "SPRIselect",
         "library_type": "RNA-seq",
         "name": "Visium-10x-GE",
-        "polyA_selection": true,
-        "polyA_selection_method": "poly(dT)",
         "read_structure": [
             {
                 "start": 1,
@@ -657,7 +573,6 @@
                 "sequence_element": "UMI"
             }
         ],
-        "second_strand_primer": "TSO",
         "sequence_file_standards": [
             {
                 "read_type": "Read 1",
@@ -701,7 +616,6 @@
                 "required": false
             }
         ],
-        "size_range": "300-600",
         "status": "in progress",
         "strand_specificity": "first",
         "title": "Visium 10x GE",
@@ -711,21 +625,12 @@
         "assay_ontology": "/ontology-terms/EFO_0009900/",
         "biological_macromolecule": "RNA",
         "cell_barcode_whitelist": "737k-august-2016.txt",
-        "construction_platform": "10x",
-        "construction_platform_version": 2,
         "end_bias": "5'",
-        "extraction_method": "10x GEM generation",
         "first_strand_primer": "poly(dT)",
-        "fragmentation_method": "enzymatic",
         "library_amplification_method": "PCR",
         "library_preamplification_method": "RT-PCR",
-        "library_preparation_environment": "droplet",
-        "library_size_selection_method": "SPRIselect",
         "library_type": "RNA-seq",
-        "lysis_method": "10x GEM generation",
         "name": "10x-5'-v2",
-        "polyA_selection": true,
-        "polyA_selection_method": "poly(dT)",
         "read_structure": [
             {
                 "start": 1,
@@ -740,7 +645,6 @@
                 "sequence_element": "UMI"
             }
         ],
-        "second_strand_primer": "TSO",
         "sequence_file_standards": [
             {
                 "read_type": "Read 1",
@@ -793,22 +697,12 @@
         "assay_ontology": "/ontology-terms/EFO_0011025/",
         "biological_macromolecule": "RNA",
         "cell_barcode_whitelist": "737k-august-2016.txt",
-        "construction_platform": "10x",
-        "construction_platform_version": 1,
-        "documents": [],
         "end_bias": "5'",
-        "extraction_method": "10x GEM generation",
         "first_strand_primer": "poly(dT)",
-        "fragmentation_method": "enzymatic",
         "library_amplification_method": "PCR",
         "library_preamplification_method": "RT-PCR",
-        "library_preparation_environment": "droplet",
-        "library_size_selection_method": "SPRIselect",
         "library_type": "RNA-seq",
-        "lysis_method": "10x GEM generation",
         "name": "10x-5'-v1",
-        "polyA_selection": true,
-        "polyA_selection_method": "poly(dT)",
         "read_structure": [
             {
                 "start": 1,
@@ -823,7 +717,6 @@
                 "sequence_element": "UMI"
             }
         ],
-        "second_strand_primer": "TSO",
         "sequence_file_standards": [
             {
                 "read_type": "Read 1",
@@ -857,7 +750,6 @@
                 "required": false
             }
         ],
-        "size_range": "400-9000",
         "status": "in progress",
         "strand_specificity": "second",
         "title": "10x 5' v1",
@@ -866,18 +758,12 @@
     {
         "biological_macromolecule": "protein",
         "cell_barcode_whitelist": "737k-august-2016.txt",
-        "construction_platform": "10x",
-        "construction_platform_version": 2,
-        "extraction_method": "10x GEM generation",
         "first_strand_primer": "poly(dT)",
         "library_amplification_method": "PCR",
         "library_preamplification_method": "PCR",
-        "library_preparation_environment": "droplet",
-        "library_size_selection_method": "SPRIselect",
         "library_type": "CITE-seq",
         "antibody_format": "TotalSeq-A",
         "antibody_application": "ADT",
-        "lysis_method": "10x GEM generation",
         "name": "CITE-10x-3'-v2",
         "read_structure": [
             {
@@ -940,21 +826,12 @@
         "assay_ontology": "/ontology-terms/EFO_0010714/",
         "biological_macromolecule": "RNA",
         "cell_barcode_whitelist": "737k-august-2016.txt",
-        "construction_platform": "10x",
-        "construction_platform_version": 2.0,
         "end_bias": "5'",
-        "extraction_method": "10x GEM generation",
         "first_strand_primer": "poly(dT)",
-        "fragmentation_method": "enzymatic",
         "library_amplification_method": "PCR",
         "library_preamplification_method": "RT-PCR",
-        "library_preparation_environment": "droplet",
-        "library_size_selection_method": "SPRIselect",
         "library_type": "RNA-seq",
-        "lysis_method": "10x GEM generation",
         "name": "TCR-10x-5'-v2",
-        "polyA_selection": true,
-        "polyA_selection_method": "poly(dT)",
         "read_structure": [
             {
                 "start": 1,
@@ -969,7 +846,6 @@
                 "sequence_element": "UMI"
             }
         ],
-        "second_strand_primer": "TSO",
         "sequence_file_standards": [
             {
                 "read_type": "Read 1",
@@ -1013,7 +889,6 @@
                 "required": false
             }
         ],
-        "size_range": "400-9000",
         "status": "in progress",
         "strand_specificity": "second",
         "title": "TCR 10x 5' v2",
@@ -1023,18 +898,10 @@
         "assay_ontology": "/ontology-terms/EFO_0030007/",
         "biological_macromolecule": "DNA",
         "cell_barcode_whitelist": "737K-cratac-v1.txt",
-        "construction_platform": "10x",
-        "construction_platform_version": 1,
-        "documents": [],
-        "extraction_method": "10x GEM generation",
         "first_strand_primer": "adapter",
-        "fragmentation_method": "enzymatic",
         "library_amplification_method": "PCR",
         "library_preamplification_method": "PCR",
-        "library_preparation_environment": "droplet",
-        "library_size_selection_method": "SPRIselect",
         "library_type": "ATAC-seq",
-        "lysis_method": "10x GEM generation",
         "name": "ATAC-10x-v1",
         "read_structure": [
             {
@@ -1044,7 +911,6 @@
                 "sequence_element": "cell barcode"
             }
         ],
-        "second_strand_primer": "adapter",
         "sequence_file_standards": [
             {
                 "read_type": "Read 1N",
@@ -1087,7 +953,6 @@
                 "required": true
             }
         ],
-        "size_range": "400-9000",
         "status": "in progress",
         "strand_specificity": "unstranded",
         "title": "ATAC 10x v1",
@@ -1097,21 +962,12 @@
         "assay_ontology": "/ontology-terms/EFO_0030059/",
         "biological_macromolecule": "RNA",
         "cell_barcode_whitelist": "737k-arc-v1.txt",
-        "construction_platform": "10x",
-        "construction_platform_version": 1,
         "end_bias": "3'",
-        "extraction_method": "10x GEM generation",
         "first_strand_primer": "poly(dT)",
-        "fragmentation_method": "enzymatic",
         "library_amplification_method": "PCR",
         "library_preamplification_method": "RT-PCR",
-        "library_preparation_environment": "droplet",
-        "library_size_selection_method": "SPRIselect",
         "library_type": "RNA-seq",
-        "lysis_method": "10x GEM generation",
         "name": "10x-multiome-GEX-v1",
-        "polyA_selection": true,
-        "polyA_selection_method": "poly(dT)",
         "read_structure": [
             {
                 "start": 1,
@@ -1126,7 +982,6 @@
                 "sequence_element": "UMI"
             }
         ],
-        "second_strand_primer": "TSO",
         "sequence_file_standards": [
             {
                 "read_type": "Read 1",
@@ -1178,22 +1033,12 @@
     {
         "assay_ontology": "/ontology-terms/EFO_0008931/",
         "biological_macromolecule": "RNA",
-        "construction_platform": "Smart-seq",
-        "construction_platform_version": 2,
-        "documents": [],
         "end_bias": "full length",
         "first_strand_primer": "poly(dT)",
-        "fragmentation_method": "enzymatic",
         "library_amplification_method": "PCR",
         "library_preamplification_method": "RT-PCR",
-        "library_preparation_environment": "plate",
         "library_type": "RNA-seq",
-        "lysis_method": "Cell lysis buffer: detergent (Triton X-100)",
         "name": "Smart-seq2",
-        "polyA_selection": true,
-        "polyA_selection_method": "poly(dT)",
-        "second_strand_primer": "TSO",
-        "size_range": "200-600",
         "status": "in progress",
         "strand_specificity": "unstranded",
         "title": "Smart-seq2",
@@ -1203,17 +1048,10 @@
         "assay_ontology": "/ontology-terms/EFO_0030059/",
         "biological_macromolecule": "DNA",
         "cell_barcode_whitelist": "737k-arc-v1.txt",
-        "construction_platform": "10x",
-        "construction_platform_version": 1,
-        "extraction_method": "10x GEM generation",
         "first_strand_primer": "adapter",
-        "fragmentation_method": "enzymatic",
         "library_amplification_method": "PCR",
         "library_preamplification_method": "PCR",
-        "library_preparation_environment": "droplet",
-        "library_size_selection_method": "SPRIselect",
         "library_type": "ATAC-seq",
-        "lysis_method": "10x GEM generation",
         "name": "10x-multiome-ATAC-v1",
         "notes": "Forward strand workflow",
         "read_structure": [
@@ -1230,7 +1068,6 @@
                 "sequence_element": "Spacer"
             }
         ],
-        "second_strand_primer": "adapter",
         "sequence_file_standards": [
             {
                 "read_type": "Read 1N",
@@ -1283,17 +1120,10 @@
         "assay_ontology": "/ontology-terms/EFO_0030059/",
         "biological_macromolecule": "DNA",
         "cell_barcode_whitelist": "737k-arc-v1.txt",
-        "construction_platform": "10x",
-        "construction_platform_version": 1,
-        "extraction_method": "10x GEM generation",
         "first_strand_primer": "adapter",
-        "fragmentation_method": "enzymatic",
         "library_amplification_method": "PCR",
         "library_preamplification_method": "PCR",
-        "library_preparation_environment": "droplet",
-        "library_size_selection_method": "SPRIselect",
         "library_type": "ATAC-seq",
-        "lysis_method": "10x GEM generation",
         "name": "10x-multiome-ATAC-v1-custom",
         "notes": "Custom reverse complement workflow which includes performing 8 dark cycles",
         "read_structure": [
@@ -1304,7 +1134,6 @@
                 "sequence_element": "cell barcode"
             }
         ],
-        "second_strand_primer": "adapter",
         "sequence_file_standards": [
             {
                 "read_type": "Read 1N",
@@ -1356,21 +1185,12 @@
         "assay_ontology": "/ontology-terms/EFO_0010714/",
         "biological_macromolecule": "RNA",
         "cell_barcode_whitelist": "737k-august-2016.txt",
-        "construction_platform": "10x",
-        "construction_platform_version": 1.0,
         "end_bias": "5'",
-        "extraction_method": "10x GEM generation",
         "first_strand_primer": "poly(dT)",
-        "fragmentation_method": "enzymatic",
         "library_amplification_method": "PCR",
         "library_preamplification_method": "RT-PCR",
-        "library_preparation_environment": "droplet",
-        "library_size_selection_method": "SPRIselect",
         "library_type": "RNA-seq",
-        "lysis_method": "10x GEM generation",
         "name": "TCR-10x-5'-v1",
-        "polyA_selection": true,
-        "polyA_selection_method": "poly(dT)",
         "read_structure": [
             {
                 "start": 1,
@@ -1385,7 +1205,6 @@
                 "sequence_element": "UMI"
             }
         ],
-        "second_strand_primer": "TSO",
         "sequence_file_standards": [
             {
                 "read_type": "Read 1",
@@ -1419,7 +1238,6 @@
                 "required": false
             }
         ],
-        "size_range": "400-9000",
         "status": "in progress",
         "strand_specificity": "second",
         "title": "TCR 10x 5' v1",

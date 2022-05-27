@@ -4,7 +4,6 @@
         "first_name": "Abbe",
         "last_name": "Clark",
         "job_title": "computational scientist",
-        "lab": "Anna Greka, Broad",
         "submits_for": [
             "anna-greka"
         ],
@@ -20,7 +19,6 @@
         "first_name": "Anna",
         "last_name": "Greka",
         "job_title": "principal investigator",
-        "lab": "Anna Greka, Broad",
         "submits_for": [
             "anna-greka"
         ],
@@ -35,7 +33,6 @@
         "email": "jpa29@stanford.edu",
         "first_name": "Joanna",
         "job_title": "data wrangler",
-        "lab": "j-michael-cherry",
         "last_name": "Argasinska",
         "groups": [
             "admin"
@@ -47,7 +44,6 @@
         "email": "jimmie.ye@ucsf.ude",
         "first_name": "Jimmie",
         "job_title": "principal investigator",
-        "lab": "Jimmie Ye, UCSF",
         "last_name": "Ye",
         "submits_for": [
             "jimmie-ye"
@@ -63,7 +59,6 @@
         "first_name": "Rachel",
         "last_name": "Gate",
         "job_title": "principal investigator",
-        "lab": "Jimmie Ye, UCSF",
         "submits_for": [
             "jimmie-ye"
         ],
@@ -78,7 +73,6 @@
         "first_name": "Peter",
         "last_name": "Sims",
         "job_title": "principal investigator",
-        "lab": "Peter Sims, Columbia",
         "submits_for": [
             "peter-sims"
         ],
@@ -93,7 +87,6 @@
         "first_name": "David",
         "last_name": "Chen",
         "job_title": "principal investigator",
-        "lab": "Peter Sims, Columbia",
         "submits_for": [
             "peter-sims"
         ],
@@ -114,7 +107,6 @@
             "verified"
         ],
         "job_title": "data wrangler",
-        "lab": "/labs/j-michael-cherry/",
         "last_name": "Hilton",
         "schema_version": "8",
         "status": "current",
@@ -135,7 +127,6 @@
             "verified"
         ],
         "job_title": "data wrangler",
-        "lab": "/labs/j-michael-cherry/",
         "last_name": "Chien",
         "schema_version": "8",
         "status": "current",
@@ -156,7 +147,6 @@
             "verified"
         ],
         "job_title": "software developer",
-        "lab": "/labs/j-michael-cherry/",
         "last_name": "H",
         "schema_version": "8",
         "status": "current",
@@ -177,7 +167,6 @@
             "verified"
         ],
         "job_title": "data wrangler",
-        "lab": "/labs/j-michael-cherry/",
         "last_name": "Zamanian",
         "schema_version": "8",
         "status": "current",
@@ -193,7 +182,6 @@
         "email": "massa.porta@varius.mauris",
         "first_name": "J. Michael",
         "job_title": "principal investigator",
-        "lab": "/labs/j-michael-cherry/",
         "last_name": "Cherry",
         "groups": [
             "verified"
@@ -207,7 +195,6 @@
         "email": "metus.donec@nisl.montes",
         "first_name": "Gregory",
         "job_title": "data wrangler",
-        "lab": "/labs/peter-sims/",
         "last_name": "Crawford",
         "submits_for": [
             "Peter Sims, Columbia"
@@ -217,7 +204,6 @@
     {
         "email": "quisque.consequat@venenatis.magna",
         "first_name": "Sam",
-        "lab": "/labs/j-michael-cherry/",
         "last_name": "Hill",
         "status": "current",
         "uuid": "f1ef8d70-12a8-4a75-81cc-8167e375c35f"
@@ -225,7 +211,6 @@
     {
         "email": "netus.lorem@risus.lobortis",
         "first_name": "Sammy",
-        "lab": "/labs/j-michael-cherry/",
         "last_name": "Hill",
         "status": "current",
         "uuid": "cd09e34b-7513-456c-a69c-66d258b99d83",
@@ -233,7 +218,6 @@
     },
     {
         "first_name": "Erica",
-        "lab": "/labs/j-michael-cherry/",
         "email": "emruther@stanford.edu",
         "groups": [
             "admin",

@@ -16,7 +16,7 @@
     ],
     "properties": {
         "schema_version": {
-            "default": "3"
+            "default": "4"
         },
         "email": {
             "title": "Email",
@@ -34,13 +34,6 @@
             "title": "Last name",
             "description": "The user's last (family) name.",
             "type": "string"
-        },
-        "lab": {
-            "title": "Lab",
-            "description": "The lab that the user is primarily associated with.",
-            "permission": "import-items",
-            "type": "string",
-            "linkTo": "Lab"
         },
         "institute_name": {
             "title": "Institute",
@@ -97,17 +90,11 @@
         "title": {
             "title": "Title",
             "type": "typeahead"
-        },
-        "lab.title": {
-            "title": "Lab"
         }
     },
     "columns": {
         "title": {
             "title": "Title"
-        },
-        "lab.title": {
-            "title": "Lab"
         }
     },
     "changelog": "/profiles/changelogs/user.md"

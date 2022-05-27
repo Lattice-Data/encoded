@@ -8,22 +8,13 @@
     "identifyingProperties": ["uuid", "name"],
     "additionalProperties": false,
     "mixinProperties": [
-        {"$ref": "mixins.json#/documents"},
         {"$ref": "mixins.json#/notes"},
         {"$ref": "mixins.json#/submitted"},
         {"$ref": "mixins.json#/schema_version"},
-        {"$ref": "mixins.json#/url"},
         {"$ref": "mixins.json#/uuid"},
         {"$ref": "mixins.json#/standard_status"}
     ],
     "dependencies": {
-        "polyA_selection_method": {
-            "properties": {
-                "polyA_selection": {
-                    "enum": [true]
-                }
-            }
-        },
         "antibody_format": {
             "properties": {
                 "library_type": {
@@ -88,7 +79,7 @@
     },
     "properties": {
         "schema_version": {
-            "default": "1"
+            "default": "2"
         },
         "name": {
             "title": "Name",
@@ -106,23 +97,6 @@
             "description": "The ontology identifier describing the protocol",
             "type": "string",
             "linkTo": "OntologyTerm"
-        },
-        "construction_platform": {
-            "title": "Platform",
-            "description": "The device used to construct the library.",
-            "comment": "Use in cases of automated/proprietary library preparation (Fluidigm, 10x, etc.)",
-            "type": "string",
-            "enum": [
-                "10x",
-                "Smart-seq",
-                "SMARTer",
-                "sci-seq"
-            ]
-        },
-        "construction_platform_version": {
-            "title": "Platform version",
-            "description": "The version of the device used to construct the library.",
-            "type": "number"
         },
         "antibody_format": {
             "title": "Format",
@@ -165,48 +139,6 @@
                 "RNA"
             ]
         },
-        "extraction_method": {
-            "title": "Extraction method",
-            "description": "A short description or reference of the nucleic acid extraction protocol used in library preparation, if applicable.",
-            "type": "string",
-            "enum": [
-                "10x GEM generation"
-            ]
-        },
-        "fragmentation_method": {
-            "title": "Fragmentation method",
-            "type": "string",
-            "uniqueItems": true,
-            "description": "A list of nucleic acid fragmentation methods and restriction enzymes used in library preparation.",
-            "enum": [
-                "enzymatic",
-                "physical",
-                "chemical"
-           ]
-        },
-        "library_size_selection_method": {
-            "title": "Size selection method",
-            "description": "A short description or reference of the size selection protocol used in library preparation, if applicable.",
-            "type": "string",
-            "enum": [
-                "SPRIselect"
-            ]
-        },
-        "lysis_method": {
-            "title": "Lysis method",
-            "description": "A short description or reference of the cell lysis protocol used in library preparation, if applicable.",
-            "type": "string",
-            "enum": [
-                "10x GEM generation",
-                "Cell lysis buffer: detergent (Triton X-100)"
-            ]
-        },
-        "size_range": {
-            "title": "Size range",
-            "description": "The targeted size range of the purified nucleic acid (eg: 400-1000 or >500).",
-            "type": "string",
-            "pattern": "(^[0-9]+-[0-9]+$|^[<>][0-9]+$)"
-        },
         "strand_specificity": {
             "title": "Strand specificity",
             "description": "The forward or reverse strandedness of the library resulting from a strand-specific protocol.",
@@ -216,26 +148,6 @@
                 "second",
                 "unstranded"
             ]
-        },
-        "depleted_in_term_name": {
-            "type": "array",
-            "title": "Depleted in term name",
-            "description": "SO (Sequence Ontology) term best matching the nucleic acid that was diminished from the library.",
-            "uniqueItems": true,
-            "items": {
-                "type": "string",
-                "enum": [
-                    "capped mRNA",
-                    "polyadenylated mRNA",
-                    "rRNA"
-                ]
-            }
-        },
-        "depleted_in_term_id": {
-            "title": "Depleted in term ID",
-            "description": "The SO (Sequence Ontology) term ID best matching the nucleic acid that was diminished from the library.",
-            "type": "string",
-            "pattern": "^(SO:[0-9]{2,8})$"
         },
         "end_bias": {
             "title": "End bias",
@@ -247,30 +159,10 @@
                 "full length"
             ]
         },
-        "library_preparation_environment": {
-            "title": "Library preparation environment",
-            "description": "The mechanical design and infrastructure of the assay used in library creation.",
-            "type": "string",
-            "enum": [
-                "plate",
-                "valve",
-                "droplet",
-                "nanowell",
-                "slide"
-            ]
-        },
         "polyA_selection": {
             "title": "polyA selection",
             "description": "A flag to indicate whether or not there was step in the experimental protocol to select for polyA in the mRNA.",
             "type": "boolean"
-        },
-        "polyA_selection_method": {
-            "title": "polyA selection method",
-            "description": "The method in the experimental protocol used to select for the polyA in mRNA.",
-            "type": "string",
-            "enum": [
-                "poly(dT)"
-            ]
         },
         "cell_barcode_whitelist": {
             "title": "Cell barcode whitelist",
@@ -352,29 +244,6 @@
                 "capture sequence",
                 "TSO",
                 "adapter"
-            ]
-        },
-        "second_strand_primer": {
-            "title": "Second strand primer",
-            "description": "The primer used to create the second-strand in library synthesis.",
-            "type": "string",
-            "enum": [
-                "TSO",
-                "adapter"
-            ]
-        },
-        "spatial_resolution": {
-            "title": "Spatial resolution",
-            "description": "The resolution at which the protocol can make measurements, as the diameter",
-            "type": "string",
-            "pattern": "(^[<>]?[0-9]+(.[0-9]+)?$)|(^[0-9]+(.[0-9]+)-[0-9]+(.[0-9]+)$)"
-        },
-        "spatial_resolution_units": {
-            "title": "Spatial resolution units",
-            "description": "The units by which the resolution is measured",
-            "type": "string",
-            "enum": [
-                "μm"
             ]
         },
         "sequence_file_standards": {
@@ -464,9 +333,6 @@
         "library_type": {
             "title": "Library type"
         },
-        "construction_platform": {
-            "title": "Construction platform"
-        },
         "status": {
             "title": "Status"
         }
@@ -477,12 +343,6 @@
         },
         "title": {
             "title": "Title"
-        },
-        "construction_platform": {
-            "title": "Platform"
-        },
-        "construction_platform_version": {
-            "title": "Platform version"
         },
         "end_bias": {
             "title": "End bias"

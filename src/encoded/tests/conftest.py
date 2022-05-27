@@ -24,7 +24,6 @@ pytest_plugins = [
     'encoded.tests.fixtures.schemas.award',
     'encoded.tests.fixtures.schemas.dataset',
     'encoded.tests.fixtures.schemas.document',
-    'encoded.tests.fixtures.schemas.gene',
     'encoded.tests.fixtures.schemas.human_postnatal_donor',
     'encoded.tests.fixtures.schemas.lab',
     'encoded.tests.fixtures.schemas.library',

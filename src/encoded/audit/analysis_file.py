@@ -33,12 +33,12 @@ def audit_read_count_compare(value, system):
 
         out_reads = 0
         for qc in value.get('quality_metrics'):
-            if qc['@type'][0] == 'AtacMetrics':
-                out_reads += qc.get('total_fragments',0)
-            elif qc['@type'][0] == 'RnaMetrics':
-                out_reads += qc.get('total_reads',0)
+            if qc['@type'][0] == 'AtacMetrics' and 'total_fragments' in qc:
+                out_reads += qc['total_fragments']
+            elif qc['@type'][0] == 'RnaMetrics' and 'total_reads' in qc:
+                out_reads += qc['total_reads']
 
-        if in_reads != out_reads:
+        if in_reads != out_reads and out_reads !=0:
             detail = ('File {} has {} reads but input objects total {} reads.'.format(
                 audit_link(path_to_text(value['@id']), value['@id']),
                 out_reads,

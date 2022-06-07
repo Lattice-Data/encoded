@@ -29,38 +29,22 @@
                 }
             }
         },
+        "end_bias": {
+            "properties": {
+                "library_type": {
+                    "enum": ["RNA-seq"]
+                }
+            }
+        },
         "antibody_format": {
             "oneOf": [
                 {
                     "properties": {
                         "antibody_format": {
-                            "enum": ["TotalSeq-A"]
-                        },
-                        "end_bias": {
-                            "enum": ["3'"]
-                        }
-                    }
-                },
-                {
-                    "properties": {
-                        "antibody_format": {
                             "enum": ["TotalSeq-B"]
-                        },
-                        "end_bias": {
-                            "enum": ["3'"]
                         },
                         "construction_platform_version": {
                             "enum": [3]
-                        }
-                    }
-                },
-                {
-                    "properties": {
-                        "antibody_format": {
-                            "enum": ["TotalSeq-C"]
-                        },
-                        "end_bias": {
-                            "enum": ["5'"]
                         }
                     }
                 },

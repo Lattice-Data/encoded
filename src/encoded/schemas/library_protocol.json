@@ -99,7 +99,7 @@
             "linkTo": "OntologyTerm"
         },
         "antibody_format": {
-            "title": "Format",
+            "title": "Antibody format",
             "description": "The categories used to distinguish the oligonucleotide conjugated to the antibody in regards to the barcode flanking sequences (capture sequence and PCR handle) used.",
             "type": "string",
             "enum": [
@@ -110,7 +110,7 @@
             ]
         },
         "antibody_application": {
-            "title": "Application",
+            "title": "Antibody application",
             "description": "The intended purpose of using the antibody.",
             "type": "string",
             "enum": [

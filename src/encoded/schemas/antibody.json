@@ -94,6 +94,7 @@
                 "IgG2bκ",
                 "IgG2bλ",
                 "IgG2c",
+                "IgG2cκ",
                 "IgG2κ",
                 "IgG2λ",
                 "IgG3",
@@ -102,6 +103,7 @@
                 "IgGκ",
                 "IgM",
                 "IgMκ",
+                "IgG2aκ/IgG2bκ",
                 "serum"
             ]
         },
@@ -163,29 +165,63 @@
         }
     },
     "facets": {
+        "source": {
+            "title": "Source"
+        },
+        "application": {
+            "title": "Application"
+        },
         "control": {
             "title": "Control"
         },
-        "target.organism": {
+        "targets.organism": {
             "title": "Target organism"
         },
-        "target.label": {
+        "targets.label": {
             "title": "Target",
-            "type": "typeahead"
+            "type": "typeahead",
+            "length": "long"
+        },
+        "product_ids": {
+            "title": "Product ID",
+            "type": "typeahead",
+            "length": "long"
+        },
+        "clone_id": {
+            "title": "Clone ID",
+            "type": "typeahead",
+            "length": "long"
+        },
+        "oligo_sequence": {
+            "title": "Oligo sequence",
+            "type": "typeahead",
+            "length": "long"
         }
     },
     "columns": {
         "source": {
             "title": "Source"
         },
-        "product_ids": {
-            "title": "Product IDs"
-        },
         "targets.label": {
             "title": "Targets"
         },
-        "target.organism": {
+        "targets.organism": {
             "title": "Target organism"
+        },
+        "source": {
+            "title": "Source"
+        },
+        "application": {
+            "title": "Application"
+        },
+        "product_ids": {
+            "title": "Product IDs"
+        },
+        "clone_id": {
+            "title": "Clone ID"
+        },
+        "oligo_sequence": {
+            "title": "Oligo sequence"
         },
         "clonality": {
             "title": "Clonality"

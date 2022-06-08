@@ -43,8 +43,12 @@
         }
     },
     "facets": {
-        "organism": {
+        "organism.name": {
             "title": "Organism"
+        },
+        "label": {
+            "title": "Target",
+            "type": "typeahead"
         }
     },
     "columns": {

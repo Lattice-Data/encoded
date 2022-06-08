@@ -11,9 +11,6 @@
         "host_organism": "mouse",
         "application": "ADT",
         "isotype": "IgG1",
-        "purification_methods": [
-            "chromatography"
-        ],
         "targets": ["lattice:CD14"],
         "oligo_sequence": "CAATCAGACCTATGA",
         "url": "https://www.biolegend.com/en-us/products/totalseq-c0051-anti-human-cd14-antibody-17583",
@@ -32,9 +29,6 @@
         "host_organism": "mouse",
         "application": "ADT",
         "isotype": "IgG1",
-        "purification_methods": [
-            "chromatography"
-        ],
         "targets": ["lattice:CD3E"],
         "oligo_sequence": "CTCATTGTAACTCCT",
         "url": "https://www.biolegend.com/en-us/products/totalseq-c0034-anti-human-cd3-antibody-16819",
@@ -53,9 +47,6 @@
         "application": "ADT",
         "host_organism": "mouse",
         "isotype": "IgG1",
-        "purification_methods": [
-            "chromatography"
-        ],
         "targets": ["lattice:CD19"],
         "oligo_sequence": "CTGGGCAATTACTCG",
         "url": "https://www.biolegend.com/en-us/products/totalseq-c0050-anti-human-cd19-antibody-16832",
@@ -74,9 +65,6 @@
         "application": "ADT",
         "host_organism": "mouse",
         "isotype": "IgG1",
-        "purification_methods": [
-            "chromatography"
-        ],
         "targets": ["lattice:HbA"],
         "oligo_sequence": "GACAAGTGATCTGCA",
         "url": "https://www.biolegend.com/en-us/products/totalseq-c0161-anti-human-cd11b-antibody-16826",
@@ -95,9 +83,6 @@
         "application": "ADT",
         "host_organism": "mouse",
         "isotype": "IgG1",
-        "purification_methods": [
-            "chromatography"
-        ],
         "targets": ["lattice:CD8A"],
         "oligo_sequence": "GCGCAACTTGATGAT",
         "url": "https://www.biolegend.com/en-us/products/totalseq-c0046-anti-human-cd8-antibody-17318",
@@ -116,9 +101,6 @@
         "application": "ADT",
         "host_organism": "mouse",
         "isotype": "IgG2a",
-        "purification_methods": [
-            "chromatography"
-        ],
         "targets": ["lattice:CD8A"],
         "oligo_sequence": "TACCCGTAATAGCGT",
         "url": "https://www.biolegend.com/en-us/products/totalseq-c0002-anti-mouse-cd8a-antibody-18641",
@@ -137,9 +119,6 @@
         "host_organism": "mouse",
         "application": "ADT",
         "isotype": "IgG2a",
-        "purification_methods": [
-            "chromatography"
-        ],
         "targets": ["lattice:CD14"],
         "oligo_sequence": "AACCAACAGTCACGT",
         "url": "https://www.biolegend.com/en-us/products/totalseq-c0424-anti-mouse-cd14-antibody-18868",
@@ -158,9 +137,6 @@
         "host_organism": "mouse",
         "application": "ADT",
         "isotype": "IgG2b",
-        "purification_methods": [
-            "chromatography"
-        ],
         "targets": ["lattice:CD3G"],
         "oligo_sequence": "GTATGTCCGCTCGAT",
         "url": "https://www.biolegend.com/en-us/products/totalseq-c0182-anti-mouse-cd3-antibody-18764",
@@ -179,9 +155,6 @@
         "host_organism": "mouse",
         "application": "ADT",
         "isotype": "IgG2a",
-        "purification_methods": [
-            "chromatography"
-        ],
         "targets": ["lattice:CD19"],
         "oligo_sequence": "ATCAGCCATGTCAGT",
         "url": "https://www.biolegend.com/en-us/products/totalseq-c0093-anti-mouse-cd19-antibody-18761",
@@ -203,9 +176,6 @@
         "host_organism": "mouse",
         "isotype": "IgG2b",
         "application": "HTO",
-        "purification_methods": [
-            "chromatography"
-        ],
         "targets": ["lattice:HbA"],
         "oligo_sequence": "TGAAGGCTCATTTGT",
         "url": "https://www.biolegend.com/en-us/products/totalseq-c0014-anti-mouse-human-cd11b-antibody-18762",

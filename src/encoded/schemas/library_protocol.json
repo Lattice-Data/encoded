@@ -57,6 +57,13 @@
                             "enum": ["ADT"]
                         }
                     }
+                },
+                {
+                    "properties": {
+                        "antibody_format": {
+                            "enum": ["TotalSeq-A","TotalSeq-C"]
+                        }
+                    }
                 }
             ]
         }

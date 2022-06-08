@@ -174,7 +174,7 @@
         "control": {
             "title": "Control"
         },
-        "targets.organism": {
+        "targets.organism.name": {
             "title": "Target organism"
         },
         "targets.label": {
@@ -208,9 +208,6 @@
         "targets.organism": {
             "title": "Target organism"
         },
-        "source": {
-            "title": "Source"
-        },
         "application": {
             "title": "Application"
         },
@@ -227,7 +224,7 @@
             "title": "Clonality"
         },
         "host_organism": {
-            "title": "Organism"
+            "title": "Host organism"
         },
         "dbxrefs": {
             "title": "External resources"

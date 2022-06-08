@@ -86,4 +86,7 @@ class Document(ItemWithAttachment, Item):
 class Antibody(Item):
     item_type = 'antibody'
     schema = load_schema('encoded:schemas/antibody.json')
-    embedded = ['targets']
+    embedded = [
+        'targets',
+        'targets.organism'
+        ]

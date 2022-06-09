@@ -123,7 +123,7 @@ def warn_keys_with_unknown_value_except_for(*keys):
     def component(dictrows):
         for row in dictrows:
             for k, v in row.items():
-                if k not in keys and text(v).lower() == 'unknown':
+                if k not in keys and text(v).lower() == 'unknown' and k != 'term_name':
                     logger.warn('unknown %r for %s' %
                                 (k, row.get('uuid', '<empty uuid>')))
             yield row

@@ -83,8 +83,9 @@ def audit_donor_dev_stage(value, system):
         else:
             return
     elif value.get('conceptional_age_units'):
-        if value.get('conceptional_age_units') == 'week' and float(value.get('conceptional_age')) <= 8 or \
-            value.get('conceptional_age_units') == 'day' and float(value.get('conceptional_age')) <= 56:
+        conc_age = float(value['conceptional_age'].split('.')[0])
+        if value.get('conceptional_age_units') == 'week' and conc_age <= 8 or \
+            value.get('conceptional_age_units') == 'day' and conc_age <= 56:
             if 'embryonic human stage' not in value['development_ontology']['development_slims']:
                 detail = ('Donor {} of age 56 days (8 wk) or less should be embryonic, not {}.'.format(
                     audit_link(value['accession'], value['@id']),
@@ -95,13 +96,13 @@ def audit_donor_dev_stage(value, system):
                 return
             else:
                 return
-        elif value.get('conceptional_age_units') == 'week' and float(value.get('conceptional_age')) > 8:
-            week = float(value['conceptional_age'])
+        elif value.get('conceptional_age_units') == 'week' and conc_age > 8:
+            week = conc_age
             if week %1 != 0:
                 week += 1
             week = int(week//1)
             expected = ordinalize(str(week)) + pre_term_end_wk
-        elif value.get('conceptional_age_units') == 'day' and float(value.get('conceptional_age')) > 56:
+        elif value.get('conceptional_age_units') == 'day' and conc_age > 56:
             days = int(value['conceptional_age'])
             week = days//7
             if days%7 != 0:
@@ -113,7 +114,10 @@ def audit_donor_dev_stage(value, system):
         if value['age'] == '>89':
             expected = '80 year-old and over human stage'
         else:
-            expected = value['age'] + post_term_end_yr
+            if 'month' in dev:
+                expected = str(int(float(value['age'])*12)) + post_term_end_mo
+            else:
+                expected = value['age'].split('.')[0] + post_term_end_yr
     elif value.get('age_units') == 'month':
         if float(value['age']) <= 23:
             expected = value['age'] + post_term_end_mo

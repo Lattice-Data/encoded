@@ -196,7 +196,7 @@ class HumanPostnatalDonor(HumanDonor):
         "type": "boolean"
     })
     def age_development_stage_redundancy(self, age, age_units=None):
-        if age != 'unknown' and '-' not in age and '>' not in age:
+        if age != 'unknown' and '-' not in age and '>' not in age and '.' not in age:
             if age_units == 'year':
                 return True
             elif age_units == 'month' and int(age) > 24:

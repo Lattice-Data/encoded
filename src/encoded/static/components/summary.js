@@ -327,7 +327,8 @@ class SummaryBody extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            cellCount: 0
+            cellCount: 0,
+            donorCount: 0,
         }
         const searchQuery = url.parse(this.props.context['@id']).search;
         const terms = queryString.parse(searchQuery);
@@ -350,6 +351,18 @@ class SummaryBody extends React.Component {
         })
     }
 
+    getDonorCount(searchBase) {
+        requestSearch(searchBase + '&limit=all').then((results) => {
+            if (Object.keys(results).length > 0 && results['@graph'].length > 0) {
+                var donors = []
+                results['@graph'].forEach(y => donors.push.apply(donors, y['donors']));
+                this.setState({
+                    donorCount: new Set(donors).size
+                })
+            }
+        })
+    }
+
     render() {
         const searchQuery = url.parse(this.props.context['@id']).search;
         const context = this.props.context;
@@ -360,6 +373,7 @@ class SummaryBody extends React.Component {
             })
 
         const cell_count = this.state.cellCount.toLocaleString();
+        const donor_count = this.state.donorCount.toLocaleString();
 
         return (
             <div className="search-results">
@@ -369,6 +383,7 @@ class SummaryBody extends React.Component {
                 <div className="search-results__report-list">
                     <h4>{this.props.context.total} {this.props.context.total > 1 ? 'libraries' : 'library'}</h4>
                     <h4>{cell_count} cells/nuclei</h4>
+                    <h4>{donor_count} donors</h4>
                     <div className="view-controls-container">
                         <ViewControls results={this.props.context} alternativeNames={['Tabular report']} />
                     </div>

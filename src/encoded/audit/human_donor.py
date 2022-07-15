@@ -9,11 +9,11 @@ from .formatter import (
 
 
 def ordinalize(number):
-    n = int(number)
+    n = int(number.split('.')[0])
     suffix = ['th', 'st', 'nd', 'rd', 'th'][min(n % 10, 4)]
     if 11 <= (n % 100) <= 13:
         suffix = 'th'
-    return number + suffix
+    return str(n) + suffix
 
 
 def audit_donor_age(value, system):
@@ -83,7 +83,7 @@ def audit_donor_dev_stage(value, system):
         else:
             return
     elif value.get('conceptional_age_units'):
-        conc_age = float(value['conceptional_age'].split('.')[0])
+        conc_age = float(value['conceptional_age'])
         if value.get('conceptional_age_units') == 'week' and conc_age <= 8 or \
             value.get('conceptional_age_units') == 'day' and conc_age <= 56:
             if 'embryonic human stage' not in value['development_ontology']['development_slims']:
@@ -103,7 +103,7 @@ def audit_donor_dev_stage(value, system):
             week = int(week//1)
             expected = ordinalize(str(week)) + pre_term_end_wk
         elif value.get('conceptional_age_units') == 'day' and conc_age > 56:
-            days = int(value['conceptional_age'])
+            days = conc_age
             week = days//7
             if days%7 != 0:
                 week += 1

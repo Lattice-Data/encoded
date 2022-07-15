@@ -42,3 +42,17 @@ def processed_matrix_file_6_7(value, system):
 def raw_matrix_file_3_4(value, system):
 	if 'value_units' in value:
 		value['value_units'] = [value['value_units']]
+
+
+@upgrade_step('processed_matrix_file', '7', '8')
+def processed_matrix_file_7_8(value, system):
+	for p in ['software','cell_annotation_method','author_cluster_column']:
+		if p in value:
+			del value[p]
+	if 'layers' in value:
+		for l in value['layers']:
+			if 'scaled' in l:
+				del l['scaled']
+			if 'filtering_cutoffs' in l:
+				del l['filtering_cutoffs']
+	value['derivation_process'] = ['single cell analysis pipeline']

@@ -12,10 +12,6 @@
             "jimmie-ye:raw_peak_matrix_3c"
         ],
         "dataset": "LATDS600ABA",
-        "derivation_process": [
-            "alignment",
-            "quantification"
-        ],
         "file_format": "rds",
         "output_types": [
             "gene quantifications"
@@ -35,7 +31,8 @@
         "author_columns": [
             "my_cell_labels",
             "my_other_cell_labels"
-        ]
+        ],
+        "derivation_process": ["single cell analysis pipeline"]
     },
     {
         "aliases": [
@@ -62,12 +59,6 @@
             "peter-sims:postnatal_1b_filtered_matrix",
             "peter-sims:postnatal_1c_filtered_matrix"
         ],
-        "derivation_process": [
-            "merging"
-        ],
-        "software": [
-            "cellranger aggr 4.0"
-        ],
         "md5sum": "b80320ebaa285af7a6880dbbd6795134",
         "layers": [
             {
@@ -81,32 +72,11 @@
                 "value_scale": "log1p, base 10",
                 "value_units": "UMI",
                 "normalized": true,
-                "normalization_method": "cellranger aggr read depth normalization",
-                "filtering_cutoffs": [
-                    {
-                        "cutoff_value": 20000,
-                        "cutoff_units": "genes/observation",
-                        "cutoff_type": "maximum"
-                    },
-                    {
-                        "cutoff_value": 1000,
-                        "cutoff_units": "genes/observation",
-                        "cutoff_type": "minimum"
-                    },
-                    {
-                        "cutoff_value": 10,
-                        "cutoff_units": "percent mitochondrial/observation",
-                        "cutoff_type": "maximum"
-                    },
-                    {
-                        "cutoff_value": 3,
-                        "cutoff_units": "observations/gene",
-                        "cutoff_type": "minimum"
-                    }
-                ]
+                "normalization_method": "cellranger aggr read depth normalization"
             }
         ],
-        "is_primary_data": "True"
+        "is_primary_data": "True",
+        "derivation_process": ["single cell analysis pipeline"]
     },
     {
         "aliases": [
@@ -114,8 +84,6 @@
         ],
         "accession": "LATDF421ZPI",
         "author_cell_type_column": "celltype",
-        "cell_annotation_method": "Seurat FindMarkers v3.0.2, manual curation",
-        "author_cluster_column": "seurat_clusters",
         "uuid": "2d78464c-204a-4bcc-abfa-816688c4a975",
         "s3_uri": "s3://submissions-lattice/testing/muto_rna.rds",
         "no_file_available": false,
@@ -139,13 +107,6 @@
             "peter-sims:prenatal_2c_filtered_matrix",
             "peter-sims:prenatal_3a_filtered_matrix",
             "peter-sims:prenatal_3b_filtered_matrix"
-        ],
-        "derivation_process": [
-            "merging",
-            "ambient RNA correction"
-        ],
-        "software": [
-            "cellranger aggr 4.0"
         ],
         "experimental_variable_disease": "MONDO_0005296",
         "md5sum": "2e883306013203954eb1b69ae063eef1",
@@ -185,33 +146,11 @@
                 "value_scale": "log1p",
                 "value_units": "UMI",
                 "normalized": true,
-                "normalization_method": "scTransform, custom params",
-                "filtering_cutoffs": [
-                    {
-                        "cutoff_value": 20000,
-                        "cutoff_units": "genes/observation",
-                        "cutoff_type": "maximum",
-                        "cutoff_proportion": "epithelial cells 1"
-                    },
-                    {
-                        "cutoff_value": 1000,
-                        "cutoff_units": "per batch distribution percent umi/observation",
-                        "cutoff_type": "minimum"
-                    },
-                    {
-                        "cutoff_value": 10,
-                        "cutoff_units": "percent fragments in peaks/nuclei",
-                        "cutoff_type": "maximum"
-                    },
-                    {
-                        "cutoff_value": 3,
-                        "cutoff_units": "observations/gene",
-                        "cutoff_type": "minimum"
-                    }
-                ]
+                "normalization_method": "scTransform, custom params"
             }
         ],
-        "is_primary_data": "True"
+        "is_primary_data": "True",
+        "derivation_process": ["single cell analysis pipeline"]
     },
     {
         "aliases": [
@@ -234,14 +173,6 @@
         ],
         "observation_count": 20192,
         "dataset": "anna-greka:large_test_dataset",
-        "derivation_process": [
-            "merging",
-            "cell filtering",
-            "gene filtering"
-        ],
-        "software": [
-            "seurat 3.0"
-        ],
         "derived_from": [
             "anna-greka:donorA1_filtered_feature_bc_matrix",
             "anna-greka:donorA2_filtered_feature_bc_matrix",
@@ -265,35 +196,12 @@
                 "value_scale": "log",
                 "value_units": "UMI",
                 "normalized": true,
-                "scaled": true,
-                "normalization_method": "LogNormalize",
-                "filtering_cutoffs": [
-                    {
-                        "cutoff_value": 25000,
-                        "cutoff_units": "genes/observation",
-                        "cutoff_type": "maximum",
-                        "cutoff_proportion": "fibroblasts"
-                    },
-                    {
-                        "cutoff_value": 1000,
-                        "cutoff_units": "genes/observation",
-                        "cutoff_type": "minimum"
-                    },
-                    {
-                        "cutoff_value": 15,
-                        "cutoff_units": "percent mitochondrial/observation",
-                        "cutoff_type": "maximum"
-                    },
-                    {
-                        "cutoff_value": 3,
-                        "cutoff_units": "observations/gene",
-                        "cutoff_type": "minimum"
-                    }
-                ]
+                "normalization_method": "LogNormalize"
             }
         ],
         "accession": "LATDF982KCF",
-        "is_primary_data": "True"
+        "is_primary_data": "True",
+        "derivation_process": ["single cell analysis pipeline"]
     },
     {
         "aliases": [
@@ -313,12 +221,6 @@
         ],
         "observation_count": 82379,
         "dataset": "anna-greka:large_test_dataset",
-        "derivation_process": [
-            "merging"
-        ],
-        "software": [
-            "seurat 3.0"
-        ],
         "derived_from": [
             "anna-greka:donorC1a_filtered_feature_bc_matrix",
             "anna-greka:donorC1b_filtered_feature_bc_matrix",
@@ -342,33 +244,12 @@
                 "value_scale": "log, base e",
                 "value_units": "UMI",
                 "normalized": true,
-                "normalization_method": "LogNormalize",
-                "filtering_cutoffs": [
-                    {
-                        "cutoff_value": 25000,
-                        "cutoff_units": "genes/observation",
-                        "cutoff_type": "maximum"
-                    },
-                    {
-                        "cutoff_value": 800,
-                        "cutoff_units": "genes/observation",
-                        "cutoff_type": "minimum"
-                    },
-                    {
-                        "cutoff_value": 15,
-                        "cutoff_units": "percent mitochondrial/observation",
-                        "cutoff_type": "maximum"
-                    },
-                    {
-                        "cutoff_value": 3,
-                        "cutoff_units": "observations/gene",
-                        "cutoff_type": "minimum"
-                    }
-                ]
+                "normalization_method": "LogNormalize"
             }
         ],
         "accession": "LATDF611FOP",
-        "is_primary_data": "True"
+        "is_primary_data": "True",
+        "derivation_process": ["single cell analysis pipeline"]
     },
     {
         "aliases": [
@@ -389,12 +270,6 @@
         ],
         "observation_count": 18293,
         "dataset": "anna-greka:large_test_dataset",
-        "derivation_process": [
-            "merging"
-        ],
-        "software": [
-            "seurat 3.0"
-        ],
         "derived_from": [
             "anna-greka:donorCD1_filtered_feature_bc_matrix",
             "anna-greka:donorCD2_filtered_feature_bc_matrix"
@@ -413,33 +288,12 @@
                 "value_scale": "log, base e",
                 "value_units": "UMI",
                 "normalized": true,
-                "normalization_method": "LogNormalize",
-                "filtering_cutoffs": [
-                    {
-                        "cutoff_value": 25000,
-                        "cutoff_units": "genes/observation",
-                        "cutoff_type": "maximum"
-                    },
-                    {
-                        "cutoff_value": 1000,
-                        "cutoff_units": "genes/observation",
-                        "cutoff_type": "minimum"
-                    },
-                    {
-                        "cutoff_value": 10,
-                        "cutoff_units": "percent mitochondrial/observation",
-                        "cutoff_type": "maximum"
-                    },
-                    {
-                        "cutoff_value": 3,
-                        "cutoff_units": "observations/gene",
-                        "cutoff_type": "minimum"
-                    }
-                ]
+                "normalization_method": "LogNormalize"
             }
         ],
         "accession": "LATDF757YHL",
-        "is_primary_data": "True"
+        "is_primary_data": "True",
+        "derivation_process": ["single cell analysis pipeline"]
     },
     {
         "aliases": [
@@ -461,12 +315,6 @@
         ],
         "observation_count": 18722,
         "dataset": "anna-greka:large_test_dataset",
-        "derivation_process": [
-            "merging"
-        ],
-        "software": [
-            "seurat 3.0"
-        ],
         "derived_from": [
             "anna-greka:donorE_filtered_feature_bc_matrix",
             "anna-greka:donorF_filtered_feature_bc_matrix"
@@ -488,33 +336,12 @@
                 "value_scale": "log, base e",
                 "value_units": "UMI",
                 "normalized": true,
-                "normalization_method": "LogNormalize",
-                "filtering_cutoffs": [
-                    {
-                        "cutoff_value": 25000,
-                        "cutoff_units": "genes/observation",
-                        "cutoff_type": "maximum"
-                    },
-                    {
-                        "cutoff_value": 1500,
-                        "cutoff_units": "genes/observation",
-                        "cutoff_type": "minimum"
-                    },
-                    {
-                        "cutoff_value": 20,
-                        "cutoff_units": "percent mitochondrial/observation",
-                        "cutoff_type": "maximum"
-                    },
-                    {
-                        "cutoff_value": 3,
-                        "cutoff_units": "observations/gene",
-                        "cutoff_type": "minimum"
-                    }
-                ]
+                "normalization_method": "LogNormalize"
             }
         ],
         "accession": "LATDF071TSQ",
-        "is_primary_data": "True"
+        "is_primary_data": "True",
+        "derivation_process": ["single cell analysis pipeline"]
     },
     {
         "aliases": [
@@ -536,12 +363,6 @@
         ],
         "observation_count": 29292,
         "dataset": "anna-greka:large_test_dataset",
-        "derivation_process": [
-            "merging"
-        ],
-        "software": [
-            "seurat 3.0"
-        ],
         "derived_from": [
             "anna-greka:donorG_filtered_feature_bc_matrix",
             "anna-greka:donorH_filtered_feature_bc_matrix"
@@ -563,32 +384,11 @@
                 "value_scale": "log1p, base e",
                 "value_units": "UMI",
                 "normalized": true,
-                "normalization_method": "LogNormalize",
-                "filtering_cutoffs": [
-                    {
-                        "cutoff_value": 25000,
-                        "cutoff_units": "genes/observation",
-                        "cutoff_type": "maximum"
-                    },
-                    {
-                        "cutoff_value": 1000,
-                        "cutoff_units": "genes/observation",
-                        "cutoff_type": "minimum"
-                    },
-                    {
-                        "cutoff_value": 15,
-                        "cutoff_units": "percent mitochondrial/observation",
-                        "cutoff_type": "maximum"
-                    },
-                    {
-                        "cutoff_value": 3,
-                        "cutoff_units": "observations/gene",
-                        "cutoff_type": "minimum"
-                    }
-                ]
+                "normalization_method": "LogNormalize"
             }
         ],
         "accession": "LATDF522RJH",
-        "is_primary_data": "False"
+        "is_primary_data": "False",
+        "derivation_process": ["single cell analysis pipeline"]
     }
 ]

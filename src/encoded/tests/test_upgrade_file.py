@@ -34,3 +34,20 @@ def test_raw_matrix_file_upgrade_3_4(upgrader, raw_matrix_file_base):
 	value = upgrader.upgrade('raw_matrix_file', raw_matrix_file_base, current_version='3', target_version='4')
 	assert value['schema_version'] == '4'
 	assert value['value_units'] == ['UMI']
+
+
+def test_processed_matrix_file_upgrade_7_8(upgrader, processed_matrix_file_base):
+	processed_matrix_file_base['layers'][0]['scaled'] = True
+	processed_matrix_file_base['layers'][0]['filtering_cutoffs'] = 'something'
+	processed_matrix_file_base['software'] = 'Seurat'
+	processed_matrix_file_base['cell_annotation_method'] = 'manual'
+	processed_matrix_file_base['author_cluster_column'] = 'cluster'
+	processed_matrix_file_base['derivation_process'] = ['doublet removal','batch correction','depth normalization']
+	value = upgrader.upgrade('processed_matrix_file', processed_matrix_file_base, current_version='7', target_version='8')
+	assert value['schema_version'] == '8'
+	assert 'scaled' not in value['layers'][0]
+	assert 'filtering_cutoffs' not in value['layers'][0]
+	assert 'software' not in value
+	assert 'cell_annotation_method' not in value
+	assert 'author_cluster_column' not in value
+	assert value['derivation_process'] == ['single cell analysis pipeline']

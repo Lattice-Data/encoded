@@ -3,7 +3,10 @@
         "aliases": [
             "lattice:multiplexed_dataset",
             "purushothama-rao-tata:dataset_1",
-            "kristin-ardlie:my_dataset"
+            "kristin-ardlie:my_dataset",
+            "sophia-george:UM_dataset",
+            "mengjie-chen:dataset1",
+            "sarah-snelling:ds1"
         ],
         "dataset_title": "Dataset with a multiplexed Library",
         "description": "Used to test tools with pooling and demultiplexing",

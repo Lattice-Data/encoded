@@ -19,6 +19,17 @@
             "linkTo": "Dataset"
         }
     },
+    "software": {
+        "software": {
+            "title": "Software",
+            "description": "The software used to generate the file.",
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+                "type": "string"
+            }
+        }
+    },
     "supersedes": {
         "supersedes": {
             "title": "Supersedes" ,
@@ -491,6 +502,7 @@
                     "margaret-deangelis|",
                     "matthias-heinig|",
                     "matthias-kretzler|",
+                    "mengjie-chen|",
                     "menna-clatworthy|",
                     "minnie-sarwal|",
                     "nicholas-navin|",
@@ -502,12 +514,14 @@
                     "rahul-satija|",
                     "ronald-germain|",
                     "rui-chen|",
+                    "sarah-snelling|",
                     "sarah-teichmann|",
                     "sarah-tishkoff|",
                     "sebastian-pott|",
                     "shalev-itzkovitz|",
                     "sheng-zhong|",
                     "shyam-prabhakar|",
+                    "sophia-george|",
                     "sonya-macparland|",
                     "sten-linnarsson|",
                     "thomas-quertermous|",

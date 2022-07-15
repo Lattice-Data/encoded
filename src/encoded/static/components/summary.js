@@ -337,6 +337,7 @@ class SummaryBody extends React.Component {
     componentDidMount() {
         const query_url = this.props.context.search_base.replace('/search/?', '')
         this.getCellCount(query_url);
+        this.getDonorCount(query_url);
     }
 
     getCellCount(searchBase) {
@@ -382,8 +383,8 @@ class SummaryBody extends React.Component {
                 </div>
                 <div className="search-results__report-list">
                     <h4>{this.props.context.total} {this.props.context.total > 1 ? 'libraries' : 'library'}</h4>
-                    <h4>{cell_count} cells/nuclei</h4>
                     <h4>{donor_count} donors</h4>
+                    <h4>{cell_count} cells/nuclei</h4>
                     <div className="view-controls-container">
                         <ViewControls results={this.props.context} alternativeNames={['Tabular report']} />
                     </div>

@@ -37,15 +37,6 @@
             "default": false,
             "type": "boolean"
         },
-        "software": {
-            "title": "Software",
-            "description": "The software used to generate the file.",
-            "type": "array",
-            "uniqueItems": true,
-            "items": {
-                "type": "string"
-            }
-        },
         "content_error_detail": {
             "title": "Content error detail",
             "description": "Explanation of why the file failed the automated content checks.",

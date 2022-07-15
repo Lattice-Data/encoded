@@ -1,5 +1,8 @@
 ## Changelog for processed_matrix_file.json
 
+### Schema version 8
+* Removed *software*,*cell_annotation_method*,*author_cluster_column*,*layers.scaled*,*layers.filtering_cutoffs*
+
 ### Schema version 7
 * Removed *is_primary_data* from *layers*
 

@@ -24,3 +24,11 @@ def adult_ontology(testapp):
         'term_name': 'human adult stage'
     }
     return testapp.post_json('/ontology_term', item).json['@graph'][0]
+
+@pytest.fixture
+def asian_ontology(testapp):
+    item = {
+        'term_id': 'HANCESTRO:0008',
+        'term_name': 'Asian'
+    }
+    return testapp.post_json('/ontology_term', item).json['@graph'][0]

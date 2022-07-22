@@ -14,3 +14,12 @@ def human_postnatal_donor_2_3(value, system):
 		value['height'] = str(value['height'])
 	if 'body_mass_index' in value:
 		value['body_mass_index'] = str(value['body_mass_index'])
+
+
+@upgrade_step('human_postnatal_donor', '3', '4')
+@upgrade_step('human_prenatal_donor', '1', '2')
+def human_donor_ancestry(value, system):
+	if 'ancestry' in value:
+		for a in value['ancestry']:
+			a['fraction'] = a['percentage'] / 100
+			del a['percentage']

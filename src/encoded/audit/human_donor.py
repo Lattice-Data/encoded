@@ -221,13 +221,39 @@ def ontology_check_anc(value, system):
         yield AuditFailure('incorrect ontology term', detail, 'ERROR')
 
 
+def audit_ancestry(value, system):
+    total_frac = sum([a['fraction'] for a in value['ancestry']])
+    if total_frac != 1:
+        detail = ('Donor {} ancestry fractions total {}.'.format(
+            audit_link(value['accession'], value['@id']),
+            str(total_frac)
+            )
+        )
+        yield AuditFailure('ancestry error', detail, 'ERROR')
+
+
+    dup_groups = []
+    anc_groups = [a['ancestry_group'] for a in value['ancestry']]
+    for a in anc_groups:
+        if anc_groups.count(a) > 1:
+            dup_groups.append(a)
+    if dup_groups:
+        detail = ('Donor ancestry has duplicate groups {}.'.format(
+            audit_link(value['accession'], value['@id']),
+            ','.join(dup_groups)
+            )
+        )
+        yield AuditFailure('ancestry error', detail, 'ERROR')
+
+
 function_dispatcher = {
     'audit_donor_age': audit_donor_age,
     'audit_donor_dev_stage': audit_donor_dev_stage,
     'ontology_check_dev': ontology_check_dev,
     'ontology_check_eth': ontology_check_eth,
     'ontology_check_dis': ontology_check_dis,
-    'ontology_check_anc': ontology_check_anc
+    'ontology_check_anc': ontology_check_anc,
+    'audit_ancestry': audit_ancestry
 }
 
 @audit_checker('HumanDonor',

@@ -35,20 +35,21 @@
             "description": "Ancestry of the donor, as determined by genotype.",
             "type": "array",
             "uniqueItems": true,
-            "additionalProperties": false,
             "required": ["ancestry_group"],
             "items": {
                 "type": "object",
+                "additionalProperties": false,
                 "properties": {
                     "ancestry_group": {
                         "description": "An ancestry group, preferably defined by the Human Ancestry Ontology.",
                         "type": "string",
                         "linkTo": "OntologyTerm"
                     },
-                    "percentage": {
-                        "description": "An estimated percent ancestry to the corresponding group, as determined by genotype data.",
+                    "fraction": {
+                        "description": "An estimated proportion ancestry to the corresponding group, as determined by genotype data.",
                         "type": "number",
-                        "maximum": 100
+                        "minimum": 0,
+                        "maximum": 1
                     }
                 }
             }

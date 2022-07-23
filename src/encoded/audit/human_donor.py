@@ -222,28 +222,29 @@ def ontology_check_anc(value, system):
 
 
 def audit_ancestry(value, system):
-    total_frac = sum([a['fraction'] for a in value['ancestry']])
-    if total_frac != 1:
-        detail = ('Donor {} ancestry fractions total {}.'.format(
-            audit_link(value['accession'], value['@id']),
-            str(total_frac)
+    if 'ancestry' in value:
+        total_frac = sum([a['fraction'] for a in value['ancestry']])
+        if total_frac != 1:
+            detail = ('Donor {} ancestry fractions total {}, expecting 1.'.format(
+                audit_link(value['accession'], value['@id']),
+                str(total_frac)
+                )
             )
-        )
-        yield AuditFailure('ancestry error', detail, 'ERROR')
+            yield AuditFailure('ancestry error', detail, 'ERROR')
 
 
-    dup_groups = []
-    anc_groups = [a['ancestry_group'] for a in value['ancestry']]
-    for a in anc_groups:
-        if anc_groups.count(a) > 1:
-            dup_groups.append(a)
-    if dup_groups:
-        detail = ('Donor ancestry has duplicate groups {}.'.format(
-            audit_link(value['accession'], value['@id']),
-            ','.join(dup_groups)
+        dup_groups = []
+        anc_groups = [a['ancestry_group']['term_id'] for a in value['ancestry']]
+        for a in anc_groups:
+            if anc_groups.count(a) > 1 and a not in dup_groups:
+                dup_groups.append(a)
+        if dup_groups:
+            detail = ('Donor {} ancestry has duplicate groups: {}.'.format(
+                audit_link(value['accession'], value['@id']),
+                ','.join(dup_groups)
+                )
             )
-        )
-        yield AuditFailure('ancestry error', detail, 'ERROR')
+            yield AuditFailure('ancestry error', detail, 'ERROR')
 
 
 function_dispatcher = {

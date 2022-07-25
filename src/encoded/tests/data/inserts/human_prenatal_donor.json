@@ -17,10 +17,10 @@
         "knee_heel_length_units": "mm",
         "ancestry": [
             {
-                "ancestry_group":  "HANCESTRO_0005", "percentage": 30  
+                "ancestry_group":  "HANCESTRO_0005", "fraction": 0.4
             },
             {
-                "ancestry_group":  "HANCESTRO_0014", "percentage": 60 
+                "ancestry_group":  "HANCESTRO_0014", "fraction": 0.6
             }
         ],
         "conceptional_age": "15",
@@ -47,10 +47,10 @@
         "knee_heel_length_units": "mm",
         "ancestry": [
             {
-                "ancestry_group":  "HANCESTRO_0005", "percentage": 35  
+                "ancestry_group":  "HANCESTRO_0005", "fraction": 0.35
             },
             {
-                "ancestry_group":  "HANCESTRO_0014", "percentage": 55 
+                "ancestry_group":  "HANCESTRO_0014", "fraction": 0.65
             }
         ],
         "conceptional_age": "16-17",

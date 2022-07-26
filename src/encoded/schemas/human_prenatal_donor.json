@@ -109,6 +109,9 @@
         "accession": {
             "title": "Accession"
         },
+        "donor_id": {
+            "title": "Donor ID"
+        },
         "aliases": {
             "title": "Aliases"
         },

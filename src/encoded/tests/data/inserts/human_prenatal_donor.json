@@ -27,7 +27,8 @@
         "conceptional_age_units": "week",
         "development_ontology": "HsapDv_0000052",
         "crown_rump_length": 105,
-        "crown_rump_length_units": "mm"
+        "crown_rump_length_units": "mm",
+        "donor_id": "Donor1"
     },
     {
         "accession": "LATHD075DDD",
@@ -57,7 +58,8 @@
         "conceptional_age_units": "week",
         "development_ontology": "HsapDv_0000046",
         "crown_rump_length": 108,
-        "crown_rump_length_units": "mm"
+        "crown_rump_length_units": "mm",
+        "donor_id": "Donor4"
     },
     {
         "accession": "LATHD130BBB",
@@ -76,7 +78,8 @@
         "weight_unit": "oz",
         "sex": "unknown",
         "ethnicity": "HANCESTRO_0008",
-        "notes": "Test notes"
+        "notes": "Test notes",
+        "donor_id": "Donor9"
     },
     {
         "accession": "LATHD131BBB",
@@ -95,66 +98,69 @@
         "weight_unit": "oz",
         "sex": "unknown",
         "ethnicity": "HANCESTRO_0008",
-        "notes": "Test notes"
+        "notes": "Test notes",
+        "donor_id": "Donor11"
     },
     {
-    	"accession": "LATHD123ABC",
-    	"aliases": [
-    		"peter-sims:prenatal_donor2"
-    	],
+        "accession": "LATHD123ABC",
+        "aliases": [
+            "peter-sims:prenatal_donor2"
+        ],
         "status": "released",
-    	"description": "Prenatal donor2",
-    	"uuid":"9037d8f8-db7b-11ea-87d0-0242ac130003",
-    	"conceptional_age": "85",
-    	"conceptional_age_units": "day",
+        "description": "Prenatal donor2",
+        "uuid":"9037d8f8-db7b-11ea-87d0-0242ac130003",
+        "conceptional_age": "85",
+        "conceptional_age_units": "day",
         "development_ontology": "HsapDv_0000049",
         "diseases": [
             "MONDO_0021631"
         ],
-    	"sex": "unknown",
-    	"crown_rump_length": 54,
-    	"crown_rump_length_units": "mm",
-    	"foot_length": 9,
-    	"foot_length_units": "mm",
-    	"knee_heel_length": 12,
-    	"knee_heel_length_units": "mm",
-    	"weight": "0.52",
-    	"weight_unit": "oz",
-    	"parents": [
-    		"2db646f0-d910-11ea-87d0-0242ac130003"
-    	],
-    	"notes": "Test notes"
+        "sex": "unknown",
+        "crown_rump_length": 54,
+        "crown_rump_length_units": "mm",
+        "foot_length": 9,
+        "foot_length_units": "mm",
+        "knee_heel_length": 12,
+        "knee_heel_length_units": "mm",
+        "weight": "0.52",
+        "weight_unit": "oz",
+        "parents": [
+            "2db646f0-d910-11ea-87d0-0242ac130003"
+        ],
+        "notes": "Test notes",
+        "donor_id": "Donor24"
     },
     {
-    	"accession": "LATHD124ABC",
-    	"aliases": [
-    		"peter-sims:prenatal_donor3",
+        "accession": "LATHD124ABC",
+        "aliases": [
+            "peter-sims:prenatal_donor3",
             "jimmie-ye:prenatal_donor3"
-    	],
+        ],
         "status": "released",
-    	"description": "Prenatal donor3",
-    	"uuid": "944ba348-db7b-11ea-87d0-0242ac130003",
-    	"conceptional_age": "85",
-    	"conceptional_age_units": "day",
+        "description": "Prenatal donor3",
+        "uuid": "944ba348-db7b-11ea-87d0-0242ac130003",
+        "conceptional_age": "85",
+        "conceptional_age_units": "day",
         "development_ontology": "HsapDv_0000049",
-    	"sex": "unknown",
-    	"ethnicity": "HANCESTRO_0008",
-    	"crown_rump_length": 53,
-    	"crown_rump_length_units": "mm",
-    	"foot_length": 8,
-    	"foot_length_units": "mm",
-    	"knee_heel_length": 11,
-    	"knee_heel_length_units": "mm",
-    	"weight": "0.49",
-    	"weight_unit": "oz",
-    	"parents": [
-    		"2db646f0-d910-11ea-87d0-0242ac130003"
-    	],
-    	"siblings": [
-    		"9037d8f8-db7b-11ea-87d0-0242ac130003"
-    	],
-    	"twin": "9037d8f8-db7b-11ea-87d0-0242ac130003",
-    	"twin_type": "monozygotic",
-    	"notes": "Test notes"
+        "sex": "unknown",
+        "ethnicity": "HANCESTRO_0008",
+        "crown_rump_length": 53,
+        "crown_rump_length_units": "mm",
+        "foot_length": 8,
+        "foot_length_units": "mm",
+        "knee_heel_length": 11,
+        "knee_heel_length_units": "mm",
+        "weight": "0.49",
+        "weight_unit": "oz",
+        "parents": [
+            "2db646f0-d910-11ea-87d0-0242ac130003"
+        ],
+        "siblings": [
+            "9037d8f8-db7b-11ea-87d0-0242ac130003"
+        ],
+        "twin": "9037d8f8-db7b-11ea-87d0-0242ac130003",
+        "twin_type": "monozygotic",
+        "notes": "Test notes",
+        "donor_id": "Donor99"
     }
 ]

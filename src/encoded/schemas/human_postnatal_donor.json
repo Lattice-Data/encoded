@@ -4,7 +4,7 @@
     "id": "/profiles/human_postnatal_donor.json",
     "$schema": "http://json-schema.org/draft-04/schema#",
     "type": "object",
-    "required": ["age", "sex", "development_ontology"],
+    "required": ["age", "sex", "development_ontology", "donor_id"],
     "identifyingProperties": ["uuid", "accession", "aliases"],
     "additionalProperties": false,
     "mixinProperties": [
@@ -409,6 +409,9 @@
     "columns": {
         "accession": {
             "title": "Accession"
+        },
+        "donor_id": {
+            "title": "Donor ID"
         },
         "aliases": {
             "title": "Aliases"

@@ -10,6 +10,12 @@
         {"$ref": "mixins.json#/diseases"}
     ],
     "properties": {
+        "donor_id": {
+            "title": "Donor ID",
+            "description": "A human-friendly identifier for the donor.",
+            "comment": "Because this will be passed, as is, to cellxgene, it is recommended that this be designed so that it is likely to be unique across the larger data corpus.",
+            "type": "string"
+        },
         "treatments": {
             "description": "A list of treatments applied to the donor.",
             "comment": "Can include drug treatments, medication, and/or conditions like fasting"

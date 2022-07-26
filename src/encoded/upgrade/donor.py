@@ -23,3 +23,7 @@ def human_donor_ancestry(value, system):
 		for a in value['ancestry']:
 			a['fraction'] = a['percentage'] / 100
 			del a['percentage']
+	donor_id = value['aliases'][0].split(':')[1]
+	if donor_id.endswith('_donor'):
+		donor_id = donor_id[:-6]
+	value['donor_id'] = donor_id

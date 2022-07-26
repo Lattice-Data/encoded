@@ -76,7 +76,7 @@ class HomeContent extends React.Component {
                             <img src="static/img/tabula_sapiens_cxg.png" alt="CXG UMAP" />
                         </div>
                         <div className="site-banner__intro text-side">
-                            <p>Lattice are also the Lead Curation Team for <a href="https://cellxgene.cziscience.com/" target="_blank">cellxgene</a>.</p>
+                            <p>Lattice are also the Lead Curation Team for the <a href="https://cellxgene.cziscience.com/" target="_blank">cellxgene Data Portal</a>.</p>
                             <p>Lattice work with cellxgene developers and computational biologists at the Chan Zuckerberg Initiative to develop a cell-based schema that captures and standardizes key biological and technical variables that impact single-cell data.</p>
                             <p>We facilitate the submission of data as a means to enhance the data sharing and exploration of a each dataset, individually, while ensuring a harmonized data corpus that can be readily searched, filtered, and integrated.</p>
                             <p>Image to the left is from the <a href="https://cellxgene.cziscience.com/e/53d208b0-2cfd-4366-9866-c3c6114081bc.cxg/" target="_blank">Tabula Sapiens dataset</a>.</p>

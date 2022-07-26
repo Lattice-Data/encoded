@@ -224,7 +224,7 @@ def ontology_check_anc(value, system):
 def audit_ancestry(value, system):
     if 'ancestry' in value:
         total_frac = sum([a['fraction'] for a in value['ancestry']])
-        if total_frac != 1:
+        if round(total_frac,2) != 1:
             detail = ('Donor {} ancestry fractions total {}, expecting 1.'.format(
                 audit_link(value['accession'], value['@id']),
                 str(total_frac)

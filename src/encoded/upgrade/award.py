@@ -26,4 +26,4 @@ def award_1_2(value, system):
 		'methods': 'technology'
 		}
 
-	value['focus'] = mapping[value['focus']]
+	value['focus'] = mapping.get(value['focus'], value['focus'])

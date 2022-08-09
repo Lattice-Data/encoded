@@ -17,7 +17,7 @@
     ],
     "properties": {
         "schema_version": {
-            "default": "1"
+            "default": "2"
         },
         "title": {
             "rdfs:subPropertyOf": "dc:title",
@@ -81,30 +81,17 @@
             "description": "The general scientific area of focus for the research funded by this award.",
             "type": "string",
             "enum": [
+                "adipose, skin, breast",
                 "cardiovascular system",
-                "central nervous system",
-                "female reproductive system",
-                "immune system",
-                "adipose",
-                "bone marrow",
-                "breast",
+                "data coordination",
+                "digestive and respiratory systems",
                 "eye",
-                "gastrointestinal",
+                "immune and lymphoreticular systems",
                 "kidney",
-                "liver",
-                "lung",
-                "lymph nodes",
-                "muscle",
-                "musculoskeletal",
-                "prostate",
-                "respiratory system",
-                "skin",
-                "tendon",
-                "testis",
-                "thymus",
-                "multi-organ",
-                "methods",
-                "data coordination"
+                "organ systems",
+                "nervous system",
+                "reproductive system",
+                "technology"
             ]
        },
         "CZI_project_identifier": {

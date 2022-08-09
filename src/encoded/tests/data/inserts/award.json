@@ -35,7 +35,7 @@
             "CZI017IMM"
         ],
         "CZI_project_identifier": "CZF2019-002440",
-        "focus": "liver"
+        "focus": "digestive and respiratory systems"
     },
     {
         "description": "This team will analyze single cells and develop computational tools to build a single cell map of the human liver, combining transcriptomics, spatial organization, and cell-cell interactions across diverse individuals and developmental stages.",
@@ -54,7 +54,7 @@
             "CZI004LIV"
         ],
         "CZI_project_identifier": "HCA-A-1704-01668",
-        "focus": "multi-organ"
+        "focus": "organ systems"
     },
     {
         "description": "To identify methods of cell and nuclei isolation that are robust across three tissue storage conditions and a number of tissues, with expression changes between storage conditions and processing for single-cells versus single-nuclei.",
@@ -72,7 +72,7 @@
             "CZI025LYN"
         ],
         "CZI_project_identifier": "CZF2019-002445",
-        "focus": "skin" 
+        "focus": "adipose, skin, breast" 
     },
     {
       "name": "CZI903MTH",
@@ -691,14 +691,14 @@
       "project": "HCA Ancestry Networks",
       "title": "Immune Cell Atlas of Indigenous South American Populations",
       "uuid": "aa5393a6-6eab-4712-a8c5-030687eeb03d",
-      "focus": "prostate"
+      "focus": "reproductive system"
     },
     {
       "name": "CZI213LYN",
       "project": "HCA Ancestry Networks",
       "title": "Lymph Node Single-Cell Genomics Ancestry (LEGACY) Network",
       "uuid": "d3c80392-4fd2-46fd-92d8-99f506469ca2",
-      "focus": "musculoskeletal"
+      "focus": "organ systems"
     },
     {
       "name": "CZI214LAI",

@@ -50,6 +50,11 @@
         "ontology_database": {
             "title": "Ontology DB"
         },
+        "term_name": {
+            "title": "Term name",
+            "type": "typeahead",
+            "length": "long"
+        },
         "system_slims": {
             "title": "System"
         },

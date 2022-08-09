@@ -367,7 +367,7 @@ class SummaryBody extends React.Component {
     render() {
         const searchQuery = url.parse(this.props.context['@id']).search;
         const context = this.props.context;
-        const vertFacetNames = ['assay', 'protocol.title', 'observation_count', 'biosample_classification', 'biosample_ontologies.system_slims', 'biosample_ontologies.organ_slims', 'biosample_ontologies.term_name', 'award.project', 'award.coordinating_pi.title', 'lab.title'];
+        const vertFacetNames = ['assay', 'protocol.title', 'observation_count', 'biosample_classification', 'biosample_ontologies.system_slims', 'biosample_ontologies.organ_slims', 'biosample_ontologies.term_name', 'award.focus', 'award.project', 'award.coordinating_pi.title', 'lab.title'];
         const vertFacets = []
         context.facets.forEach(x => {
             if (vertFacetNames.includes(x.field)) vertFacets.push(x);

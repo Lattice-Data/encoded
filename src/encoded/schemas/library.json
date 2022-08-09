@@ -249,6 +249,9 @@
             "title": "Biosample term name",
             "type": "typeahead"
         },
+        "award.focus": {
+            "title": "Focus"
+        },
         "award.project": {
             "title": "Project"
         },
@@ -317,6 +320,9 @@
         },
         "biosample_ontologies.cell_slims": {
             "title": "Biosample cell type"
+        },
+        "award.focus": {
+            "title": "Focus"
         },
         "award.project": {
             "title": "Project"

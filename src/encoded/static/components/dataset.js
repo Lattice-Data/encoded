@@ -450,6 +450,12 @@ const DatasetComponent = ({ context, auditIndicators, auditDetail }, reactContex
     const references = pubReferenceList(context.references);
 
     // Make a list of url links, if any.
+    const cxg_urls = urlList(context.cellxgene_urls);
+
+    // Make a list of url links, if any.
+    const hca_urls = urlList(context.hca_portal_urls);
+
+    // Make a list of url links, if any.
     const urls = urlList(context.urls);
 
     function libraryProtocolList(values, field) {
@@ -589,17 +595,31 @@ const DatasetComponent = ({ context, auditIndicators, auditDetail }, reactContex
                                 </div>
                             : null}
 
-                            {context.dbxrefs ?
-                                <div data-test="external-resources">
-                                    <dt>External resources</dt>
-                                    <dd><DbxrefList context={context} dbxrefs={context.dbxrefs} /></dd>
-                                </div>
-                            : null}
-
                             {references ?
                                 <div data-test="references">
                                     <dt>References</dt>
                                     <dd>{references}</dd>
+                                </div>
+                            : null}
+
+                            {cxg_urls ?
+                                <div data-test="cxg_urls">
+                                    <dt>CELLxGENE Discover</dt>
+                                    <dd>{cxg_urls}</dd>
+                                </div>
+                            : null}
+
+                            {hca_urls ?
+                                <div data-test="hca_urls">
+                                    <dt>HCA Data Portal</dt>
+                                    <dd>{hca_urls}</dd>
+                                </div>
+                            : null}
+
+                            {context.dbxrefs ?
+                                <div data-test="external-resources">
+                                    <dt>External resources</dt>
+                                    <dd><DbxrefList context={context} dbxrefs={context.dbxrefs} /></dd>
                                 </div>
                             : null}
 

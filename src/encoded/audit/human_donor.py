@@ -120,7 +120,7 @@ def audit_donor_dev_stage(value, system):
                 expected = value['age'].split('.')[0] + post_term_end_yr
     elif value.get('age_units') == 'month':
         if float(value['age']) <= 23:
-            expected = value['age'] + post_term_end_mo
+            expected = str(int(float(value['age']))) + post_term_end_mo
         else:
             years = int(value['age'])//12
             expected = str(years) + post_term_end_yr

@@ -25,5 +25,5 @@ def award_1_2(value, system):
 		'lung': 'organ systems',
 		'methods': 'technology'
 		}
-
-	value['focus'] = mapping.get(value['focus'], value['focus'])
+	if 'focus' in value:
+		value['focus'] = mapping.get(value['focus'], value['focus'])

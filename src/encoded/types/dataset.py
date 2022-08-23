@@ -9,6 +9,14 @@ from .base import (
 )
 
 
+def gather_urls(urls, start):
+    links = []
+    for u in urls:
+        if u.startswith(start):
+            links.append(u)
+    return links
+
+
 def item_is_revoked(request, path):
     return request.embed(path, '@@object?skip_calculated=true').get('status') == 'revoked'
 
@@ -204,6 +212,34 @@ class Dataset(Item):
             ]
             if revoked:
                 return revoked
+
+
+    @calculated_property(define=True, schema={
+        "title": "CELLxGENE URLs",
+        "description": "Links to the representation of this dataset in CZ CELLxGENE Discover.",
+        "comment": "Do not submit. This is a calculated property",
+        "type": "array",
+        "items": {
+            "type": "string",
+        },
+    })
+    def cellxgene_urls(self, request, urls=None):
+        if urls:
+            return gather_urls(urls, 'https://cellxgene.cziscience.com/collections/')
+
+
+    @calculated_property(define=True, schema={
+        "title": "HCA Data Portal URLs",
+        "description": "Links to the representation of this dataset in the HCA Data Portal.",
+        "comment": "Do not submit. This is a calculated property",
+        "type": "array",
+        "items": {
+            "type": "string",
+        },
+    })
+    def hca_portal_urls(self, request, urls=None):
+        if urls:
+            return gather_urls(urls, 'https://data.humancellatlas.org/explore/projects/')
 
 
     @calculated_property(define=True, schema={

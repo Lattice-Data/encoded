@@ -179,6 +179,12 @@
         "libraries.biosample_classification": {
             "title": "Biosample classification"
         },
+        "cellxgene_urls": {
+            "title": "CELLxGENE URLs"
+        },
+        "hca_portal_urls": {
+            "title": "HCA Data Portal URLs"
+        },
         "status": {
             "title": "Status"
         }

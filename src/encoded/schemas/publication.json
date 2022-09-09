@@ -26,35 +26,14 @@
             "uniqueKey": true,
             "type": "string"
         },
-        "abstract": {
-            "rdfs:subPropertyOf": "dc:abstract",
-            "title": "Abstract",
-            "description": "Abstract of the publication or communication.",
-            "type": "string"
-        },
-        "authors": {
-            "title": "Authors",
-            "description": "The list of authors of the publication, comma-separated.",
-            "type": "string"
-        },
         "publication_year": {
             "title": "Publication year",
             "description": "The year of publication.",
             "type": "integer"
         },
-        "issue": {
-            "title": "Issue",
-            "description": "The issue of the publication.",
-            "type": "string"
-        },
-        "page": {
-            "title": "Page",
-            "description": "Pagination of the reference",
-            "type": "string"
-        },
-        "volume": {
-            "title": "Volume",
-            "description": "The volume of the publication.",
+        "first_author": {
+            "title": "First authors",
+            "description": "The first author of the publication.",
             "type": "string"
         },
         "journal": {
@@ -76,20 +55,8 @@
             "uniqueKey":  "publication:pmid",
             "pattern": "^([0-9]+)$"
         },
-        "award": {
-            "title": "Award",
-            "description": "The HCA Seed Network or HCA Pilot Project award used to fund the published research.",
-            "type": "string",
-            "linkTo": "Award"
-        }
     },
     "facets": {
-        "award.project": {
-            "title": "Project"
-        },
-        "award.name": {
-            "title": "Award name"
-        },
         "publication_year": {
             "title": "Publication year"
         },
@@ -121,12 +88,6 @@
         },
         "datasets": {
             "title": "Datasets"
-        },
-        "award.project": {
-            "title": "Project"
-        },
-        "award.name": {
-            "title": "Award name"
         },
         "status": {
             "title": "Status"

@@ -39,11 +39,14 @@ class Publication(Item):
         "comment": "Do not submit. This is a calculated property",
         "type": "string"
     })
-    def citation(self, registry, publication_year, authors=None):
+    def citation(self, registry, authors=None, publication_year=None):
         if authors:
             first_author = authors.split(',')[0]
             firstauth_lastname = first_author.split(' ')[-1]
-            return firstauth_lastname + ' et al. ' + str(publication_year)
+            if publication_year:
+                return firstauth_lastname + ' et al. ' + str(publication_year)
+            else:
+                return firstauth_lastname + ' et al. '
 
 
     @calculated_property(schema={

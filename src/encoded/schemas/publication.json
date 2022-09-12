@@ -4,7 +4,7 @@
     "id": "/profiles/publication.json",
     "$schema": "http://json-schema.org/draft-04/schema#",
     "type": "object",
-    "required": [ "title", "abstract"],
+    "required": [ "title", "doi", "journal"],
     "identifyingProperties": ["uuid", "aliases"],
     "additionalProperties": false,
     "mixinProperties": [
@@ -41,21 +41,6 @@
             "title": "Publication year",
             "description": "The year of publication.",
             "type": "integer"
-        },
-        "issue": {
-            "title": "Issue",
-            "description": "The issue of the publication.",
-            "type": "string"
-        },
-        "page": {
-            "title": "Page",
-            "description": "Pagination of the reference",
-            "type": "string"
-        },
-        "volume": {
-            "title": "Volume",
-            "description": "The volume of the publication.",
-            "type": "string"
         },
         "journal": {
             "title": "Journal",

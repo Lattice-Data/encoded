@@ -10,9 +10,8 @@
         "journal": "BMC Bioinformatics",
         "publication_year": 2019,
         "pmid": "2314242",
+        "doi": "10.1016/0076-6879(90)82024-v",
         "award": "CZI001KID",
-        "volume": "88",
-        "page": "55-57",
         "uuid": "2c993c94-897a-4c2c-961f-e6edc877f449"
     },
     {
@@ -27,9 +26,6 @@
         "pmid": "22955622",
         "doi": "10.1101/2020.07.24.219147",
         "award": "CZI021IMM",
-        "volume": "234",
-        "issue": "454",
-        "page": "100-103",
         "status": "in progress",
         "uuid": "38131eba-e32f-11ea-87d0-0242ac130003"
     },
@@ -45,9 +41,6 @@
         "publication_year": 2012,
         "pmid": "22955616",
         "doi": "10.1016/j.devcel.2020.01.033",
-        "volume": "489",
-        "issue": "7414",
-        "page": "57-74",
         "status": "released",
         "uuid": "52e85c70-fe2d-11e3-9191-0800200c9a66"
     },
@@ -56,17 +49,12 @@
             "lattice:Anindita_Basu_deleted_dataset"
         ],
         "status": "deleted",
-        "abstract": "Tissue homeostasis relies on orchestrated multicellular circuits, where interactions between different cell types dynamically balance tissue function. While single-cell genomics identifies tissues’ cellular components, deciphering their coordinated action remains a major challenge. ",
         "uuid": "474461bd-943e-4514-92a7-e268390eef53",
         "title": "Mapping multicellular programs from single-cell profiles ",
-        "issue": "2",
         "journal": "Biorxiv",
-        "page": "pdb.prot5384",
-        "volume": "2010",
         "publication_year": 2020,
         "pmid": "20150888",
         "doi": "10.1016/j.devcel.2020.07.023",
-        "award": "CZI025LYN",
         "authors": "Livnat Jerby-Arnon, Aviv Regev"
     }
 ]

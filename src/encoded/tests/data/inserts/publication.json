@@ -5,10 +5,13 @@
             "lattice:Litviňuková_Teichmann_2020_heart"
         ],
         "title": "A comprehensive dataset with human, mouse, and CITEseq",
-        "first_author": "Anna Greka",
+        "abstract": "A comprehensive dataset of kidney with human, mouse, and CITEseq",
+        "authors": "Anna Greka, Abbe Clark",
         "journal": "BMC Bioinformatics",
         "publication_year": 2019,
         "pmid": "2314242",
+        "doi": "10.1016/0076-6879(90)82024-v",
+        "award": "CZI001KID",
         "uuid": "2c993c94-897a-4c2c-961f-e6edc877f449"
     },
     {
@@ -16,11 +19,13 @@
             "lattice:Ye_Chen_2018_atac"
         ],
         "title": "An ATACseq publication",
-        "first_author": "Jimmie Ye",
+        "abstract": "A dataset with cell culture and organoid",
+        "authors": "Jimmie Ye, Jenny Chen",
         "journal": "Nature",
         "publication_year": 2018,
         "pmid": "22955622",
         "doi": "10.1101/2020.07.24.219147",
+        "award": "CZI021IMM",
         "status": "in progress",
         "uuid": "38131eba-e32f-11ea-87d0-0242ac130003"
     },
@@ -29,8 +34,10 @@
             "lattice:Sims_Chen_2020_RNAseq"
         ],
         "title": "A RNAseq publication",
-        "first_author": "ED Green",
+        "abstract": "The human genome encodes the blueprint of life, but the function of the vast majority of its nearly three billion bases is unknown. The Encyclopedia of DNA Elements (ENCODE) project has systematically mapped regions of transcription, transcription factor association, chromatin structure and histone modification. These data enabled us to assign biochemical functions for 80% of the genome, in particular outside of the well-studied protein-coding regions. Many discovered candidate regulatory elements are physically associated with one another and with expressed genes, providing new insights into the mechanisms of gene regulation. The newly identified elements also show a statistical correspondence to sequence variants linked to human disease, and can thereby guide interpretation of this variation. Overall, the project provides new insights into the organization and regulation of our genes and genome, and is an expansive resource of functional annotations for biomedical research.",
+        "authors": "ENCODE Project Consortium, Bernstein BE, Birney E, Dunham I, Green ED, Gunter C, Snyder M.",
         "journal": "Nature",
+        "award": "CZI004LIV",
         "publication_year": 2012,
         "pmid": "22955616",
         "doi": "10.1016/j.devcel.2020.01.033",
@@ -48,6 +55,6 @@
         "publication_year": 2020,
         "pmid": "20150888",
         "doi": "10.1016/j.devcel.2020.07.023",
-        "first_author": "Livnat Jerby-Arnon"
+        "authors": "Livnat Jerby-Arnon, Aviv Regev"
     }
 ]

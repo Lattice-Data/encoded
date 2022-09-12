@@ -34,7 +34,7 @@
         "viewing_groups": [
             "CZI017IMM"
         ],
-        "CZI_project_identifier": "CZF2019-002440",
+        "CZI_project_identifier": "CZIF2019-002440",
         "focus": "digestive and respiratory systems"
     },
     {
@@ -53,7 +53,6 @@
         "viewing_groups": [
             "CZI004LIV"
         ],
-        "CZI_project_identifier": "HCA-A-1704-01668",
         "focus": "organ systems"
     },
     {
@@ -71,7 +70,7 @@
         "viewing_groups": [
             "CZI025LYN"
         ],
-        "CZI_project_identifier": "CZF2019-002445",
+        "CZI_project_identifier": "CZIF2019-002445",
         "focus": "adipose, skin, breast" 
     },
     {

@@ -46,7 +46,7 @@ class Publication(Item):
             if publication_year:
                 return firstauth_lastname + ' et al. ' + str(publication_year)
             else:
-                return firstauth_lastname + ' et al. '
+                return firstauth_lastname + ' et al.'
 
 
     @calculated_property(schema={

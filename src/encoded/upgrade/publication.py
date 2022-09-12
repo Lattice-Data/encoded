@@ -11,3 +11,10 @@ def publication_1_2(value, system):
 			elif path[0] == 'PMID':
 				value['pmid'] = path[1]
 		del value['identifiers']
+
+
+@upgrade_step('publication', '2', '3')
+def publication_2_3(value, system):
+	for p in ['issue','page','volume']:
+		if p in value:
+			del value[p]

@@ -389,7 +389,7 @@ class RawMatrixFile(AnalysisFile):
         for l in libraries:
             l_obj = request.embed(l, '@@object')
             assays.add(l_obj['assay'])
-        return assays
+        return list(assays)
 
 
     @calculated_property(schema={

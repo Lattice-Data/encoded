@@ -105,9 +105,46 @@ def audit_validated(value, system):
 			yield AuditFailure('file access not specified', detail, level='WARNING')
 			return
 
+
+def metrics_types(value, system):
+	assays = value['assays']
+
+	for qc in value.get('quality_metrics',[]):
+		errors = []
+		qc_type = qc['@type'][0]
+
+		if qc_type == 'RnaMetrics':
+			req_assay = 'RNA-seq'
+			if 'snRNA-seq' in assays or 'scRNA-seq' in assays or 'spatial transcriptomics' in assays:
+				assays.append('RNA-seq')
+		elif qc_type == 'MultiomeMetrics':
+			if 'snATAC-seq' not in assays and ('snRNA-seq' not in assays and 'scRNA-seq' not in assays):
+				req_assay = 'RNA-seq or snATAC-seq'
+			elif 'snRNA-seq' not in assays and 'scRNA-seq' not in assays:
+				req_assay = 'RNA-seq'
+			else:
+				req_assay = 'snATAC-seq'
+		elif qc_type == 'AtacMetrics':
+			req_assay = 'snATAC-seq'
+		elif qc_type == 'AntibodyCaptureMetrics':
+			req_assay = 'CITE-seq'
+		elif qc_type == 'SpatialMetrics':
+			req_assay = 'spatial transcriptomics'
+
+		if req_assay not in assays:
+			detail = ('File {} has {} but is not linked to any {} Library.'.format(
+				audit_link(path_to_text(value['@id']), value['@id']),
+				qc_type,
+				req_assay
+				)
+			)
+			yield AuditFailure('metrics, library inconsistency', detail, level='ERROR')
+
+
 function_dispatcher = {
 	'audit_read_count_compare': audit_read_count_compare,
-	'audit_validated': audit_validated
+	'audit_validated': audit_validated,
+	'metrics_types': metrics_types
 }
 
 @audit_checker('RawMatrixFile',

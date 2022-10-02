@@ -31,7 +31,7 @@
         },
         "sex": {
             "title": "Sex",
-            "description": "Biological sex of the donor.",
+            "description": "Biological sex at birth of the donor.",
             "type": "string",
             "default": "unknown",
             "enum": [

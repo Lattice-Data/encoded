@@ -17,6 +17,7 @@
         "ethnicity": "HANCESTRO_0014",
         "reported_ethnicity": "Amerindian",
         "sex": "male",
+        "gender": "female",
         "age": "65-70",
         "age_units": "year",
         "development_ontology": "HsapDv_0000087",
@@ -56,6 +57,7 @@
         "description": "Healthy kidney donorA",
         "ethnicity": "HANCESTRO_0022",
         "sex": "female",
+        "gender": "male",
         "menopausal_status": "premenopausal",
         "risk_score_tyrer_cuzick_lifetime": 21,
         "age": "variable",
@@ -96,6 +98,7 @@
         "age_units": "year",
         "development_ontology": "HsapDv_0000124",
         "sex": "female",
+        "gender": "other",
         "menopausal_status": "premenopausal",
         "ethnicity": "HANCESTRO_0008",
         "diseases": [

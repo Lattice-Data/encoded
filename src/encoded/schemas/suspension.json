@@ -354,6 +354,9 @@
         "aliases": {
             "title": "Aliases"
         },
+        "suspension_type": {
+            "title": "Suspension type"
+        },
         "biosample_summary": {
             "title": "Biosample summary"
         },

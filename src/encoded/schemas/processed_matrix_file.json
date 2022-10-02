@@ -397,7 +397,7 @@
             "title": "CELLxGENE UUID",
             "description": "The UUID of the CELLxGENE Dataset representing this matrix",
             "type": "string",
-            "format": "uuid"
+            "pattern": "^([0-9a-f]{8}\\-[0-9a-f]{4}\\-[0-9a-f]{4}\\-[0-9a-f]{4}\\-[0-9a-f]{12})$"
         }
     },
     "facets": {

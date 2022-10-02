@@ -288,9 +288,9 @@
                 "hour"
             ]
         },
-        "red_blood_cell_lysis": {
-            "title": "Red blood cell lysis",
-            "description": "If true, a red blood cell lysis step was included in the preparation protocol.",
+        "red_blood_cell_removal": {
+            "title": "Red blood cell removal",
+            "description": "If true, a red blood cell removal step was included in the preparation protocol.",
             "type": "boolean"
         },
         "feature_antibodies": {

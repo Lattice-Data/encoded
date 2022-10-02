@@ -55,7 +55,10 @@
         ],
         "status": "released",
         "description": "Healthy kidney donorA",
-        "ethnicity": ["HANCESTRO_0022"],
+        "ethnicity": [
+            "HANCESTRO_0022",
+            "HANCESTRO_0014"
+        ],
         "sex": "female",
         "gender": "male",
         "menopausal_status": "premenopausal",

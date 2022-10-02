@@ -20,18 +20,6 @@ class Metrics(Item):
 
 
 @collection(
-    name='rna-aggregate-metrics',
-    properties={
-        'title': "RNA Aggregate Metrics",
-        'description': "",
-    })
-class RnaAggregateMetrics(Metrics):
-    item_type = 'rna_aggregate_metrics'
-    schema = load_schema('encoded:schemas/rna_aggregate_metrics.json')
-    embedded = Metrics.embedded + []
-
-
-@collection(
     name='antibody-capture-metrics',
     properties={
         'title': "Antibody Capture Metrics",
@@ -40,18 +28,6 @@ class RnaAggregateMetrics(Metrics):
 class AntibodyCaptureMetrics(Metrics):
     item_type = 'antibody_capture_metrics'
     schema = load_schema('encoded:schemas/antibody_capture_metrics.json')
-    embedded = Metrics.embedded + []
-
-
-@collection(
-    name='cluster-metrics',
-    properties={
-        'title': "Cluster Metrics",
-        'description': "",
-    })
-class ClusterMetrics(Metrics):
-    item_type = 'cluster_metrics'
-    schema = load_schema('encoded:schemas/cluster_metrics.json')
     embedded = Metrics.embedded + []
 
 
@@ -97,15 +73,4 @@ class MultiomeMetrics(Metrics):
 class SpatialMetrics(Metrics):
     item_type = 'spatial_metrics'
     schema = load_schema('encoded:schemas/spatial_metrics.json')
-    embedded = Metrics.embedded + []
-
-@collection(
-    name='atac-aggregate-metrics',
-    properties={
-        'title': "ATAC Aggregate Metrics",
-        'description': "",
-    })
-class AtacAggregateMetrics(Metrics):
-    item_type = 'atac_aggregate_metrics'
-    schema = load_schema('encoded:schemas/atac_aggregate_metrics.json')
     embedded = Metrics.embedded + []

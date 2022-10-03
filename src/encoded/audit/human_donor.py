@@ -22,7 +22,7 @@ def audit_donor_age(value, system):
     else:
         age = value['conceptional_age']
 
-    if value['status'] in ['deleted'] or age in ['unknown', 'variable', '>89']:
+    if value['status'] in ['deleted'] or age in ['unknown', 'variable', '>89'] or '>' in age or '<' in age:
         return
 
     if '-' in age:
@@ -63,7 +63,9 @@ def audit_donor_dev_stage(value, system):
     post_term_end_yr = '-year-old human stage'
     pre_term_end_wk = ' week post-fertilization human stage'
 
-    if dev == 'variable' and value['age_display'] != 'variable':
+    if '>' in value['age_display'] or '<' in value['age_display']:
+        return
+    elif dev == 'variable' and value['age_display'] != 'variable':
         detail = ('Donor {} of development_ontology variable expected age variable.'.format(
             audit_link(value['accession'], value['@id'])
             )
@@ -163,18 +165,19 @@ def ontology_check_eth(value, system):
     dbs = ['HANCESTRO']
     terms = ['NCIT:C17998']
 
-    term = value[field]['term_id']
-    ont_db = term.split(':')[0]
-    if ont_db not in dbs and term not in terms:
-        detail = ('Donor {} {} {} not from {} or {}.'.format(
-            audit_link(value['accession'], value['@id']),
-            field,
-            term,
-            ','.join(dbs),
-            ','.join(terms)
+    for e in value[field]:
+        term = e['term_id']
+        ont_db = term.split(':')[0]
+        if ont_db not in dbs and term not in terms:
+            detail = ('Donor {} {} {} not from {} or {}.'.format(
+                audit_link(value['accession'], value['@id']),
+                field,
+                term,
+                ','.join(dbs),
+                ','.join(terms)
+                )
             )
-        )
-        yield AuditFailure('incorrect ontology term', detail, 'ERROR')
+            yield AuditFailure('incorrect ontology term', detail, 'ERROR')
 
 
 def ontology_check_dis(value, system):

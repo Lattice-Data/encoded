@@ -70,16 +70,6 @@
             "comment": "Only adjusted from researcher's records by capitalization, correcting typos, or removing odd characters.",
             "type": "string"
         },
-        "gender": {
-            "title": "Gender",
-            "description": "The gender identity of the donor.",
-            "type": "string",
-            "enum": [
-                "female",
-                "male",
-                "other"
-            ]
-        },
         "parents": {
             "title": "Parents",
             "description": "Biological parents of this donor",

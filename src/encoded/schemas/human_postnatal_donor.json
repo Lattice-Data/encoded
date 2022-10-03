@@ -114,6 +114,16 @@
             "comment": "For privacy purposes, any age 90 years or above is listed as '>89'. Submit 'variable' if samples in the database represent collection points when the donor was a different age and specify the appropriate age in the Tissue objects.",
             "pattern": "^((variable)|(unknown)|((<|>)?)((\\d+(.\\d)?)(\\-(\\d+))?))$"
         },
+        "gender": {
+            "title": "Gender",
+            "description": "The gender identity of the donor.",
+            "type": "string",
+            "enum": [
+                "female",
+                "male",
+                "other"
+            ]
+        },
         "times_pregnant": {
             "title": "Times pregnant",
             "description": "Number of pregnancies of the donor.",

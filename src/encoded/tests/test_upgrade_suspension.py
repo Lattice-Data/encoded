@@ -16,13 +16,11 @@ def test_suspension_upgrade_2_3(upgrader, suspension_base):
 	assert value['schema_version'] == '3'
 
 
-'''
 def test_suspension_upgrade_3_4(upgrader, suspension_base):
 	suspension_base['dissociation_time'] = 10
 	value = upgrader.upgrade('suspension', suspension_base, current_version='3', target_version='4')
 	assert value['dissociation_time'] == '10'
 	assert value['schema_version'] == '4'
-'''
 
 
 def test_suspension_upgrade_4_5(upgrader, suspension_base):

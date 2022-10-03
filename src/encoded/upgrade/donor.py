@@ -27,3 +27,10 @@ def human_donor_ancestry(value, system):
 	if donor_id.endswith('_donor'):
 		donor_id = donor_id[:-6]
 	value['donor_id'] = donor_id
+
+
+@upgrade_step('human_postnatal_donor', '4', '5')
+@upgrade_step('human_prenatal_donor', '2', '3')
+def human_donor_ethnicity_array(value, system):
+	if 'ethnicity' in value:
+		value['ethnicity'] = [value['ethnicity']]

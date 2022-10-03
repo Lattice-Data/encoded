@@ -26,3 +26,10 @@ def test_human_donor_upgrade_3_4(upgrader, human_postnatal_donor_base, asian_ont
 	assert value['ancestry'][0]['fraction'] == 0.75
 	assert 'percentage' not in value['ancestry'][0]
 	assert value['donor_id'] == 'W09'
+
+
+def test_human_donor_upgrade_4_5(upgrader, human_postnatal_donor_base, asian_ontology):
+	human_postnatal_donor_base['ethnicity'] = asian_ontology
+	value = upgrader.upgrade('human_postnatal_donor', human_postnatal_donor_base, current_version='4', target_version='5')
+	assert value['schema_version'] == '5'
+	assert value['ethnicity'] == [asian_ontology]

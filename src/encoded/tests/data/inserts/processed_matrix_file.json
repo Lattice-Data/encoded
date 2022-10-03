@@ -20,6 +20,7 @@
         "accession": "LATDF417SAQ",
         "description": "There's organoid data in this one!",
         "is_primary_data": "True",
+        "cellxgene_uuid": "db4a9ed2-e994-40c1-b7ec-4091fdf7b6c1",
         "layers": [
             {
                 "label": "X",

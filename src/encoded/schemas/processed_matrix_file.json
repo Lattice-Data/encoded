@@ -392,6 +392,12 @@
                     }
                 }
             }
+        },
+        "cellxgene_uuid": {
+            "title": "CELLxGENE UUID",
+            "description": "The UUID of the CELLxGENE Dataset representing this matrix",
+            "type": "string",
+            "pattern": "^([0-9a-f]{8}\\-[0-9a-f]{4}\\-[0-9a-f]{4}\\-[0-9a-f]{4}\\-[0-9a-f]{12})$"
         }
     },
     "facets": {
@@ -451,6 +457,9 @@
         },
         "is_primary_data": {
             "title": "Is primary data"
+        },
+        "cellxgene_uuid": {
+            "title": "CELLxGENE UUID"
         },
         "feature_keys": {
             "title": "Feature keys"

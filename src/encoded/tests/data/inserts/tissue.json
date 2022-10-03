@@ -71,6 +71,8 @@
         "biosample_ontology": "UBERON_0001225",
         "death_to_preservation_interval": "6.1",
         "death_to_preservation_interval_units": "hour",
+        "preservation_time": "5",
+        "preservation_time_units": "year",
         "ischemic_temperature": "cold",
         "ischemic_time": "5",
         "ischemic_time_units": "hour",

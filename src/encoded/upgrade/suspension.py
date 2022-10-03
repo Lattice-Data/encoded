@@ -16,3 +16,9 @@ def suspension_2_3(value, system):
 def suspension_3_4(value, system):
 	if 'dissociation_time' in value:
 		value['dissociation_time'] = str(value['dissociation_time'])
+
+@upgrade_step('suspension', '4', '5')
+def suspension_3_4(value, system):
+	if 'red_blood_cell_lysis' in value:
+		value['red_blood_cell_removal'] = value['red_blood_cell_lysis']
+		del value['red_blood_cell_lysis']

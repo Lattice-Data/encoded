@@ -18,7 +18,7 @@
         "suspension_type": "cell",
         "starting_quantity": "1000",
         "starting_quantity_units": "cells/\u03bcl",
-        "cell_viability_method": "acridine orange and propidium iodide",
+        "cell_viability_method": "acridine orange and DAPI",
         "percent_cell_viability": "95",
         "depleted_cell_types": [
             "CL_0000540"
@@ -32,7 +32,7 @@
         "dissociation_reagent": "10x reagent",
         "dissociation_time": "1-10",
         "dissociation_time_units": "minute",
-        "red_blood_cell_lysis": true,
+        "red_blood_cell_removal": true,
         "dbxrefs": [
             "BioSample:SAMN144225",
             "EGA:EGAN00001549491"
@@ -82,7 +82,7 @@
         "dissociation_reagent": "10x reagent",
         "dissociation_time": "1",
         "dissociation_time_units": "minute",
-        "red_blood_cell_lysis": true,
+        "red_blood_cell_removal": true,
         "dbxrefs": [
             "BioSample:SAMN14426"
         ],
@@ -127,7 +127,7 @@
         "dissociation_reagent": "10x reagent",
         "dissociation_time": "1",
         "dissociation_time_units": "minute",
-        "red_blood_cell_lysis": true,
+        "red_blood_cell_removal": true,
         "dbxrefs": [
             "BioSample:SAMN144227"
         ]
@@ -165,7 +165,7 @@
         "dissociation_reagent": "10x reagent",
         "dissociation_time": "1",
         "dissociation_time_units": "minute",
-        "red_blood_cell_lysis": true,
+        "red_blood_cell_removal": true,
         "dbxrefs": [
             "BioSample:SAMN144228"
         ]
@@ -197,7 +197,7 @@
         "dissociation_reagent": "10x reagent",
         "dissociation_time": "1",
         "dissociation_time_units": "minute",
-        "red_blood_cell_lysis": true,
+        "red_blood_cell_removal": true,
         "dbxrefs": [
             "BioSample:SAMN144229"
         ]
@@ -230,7 +230,7 @@
         "dissociation_reagent": "10x reagent",
         "dissociation_time": "1",
         "dissociation_time_units": "minute",
-        "red_blood_cell_lysis": true,
+        "red_blood_cell_removal": true,
         "dbxrefs": [
             "BioSample:SAMN144230"
         ]
@@ -263,7 +263,7 @@
         "dissociation_reagent": "10x reagent",
         "dissociation_time": "1",
         "dissociation_time_units": "minute",
-        "red_blood_cell_lysis": true,
+        "red_blood_cell_removal": true,
         "dbxrefs": [
             "BioSample:SAMN144231"
         ]
@@ -296,7 +296,7 @@
         "dissociation_reagent": "10x reagent",
         "dissociation_time": "1",
         "dissociation_time_units": "minute",
-        "red_blood_cell_lysis": true,
+        "red_blood_cell_removal": true,
         "dbxrefs": [
             "BioSample:SAMN144232"
         ]
@@ -330,7 +330,7 @@
         "dissociation_reagent": "10x reagent",
         "dissociation_time": "1",
         "dissociation_time_units": "minute",
-        "red_blood_cell_lysis": true,
+        "red_blood_cell_removal": true,
         "dbxrefs": [
             "BioSample:SAMN144233"
         ]
@@ -363,7 +363,7 @@
         "dissociation_reagent": "10x reagent",
         "dissociation_time": "1",
         "dissociation_time_units": "minute",
-        "red_blood_cell_lysis": true,
+        "red_blood_cell_removal": true,
         "dbxrefs": [
             "BioSample:SAMN144234"
         ],
@@ -399,7 +399,7 @@
         "dissociation_reagent": "10x reagent",
         "dissociation_time": "1",
         "dissociation_time_units": "minute",
-        "red_blood_cell_lysis": true,
+        "red_blood_cell_removal": true,
         "dbxrefs": [
             "BioSample:SAMN144235"
         ]
@@ -432,7 +432,7 @@
         "dissociation_reagent": "10x reagent",
         "dissociation_time": "1",
         "dissociation_time_units": "minute",
-        "red_blood_cell_lysis": true,
+        "red_blood_cell_removal": true,
         "dbxrefs": [
             "BioSample:SAMN144236"
         ]
@@ -468,7 +468,7 @@
         "dissociation_reagent": "10x reagent",
         "dissociation_time": "1",
         "dissociation_time_units": "minute",
-        "red_blood_cell_lysis": true,
+        "red_blood_cell_removal": true,
         "dbxrefs": [
             "BioSample:SAMN144237"
         ],
@@ -509,7 +509,7 @@
         "dissociation_reagent": "10x reagent",
         "dissociation_time": "1",
         "dissociation_time_units": "minute",
-        "red_blood_cell_lysis": true,
+        "red_blood_cell_removal": true,
         "dbxrefs": [
             "BioSample:SAMN144242"
         ],
@@ -554,7 +554,7 @@
         "dissociation_reagent": "10x reagent",
         "dissociation_time": "1",
         "dissociation_time_units": "minute",
-        "red_blood_cell_lysis": true,
+        "red_blood_cell_removal": true,
         "dbxrefs": [
             "BioSample:SAMN144243"
         ],
@@ -599,7 +599,7 @@
         "dissociation_reagent": "10x reagent",
         "dissociation_time": "1",
         "dissociation_time_units": "minute",
-        "red_blood_cell_lysis": true,
+        "red_blood_cell_removal": true,
         "dbxrefs": [
             "BioSample:SAMN144244"
         ],
@@ -644,7 +644,7 @@
         "dissociation_reagent": "10x reagent",
         "dissociation_time": "1",
         "dissociation_time_units": "minute",
-        "red_blood_cell_lysis": true,
+        "red_blood_cell_removal": true,
         "dbxrefs": [
             "BioSample:SAMN144245"
         ],
@@ -689,7 +689,7 @@
         "dissociation_reagent": "10x reagent",
         "dissociation_time": "1",
         "dissociation_time_units": "minute",
-        "red_blood_cell_lysis": true,
+        "red_blood_cell_removal": true,
         "dbxrefs": [
             "BioSample:SAMN144246"
         ]
@@ -727,7 +727,7 @@
         "dissociation_reagent": "10x reagent",
         "dissociation_time": "1",
         "dissociation_time_units": "minute",
-        "red_blood_cell_lysis": true,
+        "red_blood_cell_removal": true,
         "dbxrefs": [
             "BioSample:SAMN144247"
         ]
@@ -765,7 +765,7 @@
         "dissociation_reagent": "10x reagent",
         "dissociation_time": "1",
         "dissociation_time_units": "minute",
-        "red_blood_cell_lysis": true,
+        "red_blood_cell_removal": true,
         "dbxrefs": [
             "BioSample:SAMN144248"
         ]
@@ -803,7 +803,7 @@
         "dissociation_reagent": "10x reagent",
         "dissociation_time": "1",
         "dissociation_time_units": "minute",
-        "red_blood_cell_lysis": true,
+        "red_blood_cell_removal": true,
         "dbxrefs": [
             "BioSample:SAMN144249"
         ]

@@ -170,6 +170,18 @@
         "references.citation": {
             "title": "References"
         },
+        "donor_count": {
+            "title": "Donor count"
+        },
+        "library_count": {
+            "title": "Library count"
+        },
+        "read_count": {
+            "title": "Read count"
+        },
+        "observation_count": {
+            "title": "Observation count"
+        },
         "libraries.protocol.title": {
             "title": "Library protocol"
         },

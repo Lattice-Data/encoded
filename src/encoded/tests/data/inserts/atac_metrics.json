@@ -3,7 +3,7 @@
         "bulk_estimated_saturation": 0.3622507517004286,
         "bulk_total_library_complexity": 473866563.9594224,
         "cell_threshold": 299,
-        "ctcf_enrichment_score": 1.1388714044121553,
+        "ctcf_enrichment_score": -0.138871404553,
         "downsample_succeeded": true,
         "fitted_dispersion_noise": 0.9475101014774829,
         "fitted_dispersion_signal": 1.1104480281526803,

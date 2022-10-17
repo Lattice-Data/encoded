@@ -141,6 +141,9 @@
         "award.name": {
             "title": "Award name"
         },
+        "references.hca_publication": {
+            "title": "HCA publication"
+        },
         "reference_assembly": {
             "title": "Genome assembly"
         },

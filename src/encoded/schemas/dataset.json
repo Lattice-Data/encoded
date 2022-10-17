@@ -141,6 +141,9 @@
         "award.name": {
             "title": "Award name"
         },
+        "references.hca_publication": {
+            "title": "HCA publication"
+        },
         "reference_assembly": {
             "title": "Genome assembly"
         },
@@ -169,6 +172,18 @@
         },
         "references.citation": {
             "title": "References"
+        },
+        "donor_count": {
+            "title": "Donor count"
+        },
+        "library_count": {
+            "title": "Library count"
+        },
+        "read_count": {
+            "title": "Read count"
+        },
+        "observation_count": {
+            "title": "Observation count"
         },
         "libraries.protocol.title": {
             "title": "Library protocol"

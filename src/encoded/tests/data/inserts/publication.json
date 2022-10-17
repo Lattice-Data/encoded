@@ -27,7 +27,8 @@
         "doi": "10.1101/2020.07.24.219147",
         "award": "CZI021IMM",
         "status": "in progress",
-        "uuid": "38131eba-e32f-11ea-87d0-0242ac130003"
+        "uuid": "38131eba-e32f-11ea-87d0-0242ac130003",
+        "hca_publication": true
     },
     {
         "aliases": [

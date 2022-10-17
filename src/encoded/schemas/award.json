@@ -107,6 +107,14 @@
         },
         "focus": {
             "title": "Focus"
+        },
+        "coordinating_pi.title": {
+            "title": "Coordinating PI",
+            "type": "typeahead"
+        },
+        "principal_investigators.title": {
+            "title": "PI",
+            "type": "typeahead"
         }
     },
     "columns": {

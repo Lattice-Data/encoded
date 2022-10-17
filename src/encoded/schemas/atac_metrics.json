@@ -214,8 +214,7 @@
 		},
 		"ctcf_enrichment_score":{
 			"title": "CTCF enrichment score",
-			"type": "number",
-			"minimum": 0
+			"type": "number"
 		},
 		"downsample_succeeded":{
 			"title": "Downsample succeeded",

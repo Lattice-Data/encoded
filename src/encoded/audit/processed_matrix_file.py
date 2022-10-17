@@ -121,12 +121,23 @@ def duplicated_derfrom(value, system):
             yield AuditFailure('duplicate input raw data', detail, 'ERROR')
 
 
+def cellxgene_links(value, system):
+    if 'cellxgene_uuid' in value and len(value['dataset']['cellxgene_urls']) == 0:
+        detail = ('File {} has cellxgene_uuid but {} has no cellxgene_urls.'.format(
+            audit_link(value['accession'], value['@id']),
+            value['dataset']['accession']
+            )
+        )
+        yield AuditFailure('missing cellxgene link', detail, 'ERROR')
+
+
 function_dispatcher = {
     'ontology_check_dis': ontology_check_dis,
     'duplicated_derfrom': duplicated_derfrom,
     'mappings_antibodies': mappings_antibodies,
     'mappings_donors': mappings_donors,
-    'mappings_matrices': mappings_matrices
+    'mappings_matrices': mappings_matrices,
+    'cellxgene_links': cellxgene_links
 }
 
 @audit_checker('ProcessedMatrixFile',
@@ -134,7 +145,8 @@ function_dispatcher = {
                 'experimental_variable_disease',
                 'derived_from',
                 'libraries',
-                'libraries.derived_from'
+                'libraries.derived_from',
+                'dataset'
                 ])
 def audit_processed_matrix_file(value, system):
     for function_name in function_dispatcher.keys():

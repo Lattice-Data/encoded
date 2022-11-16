@@ -82,7 +82,7 @@ RUN mkdir -p /opt/Mod_Wsgi_Build
 
 # Config Apache2
 COPY ./etc/logging-apache.conf /etc/apache2/conf-available/logging.conf
-COPY ./parts/wsgi_source/4.6.5.tar.gz /opt/Mod_Wsgi_Build
+COPY ./conf/wsgi_source/4.6.5.tar.gz /opt/Mod_Wsgi_Build
 
 # Compiling Apache mod_wsgi
 RUN cd /opt/Mod_Wsgi_Build && \

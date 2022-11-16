@@ -20,6 +20,8 @@
 /parts/
 /base.ini
 /development.ini
+/base-docker.ini
+/development-docker.ini
 /production.ini
 /session-secret.b64
 /src/encoded/static/css/

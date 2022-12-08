@@ -4,11 +4,12 @@ echo "Lattice Local Development Script - params: ($1, $LATTICE_INI, $BUILDOUT)"
 
 cd /app
 
+export PATH=/usr/lib/postgresql/12/bin:/usr/share/elasticsearch/bin:$PATH
+
 if [ "$BUILDOUT" = "true" ];
 then
-    python3 -m venv lattice-venv
-    . ./lattice-venv/bin/activate
-    pip3 install -r requirements.txt
+    pip install -U setuptools
+    pip3 install -r requirements.osx.txt
     buildout bootstrap
     bin/buildout
 
@@ -16,11 +17,7 @@ then
     then
 	npm install
     fi
-else
-    . ./lattice-venv/bin/activate
 fi
-
-export PATH=/usr/lib/postgresql/12/bin:/usr/share/elasticsearch/bin:$PATH
 
 if [ "$1" = "pserve" ];
 then

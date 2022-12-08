@@ -48,15 +48,17 @@ RUN wget https://www.python.org/ftp/python/3.7.6/Python-3.7.6.tgz && \
     make install && \
     cd .. && rm -r Python-3.7.6.tgz Python-3.7.6/
 
+# Install Conda
+ENV CONDA_DIR /opt/conda
+RUN wget --quiet https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-aarch64.sh -O ~/miniconda.sh && /bin/bash ~/miniconda.sh -b -p /opt/conda
+ENV PATH=$CONDA_DIR/bin:$PATH
+
 WORKDIR /app
 
 RUN useradd -m --groups sudo latticed && \
     echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers && \
     chown -R latticed /var/log/nginx /var/lib/nginx && \
     mkdir -p /run && chown -R latticed /run
-
-COPY --chown=latticed ./dev_servers.sh /usr/local/bin
-RUN chmod +x /usr/local/bin/dev_servers.sh
 
 CMD git config --global --add safe.directory /app
 
@@ -71,9 +73,23 @@ RUN wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-5.6.
 
 USER latticed
 
-CMD exec dev_servers.sh "dev-servers"
+RUN conda create --name lattice_env python=3.7 && \
+    conda config --append channels conda-forge && \
+    conda install -n lattice_env -c anaconda psycopg2==2.8.4
+
+ENV PATH=/usr/lib/postgresql/12/bin:/usr/share/elasticsearch/bin:$PATH
+
+CMD conda run --no-capture-output -n lattice_env /bin/bash dev_servers.sh "dev-servers"
 
 
 FROM base as pserve
 
-CMD exec dev_servers.sh "pserve"
+USER latticed
+
+RUN conda create --name lattice_env python=3.7 && \
+    conda config --append channels conda-forge && \
+    conda install -n lattice_env -c anaconda psycopg2==2.8.4
+
+ENV PATH=/usr/lib/postgresql/12/bin:/usr/share/elasticsearch/bin:$PATH
+
+CMD conda run --no-capture-output -n lattice_env /bin/bash dev_servers.sh "pserve"

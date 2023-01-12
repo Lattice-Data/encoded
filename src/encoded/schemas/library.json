@@ -216,9 +216,6 @@
             "type": "exists",
             "title": "Has raw count matrix"
         },
-        "donors.organism.scientific_name": {
-            "title": "Donor organism"
-        },
         "donors.development_ontology.development_slims": {
             "title": "Donor life stage"
         },

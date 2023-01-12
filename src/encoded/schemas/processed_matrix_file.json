@@ -407,9 +407,6 @@
         "output_types": {
             "title": "Output type"
         },
-        "file_format": {
-            "title": "File format"
-        },
         "layers.value_scale": {
             "title": "Scale"
         },
@@ -445,9 +442,6 @@
         },
         "genome_annotations": {
             "title": "Genome annotations"
-        },
-        "file_format": {
-            "title": "File Format"
         },
         "is_primary_data": {
             "title": "Is primary data"

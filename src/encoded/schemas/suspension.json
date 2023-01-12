@@ -308,9 +308,6 @@
         }
     },
     "facets": {
-        "donors.organism.scientific_name": {
-            "title": "Organism"
-        },
         "donors.development_ontology.development_slims": {
             "title": "Donor life stage"
         },
@@ -360,9 +357,6 @@
         },
         "biosample_summary": {
             "title": "Biosample summary"
-        },
-        "donors.organism.scientific_name": {
-            "title": "Organism"
         },
         "donors.development_ontology.development_slims": {
             "title": "Donor life stage"

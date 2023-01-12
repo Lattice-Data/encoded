@@ -435,9 +435,6 @@
         "sex": {
             "title": "Sex"
         },
-        "organism.scientific_name": {
-            "title": "Organism species"
-        },
         "ethnicity.term_name": {
             "title": "Ethnicity"
         },

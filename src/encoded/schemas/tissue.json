@@ -230,9 +230,6 @@
         }
     },
     "facets": {
-        "donors.organism.scientific_name": {
-            "title": "Organism"
-        },
         "summary_development_ontology_at_collection.development_slims": {
             "title": "Donor life stage"
         },
@@ -275,9 +272,6 @@
         },
         "treatment_summary": {
             "title": "Treatment summary"
-        },
-        "donors.organism.scientific_name": {
-            "title": "Organism"
         },
         "summary_development_ontology_at_collection.development_slims": {
             "title": "Donor life stage"

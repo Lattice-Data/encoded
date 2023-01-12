@@ -4,7 +4,7 @@
     "id": "/profiles/processed_matrix_file.json",
     "$schema": "http://json-schema.org/draft-04/schema#",
     "type": "object",
-    "required": ["dataset", "file_format", "output_types", "derived_from", "is_primary_data"],
+    "required": ["dataset", "output_types", "derived_from", "is_primary_data"],
     "identifyingProperties": ["uuid", "accession", "aliases"],
     "additionalProperties": false,
     "mixinProperties": [
@@ -116,15 +116,9 @@
         },
         "file_format": {
             "enum": [
-                "mtx",
-                "csv",
-                "loom",
-                "tsv",
-                "txt",
-                "hdf5",
-                "rds",
-                "mex"
-            ]
+                "hdf5"
+            ],
+            "default": "hdf5"
         },
         "output_types": {
             "items": {

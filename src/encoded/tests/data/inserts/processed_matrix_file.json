@@ -12,7 +12,6 @@
             "jimmie-ye:raw_peak_matrix_3c"
         ],
         "dataset": "LATDS600ABA",
-        "file_format": "rds",
         "output_types": [
             "gene quantifications"
         ],
@@ -43,7 +42,7 @@
         "uuid": "4682ce37-968c-44cf-af4d-9211d0cd93db",
         "no_file_available": false,
         "status": "released",
-        "file_format": "mtx",
+        "file_format": "hdf5",
         "file_size": 50000,
         "lab": "peter-sims",
         "submitted_file_name": "prenatal_merged_matrix.mtx",
@@ -86,11 +85,10 @@
         "accession": "LATDF421ZPI",
         "author_cell_type_column": "celltype",
         "uuid": "2d78464c-204a-4bcc-abfa-816688c4a975",
-        "s3_uri": "s3://submissions-lattice/testing/muto_rna.rds",
+        "s3_uri": "s3://submissions-lattice/testing/muto_rna.h5ad",
         "no_file_available": false,
         "description": "A super cool dataset for all to see",
         "status": "released",
-        "file_format": "rds",
         "file_size": 50000,
         "lab": "peter-sims",
         "submitted_file_name": "prenatal_merged_matrix.mtx",
@@ -161,7 +159,7 @@
         "status": "released",
         "uuid": "81525748-42a0-4c5b-8273-200d7126ed41",
         "submitted_file_name": "donorAB_merged_sc_citeseq_matrix.mtx/",
-        "file_format": "mtx",
+        "file_format": "hdf5",
         "file_size": 100000,
         "lab": "anna-greka",
         "output_types": [
@@ -211,7 +209,7 @@
         "status": "released",
         "uuid": "fd011329-b41e-455b-81e0-54ce67b6f176",
         "submitted_file_name": "donorCD_merged_sc_matrix.mtx/",
-        "file_format": "mtx",
+        "file_format": "hdf5",
         "file_size": 150000,
         "lab": "anna-greka",
         "output_types": [
@@ -260,7 +258,7 @@
         "uuid": "c7f576c1-6bcc-41fa-ae79-0d2d4082a814",
         "submitted_file_name": "donorCD_pooled_merged_sc_matrix.mtx/",
         "description": "Anna Greka's very special data",
-        "file_format": "mtx",
+        "file_format": "hdf5",
         "file_size": 100000,
         "lab": "anna-greka",
         "output_types": [
@@ -303,7 +301,7 @@
         "status": "released",
         "uuid": "9b9eed35-70b9-4248-89c5-17193e005cd6",
         "submitted_file_name": "donorEF_merged_sc_citeseq_matrix.mtx/",
-        "file_format": "mtx",
+        "file_format": "hdf5",
         "file_size": 100000,
         "lab": "anna-greka",
         "output_types": [
@@ -351,7 +349,7 @@
         "status": "released",
         "uuid": "428560c1-f0b1-4076-9c3d-76dd2df8fff8",
         "submitted_file_name": "donorGH_merged_sc_citeseq_matrix.mtx/",
-        "file_format": "mtx",
+        "file_format": "hdf5",
         "file_size": 200000,
         "lab": "anna-greka",
         "output_types": [

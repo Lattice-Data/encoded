@@ -78,21 +78,36 @@ def audit_contributor_lists(value, system):
     return
 
 
-def audit_dataset_no_raw_files(value, system):
+def audit_dataset_raw_files(value, system):
     if value['status'] in ['deleted']:
         return
 
     raw_data = False
+    file_names = []
     if 'original_files' in value:
         for f in value['original_files']:
             if f['@type'][0] == 'RawSequenceFile' and f['no_file_available'] != True:
                 raw_data = True
+                if 's3_uri' in f:
+                    file_names.append(f['s3_uri'].split('/')[-1])
     if raw_data == False:
         detail = ('Dataset {} does not contain any raw sequence files.'.format(
                 audit_link(path_to_text(value['@id']), value['@id'])
             )
         )
         yield AuditFailure('no raw data', detail, level='ERROR')
+    else:
+        redundant = []
+        for f in file_names:
+            if file_names.count(f) > 1 and f not in redundant:
+                redundant.append(f)
+        if redundant:
+            detail = ('Dataset {} contains multiple raw sequence files named {}.'.format(
+                    audit_link(path_to_text(value['@id']), value['@id']),
+                    ','.join(redundant)
+                )
+            )
+            yield AuditFailure('redundant raw data file names', detail, level='ERROR')
     return
 
 
@@ -146,7 +161,7 @@ function_dispatcher_with_files = {
     'audit_contributor_institute': audit_contributor_institute,
     'audit_contributor_email': audit_contributor_email,
     'audit_contributor_lists': audit_contributor_lists,
-    'audit_dataset_no_raw_files': audit_dataset_no_raw_files,
+    'audit_dataset_raw_files': audit_dataset_raw_files,
     'audit_dataset_dcp_required_properties': audit_dataset_dcp_required_properties,
     'audit_released_with_unreleased_files': audit_experiment_released_with_unreleased_files
 }

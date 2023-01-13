@@ -22,6 +22,15 @@ const Donor = (props) => {
     const { context, biosample } = props;
     const references = pubReferenceList(context.references);
 
+    function ethList(values) {
+        if (values && values.length > 0) {
+            return Array.from(new Set(values.map(function(value) { return value['term_name'] }))).join(", ");
+        }
+        return null;
+    }
+
+    const ethnicities = ethList(context.ethnicity);
+
     return (
         <div>
             <Panel>
@@ -71,14 +80,7 @@ const Donor = (props) => {
                         {context.ethnicity ?
                             <div data-test="ethnicity">
                                 <dt>Ethnicity</dt>
-                                <dd className="sentence-case">{context.ethnicity.term_name}</dd>
-                            </div>
-                        : null}
-
-                        {context.strain_term_name ?
-                            <div data-test="strain_term_name">
-                                <dt>Strain</dt>
-                                <dd className="sentence-case">{context.strain_term_name}</dd>
+                                <dd>{ethnicities}</dd>
                             </div>
                         : null}
 

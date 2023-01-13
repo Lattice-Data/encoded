@@ -1,5 +1,13 @@
 ## Changelog for processed_matrix_file.json
 
+### Schema version 9
+* Renamed *author_donor_column* to *demultiplexed_donor_column*
+* Moved *layers.normalized* to *X_normalized*
+* Moved *layers.feature_counts* to *feature_counts*
+* Added *layers_to_keep*
+* Removed *layers*
+* Set default *file_format* to `hdf5`
+
 ### Schema version 8
 * Removed *software*,*cell_annotation_method*,*author_cluster_column*,*layers.scaled*,*layers.filtering_cutoffs*
 

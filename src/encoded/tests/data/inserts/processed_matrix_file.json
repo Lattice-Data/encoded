@@ -20,19 +20,14 @@
         "description": "There's organoid data in this one!",
         "is_primary_data": "True",
         "cellxgene_uuid": "db4a9ed2-e994-40c1-b7ec-4091fdf7b6c1",
-        "layers": [
-            {
-                "label": "X",
-                "normalized": true,
-                "value_units": "UMI",
-                "value_scale": "log, base 10"
-            }
-        ],
+        "X_normalized": true,
+        "layers_to_keep": ["soupx"],
         "author_columns": [
             "my_cell_labels",
             "my_other_cell_labels"
         ],
-        "derivation_process": ["single cell analysis pipeline"]
+        "derivation_process": ["single cell analysis pipeline"],
+        "demultiplexed_donor_column": "Donor"
     },
     {
         "aliases": [
@@ -60,21 +55,13 @@
             "peter-sims:postnatal_1c_filtered_matrix"
         ],
         "md5sum": "b80320ebaa285af7a6880dbbd6795134",
-        "layers": [
+        "feature_counts": [
             {
-                "label": "X",
-                "feature_counts": [
-                    {
-                        "feature_type": "gene",
-                        "feature_count": 20919
-                    }
-                ],
-                "value_scale": "log1p, base 10",
-                "value_units": "UMI",
-                "normalized": true,
-                "normalization_method": "cellranger aggr read depth normalization"
+                "feature_type": "gene",
+                "feature_count": 20919
             }
         ],
+        "X_normalized": true,
         "is_primary_data": "True",
         "derivation_process": ["single cell analysis pipeline"]
     },
@@ -133,21 +120,13 @@
             }
         ],
         "default_embedding": "X_umap",
-        "layers": [
+        "feature_counts": [
             {
-                "assay": "SCT",
-                "feature_counts": [
-                    {
-                        "feature_type": "gene",
-                        "feature_count": 22357
-                    }
-                ],
-                "value_scale": "log1p",
-                "value_units": "UMI",
-                "normalized": true,
-                "normalization_method": "scTransform, custom params"
+                "feature_type": "gene",
+                "feature_count": 22357
             }
         ],
+        "X_normalized": true,
         "is_primary_data": "True",
         "derivation_process": ["single cell analysis pipeline"]
     },
@@ -179,25 +158,17 @@
             "anna-greka:donorB2_filtered_feature_bc_matrix"
         ],
         "md5sum": "48912b433c9105e6b4f32c79f6b09f6b",
-        "layers": [
+        "feature_counts": [
             {
-                "label": "X",
-                "feature_counts": [
-                    {
-                        "feature_type": "gene",
-                        "feature_count": 329950
-                    },
-                    {
-                        "feature_type": "antibody capture",
-                        "feature_count": 50
-                    }
-                ],
-                "value_scale": "log",
-                "value_units": "UMI",
-                "normalized": true,
-                "normalization_method": "LogNormalize"
+                "feature_type": "gene",
+                "feature_count": 329950
+            },
+            {
+                "feature_type": "antibody capture",
+                "feature_count": 50
             }
         ],
+        "X_normalized": true,
         "accession": "LATDF982KCF",
         "is_primary_data": "True",
         "derivation_process": ["single cell analysis pipeline"]
@@ -231,21 +202,14 @@
             "anna-greka:donorD2b_filtered_feature_bc_matrix"
         ],
         "md5sum": "2dd4370d08bdf8666b859c888b1f7006",
-        "layers": [
+        "layers_to_keep": ["soupx","soupx_but_better"],
+        "feature_counts": [
             {
-                "label": "X",
-                "feature_counts": [
-                    {
-                        "feature_type": "gene",
-                        "feature_count": 329950
-                    }
-                ],
-                "value_scale": "log, base e",
-                "value_units": "UMI",
-                "normalized": true,
-                "normalization_method": "LogNormalize"
+                "feature_type": "gene",
+                "feature_count": 329950
             }
         ],
+        "X_normalized": true,
         "accession": "LATDF611FOP",
         "is_primary_data": "True",
         "derivation_process": ["single cell analysis pipeline"]
@@ -275,21 +239,13 @@
         ],
         "s3_uri": "s3://submissions-czi012eye/chen_2020/19D015_macular_outs/filtered_feature_bc_matrix.h5",
         "md5sum": "98b5746b0f69e8be8c888e3c1d74b150",
-        "layers": [
+        "feature_counts": [
             {
-                "label": "X",
-                "feature_counts": [
-                    {
-                        "feature_type": "gene",
-                        "feature_count": 329950
-                    }
-                ],
-                "value_scale": "log, base e",
-                "value_units": "UMI",
-                "normalized": true,
-                "normalization_method": "LogNormalize"
+                "feature_type": "gene",
+                "feature_count": 329950
             }
         ],
+        "X_normalized": true,
         "accession": "LATDF757YHL",
         "is_primary_data": "True",
         "derivation_process": ["single cell analysis pipeline"]
@@ -319,25 +275,17 @@
             "anna-greka:donorF_filtered_feature_bc_matrix"
         ],
         "md5sum": "ee656a7331492beca246fcb1b503fd33",
-        "layers": [
+        "feature_counts": [
             {
-                "label": "X",
-                "feature_counts": [
-                    {
-                        "feature_type": "gene",
-                        "feature_count": 329950
-                    },
-                    {
-                        "feature_type": "antibody capture",
-                        "feature_count": 50
-                    }
-                ],
-                "value_scale": "log, base e",
-                "value_units": "UMI",
-                "normalized": true,
-                "normalization_method": "LogNormalize"
+                "feature_type": "gene",
+                "feature_count": 329950
+            },
+            {
+                "feature_type": "antibody capture",
+                "feature_count": 50
             }
         ],
+        "X_normalized": true,
         "accession": "LATDF071TSQ",
         "is_primary_data": "True",
         "derivation_process": ["single cell analysis pipeline"]
@@ -367,25 +315,17 @@
             "anna-greka:donorH_filtered_feature_bc_matrix"
         ],
         "md5sum": "24aaa927d40e8680ea107684c39fb442",
-        "layers": [
+        "feature_counts": [
             {
-                "label": "X",
-                "feature_counts": [
-                    {
-                        "feature_type": "gene",
-                        "feature_count": 329950
-                    },
-                    {
-                        "feature_type": "antibody capture",
-                        "feature_count": 50
-                    }
-                ],
-                "value_scale": "log1p, base e",
-                "value_units": "UMI",
-                "normalized": true,
-                "normalization_method": "LogNormalize"
+                "feature_type": "gene",
+                "feature_count": 329950
+            },
+            {
+                "feature_type": "antibody capture",
+                "feature_count": 50
             }
         ],
+        "X_normalized": true,
         "accession": "LATDF522RJH",
         "is_primary_data": "False",
         "derivation_process": ["single cell analysis pipeline"]

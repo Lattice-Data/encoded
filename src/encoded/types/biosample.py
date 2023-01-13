@@ -41,7 +41,8 @@ class Biosample(Item, CalculatedDonors, CalculatedTreatmentSummary):
         'donors.organism',
         'donors.ethnicity',
         'donors.development_ontology',
-        'treatments'
+        'treatments',
+        'summary_development_ontology_at_collection'
     ]
 
     @calculated_property(schema={
@@ -74,6 +75,27 @@ class Biosample(Item, CalculatedDonors, CalculatedTreatmentSummary):
         summ.append(my_type)
 
         return ' '.join(summ)
+
+
+    @calculated_property(schema={
+        "title": "Summary development ontology at collection",
+        "description": "The development stage of the donor at the time this sample was collected.",
+        "comment": "Do not submit. This is a calculated property",
+        "type": "string",
+        "linkTo": ['OntologyTerm'],
+        "notSubmittable": True,
+    })
+    def summary_development_ontology_at_collection(self, request, derived_from, development_ontology_at_collection=None):
+        if development_ontology_at_collection != None:
+            return development_ontology_at_collection
+
+        else:
+            df = derived_from[0]
+            df_obj = request.embed(df, '@@object')
+            if 'summary_development_ontology_at_collection' in df_obj:
+                return df_obj['summary_development_ontology_at_collection']
+            else:
+                return df_obj['development_ontology']
 
 
 @abstract_collection(
@@ -126,7 +148,7 @@ class Organoid(Culture):
 class Tissue(Biosample):
     item_type = 'tissue'
     schema = load_schema('encoded:schemas/tissue.json')
-    embedded = Biosample.embedded + ['summary_development_ontology_at_collection']
+    embedded = Biosample.embedded
 
 
     @calculated_property(schema={
@@ -147,27 +169,6 @@ class Tissue(Biosample):
                 return df_obj['age_at_collection_display']
             else:
                 return df_obj['age_display']
-
-
-    @calculated_property(schema={
-        "title": "Summary development ontology at collection",
-        "description": "The development stage of the donor at the time this sample was collected.",
-        "comment": "Do not submit. This is a calculated property",
-        "type": "string",
-        "linkTo": ['OntologyTerm'],
-        "notSubmittable": True,
-    })
-    def summary_development_ontology_at_collection(self, request, derived_from, development_ontology_at_collection=None):
-        if development_ontology_at_collection != None:
-            return development_ontology_at_collection
-
-        else:
-            df = derived_from[0]
-            df_obj = request.embed(df, '@@object')
-            if 'summary_development_ontology_at_collection' in df_obj:
-                return df_obj['summary_development_ontology_at_collection']
-            else:
-                return df_obj['development_ontology']
 
 
     @calculated_property(schema={

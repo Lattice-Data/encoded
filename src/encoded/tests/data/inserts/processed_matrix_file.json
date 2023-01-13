@@ -72,7 +72,7 @@
         "accession": "LATDF421ZPI",
         "author_cell_type_column": "celltype",
         "uuid": "2d78464c-204a-4bcc-abfa-816688c4a975",
-        "s3_uri": "s3://submissions-lattice/testing/muto_rna.h5ad",
+        "s3_uri": "s3://submissions-award/dataset_1/hamstring_integrated_annotated_202207_cellxgene_h5ad_curated.h5ad",
         "no_file_available": false,
         "description": "A super cool dataset for all to see",
         "status": "released",
@@ -237,7 +237,7 @@
             "anna-greka:donorCD1_filtered_feature_bc_matrix",
             "anna-greka:donorCD2_filtered_feature_bc_matrix"
         ],
-        "s3_uri": "s3://submissions-czi012eye/chen_2020/19D015_macular_outs/filtered_feature_bc_matrix.h5",
+        "s3_uri": "s3://submissions-czi000aaa/first_dataset/finalied_RDS/scRNAseq_FT_finalized_wAnno_rds_curated.h5ad",
         "md5sum": "98b5746b0f69e8be8c888e3c1d74b150",
         "feature_counts": [
             {

@@ -21,29 +21,6 @@ def no_read_type(value, system):
                 )
             )
             yield AuditFailure('no read_type', detail, level='ERROR')
-            return
-
-
-def no_file_name(value, system):
-    if value['status'] in ['deleted']:
-        return
-
-    if value.get('no_file_available') != True:
-        if not value.get('submitted_file_name'):
-            detail = ('File {} does not have a submitted_file_name.'.format(
-                audit_link(path_to_text(value['@id']), value['@id'])
-                )
-            )
-            yield AuditFailure('no submitted_file_name', detail, level='ERROR')
-            return
-        elif (value.get('submitted_file_name').startswith('/') or value.get('submitted_file_name').endswith('/')):
-            detail = ('File {} submitted_file_name {} has a leading or trailing slash.'.format(
-                audit_link(path_to_text(value['@id']), value['@id'],),
-                value.get('submitted_file_name')
-                )
-            )
-            yield AuditFailure('invalid submitted_file_name', detail, level='ERROR')
-            return
 
 
 def no_file_stats(value, system):
@@ -175,7 +152,6 @@ def audit_library_protocol_standards(value, system):
 
 function_dispatcher = {
     'no_read_type': no_read_type,
-    'no_file_name': no_file_name,
     'no_file_stats': no_file_stats,
     'not_validated': not_validated,
     'no_uri': no_uri,

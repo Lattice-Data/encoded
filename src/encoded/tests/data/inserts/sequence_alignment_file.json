@@ -9,7 +9,6 @@
         "file_format": "bam",
         "dataset": "anna-greka:large_test_dataset",
         "file_size": 300000000,
-        "submitted_file_name": "sc_donorA1.bam",
         "output_types": [
             "transcriptome alignments",
             "genome alignments"
@@ -43,7 +42,6 @@
         "file_format": "bam",
         "dataset": "anna-greka:large_test_dataset",
         "file_size": 300000000,
-        "submitted_file_name": "sc_donorA2.bam",
         "output_types": [
             "transcriptome alignments",
             "genome alignments"
@@ -75,7 +73,6 @@
         "file_format": "bam",
         "dataset": "anna-greka:large_test_dataset",
         "file_size": 300000000,
-        "submitted_file_name": "sc_donorB1.bam",
         "output_types": [
             "transcriptome alignments",
             "genome alignments"
@@ -108,7 +105,6 @@
         "file_format": "bam",
         "dataset": "anna-greka:large_test_dataset",
         "file_size": 300000000,
-        "submitted_file_name": "sc_donorA1.bam",
         "output_types": [
             "transcriptome alignments",
             "genome alignments"
@@ -140,7 +136,6 @@
         "file_format": "bam",
         "dataset": "anna-greka:large_test_dataset",
         "file_size": 300000000,
-        "submitted_file_name": "sc_donorA1.bam",
         "output_types": [
             "transcriptome alignments",
             "genome alignments"
@@ -172,7 +167,6 @@
         "file_format": "bam",
         "dataset": "anna-greka:large_test_dataset",
         "file_size": 300000000,
-        "submitted_file_name": "sc_donor_C1b.bam",
         "output_types": [
             "transcriptome alignments",
             "genome alignments"
@@ -204,7 +198,6 @@
         "file_format": "bam",
         "dataset": "anna-greka:large_test_dataset",
         "file_size": 300000000,
-        "submitted_file_name": "sc_donor_C2a.bam",
         "output_types": [
             "transcriptome alignments",
             "genome alignments"
@@ -236,7 +229,6 @@
         "file_format": "bam",
         "dataset": "anna-greka:large_test_dataset",
         "file_size": 300000000,
-        "submitted_file_name": "sc_donor_C2b.bam",
         "output_types": [
             "transcriptome alignments",
             "genome alignments"
@@ -268,7 +260,6 @@
         "file_format": "bam",
         "dataset": "anna-greka:large_test_dataset",
         "file_size": 300000000,
-        "submitted_file_name": "sc_donor_D1a.bam",
         "output_types": [
             "transcriptome alignments",
             "genome alignments"
@@ -300,7 +291,6 @@
         "file_format": "bam",
         "dataset": "anna-greka:large_test_dataset",
         "file_size": 300000000,
-        "submitted_file_name": "sc_donor_D1b.bam",
         "output_types": [
             "transcriptome alignments",
             "genome alignments"
@@ -332,7 +322,6 @@
         "file_format": "bam",
         "dataset": "anna-greka:large_test_dataset",
         "file_size": 300000000,
-        "submitted_file_name": "sc_donor_D2a.bam",
         "output_types": [
             "transcriptome alignments",
             "genome alignments"
@@ -364,7 +353,6 @@
         "file_format": "bam",
         "dataset": "anna-greka:large_test_dataset",
         "file_size": 300000000,
-        "submitted_file_name": "sc_donor_D2b.bam",
         "output_types": [
             "transcriptome alignments",
             "genome alignments"
@@ -396,7 +384,6 @@
         "file_format": "bam",
         "dataset": "anna-greka:large_test_dataset",
         "file_size": 300000000,
-        "submitted_file_name": "sc_donorCD1_L001.bam",
         "output_types": [
             "transcriptome alignments",
             "genome alignments"
@@ -428,7 +415,6 @@
         "file_format": "bam",
         "dataset": "anna-greka:large_test_dataset",
         "file_size": 300000000,
-        "submitted_file_name": "sc_donorCD2_L001.bam",
         "output_types": [
             "transcriptome alignments",
             "genome alignments"
@@ -460,7 +446,6 @@
         "file_format": "bam",
         "dataset": "anna-greka:large_test_dataset",
         "file_size": 300000000,
-        "submitted_file_name": "sc_donorCD1_L002.bam",
         "output_types": [
             "transcriptome alignments",
             "genome alignments"
@@ -492,7 +477,6 @@
         "file_format": "bam",
         "dataset": "anna-greka:large_test_dataset",
         "file_size": 300000000,
-        "submitted_file_name": "sc_donorCD2_L002.bam",
         "output_types": [
             "transcriptome alignments",
             "genome alignments"
@@ -524,7 +508,6 @@
         "file_format": "bam",
         "dataset": "anna-greka:large_test_dataset",
         "file_size": 300000000,
-        "submitted_file_name": "sc_donorE1.bam",
         "output_types": [
             "transcriptome alignments",
             "genome alignments"
@@ -557,7 +540,6 @@
         "file_format": "bam",
         "dataset": "anna-greka:large_test_dataset",
         "file_size": 300000000,
-        "submitted_file_name": "sc_donorF1.bam",
         "output_types": [
             "transcriptome alignments",
             "genome alignments"
@@ -589,7 +571,6 @@
         "file_format": "bam",
         "dataset": "anna-greka:large_test_dataset",
         "file_size": 300000000,
-        "submitted_file_name": "sc_donorG1.bam",
         "output_types": [
             "transcriptome alignments",
             "genome alignments"
@@ -621,7 +602,6 @@
         "file_format": "bam",
         "dataset": "anna-greka:large_test_dataset",
         "file_size": 300000000,
-        "submitted_file_name": "sc_donorH1.bam",
         "output_types": [
             "transcriptome alignments",
             "genome alignments"
@@ -653,7 +633,6 @@
         "file_format": "bam",
         "dataset": "anna-greka:large_test_dataset",
         "file_size": 300000000,
-        "submitted_file_name": "snATAC_donorA1.bam",
         "output_types": [
             "genome alignments"
         ],
@@ -685,7 +664,6 @@
         "file_format": "bam",
         "dataset": "anna-greka:large_test_dataset",
         "file_size": 300000000,
-        "submitted_file_name": "snATAC_donorA2.bam",
         "output_types": [
             "genome alignments"
         ],
@@ -717,7 +695,6 @@
         "file_format": "bam",
         "dataset": "anna-greka:large_test_dataset",
         "file_size": 300000000,
-        "submitted_file_name": "snATAC_donorB1.bam",
         "output_types": [
             "genome alignments"
         ],
@@ -749,7 +726,6 @@
         "file_format": "bam",
         "dataset": "anna-greka:large_test_dataset",
         "file_size": 300000000,
-        "submitted_file_name": "snATAC_donorB2.bam",
         "output_types": [
             "genome alignments"
         ],
@@ -781,7 +757,6 @@
         "file_format": "bam",
         "dataset": "anna-greka:large_test_dataset",
         "file_size": 300000000,
-        "submitted_file_name": "snATAC_donorC1.bam",
         "output_types": [
             "genome alignments"
         ],
@@ -813,7 +788,6 @@
         "file_format": "bam",
         "dataset": "anna-greka:large_test_dataset",
         "file_size": 300000000,
-        "submitted_file_name": "snATAC_donorC2.bam",
         "output_types": [
             "genome alignments"
         ],
@@ -845,7 +819,6 @@
         "file_format": "bam",
         "dataset": "anna-greka:large_test_dataset",
         "file_size": 300000000,
-        "submitted_file_name": "snATAC_donorD1.bam",
         "output_types": [
             "genome alignments"
         ],
@@ -877,7 +850,6 @@
         "file_format": "bam",
         "dataset": "anna-greka:large_test_dataset",
         "file_size": 300000000,
-        "submitted_file_name": "snATAC_donorD2.bam",
         "output_types": [
             "genome alignments"
         ],
@@ -909,7 +881,6 @@
         "file_format": "bam",
         "dataset": "anna-greka:large_test_dataset",
         "file_size": 300000000,
-        "submitted_file_name": "snATAC_donorE1.bam",
         "output_types": [
             "genome alignments"
         ],
@@ -941,7 +912,6 @@
         "file_format": "bam",
         "dataset": "anna-greka:large_test_dataset",
         "file_size": 300000000,
-        "submitted_file_name": "snATAC_donorE2.bam",
         "output_types": [
             "genome alignments"
         ],
@@ -973,7 +943,6 @@
         "file_format": "bam",
         "dataset": "anna-greka:large_test_dataset",
         "file_size": 300000000,
-        "submitted_file_name": "snATAC_donorF1.bam",
         "output_types": [
             "genome alignments"
         ],
@@ -1005,7 +974,6 @@
         "file_format": "bam",
         "dataset": "anna-greka:large_test_dataset",
         "file_size": 300000000,
-        "submitted_file_name": "snATAC_donorF2.bam",
         "output_types": [
             "genome alignments"
         ],
@@ -1037,7 +1005,6 @@
         "file_format": "bam",
         "dataset": "anna-greka:large_test_dataset",
         "file_size": 300000000,
-        "submitted_file_name": "snATAC_donorG1.bam",
         "output_types": [
             "genome alignments"
         ],
@@ -1069,7 +1036,6 @@
         "file_format": "bam",
         "dataset": "anna-greka:large_test_dataset",
         "file_size": 300000000,
-        "submitted_file_name": "snATAC_donorG2.bam",
         "output_types": [
             "genome alignments"
         ],
@@ -1101,7 +1067,6 @@
         "file_format": "bam",
         "dataset": "anna-greka:large_test_dataset",
         "file_size": 300000000,
-        "submitted_file_name": "snATAC_donorH1.bam",
         "output_types": [
             "genome alignments"
         ],
@@ -1133,7 +1098,6 @@
         "file_format": "bam",
         "dataset": "anna-greka:large_test_dataset",
         "file_size": 300000000,
-        "submitted_file_name": "snATAC_donorH2.bam",
         "output_types": [
             "genome alignments"
         ],
@@ -1165,7 +1129,6 @@
         "file_format": "bam",
         "dataset": "jimmie-ye:snATACseq_atac_dataset",
         "file_size": 300000000,
-        "submitted_file_name": "prenatal_1a.bam",
         "output_types": [
             "genome alignments"
         ],
@@ -1197,7 +1160,6 @@
         "file_format": "bam",
         "dataset": "jimmie-ye:snATACseq_atac_dataset",
         "file_size": 300000000,
-        "submitted_file_name": "prenatal_1b.bam",
         "output_types": [
             "genome alignments"
         ],
@@ -1229,7 +1191,6 @@
         "file_format": "bam",
         "dataset": "jimmie-ye:snATACseq_atac_dataset",
         "file_size": 300000000,
-        "submitted_file_name": "prenatal_1c.bam",
         "output_types": [
             "genome alignments"
         ],
@@ -1261,7 +1222,6 @@
         "file_format": "bam",
         "dataset": "jimmie-ye:snATACseq_atac_dataset",
         "file_size": 300000000,
-        "submitted_file_name": "prenatal_2a.bam",
         "output_types": [
             "genome alignments"
         ],
@@ -1293,7 +1253,6 @@
         "file_format": "bam",
         "dataset": "jimmie-ye:snATACseq_atac_dataset",
         "file_size": 300000000,
-        "submitted_file_name": "prenatal_2b.bam",
         "output_types": [
             "genome alignments"
         ],
@@ -1325,7 +1284,6 @@
         "file_format": "bam",
         "dataset": "jimmie-ye:snATACseq_atac_dataset",
         "file_size": 300000000,
-        "submitted_file_name": "prenatal_2c.bam",
         "output_types": [
             "genome alignments"
         ],
@@ -1357,7 +1315,6 @@
         "file_format": "bam",
         "dataset": "jimmie-ye:snATACseq_atac_dataset",
         "file_size": 300000000,
-        "submitted_file_name": "prenatal_3a.bam",
         "output_types": [
             "genome alignments"
         ],
@@ -1389,7 +1346,6 @@
         "file_format": "bam",
         "dataset": "jimmie-ye:snATACseq_atac_dataset",
         "file_size": 300000000,
-        "submitted_file_name": "prenatal_3b.bam",
         "output_types": [
             "genome alignments"
         ],
@@ -1421,7 +1377,6 @@
         "file_format": "bam",
         "dataset": "jimmie-ye:snATACseq_atac_dataset",
         "file_size": 300000000,
-        "submitted_file_name": "prenatal_3c.bam",
         "output_types": [
             "genome alignments"
         ],
@@ -1453,7 +1408,6 @@
         "file_format": "bam",
         "dataset": "peter-sims:scRNAseq_test_dataset",
         "file_size": 6000000000,
-        "submitted_file_name": "alignment_3a.bam",
         "output_types": [
             "transcriptome alignments",
             "genome alignments"
@@ -1491,7 +1445,6 @@
         "status": "released",
         "file_format": "bam",
         "file_size": 6000000000,
-        "submitted_file_name": "alignment_3b.bam",
         "output_types": [
             "transcriptome alignments",
             "genome alignments"
@@ -1529,7 +1482,6 @@
         "status": "released",
         "file_format": "bam",
         "file_size": 6000000000,
-        "submitted_file_name": "alignment_3c.bam",
         "output_types": [
             "transcriptome alignments",
             "genome alignments"
@@ -1567,7 +1519,6 @@
         "status": "released",
         "file_format": "bam",
         "file_size": 6000000000,
-        "submitted_file_name": "alignment_2a.bam",
         "output_types": [
             "transcriptome alignments",
             "genome alignments"
@@ -1605,7 +1556,6 @@
         "status": "released",
         "file_format": "bam",
         "file_size": 6000000000,
-        "submitted_file_name": "alignment_2b.bam",
         "output_types": [
             "transcriptome alignments",
             "genome alignments"
@@ -1643,7 +1593,6 @@
         "status": "released",
         "file_format": "bam",
         "file_size": 6000000000,
-        "submitted_file_name": "alignment_1c.bam",
         "output_types": [
             "transcriptome alignments",
             "genome alignments"
@@ -1681,7 +1630,6 @@
         "status": "released",
         "file_format": "bam",
         "file_size": 6000000000,
-        "submitted_file_name": "alignment_1a.bam",
         "output_types": [
             "transcriptome alignments",
             "genome alignments"
@@ -1719,7 +1667,6 @@
         "status": "released",
         "file_format": "bam",
         "file_size": 6000000000,
-        "submitted_file_name": "alignment_1b.bam",
         "output_types": [
             "transcriptome alignments",
             "genome alignments"
@@ -1757,7 +1704,6 @@
         "status": "released",
         "file_format": "bam",
         "file_size": 6000000000,
-        "submitted_file_name": "alignment_1c.bam",
         "output_types": [
             "transcriptome alignments",
             "genome alignments"

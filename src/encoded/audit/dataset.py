@@ -90,6 +90,8 @@ def audit_dataset_raw_files(value, system):
                 raw_data = True
                 if 's3_uri' in f:
                     file_names.append(f['s3_uri'].split('/')[-1])
+                elif 'external_uri' in f:
+                    file_names.append(f['external_uri'].split('/')[-1])
     if raw_data == False:
         detail = ('Dataset {} does not contain any raw sequence files.'.format(
                 audit_link(path_to_text(value['@id']), value['@id'])

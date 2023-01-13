@@ -8,6 +8,43 @@ from .formatter import (
 )
 
 
+def audit_suspension_intervals(value, system):
+    '''
+    A Suspension should have a donor.
+    '''
+    if value['status'] in ['deleted']:
+        return
+
+    int_field = None
+    if 'collection_to_dissociation_interval' in value:
+        int_field = 'collection_to_dissociation_interval'
+    if 'death_to_dissociation_interval' in value:
+        int_field = 'death_to_dissociation_interval'
+
+    if int_field:
+        int_flag = False
+        if value['derived_from'][0]['@type'][0] == 'Suspension':
+            for d in value['derived_from']:
+                if 'collection_to_dissociation_interval' in d or 'death_to_dissociation_interval' in d:
+                    int_flag = True
+                for dd in d['derived_from']:
+                    if 'collection_to_preservation_interval' in dd or 'death_to_preservation_interval' in dd:
+                        int_flag = True
+        else:
+            for d in value['derived_from']:
+                if 'collection_to_preservation_interval' in d or 'death_to_preservation_interval' in d:
+                    int_flag = True
+
+        if int_flag == True:
+            detail = ('Suspension {} has {} value but an interval field is present in one more more derived_from objects'.format(
+                audit_link(value['accession'], value['@id']),
+                int_field
+                )
+            )
+            yield AuditFailure('multiple tissue handling intervals', detail, level='ERROR')
+            return
+
+
 def audit_suspension_fresh(value, system):
     '''
     A Suspension should have a donor.
@@ -117,6 +154,7 @@ def ontology_check_dep(value, system):
 
 
 function_dispatcher = {
+    'audit_suspension_intervals': audit_suspension_intervals,
     'audit_suspension_fresh': audit_suspension_fresh,
     'audit_donor': audit_suspension_donor,
     'audit_death_prop_living_donor': audit_death_prop_living_donor,
@@ -129,7 +167,8 @@ function_dispatcher = {
                 'donors',
                 'enriched_cell_types',
                 'depleted_cell_types',
-                'derived_from'
+                'derived_from',
+                'derived_from.derived_from'
                 ])
 def audit_suspension(value, system):
     for function_name in function_dispatcher.keys():

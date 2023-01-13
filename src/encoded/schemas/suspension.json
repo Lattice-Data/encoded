@@ -34,6 +34,9 @@
                 "preservation_method": {
                     "enum": ["n/a (fresh)"]
                 }
+            },
+            "not": {
+                "required": ["death_to_dissociation_interval"]
             }
         },
         "collection_to_dissociation_interval_units": ["collection_to_dissociation_interval"],

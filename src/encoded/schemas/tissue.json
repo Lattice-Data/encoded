@@ -62,11 +62,18 @@
         "death_to_preservation_interval": {
             "required": ["death_to_preservation_interval_units"],
             "not": {
-                "properties": {
-                    "preservation_method": {
-                        "enum": ["n/a (fresh)"]
+                "anyOf": [
+                    {
+                        "properties": {
+                            "preservation_method": {
+                                "enum": ["n/a (fresh)"]
+                            }
+                        }
+                    },
+                    {
+                        "required": ["collection_to_preservation_interval"]
                     }
-                }
+                ]
             }
         },
         "death_to_preservation_interval_units": ["death_to_preservation_interval"],

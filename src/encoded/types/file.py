@@ -444,7 +444,7 @@ class ProcessedMatrixFile(AnalysisFile):
     @calculated_property(schema={
         "title": "Original S3 URI",
         "description": ".",
-        "comment": "Do not submit. Values in the list are reverse links of a quality metric with this file in quality_metric_of field.",
+        "comment": "Do not submit. Values are calculated based on s3_uri.",
         "type": "string",
         "notSubmittable": True,
     })

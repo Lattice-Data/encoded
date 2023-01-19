@@ -84,9 +84,11 @@ def test_processed_matrix_file_upgrade_8_9(upgrader, processed_matrix_file_base)
             "feature_count": 20919
             }]}]
 	processed_matrix_file_base['author_donor_column'] = 'my_donors'
+	processed_matrix_file_base['submitted_file_name'] = 'my_file.rds'
 	value = upgrader.upgrade('processed_matrix_file', processed_matrix_file_base, current_version='8', target_version='9')
 	assert value['schema_version'] == '9'
 	assert processed_matrix_file_base['demultiplexed_donor_column'] == 'my_donors'
 	assert value['X_normalized'] == False
 	assert value['feature_counts'] == [{"feature_type": "gene","feature_count": 20919}]
 	assert 'layers' not in value
+	assert 'submitted_file_name' not in value

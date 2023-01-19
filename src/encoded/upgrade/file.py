@@ -75,6 +75,6 @@ def processed_matrix_file_8_9(value, system):
 @upgrade_step('raw_sequence_file', '2', '3')
 @upgrade_step('sequence_alignment_file', '2', '3')
 @upgrade_step('raw_matrix_file', '4', '5')
-def analysis_file_1_2(value, system):
+def file_remove_file_name(value, system):
 	if 'submitted_file_name' in value:
 		del value['submitted_file_name']

@@ -60,6 +60,8 @@ def processed_matrix_file_7_8(value, system):
 
 @upgrade_step('processed_matrix_file', '8', '9')
 def processed_matrix_file_8_9(value, system):
+	if 'submitted_file_name' in value:
+		del value['submitted_file_name']
 	if 'author_donor_column' in value:
 		value['demultiplexed_donor_column'] = value['author_donor_column']
 		del value['author_donor_column']
@@ -69,3 +71,10 @@ def processed_matrix_file_8_9(value, system):
 		if 'normalized' in value['layers'][0]:
 			value['X_normalized'] = value['layers'][0]['normalized']
 		del value['layers']
+
+@upgrade_step('raw_sequence_file', '2', '3')
+@upgrade_step('sequence_alignment_file', '2', '3')
+@upgrade_step('raw_matrix_file', '4', '5')
+def analysis_file_1_2(value, system):
+	if 'submitted_file_name' in value:
+		del value['submitted_file_name']

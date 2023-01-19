@@ -4,7 +4,7 @@
     "id": "/profiles/processed_matrix_file.json",
     "$schema": "http://json-schema.org/draft-04/schema#",
     "type": "object",
-    "required": ["dataset", "file_format", "output_types", "derived_from", "is_primary_data"],
+    "required": ["dataset", "output_types", "derived_from", "is_primary_data", "X_normalized"],
     "identifyingProperties": ["uuid", "accession", "aliases"],
     "additionalProperties": false,
     "mixinProperties": [
@@ -14,7 +14,6 @@
         {"$ref": "mixins.json#/supersedes"},
         {"$ref": "mixins.json#/documents"},
         {"$ref": "mixins.json#/accession"},
-        {"$ref": "mixins.json#/dbxrefs"},
         {"$ref": "mixins.json#/notes"},
         {"$ref": "mixins.json#/submitted"},
         {"$ref": "mixins.json#/lab"},
@@ -81,7 +80,7 @@
     },
     "properties": {
         "schema_version": {
-            "default": "8"
+            "default": "9"
         },
         "supersedes": {
             "items": {
@@ -116,15 +115,9 @@
         },
         "file_format": {
             "enum": [
-                "mtx",
-                "csv",
-                "loom",
-                "tsv",
-                "txt",
-                "hdf5",
-                "rds",
-                "mex"
-            ]
+                "hdf5"
+            ],
+            "default": "hdf5"
         },
         "output_types": {
             "items": {
@@ -136,13 +129,6 @@
                     "transcription factor quantifications",
                     "antibody capture quantifications"
                 ]
-            }
-        },
-        "dbxrefs": {
-            "items": {
-                "title": "External identifier",
-                "description": "Identifier from an external resource that may have 1-to-1 or 1-to-many relationships with Lattice objects.",
-                "type":  "string"
             }
         },
         "feature_keys": {
@@ -194,104 +180,50 @@
                 "mixed"
             ]
         },
-        "layers": {
-            "title": "Layers",
-            "description": "",
+        "layers_to_keep": {
+            "title": "Layers to keep",
+            "description": "The keys of the layers in the matrix that should be preserved.",
             "type": "array",
             "uniqueItems": true,
             "items": {
-                "title": "Layer",
-                "description": "",
+                "type": "string"
+            }
+        },
+        "feature_counts": {
+            "title": "Feature counts",
+            "description": "For each category of feature type, the number of entries found in the matrix considered as features (eg: genes, antibody capture, or peaks)",
+            "comment":  "Do not submit. This will be filled in during checkfiles validation.",
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+                "title": "Feature count",
                 "type": "object",
                 "additionalProperties": false,
-                "required": ["normalized", "value_scale", "value_units"],
                 "properties": {
-                    "label": {
-                        "title": "Label",
-                        "description": "For AnnData h5ad final matrix files, the name used to describe the layer. Typically will be 'X', but use corresponding key if layer matrix is from AnnData.layers.",
-                        "type": "string"
-                    },
-                    "assay": {
-                        "title": "Assay",
-                        "description": "For R objects, the assay that this layer is associated with.",
-                        "type": "string"
-                    },
-                    "feature_counts": {
-                        "title": "Feature counts",
-                        "description": "For each category of feature type, the number of entries found in the matrix considered as features (eg: genes, antibody capture, or peaks)",
+                    "feature_type": {
+                        "title": "Feature type",
                         "comment":  "Do not submit. This will be filled in during checkfiles validation.",
-                        "type": "array",
-                        "uniqueItems": true,
-                        "items": {
-                            "title": "Feature count",
-                            "type": "object",
-                            "additionalProperties": false,
-                            "properties": {
-                                "feature_type": {
-                                    "title": "Feature type",
-                                    "comment":  "Do not submit. This will be filled in during checkfiles validation.",
-                                    "type": "string",
-                                    "enum": [
-                                        "gene",
-                                        "peak",
-                                        "transcription factor",
-                                        "antibody capture"
-                                    ]
-                                },
-                                "feature_count": {
-                                    "title": "Feature count",
-                                    "comment":  "Do not submit. This will be filled in during checkfiles validation.",
-                                    "description": "",
-                                    "type": "integer"
-                                }
-                            }
-                        }
-                    },
-                    "value_scale": {
-                        "title": "Value scale",
-                        "description": "The factor by which the expression values have been scaled; linear if not scaled.",
                         "type": "string",
                         "enum": [
-                            "linear",
-                            "log",
-                            "log1p",
-                            "log, base e",
-                            "log, base 10",
-                            "log, base 2",
-                            "log1p, base e",
-                            "log1p, base 10",
-                            "log1p, base 2"
+                            "gene",
+                            "peak",
+                            "transcription factor",
+                            "antibody capture"
                         ]
                     },
-                    "value_units": {
-                        "title": "Value units",
-                        "description": "The units for the expression values.",
-                        "type": "string",
-                        "enum": [
-                            "UQ",
-                            "SF",
-                            "RPM",
-                            "RPKM",
-                            "FPKM",
-                            "TPM",
-                            "TMM",
-                            "UMI",
-                            "expected count",
-                            "fragment ends"
-                        ]
-                    },
-                    "normalized": {
-                        "title": "Normalized",
-                        "description": "A flag to indicate whether the expression values have been normalized.",
-                        "type": "boolean"
-                    },
-                    "normalization_method": {
-                        "title": "Normalization method",
-                        "description": "The transformation method used to make expression values comparable across libraries.",
-                        "type": "string"
+                    "feature_count": {
+                        "title": "Feature count",
+                        "comment":  "Do not submit. This will be filled in during checkfiles validation.",
+                        "description": "",
+                        "type": "integer"
                     }
                 }
             }
+        },
+        "X_normalized": {
+            "title": "X Normalized",
+            "description": "A flag to indicate whether the expression values in .X have been normalized.",
+            "type": "boolean"
         },
         "cell_label_location": {
             "title": "Cell label location",
@@ -338,8 +270,8 @@
             "description": "The name of the metadata field that holds the researcher's most specific cell type annotation",
             "type": "string"
         },
-        "author_donor_column": {
-            "title": "Author donor column",
+        "demultiplexed_donor_column": {
+            "title": "Demultiplexed donor column",
             "description": "The name of the metadata field that holds the researcher's demultiplexed donor assignment of the cell",
             "type": "string"
         },
@@ -356,7 +288,7 @@
                 "properties": {
                     "label": {
                         "title": "Label",
-                        "description": "The donor identifier found in the author_donor_column that is associated with the corresponding donor object",
+                        "description": "The donor identifier found in the demultiplexed_donor_column that is associated with the corresponding donor object",
                         "type": "string"
                     },
                     "donor": {
@@ -413,14 +345,8 @@
         "output_types": {
             "title": "Output type"
         },
-        "file_format": {
-            "title": "File format"
-        },
-        "layers.value_scale": {
-            "title": "Scale"
-        },
-        "layers.normalized": {
-            "title": "Normalized"
+        "X_normalized": {
+            "title": "X normalized"
         },
         "cell_annotations.cell_ontology.term_name": {
             "title": "Annotated cell types",
@@ -451,9 +377,6 @@
         },
         "genome_annotations": {
             "title": "Genome annotations"
-        },
-        "file_format": {
-            "title": "File Format"
         },
         "is_primary_data": {
             "title": "Is primary data"

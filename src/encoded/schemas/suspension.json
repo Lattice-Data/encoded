@@ -28,12 +28,29 @@
         {"$ref": "mixins.json#/preservation"}
     ],
     "dependencies": {
+        "collection_to_dissociation_interval": {
+            "required": ["collection_to_dissociation_interval_units"],
+            "properties": {
+                "preservation_method": {
+                    "enum": ["n/a (fresh)"]
+                }
+            },
+            "not": {
+                "required": ["death_to_dissociation_interval"]
+            }
+        },
+        "collection_to_dissociation_interval_units": ["collection_to_dissociation_interval"],
+        "death_to_dissociation_interval": {
+            "required": ["death_to_dissociation_interval_units"],
+            "properties": {
+                "preservation_method": {
+                    "enum": ["n/a (fresh)"]
+                }
+            }
+        },
+        "death_to_dissociation_interval_units": ["death_to_dissociation_interval"],
         "cell_size": ["cell_size_unit"],
         "cell_size_unit": ["cell_size"],
-        "collection_to_dissociation_interval": ["collection_to_dissociation_interval_units"],
-        "collection_to_dissociation_interval_units": ["collection_to_dissociation_interval"],
-        "death_to_dissociation_interval": ["death_to_dissociation_interval_units"],
-        "death_to_dissociation_interval_units": ["death_to_dissociation_interval"],
         "dissociation_time": ["dissociation_time_units"],
         "dissociation_time_units": ["dissociation_time"],
         "starting_quantity": ["starting_quantity_units"],
@@ -308,9 +325,6 @@
         }
     },
     "facets": {
-        "donors.organism.scientific_name": {
-            "title": "Organism"
-        },
         "donors.development_ontology.development_slims": {
             "title": "Donor life stage"
         },
@@ -360,9 +374,6 @@
         },
         "biosample_summary": {
             "title": "Biosample summary"
-        },
-        "donors.organism.scientific_name": {
-            "title": "Organism"
         },
         "donors.development_ontology.development_slims": {
             "title": "Donor life stage"

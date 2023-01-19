@@ -114,7 +114,8 @@
         },
         "principal_investigators.title": {
             "title": "PI",
-            "type": "typeahead"
+            "type": "typeahead",
+            "length": "long"
         }
     },
     "columns": {

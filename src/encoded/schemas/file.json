@@ -20,11 +20,6 @@
             "description": "The format structure of the file.",
             "type": "string"
         },
-        "submitted_file_name": {
-            "title": "Original file name",
-            "description": "The local file name used at time of submission.",
-            "type": "string"
-        },
         "s3_uri": {
             "title": "S3 URI",
             "description": "The S3 URI of public file object.",

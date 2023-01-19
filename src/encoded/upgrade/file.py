@@ -56,3 +56,16 @@ def processed_matrix_file_7_8(value, system):
 			if 'filtering_cutoffs' in l:
 				del l['filtering_cutoffs']
 	value['derivation_process'] = ['single cell analysis pipeline']
+
+
+@upgrade_step('processed_matrix_file', '8', '9')
+def processed_matrix_file_8_9(value, system):
+	if 'author_donor_column' in value:
+		value['demultiplexed_donor_column'] = value['author_donor_column']
+		del value['author_donor_column']
+	if 'layers' in value:
+		if 'feature_counts' in value['layers'][0]:
+			value['feature_counts'] = value['layers'][0]['feature_counts']
+		if 'normalized' in value['layers'][0]:
+			value['X_normalized'] = value['layers'][0]['normalized']
+		del value['layers']

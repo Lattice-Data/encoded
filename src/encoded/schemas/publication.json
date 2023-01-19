@@ -71,8 +71,7 @@
             "title": "HCA Publication",
             "description": "If True, the publication is recognized as an official HCA Publication.",
             "comment": "HCA Publications can be searched by DOI and other properties at https://www.humancellatlas.org/publications/#",
-            "type": "boolean",
-            "default": false
+            "type": "boolean"
         }
     },
     "facets": {

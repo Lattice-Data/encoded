@@ -126,6 +126,16 @@ def paths_filtered_by_status(request, paths, exclude=('deleted', 'replaced'), in
         ]
 
 
+def pluralize(value, value_units):
+    try:
+        if float(value) == 1:
+            return str(value) + ' ' + value_units
+        else:
+            return str(value) + ' ' + value_units + 's'
+    except:
+        return str(value) + ' ' + value_units + 's'
+
+
 class AbstractCollection(snovault.AbstractCollection):
     def get(self, name, default=None):
         resource = super(AbstractCollection, self).get(name, None)

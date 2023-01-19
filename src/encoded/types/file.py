@@ -442,6 +442,20 @@ class ProcessedMatrixFile(AnalysisFile):
 
 
     @calculated_property(schema={
+        "title": "Original S3 URI",
+        "description": ".",
+        "comment": "Do not submit. Values are calculated based on s3_uri.",
+        "type": "string",
+        "notSubmittable": True,
+    })
+    def s3_uri_original(self, request, s3_uri=None):
+        if s3_uri:
+            if s3_uri.endswith('_curated.h5ad'):
+                ext = s3_uri.split('_')[-2]
+                return s3_uri.replace(f'_{ext}_curated.h5ad', f'.{ext}')
+
+
+    @calculated_property(schema={
         "title": "Quality metrics",
         "description": "The list of QC metric objects associated with this file.",
         "comment": "Do not submit. Values in the list are reverse links of a quality metric with this file in quality_metric_of field.",

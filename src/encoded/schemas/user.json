@@ -91,11 +91,18 @@
             "title": "Title",
             "type": "typeahead",
             "length": "long"
+        },
+        "institute_name": {
+            "title": "Institute",
+            "type": "typeahead"
         }
     },
     "columns": {
         "title": {
             "title": "Title"
+        },
+        "institute_name": {
+            "title": "Institute"
         }
     },
     "changelog": "/profiles/changelogs/user.md"

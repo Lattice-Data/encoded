@@ -13,7 +13,6 @@
         {"$ref": "mixins.json#/documents"},
         {"$ref": "mixins.json#/supersedes"},
         {"$ref": "mixins.json#/accession"},
-        {"$ref": "mixins.json#/dbxrefs"},
         {"$ref": "mixins.json#/notes"},
         {"$ref": "mixins.json#/submitted"},
         {"$ref": "mixins.json#/lab"},

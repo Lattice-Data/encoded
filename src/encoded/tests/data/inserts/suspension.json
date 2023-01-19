@@ -358,8 +358,6 @@
         "single_cell_isolation_method": "10x",
         "single_cell_isolation_method_version": 1,
         "medium": "some kind of medium",
-        "collection_to_dissociation_interval": "30",
-        "collection_to_dissociation_interval_units": "minute",
         "dissociation_reagent": "10x reagent",
         "dissociation_time": "1",
         "dissociation_time_units": "minute",

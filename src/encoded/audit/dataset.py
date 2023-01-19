@@ -86,7 +86,7 @@ def audit_dataset_raw_files(value, system):
     file_names = []
     if 'original_files' in value:
         for f in value['original_files']:
-            if f['@type'][0] == 'RawSequenceFile' and f['no_file_available'] != True:
+            if f['@type'][0] == 'RawSequenceFile' and f['no_file_available'] != True and f['status'] != 'archived':
                 raw_data = True
                 if 's3_uri' in f:
                     file_names.append(f['s3_uri'].split('/')[-1])

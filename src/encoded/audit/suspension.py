@@ -45,31 +45,6 @@ def audit_suspension_intervals(value, system):
             return
 
 
-def audit_suspension_fresh(value, system):
-    '''
-    A Suspension should have a donor.
-    '''
-    if value['status'] in ['deleted']:
-        return
-
-    premeth = value.get('preservation_method')
-    dr_premeth = [o.get('preservation_method') for o in value['derived_from']]
-    all_premeth = dr_premeth + [premeth]
-    if 'n/a (fresh)' in all_premeth and list(set(all_premeth)) != ['n/a (fresh)']:
-        if premeth != 'n/a (fresh)':
-            text = 'n/a (fresh) expected based on derived_from.'
-        else:
-            text = 'not all derived_from.preservation_method are n/a (fresh)'
-        detail = ('Suspension {} has preservation_method {} but {}'.format(
-            audit_link(value['accession'], value['@id']),
-            premeth,
-            text
-            )
-        )
-        yield AuditFailure('inconsistent preservation methods', detail, level='ERROR')
-        return
-
-
 def audit_suspension_donor(value, system):
     '''
     A Suspension should have a donor.
@@ -155,7 +130,6 @@ def ontology_check_dep(value, system):
 
 function_dispatcher = {
     'audit_suspension_intervals': audit_suspension_intervals,
-    'audit_suspension_fresh': audit_suspension_fresh,
     'audit_donor': audit_suspension_donor,
     'audit_death_prop_living_donor': audit_death_prop_living_donor,
     'ontology_check_enr': ontology_check_enr,

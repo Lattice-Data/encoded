@@ -16,6 +16,19 @@ def ordinalize(number):
     return str(n) + suffix
 
 
+def audit_bmi(value,system):
+    if value['status'] in ['deleted']:
+        return
+    if 'body_mass_index' not in value:
+        if value.get('height') and value.get('weight'):
+            detail = ('Donor {} BMI can be calculated from reported height and weight.'.format(
+                audit_link(value['accession'], value['@id'])
+                )
+            )
+            yield AuditFailure('missing BMI', detail, level='ERROR')
+            return
+
+
 def audit_donor_age(value, system):
     if value.get('age'):
         age = value['age']
@@ -251,6 +264,7 @@ def audit_ancestry(value, system):
 
 
 function_dispatcher = {
+    'audit_bmi': audit_bmi,
     'audit_donor_age': audit_donor_age,
     'audit_donor_dev_stage': audit_donor_dev_stage,
     'ontology_check_dev': ontology_check_dev,

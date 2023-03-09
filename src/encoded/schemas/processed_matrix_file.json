@@ -88,9 +88,12 @@
                 "type": "string",
                 "linkTo": "ProcessedMatrixFile"
             }
-        }, 
+        },
         "description": {
             "description": "The text describing the matrix, will be displayed as the title at cellxgene."
+        },
+        "s3_uri": {
+            "comment": "If a file has been altered at all from the version provided by the lab, the name should be altered from the provided <base>.<ext> to <base>_<ext>_curated.h5ad"
         },
         "derived_from": {
             "items": {

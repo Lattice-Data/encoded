@@ -33,3 +33,10 @@ def test_human_donor_upgrade_4_5(upgrader, human_postnatal_donor_base, asian_ont
 	value = upgrader.upgrade('human_postnatal_donor', human_postnatal_donor_base, current_version='4', target_version='5')
 	assert value['schema_version'] == '5'
 	assert value['ethnicity'] == [asian_ontology]
+
+
+def test_human_donor_upgrade_5_6(upgrader, human_postnatal_donor_base):
+	human_postnatal_donor_base['smoking_history'] = 'none'
+	value = upgrader.upgrade('human_postnatal_donor', human_postnatal_donor_base, current_version='5', target_version='6')
+	assert value['schema_version'] == '6'
+	assert value['smoker'] == 'never'

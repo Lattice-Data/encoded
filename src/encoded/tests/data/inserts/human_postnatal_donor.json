@@ -32,6 +32,7 @@
             "GFFR": "105"
         },
         "smoking_history": "1 pack a week for 10 years",
+        "smoker": "current",
         "alcohol_history": "3 drinks a week",
         "cause_of_death": "car accident",
         "ancestry": [
@@ -53,6 +54,8 @@
             "anna-greka:adult_human_donorA",
             "woong-yang-park:donor1"
         ],
+        "smoking_history": "none",
+        "smoker": "never",
         "status": "released",
         "description": "Healthy kidney donorA",
         "ethnicity": [
@@ -123,6 +126,7 @@
             "sister","paternal grandmother"
         ],
         "smoking_history": "2 packs a week, 1 year since cessation",
+        "smoker": "former",
         "alcohol_history": "3 drinks a week",
         "test_results": {
             "HIV-1/HBV/HCV": "negative"
@@ -156,6 +160,7 @@
         "height_unit": "in",
         "times_pregnant": 1,
         "smoking_history": "2 packs a week, 1 year since cessation",
+        "smoker": "former",
         "alcohol_history": "3 drinks a week",
         "test_results": {
             "HIV-1/HBV/HCV": "negative"

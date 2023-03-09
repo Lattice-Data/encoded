@@ -34,3 +34,10 @@ def human_donor_ancestry(value, system):
 def human_donor_ethnicity_array(value, system):
 	if 'ethnicity' in value:
 		value['ethnicity'] = [value['ethnicity']]
+
+
+@upgrade_step('human_postnatal_donor', '5', '6')
+def human_donor_smoker(value, system):
+	if 'smoking_history' in value:
+		if value['smoking_history'] == 'none':
+			value['smoker'] = 'never'

@@ -5,7 +5,6 @@
     "id": "/profiles/primary_analysis_file.json",
     "$schema": "http://json-schema.org/draft-04/schema#",
     "type": "object",
-    "mixinProperties": [],
     "properties": {
         "assembly": {
             "title": "Genome assembly",

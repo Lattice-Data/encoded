@@ -5,7 +5,6 @@
     "id": "/profiles/file.json",
     "$schema": "http://json-schema.org/draft-04/schema#",
     "type": "object",
-    "mixinProperties": [],
     "properties": {
         "external_accession": {
             "title": "External accession",

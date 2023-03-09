@@ -15,7 +15,6 @@
         {"$ref": "mixins.json#/uuid"},
         {"$ref": "mixins.json#/dbxrefs"}
     ],
-    "dependencies": {},
     "properties": {
         "schema_version": {
             "default": "1"

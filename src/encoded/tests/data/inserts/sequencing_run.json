@@ -83,7 +83,7 @@
         "derived_from": [
             "anna-greka:citeseq_library_donorB2"
         ],
-        "platform": "Illumina HiSeq 4000",
+        "platform": "Illumina NextSeq 2000",
         "uuid": "4b503f3d-73fb-448b-a2a7-c4c9a2e3e9f7",
         "dbxrefs": [
             "ENA:ERR11112"

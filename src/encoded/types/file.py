@@ -432,7 +432,14 @@ class RawMatrixFile(AnalysisFile):
 class ProcessedMatrixFile(AnalysisFile):
     item_type = 'processed_matrix_file'
     schema = load_schema('encoded:schemas/processed_matrix_file.json')
-    embedded = AnalysisFile.embedded + ['cell_annotations', 'cell_annotations.cell_ontology', 'experimental_variable_disease']
+    embedded = AnalysisFile.embedded + [
+        'antibody_mappings',
+        'antibody_mappings.antibody',
+        'antibody_mappings.antibody.targets',
+        'cell_annotations',
+        'cell_annotations.cell_ontology',
+        'experimental_variable_disease'
+        ]
     rev = DataFile.rev.copy()
     rev.update({
         'cell_annotations': ('CellAnnotation', 'matrix_files'),

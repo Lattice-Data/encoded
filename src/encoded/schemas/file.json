@@ -39,16 +39,6 @@
             "maxLength": 32,
             "pattern": "[a-f\\d]{32}|[A-F\\d]{32}"
         },
-        "content_md5sum": {
-            "title": "Content MD5sum",
-            "description": "The MD5sum of the uncompressed file.",
-            "comment":  "Do not submit. This will be filled in during checkfiles validation.",
-            "type": "string",
-            "permission": "import_items",
-            "format": "hex",
-            "maxLength": 32,
-            "pattern": "[a-f\\d]{32}|[A-F\\d]{32}"
-        },
         "sha256": {
             "title": "SHA-256",
             "description": "The SHA-256 of the file.",

@@ -72,6 +72,9 @@
             "title": "Diease",
             "type": "typeahead"
         },
+        "ethnicity_slims": {
+            "title": "Ethnicity"
+        },
         "status": {
             "title": "Status"
         }
@@ -100,6 +103,9 @@
         },
         "disease_slims": {
             "title": "Diease"
+        },
+        "ethnicity_slims": {
+            "title": "Ethnicity"
         },
         "status": {
             "title": "Status"

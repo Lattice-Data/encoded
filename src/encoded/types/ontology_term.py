@@ -8,7 +8,7 @@ from .base import (
 )
 
 
-system_slims = {
+system_slim_terms = {
     'UBERON:0000363': 'reticuloendothelial system', #subclass of UBERON:0002405
     'UBERON:0002405': 'immune system',
     'UBERON:0004535': 'cardiovascular system', #subclass of UBERON:0001009
@@ -31,7 +31,7 @@ system_slims = {
     'UBERON:0001004': 'respiratory system'
 }
 
-organ_slims = {
+organ_slim_terms = {
     'UBERON:0001155': 'colon', #subclass of UBERON:0000059,UBERON:0000160,UBERON:0001555
     'UBERON:0000059': 'large intestine', #subclass of UBERON:0000160,UBERON:0001555
     'UBERON:0002108': 'small intestine', #subclass of UBERON:0000160,UBERON:0001555
@@ -115,7 +115,7 @@ organ_slims = {
     'UBERON:0000483': 'epithelium'
 }
 
-cell_slims = {
+cell_slim_terms = {
     'CL:0000236': 'B cell', #subclass of CL:0000542,CL:0000738,CL:0000988
     'CL:0000084': 'T cell', #subclass of CL:0000542,CL:0000738,CL:0000988
     'CL:0000542': 'lymphocyte', #subclass of CL:0000763,CL:0000738,CL:0000988
@@ -141,7 +141,7 @@ cell_slims = {
     'EFO:0002886': 'stem cell derived cell line' #subclass of CL:0000034
 }
 
-disease_slims = {
+disease_slim_terms = {
     'MONDO:0005015': 'diabetes mellitus (disease)', #subclass of MONDO:0004335,MONDO:0005066
     'MONDO:0004335': 'digestive system disease',
     'MONDO:0005066': 'metabolic disease',
@@ -156,7 +156,7 @@ disease_slims = {
     'MONDO:0007179': 'autoimmune disease'
 }
 
-development_slims = {
+development_slim_terms = {
     "HsapDv:0000002": "embryonic human stage",
     "HsapDv:0000037": "fetal stage",
     "HsapDv:0000082": "newborn human stage",
@@ -171,7 +171,21 @@ development_slims = {
     "MmusDv:0000110": "mature stage"
 }
 
-qa_slims = {
+ethnicity_slim_terms = {
+    "HANCESTRO:0009": "East Asian",
+    "HANCESTRO:0006": "South Asian",
+    "HANCESTRO:0007": "South East Asian",
+    "HANCESTRO:0008": "Asian",
+    "HANCESTRO:0005": "European",
+    "HANCESTRO:0014": "Hispanic or Latin American",
+    "HANCESTRO:0010": "African",
+    "HANCESTRO:0017": "Oceanian",
+    "HANCESTRO:0016": "African American or Afro-Caribbean",
+    "HANCESTRO:0015": "Greater Middle Eastern (Middle Eastern, North African or Persian)",
+    "HANCESTRO:0013": "Native American"
+}
+
+qa_slim_terms = {
     "CL:0000000": "cell",
     "EFO:0010183": "single cell library construction"
 }
@@ -211,13 +225,16 @@ class OntologyTerm(SharedItem):
 
 
     @staticmethod
-    def _get_ontology_slims(registry, term_id, slimTerms):
+    def _get_ontology_slims(registry, term_id, slimTerms, list_ids=False):
         if term_id in registry['ontology']:
             ancestor_list = registry['ontology'][term_id]['ancestors']
             slims = []
             for slimTerm in slimTerms:
                 if slimTerm in ancestor_list:
-                    slims.append(slimTerms[slimTerm])
+                    if list_ids:
+                        slims.append(slimTerm)
+                    else:
+                        slims.append(slimTerms[slimTerm])
             if slims:
                 return slims
 
@@ -232,7 +249,7 @@ class OntologyTerm(SharedItem):
         },
     })
     def organ_slims(self, registry, term_id):
-        return self._get_ontology_slims(registry, term_id, organ_slims)
+        return self._get_ontology_slims(registry, term_id, organ_slim_terms)
 
 
     @calculated_property(condition='term_id', schema={
@@ -245,7 +262,7 @@ class OntologyTerm(SharedItem):
         },
     })
     def cell_slims(self, registry, term_id):
-        return self._get_ontology_slims(registry, term_id, cell_slims)
+        return self._get_ontology_slims(registry, term_id, cell_slim_terms)
 
 
     @calculated_property(condition='term_id', schema={
@@ -258,7 +275,7 @@ class OntologyTerm(SharedItem):
         },
     })
     def system_slims(self, registry, term_id):
-        return self._get_ontology_slims(registry, term_id, system_slims)
+        return self._get_ontology_slims(registry, term_id, system_slim_terms)
 
 
     @calculated_property(condition='term_id', schema={
@@ -271,7 +288,7 @@ class OntologyTerm(SharedItem):
         },
     })
     def disease_slims(self, registry, term_id):
-        return self._get_ontology_slims(registry, term_id, disease_slims)
+        return self._get_ontology_slims(registry, term_id, disease_slim_terms)
 
 
     @calculated_property(condition='term_id', schema={
@@ -284,7 +301,20 @@ class OntologyTerm(SharedItem):
         },
     })
     def development_slims(self, registry, term_id):
-        return self._get_ontology_slims(registry, term_id, development_slims)
+        return self._get_ontology_slims(registry, term_id, development_slim_terms)
+
+
+    @calculated_property(condition='term_id', schema={
+        "title": "Ethncitiy slims",
+        "description": "The ethnicities that this term is an ontological descendent of.",
+        "comment": "Do not submit. This is a calculated property",
+        "type": "array",
+        "items": {
+            "type": "string",
+        },
+    })
+    def ethnicity_slims(self, registry, term_id):
+        return self._get_ontology_slims(registry, term_id, ethnicity_slim_terms, list_ids=True)
 
 
     @calculated_property(condition='term_id', schema={
@@ -297,7 +327,7 @@ class OntologyTerm(SharedItem):
         },
     })
     def qa_slims(self, registry, term_id):
-        return self._get_ontology_slims(registry, term_id, qa_slims)
+        return self._get_ontology_slims(registry, term_id, qa_slim_terms)
 
 
     @calculated_property(condition='term_id', schema={

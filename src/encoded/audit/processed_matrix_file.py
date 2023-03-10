@@ -25,13 +25,22 @@ def mappings_antibodies(value,system):
             for susp in l['derived_from']:
                 antibodies.extend(susp.get('feature_antibodies',[]))
         for am in value['antibody_mappings']:
-            if am['antibody'] not in antibodies:
+            if am['antibody']['@id'] not in antibodies:
                 detail = ('File {} contains {} in antibody_mappings but is not linked to this Antibody.'.format(
                     audit_link(value['accession'], value['@id']),
-                    am['antibody']
+                    am['antibody']['@id']
                     )
                 )
                 yield AuditFailure('antibody_mapping error', detail, 'ERROR')
+
+            target_orgs = [t['organism'] for t in am['antibody']['targets']]
+            if '/organisms/human/' not in target_orgs:
+                detail = ('File {} contains {} in antibody_mappings that does not target human.'.format(
+                    audit_link(value['accession'], value['@id']),
+                    am['antibody']['@id']
+                    )
+                )
+                yield AuditFailure('antibody_mapping to non-human', detail, 'ERROR')
 
 
 def mappings_donors(value,system):
@@ -142,6 +151,9 @@ function_dispatcher = {
 
 @audit_checker('ProcessedMatrixFile',
                frame=[
+                'antibody_mappings',
+                'antibody_mappings.antibody',
+                'antibody_mappings.antibody.targets',
                 'experimental_variable_disease',
                 'derived_from',
                 'libraries',

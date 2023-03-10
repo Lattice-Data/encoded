@@ -170,7 +170,13 @@
         "accession": "LATDF982KCF",
         "is_primary_data": "True",
         "derivation_process": ["single cell analysis pipeline"],
-        "description": "some data"
+        "description": "some data",
+        "antibody_mappings": [
+            {
+                "label": "CD14",
+                "antibody": "lattice:totalseq_C0051_CD14"
+            }
+        ]
     },
     {
         "aliases": [

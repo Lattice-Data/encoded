@@ -8,6 +8,27 @@ from .formatter import (
 )
 
 
+def audit_complete_derived_from(value, system):
+	if value['status'] in ['deleted']:
+		return
+
+	included = []
+	should_be_included = []
+	for df in value.get('derived_from'):
+		if df['@type'][0] == 'RawSequenceFile':
+			included.append(df['@id'])
+			should_be_included.extend(df['derived_from'][0]['files'])
+	missing = [f for f in should_be_included if f not in included]
+
+	if missing:
+		detail = ('File {} does not have all RawSequenceFiles from all SequencingRuns in derived_from. Missing:{}.'.format(
+			audit_link(path_to_text(value['@id']), value['@id']),
+			','.join(missing)
+			)
+		)
+		yield AuditFailure('incomplete derived_from', detail, level='ERROR')
+
+
 def audit_read_count_compare(value, system):
 	'''
 	We check fastq metadata against the expected values based on the
@@ -142,6 +163,7 @@ def metrics_types(value, system):
 
 
 function_dispatcher = {
+	'audit_complete_derived_from': audit_complete_derived_from,
 	'audit_read_count_compare': audit_read_count_compare,
 	'audit_validated': audit_validated,
 	'metrics_types': metrics_types

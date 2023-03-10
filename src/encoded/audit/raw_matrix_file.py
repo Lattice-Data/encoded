@@ -130,9 +130,11 @@ def audit_validated(value, system):
 def metrics_types(value, system):
 	assays = value['assays']
 
+	all_types = []
 	for qc in value.get('quality_metrics',[]):
 		errors = []
 		qc_type = qc['@type'][0]
+		all_types.append(qc_type)
 
 		if qc_type == 'RnaMetrics':
 			req_assay = 'RNA-seq'
@@ -160,6 +162,15 @@ def metrics_types(value, system):
 				)
 			)
 			yield AuditFailure('metrics, library inconsistency', detail, level='ERROR')
+
+	for t in set(all_types):
+		if all_types.count(t) > 1:
+			detail = ('File {} has multiple metrics of type {}.'.format(
+				audit_link(path_to_text(value['@id']), value['@id']),
+				t
+				)
+			)
+			yield AuditFailure('redundant metrics', detail, level='ERROR')
 
 
 function_dispatcher = {

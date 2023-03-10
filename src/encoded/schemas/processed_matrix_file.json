@@ -76,6 +76,14 @@
                     }
                 }
             ]
+        },
+        "primary_portion": {
+            "required": ["is_primary_data"],
+            "properties": {
+                "is_primary_data": {
+                    "enum": ["mixed"]
+                }
+            }
         }
     },
     "properties": {
@@ -182,6 +190,28 @@
                 "False",
                 "mixed"
             ]
+        },
+        "primary_portion": {
+            "title": "Primary portion",
+            "description": "",
+            "comment": "Should only be used if is_primary_data is 'mixed'",
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "obs_field": {
+                    "title": "obs field",
+                    "description": "",
+                    "type": "string"
+                },
+                "values": {
+                    "title": "Values",
+                    "description": "",
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            }
         },
         "layers_to_keep": {
             "title": "Layers to keep",

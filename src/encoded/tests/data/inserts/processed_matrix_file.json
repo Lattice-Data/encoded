@@ -126,7 +126,11 @@
             }
         ],
         "X_normalized": true,
-        "is_primary_data": "True",
+        "is_primary_data": "mixed",
+        "primary_portion": {
+            "obs_field": "sample",
+            "values": ["sample1", "sample2", "sample3"]
+        },
         "derivation_process": ["single cell analysis pipeline"]
     },
     {

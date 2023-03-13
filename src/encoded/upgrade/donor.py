@@ -43,12 +43,12 @@ def human_donor_smoker_family_history(value, system):
 			value['smoker'] = 'never'
 	if 'family_members_history_breast_cancer' in value:
 		if value['family_members_history_breast_cancer'] == ["none"]:
-			value['family_medical_history'] = {
+			value['family_medical_history'] = [{
 				'present': False
-			}
+			}]
 		else:
-			value['family_medical_history'] = {
+			value['family_medical_history'] = [{
 				'family_members': value['family_members_history_breast_cancer'],
 				'present': True
-			}
+			}]
 		del value['family_members_history_breast_cancer']

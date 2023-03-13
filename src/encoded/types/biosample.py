@@ -98,6 +98,26 @@ class Biosample(Item, CalculatedDonors, CalculatedTreatmentSummary):
                 return df_obj['development_ontology']
 
 
+    @calculated_property(schema={
+        "title": "Summary BMI at collection",
+        "description": "The BMI of the donor at the time this sample was collected.",
+        "comment": "Do not submit. This is a calculated property",
+        "type": "string",
+        "notSubmittable": True,
+    })
+    def summary_body_mass_index(self, request, derived_from, body_mass_index_at_collection=None):
+        if body_mass_index_at_collection != None:
+            return body_mass_index_at_collection
+
+        else:
+            df = derived_from[0]
+            df_obj = request.embed(df, '@@object')
+            if 'summary_body_mass_index' in df_obj:
+                return df_obj['summary_body_mass_index']
+            else:
+                return df_obj.get('body_mass_index')
+
+
 @abstract_collection(
     name='cultures',
     unique_key='accession',

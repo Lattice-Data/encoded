@@ -37,7 +37,18 @@ def human_donor_ethnicity_array(value, system):
 
 
 @upgrade_step('human_postnatal_donor', '5', '6')
-def human_donor_smoker(value, system):
+def human_donor_smoker_family_history(value, system):
 	if 'smoking_history' in value:
 		if value['smoking_history'] == 'none':
 			value['smoker'] = 'never'
+	if 'family_members_history_breast_cancer' in value:
+		if value['family_members_history_breast_cancer'] == ["none"]:
+			present = False
+		else:
+			present = True
+		value['family_medical_history'] = {
+			'diagnosis': 'ontology-terms/MONDO_0007254',
+			'family_members': value['family_members_history_breast_cancer'],
+			'present': present
+		}
+		del value['family_members_history_breast_cancer']

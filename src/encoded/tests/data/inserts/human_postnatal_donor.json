@@ -70,9 +70,11 @@
         "development_ontology": "NCIT_C54166",
         "times_pregnant": 2,
         "living_at_sample_collection": true,
-        "family_members_history_breast_cancer": [
-            "mother", "maternal grandmother"
-        ],
+        "family_medical_history": [{
+            "diagnosis": "MONDO_0006507",
+            "present": true,
+            "family_members": ["mother", "maternal grandmother"]
+        }],
         "body_mass_index": "25",
         "weight": "145",
         "weight_unit": "lb",
@@ -122,9 +124,13 @@
         "height_unit": "in",
         "times_pregnant": 1,
         "genotype": "XhXh",
-        "family_members_history_breast_cancer": [
-            "sister","paternal grandmother"
-        ],
+        "family_medical_history": [{
+            "diagnosis": "MONDO_0007254",
+            "present": true,
+            "family_members": ["sister","paternal grandmother"]
+        }],
+        "medical_history": "stroke at age 69",
+        "phenotype": "red hair",
         "smoking_history": "2 packs a week, 1 year since cessation",
         "smoker": "former",
         "alcohol_history": "3 drinks a week",

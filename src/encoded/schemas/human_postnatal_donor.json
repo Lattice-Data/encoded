@@ -204,38 +204,6 @@
                 "circulatory death"
             ]
         },
-        "family_members_history_breast_cancer": {
-            "title": "Family members history breast cancer",
-            "description": "Familial relations with history of breast cancer.",
-            "type":  "array",
-            "items": {
-                "title": "",
-                "description": "",
-                "type": "string",
-                "enum": [
-                    "none",
-                    "mother",
-                    "sister",
-                    "daughter",
-                    "aunt",
-                    "grandmother",
-                    "cousin",
-                    "niece",
-                    "maternal aunt",
-                    "maternal grandmother",
-                    "maternal cousin",
-                    "sororal niece",
-                    "paternal aunt",
-                    "paternal grandmother",
-                    "paternal cousin",
-                    "fraternal niece",
-                    "maternal grandmother's mother",
-                    "maternal grandfather's mother",
-                    "paternal grandmother's mother",
-                    "paternal grandfather's mother"
-                ]
-            }
-        },
         "risk_score_tyrer_cuzick_lifetime": {
             "title": "Risk score Tyrer-Cuzick lifetime",
             "description": "The score from the Tyrer-Cuzick model, or IBIS tool, to estimate he likelihood of a woman developing breast cancer over the course of her lifetime.",

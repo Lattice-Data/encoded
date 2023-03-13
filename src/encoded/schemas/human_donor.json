@@ -71,6 +71,74 @@
             "comment": "Only adjusted from researcher's records by capitalization, correcting typos, or removing odd characters.",
             "type": "string"
         },
+        "family_medical_history": {
+            "title": "Family medical history",
+            "description": "A list of known conditions present in the donor's family and details of that history.",
+            "type": "array",
+            "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": ["diagnosis","present"],
+                "properties": {
+                    "diagnosis": {
+                        "title": "Diagnosis",
+                        "description": "The disease or condition.",
+                        "type": "string",
+                        "linkTo": "OntologyTerm"
+                    },
+                    "present": {
+                        "title": "Present",
+                        "description": "If the disease or condition has been present in the donor's family.",
+                        "type": "boolean"
+                    },
+                    "family_members": {
+                        "title": "Family members",
+                        "description": "The donor's family members known to have that disease or condition.",
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "enum": [
+                                "mother",
+                                "sister",
+                                "daughter",
+                                "aunt",
+                                "grandmother",
+                                "cousin",
+                                "niece",
+                                "maternal aunt",
+                                "maternal grandmother",
+                                "maternal cousin",
+                                "sororal niece",
+                                "paternal aunt",
+                                "paternal grandmother",
+                                "paternal cousin",
+                                "fraternal niece",
+                                "maternal grandmother's mother",
+                                "maternal grandfather's mother",
+                                "paternal grandmother's mother",
+                                "paternal grandfather's mother",
+                                "father",
+                                "brother",
+                                "son",
+                                "uncle",
+                                "grandfather",
+                                "nephew",
+                                "maternal uncle",
+                                "maternal grandfather",
+                                "sororal newphew",
+                                "paternal uncle",
+                                "paternal grandfather",
+                                "fraternal newphew",
+                                "maternal grandmother's father",
+                                "maternal grandfather's father",
+                                "paternal grandmother's father",
+                                "paternal grandfather's father"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
         "parents": {
             "title": "Parents",
             "description": "Biological parents of this donor",

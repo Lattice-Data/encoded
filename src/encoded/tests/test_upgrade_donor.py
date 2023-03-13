@@ -37,6 +37,12 @@ def test_human_donor_upgrade_4_5(upgrader, human_postnatal_donor_base, asian_ont
 
 def test_human_donor_upgrade_5_6(upgrader, human_postnatal_donor_base):
 	human_postnatal_donor_base['smoking_history'] = 'none'
+	human_postnatal_donor_base['family_members_history_breast_cancer'] = ['sister', 'mother']
 	value = upgrader.upgrade('human_postnatal_donor', human_postnatal_donor_base, current_version='5', target_version='6')
 	assert value['schema_version'] == '6'
 	assert value['smoker'] == 'never'
+	assert 'family_members_history_breast_cancer' not in value
+	assert 'family_history_breast_cancer' not in value
+	assert value['family_medical_history']['family_members'] == ['sister', 'mother']
+	assert value['family_medical_history']['present'] == True
+	assert value['family_medical_history']['diagnosis'] == 'ontology-terms/MONDO_0007254'

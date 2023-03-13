@@ -69,7 +69,10 @@
             "description": "The date the biosample was taken, created, or bought.",
             "comment": "Date should be submitted in as YYYY-MM-DD.",
             "type": "string",
-            "format": "date"
+            "anyOf": [
+                {"pattern": "^([12]\\d{3}-(0[1-9]|1[0-2]))"},
+                {"format": "date"}
+            ]
         },
         "starting_quantity": {
             "description": "The initial quantity measured at the point in time that the sample was obtained."

@@ -85,6 +85,16 @@
                  ]
             }
         },
+        "content_md5sum": {
+            "title": "Content MD5sum",
+            "description": "The MD5sum of the uncompressed file.",
+            "comment":  "Do not submit. This will be filled in during checkfiles validation.",
+            "type": "string",
+            "permission": "import_items",
+            "format": "hex",
+            "maxLength": 32,
+            "pattern": "[a-f\\d]{32}|[A-F\\d]{32}"
+        },
         "read_count": {
             "title": "Read count",
             "description": "Number of reads in fastq file.",

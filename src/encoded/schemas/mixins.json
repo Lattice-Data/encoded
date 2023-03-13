@@ -311,6 +311,7 @@
             "rdfs:subPropertyOf": "rdfs:seeAlso",
             "title": "URL",
             "description": "An external resource with additional information.",
+            "comment": "In order to be passed to the DCP, protocols.io URLs must be the DOI form, so should include doi.org/ or dx.doi.org/",
             "type": "string",
             "format": "uri"
         }
@@ -326,6 +327,7 @@
                 "title": "URL",
                 "type": "string",
                 "description": "An external resource with additional information.",
+            "comment": "In order to be passed to the DCP, protocols.io URLs must be the DOI form, so should include doi.org/ or dx.doi.org/",
                 "format": "uri"
             }
         }
@@ -474,6 +476,7 @@
                 "pattern": ["^(?:",
                     "aaron-streets|",
                     "abbas-rizvi|",
+                    "alan-mullen|",
                     "allon-klein|",
                     "andrew-mcmahon|",
                     "anindita-basu|",
@@ -483,6 +486,7 @@
                     "benjamin-humphreys|",
                     "charlotte-scott|",
                     "cole-trapnell|",
+                    "dominic-grün|",
                     "eran-mukamel|",
                     "esti-yeger-lotem|",
                     "gary-bader|",
@@ -506,6 +510,7 @@
                     "mengjie-chen|",
                     "menna-clatworthy|",
                     "minnie-sarwal|",
+                    "neil-henderson|",
                     "nicholas-navin|",
                     "nir-yosef|",
                     "norbert-hübner|",
@@ -513,6 +518,7 @@
                     "peter-smibert|",
                     "purushothama-rao-tata|",
                     "rahul-satija|",
+                    "ramanuj-dasgupta|",
                     "ronald-germain|",
                     "rui-chen|",
                     "sarah-snelling|",

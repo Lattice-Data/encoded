@@ -98,6 +98,57 @@
                 }
             }
         },
+        "smoker": {
+            "oneOf": [
+                {
+                    "required": ["smoking_history"],
+                    "properties": {
+                        "smoker": {
+                            "enum": ["never"]
+                        },
+                        "smoking_history": {
+                            "enum": ["none"]
+                        }
+                    }
+                },
+                {
+                    "properties": {
+                        "smoker": {
+                            "enum": ["former","current"]
+                        }
+                    }
+                }
+            ]
+        },
+        "smoking_history": {
+            "oneOf": [
+                {
+                    "required": ["smoker"],
+                    "properties": {
+                        "smoker": {
+                            "enum": ["never"]
+                        },
+                        "smoking_history": {
+                            "enum": ["none"]
+                        }
+                    }
+                },
+                {
+                    "properties": {
+                        "smoker": {
+                            "enum": ["former","current"]
+                        }
+                    },
+                    "not": {
+                        "properties": {
+                            "smoking_history": {
+                                "enum": ["none"]
+                            }
+                        }
+                    }
+                }
+            ]
+        },
         "twin_type": ["twin"],
         "weight": ["weight_unit"],
         "weight_unit": ["weight"],
@@ -108,7 +159,7 @@
     },
     "properties": {
         "schema_version": {
-            "default": "5"
+            "default": "6"
         },
         "age": {
             "comment": "For privacy purposes, any age 90 years or above is listed as '>89'. Submit 'variable' if samples in the database represent collection points when the donor was a different age and specify the appropriate age in the Tissue objects.",
@@ -153,46 +204,26 @@
                 "circulatory death"
             ]
         },
-        "family_members_history_breast_cancer": {
-            "title": "Family members history breast cancer",
-            "description": "Familial relations with history of breast cancer.",
-            "type":  "array",
-            "items": {
-                "title": "",
-                "description": "",
-                "type": "string",
-                "enum": [
-                    "none",
-                    "mother",
-                    "sister",
-                    "daughter",
-                    "aunt",
-                    "grandmother",
-                    "cousin",
-                    "niece",
-                    "maternal aunt",
-                    "maternal grandmother",
-                    "maternal cousin",
-                    "sororal niece",
-                    "paternal aunt",
-                    "paternal grandmother",
-                    "paternal cousin",
-                    "fraternal niece",
-                    "maternal grandmother's mother",
-                    "maternal grandfather's mother",
-                    "paternal grandmother's mother",
-                    "paternal grandfather's mother"
-                ]
-            }
-        },
         "risk_score_tyrer_cuzick_lifetime": {
             "title": "Risk score Tyrer-Cuzick lifetime",
             "description": "The score from the Tyrer-Cuzick model, or IBIS tool, to estimate he likelihood of a woman developing breast cancer over the course of her lifetime.",
             "type": "number"
         },
+        "smoker": {
+            "title": "Smoker",
+            "description": "Whether the donor is currently or ever was a smoker.",
+            "comment": "If 'never', then smoking_history must be 'none'.",
+            "type": "string",
+            "enum": [
+                "never",
+                "current",
+                "former"
+            ]
+        },
         "smoking_history": {
             "title": "Smoking history",
             "description": "Assessment of smoking history in the form # unit per time frame over length of time in years smoked and since cessation. E.g. 1 pack a day for 10 years. 2 years since cessation.",
+            "comment": "If the donor has never smoked, this should be 'none' and smoker should be 'never'.",
             "type": "string"
         },
         "alcohol_history": {
@@ -209,7 +240,7 @@
             "title": "Body mass index",
             "description": "Body mass index as defined by weight in kilograms divided by the square of height in meters.",
             "type": "string",
-            "pattern": "(^[<>]?[0-9]+(.[0-9]+)?$)|(^[0-9]+(.[0-9]+)-[0-9]+(.[0-9]+)$)"
+            "pattern": "(^(variable)|([<>]?[0-9]+(.[0-9]+)?$)|(^[0-9]+(.[0-9]+)-[0-9]+(.[0-9]+))$)"
         },
         "height": {
             "title": "Height",
@@ -227,6 +258,11 @@
                 "m",
                 "cm"
             ]
+        },
+        "medical_history": {
+            "title": "Medical history",
+            "description": "Notes pertaining to the personal medical history of the donor.",
+            "type": "string"
         },
         "test_results": {
             "title": "Test results",

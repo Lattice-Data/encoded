@@ -5,7 +5,6 @@
     "id": "/profiles/culture.json",
     "$schema": "http://json-schema.org/draft-04/schema#",
     "type": "object",
-    "mixinProperties": [],
     "properties": {
         "culture_harvest_date": {
             "title": "Culture harvest date",

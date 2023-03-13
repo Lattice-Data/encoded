@@ -4,7 +4,7 @@
     "id": "/profiles/processed_matrix_file.json",
     "$schema": "http://json-schema.org/draft-04/schema#",
     "type": "object",
-    "required": ["dataset", "output_types", "derived_from", "is_primary_data", "X_normalized"],
+    "required": ["dataset", "description", "output_types", "derived_from", "is_primary_data", "X_normalized"],
     "identifyingProperties": ["uuid", "accession", "aliases"],
     "additionalProperties": false,
     "mixinProperties": [
@@ -76,6 +76,14 @@
                     }
                 }
             ]
+        },
+        "primary_portion": {
+            "required": ["is_primary_data"],
+            "properties": {
+                "is_primary_data": {
+                    "enum": ["mixed"]
+                }
+            }
         }
     },
     "properties": {
@@ -88,9 +96,12 @@
                 "type": "string",
                 "linkTo": "ProcessedMatrixFile"
             }
-        }, 
+        },
         "description": {
             "description": "The text describing the matrix, will be displayed as the title at cellxgene."
+        },
+        "s3_uri": {
+            "comment": "If a file has been altered at all from the version provided by the lab, the name should be altered from the provided <base>.<ext> to <base>_<ext>_curated.h5ad"
         },
         "derived_from": {
             "items": {
@@ -179,6 +190,28 @@
                 "False",
                 "mixed"
             ]
+        },
+        "primary_portion": {
+            "title": "Primary portion",
+            "description": "",
+            "comment": "Should only be used if is_primary_data is 'mixed'",
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "obs_field": {
+                    "title": "obs field",
+                    "description": "",
+                    "type": "string"
+                },
+                "values": {
+                    "title": "Values",
+                    "description": "",
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            }
         },
         "layers_to_keep": {
             "title": "Layers to keep",

@@ -94,7 +94,10 @@ class HumanDonor(Donor):
     item_type = 'human_donor'
     base_types = ['HumanDonor'] + Donor.base_types
     schema = load_schema('encoded:schemas/human_donor.json')
-    embedded = Donor.embedded + ['ethnicity']
+    embedded = Donor.embedded + [
+        'ethnicity',
+        'family_medical_history',
+        'family_medical_history.diagnosis']
 
 
     @calculated_property(schema={
@@ -107,6 +110,38 @@ class HumanDonor(Donor):
     })
     def organism(self):
         return "/organism/human"
+
+
+    @calculated_property(schema={
+        "title": "Summary ethnicity",
+        "description": "A single ethnicity term until CELLxGENE enables an array.",
+        "comment": "Do not submit. This is a calculated property",
+        "permission": "import_items",
+        "type": "string"
+    })
+    def summary_ethnicity(self, request, ethnicity):
+        if len(ethnicity) == 1:
+            e = ethnicity[0].replace(':','_')
+            term = request.embed(e, '@@object')['term_id']
+            if term == 'NCIT:C17998':
+                return 'unknown'
+            else:
+                return term
+        else:
+            all_slims = []
+            for e in ethnicity:
+                e = e.replace(':','_')
+                slims = request.embed(e, '@@object').get('ethnicity_slims')
+                if not slims:
+                    return 'multiethnic'
+                all_slims.append(slims)
+
+            unpacked = [i for e in all_slims for i in e]
+            for s in all_slims[0]:
+                if unpacked.count(s) == len(all_slims):
+                    return s
+
+            return 'multiethnic'
 
 
 @collection(
@@ -173,20 +208,6 @@ class HumanPostnatalDonor(HumanDonor):
     rev = {
         'children': ('HumanDonor', 'parents')
     }
-
-    @calculated_property(schema={
-        "description": "Whether or not there is a family history of breast cancer for this Donor.",
-        "comment": "Do not submit. This is a calculated property",
-        "title": "Family history breast cancer",
-        "type": "boolean",
-        "notSubmittable": True,
-    })
-    def family_history_breast_cancer(self, request, family_members_history_breast_cancer=None):
-        if family_members_history_breast_cancer:
-            if family_members_history_breast_cancer == ["none"]:
-                return False
-            else:
-                return True
 
 
     @calculated_property(schema={

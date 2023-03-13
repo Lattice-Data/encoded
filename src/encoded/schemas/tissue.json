@@ -195,6 +195,12 @@
             "type": "string",
             "linkTo": "OntologyTerm"
         },
+        "body_mass_index_at_collection": {
+            "title": "BMI at collection",
+            "description": "Body mass index as defined by weight in kilograms divided by the square of height in meters.",
+            "type": "string",
+            "pattern": "(^[<>]?[0-9]+(.[0-9]+)?$)|(^[0-9]+(.[0-9]+)-[0-9]+(.[0-9]+)$)"
+        },
         "death_to_preservation_interval_units": {
             "title": "Death to preservation interval units",
             "description": "The unit in which the death to preservation interval was reported.",

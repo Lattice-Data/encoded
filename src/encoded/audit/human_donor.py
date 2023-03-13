@@ -16,6 +16,47 @@ def ordinalize(number):
     return str(n) + suffix
 
 
+def family_med_history(value, system):
+    if value['status'] in ['deleted']:
+        return
+
+    if 'family_medical_history' in value:
+        terms = []
+        for h in value['family_medical_history']:
+            terms.append(h['diagnosis']['term_name'])
+            if 'family_members' in h and h['present'] == False:
+                detail = ('Donor {} has specified family_members with a history of {} but is marked as present False.'.format(
+                    audit_link(value['accession'], value['@id']),
+                    h['diagnosis']['term_name']
+                    )
+                )
+                yield AuditFailure('inconsistent family medical history', detail, level='ERROR')
+                return
+        for t in terms:
+            if terms.count(t) > 1:
+                detail = ('Donor {} has duplicate family_medical_history.diagnosis of {}.'.format(
+                    audit_link(value['accession'], value['@id']),
+                    t
+                    )
+                )
+                yield AuditFailure('duplicate family medical history', detail, level='ERROR')
+                return
+
+
+
+def audit_bmi(value,system):
+    if value['status'] in ['deleted']:
+        return
+    if 'body_mass_index' not in value:
+        if value.get('height') and value.get('weight'):
+            detail = ('Donor {} BMI can be calculated from reported height and weight.'.format(
+                audit_link(value['accession'], value['@id'])
+                )
+            )
+            yield AuditFailure('missing BMI', detail, level='ERROR')
+            return
+
+
 def audit_donor_age(value, system):
     if value.get('age'):
         age = value['age']
@@ -251,6 +292,8 @@ def audit_ancestry(value, system):
 
 
 function_dispatcher = {
+    'family_med_history': family_med_history,
+    'audit_bmi': audit_bmi,
     'audit_donor_age': audit_donor_age,
     'audit_donor_dev_stage': audit_donor_dev_stage,
     'ontology_check_dev': ontology_check_dev,
@@ -262,6 +305,8 @@ function_dispatcher = {
 
 @audit_checker('HumanDonor',
                frame=[
+                'family_medical_history',
+                'family_medical_history.diagnosis',
                 'development_ontology',
                 'ethnicity',
                 'ancestry.ancestry_group',

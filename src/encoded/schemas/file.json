@@ -5,7 +5,6 @@
     "id": "/profiles/file.json",
     "$schema": "http://json-schema.org/draft-04/schema#",
     "type": "object",
-    "mixinProperties": [],
     "properties": {
         "external_accession": {
             "title": "External accession",
@@ -35,16 +34,6 @@
             "description": "The md5sum of the file.",
             "comment":  "Do not submit. This will be filled in during checkfiles validation.",
             "type": "string",
-            "format": "hex",
-            "maxLength": 32,
-            "pattern": "[a-f\\d]{32}|[A-F\\d]{32}"
-        },
-        "content_md5sum": {
-            "title": "Content MD5sum",
-            "description": "The MD5sum of the uncompressed file.",
-            "comment":  "Do not submit. This will be filled in during checkfiles validation.",
-            "type": "string",
-            "permission": "import_items",
             "format": "hex",
             "maxLength": 32,
             "pattern": "[a-f\\d]{32}|[A-F\\d]{32}"

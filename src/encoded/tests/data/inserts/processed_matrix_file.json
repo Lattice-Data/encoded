@@ -61,6 +61,7 @@
             }
         ],
         "X_normalized": true,
+        "description": "some data",
         "is_primary_data": "True",
         "derivation_process": ["single cell analysis pipeline"]
     },
@@ -125,7 +126,11 @@
             }
         ],
         "X_normalized": true,
-        "is_primary_data": "True",
+        "is_primary_data": "mixed",
+        "primary_portion": {
+            "obs_field": "sample",
+            "values": ["sample1", "sample2", "sample3"]
+        },
         "derivation_process": ["single cell analysis pipeline"]
     },
     {
@@ -168,7 +173,14 @@
         "X_normalized": true,
         "accession": "LATDF982KCF",
         "is_primary_data": "True",
-        "derivation_process": ["single cell analysis pipeline"]
+        "derivation_process": ["single cell analysis pipeline"],
+        "description": "some data",
+        "antibody_mappings": [
+            {
+                "label": "CD14",
+                "antibody": "lattice:totalseq_C0051_CD14"
+            }
+        ]
     },
     {
         "aliases": [
@@ -207,6 +219,7 @@
         ],
         "X_normalized": true,
         "accession": "LATDF611FOP",
+        "description": "some data",
         "is_primary_data": "True",
         "derivation_process": ["single cell analysis pipeline"]
     },
@@ -262,6 +275,7 @@
             "gene symbol",
             "antibody target"
         ],
+        "description": "some data",
         "observation_count": 18722,
         "dataset": "anna-greka:large_test_dataset",
         "derived_from": [
@@ -293,6 +307,7 @@
         "file_format": "hdf5",
         "file_size": 200000,
         "lab": "anna-greka",
+        "description": "some data",
         "output_types": [
             "gene quantifications",
             "antibody capture quantifications"

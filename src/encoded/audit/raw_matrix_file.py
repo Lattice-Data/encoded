@@ -8,6 +8,27 @@ from .formatter import (
 )
 
 
+def audit_complete_derived_from(value, system):
+	if value['status'] in ['deleted']:
+		return
+
+	included = []
+	should_be_included = []
+	for df in value.get('derived_from'):
+		if df['@type'][0] == 'RawSequenceFile':
+			included.append(df['@id'])
+			should_be_included.extend(df['derived_from'][0]['files'])
+	missing = [f for f in should_be_included if f not in included]
+
+	if missing:
+		detail = ('File {} does not have all RawSequenceFiles from all SequencingRuns in derived_from. Missing:{}.'.format(
+			audit_link(path_to_text(value['@id']), value['@id']),
+			','.join(missing)
+			)
+		)
+		yield AuditFailure('incomplete derived_from', detail, level='ERROR')
+
+
 def audit_read_count_compare(value, system):
 	'''
 	We check fastq metadata against the expected values based on the
@@ -109,9 +130,11 @@ def audit_validated(value, system):
 def metrics_types(value, system):
 	assays = value['assays']
 
+	all_types = []
 	for qc in value.get('quality_metrics',[]):
 		errors = []
 		qc_type = qc['@type'][0]
+		all_types.append(qc_type)
 
 		if qc_type == 'RnaMetrics':
 			req_assay = 'RNA-seq'
@@ -140,8 +163,18 @@ def metrics_types(value, system):
 			)
 			yield AuditFailure('metrics, library inconsistency', detail, level='ERROR')
 
+	for t in set(all_types):
+		if all_types.count(t) > 1:
+			detail = ('File {} has multiple metrics of type {}.'.format(
+				audit_link(path_to_text(value['@id']), value['@id']),
+				t
+				)
+			)
+			yield AuditFailure('redundant metrics', detail, level='ERROR')
+
 
 function_dispatcher = {
+	'audit_complete_derived_from': audit_complete_derived_from,
 	'audit_read_count_compare': audit_read_count_compare,
 	'audit_validated': audit_validated,
 	'metrics_types': metrics_types

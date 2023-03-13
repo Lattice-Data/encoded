@@ -105,15 +105,15 @@ class Biosample(Item, CalculatedDonors, CalculatedTreatmentSummary):
         "type": "string",
         "notSubmittable": True,
     })
-    def summary_body_mass_index(self, request, derived_from, body_mass_index_at_collection=None):
+    def summary_body_mass_index_at_collection(self, request, derived_from, body_mass_index_at_collection=None):
         if body_mass_index_at_collection != None:
             return body_mass_index_at_collection
 
         else:
             df = derived_from[0]
             df_obj = request.embed(df, '@@object')
-            if 'summary_body_mass_index' in df_obj:
-                return df_obj['summary_body_mass_index']
+            if 'summary_body_mass_index_at_collection' in df_obj:
+                return df_obj['summary_body_mass_index_at_collection']
             else:
                 return df_obj.get('body_mass_index')
 

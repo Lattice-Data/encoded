@@ -291,6 +291,11 @@
                 "cm"
             ]
         },
+        "medical_history": {
+            "title": "Medical history",
+            "description": "Notes pertaining to the personal medical history of the donor.",
+            "type": "string"
+        },
         "test_results": {
             "title": "Test results",
             "description": "The results from any test to measure the donor's health in the format of key (test name):value (test results)",

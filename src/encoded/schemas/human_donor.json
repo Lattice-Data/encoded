@@ -111,6 +111,11 @@
                 "dizygotic",
                 "monozygotic"
             ]
+        },
+        "phenotype": {
+            "title": "Phenotype",
+            "description": "Any notable phenotype that is not captured in another field.",
+            "type": "string"
         }
     }
 }

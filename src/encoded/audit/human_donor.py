@@ -30,7 +30,7 @@ def family_med_history(value, system):
                     h['diagnosis']['term_name']
                     )
                 )
-                yield AuditFailure('missing BMI', detail, level='ERROR')
+                yield AuditFailure('inconsistent family medical history', detail, level='ERROR')
                 return
         for t in terms:
             if terms.count(t) > 1:
@@ -39,7 +39,7 @@ def family_med_history(value, system):
                     t
                     )
                 )
-                yield AuditFailure('missing BMI', detail, level='ERROR')
+                yield AuditFailure('duplicate family medical history', detail, level='ERROR')
                 return
 
 

@@ -31,7 +31,8 @@
         "age_at_collection": "46.3",
         "age_at_collection_units": "year",
         "development_ontology_at_collection": "HsapDv_0000087",
-        "date_obtained": "2020-12-30"
+        "date_obtained": "2020-12-30",
+        "body_mass_index_at_collection": "45"
     },
     {
         "accession": "LATBS433DDD",

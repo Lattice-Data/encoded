@@ -240,7 +240,7 @@
             "title": "Body mass index",
             "description": "Body mass index as defined by weight in kilograms divided by the square of height in meters.",
             "type": "string",
-            "pattern": "(^[<>]?[0-9]+(.[0-9]+)?$)|(^[0-9]+(.[0-9]+)-[0-9]+(.[0-9]+)$)"
+            "pattern": "(^(variable)|([<>]?[0-9]+(.[0-9]+)?$)|(^[0-9]+(.[0-9]+)-[0-9]+(.[0-9]+))$)"
         },
         "height": {
             "title": "Height",

@@ -8,6 +8,22 @@ from .formatter import (
 )
 
 
+def audit_bmi(value, system):
+    if value['status'] in ['deleted']:
+        return
+
+    if 'body_mass_index_at_collection' in value:
+        for d in value['donors']:
+            if d.get('body_mass_index') != 'variable':
+                detail = ('Biosample {} has BMI at collection specific but donor {} BMI is not variable.'.format(
+                    audit_link(value['accession'], value['@id']),
+                    d['accession']
+                    )
+                )
+                yield AuditFailure('inconsistent BMI', detail, level='ERROR')
+                return
+
+
 def audit_biosample_donor(value, system):
     '''
     A biosample should have a donor.
@@ -70,6 +86,7 @@ def ontology_check_dis(value, system):
 
 
 function_dispatcher = {
+    'audit_bmi': audit_bmi,
     'audit_donor': audit_biosample_donor,
     'audit_death_prop_living_donor': audit_death_prop_living_donor,
     'ontology_check_dis': ontology_check_dis

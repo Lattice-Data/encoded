@@ -78,7 +78,7 @@
             "items": {
                 "type": "object",
                 "additionalProperties": false,
-                "required": ["diagnosis","present"],
+                "required": ["present"],
                 "properties": {
                     "diagnosis": {
                         "title": "Diagnosis",

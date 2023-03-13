@@ -45,4 +45,3 @@ def test_human_donor_upgrade_5_6(upgrader, human_postnatal_donor_base):
 	assert 'family_history_breast_cancer' not in value
 	assert value['family_medical_history']['family_members'] == ['sister', 'mother']
 	assert value['family_medical_history']['present'] == True
-	assert value['family_medical_history']['diagnosis'] == 'ontology-terms/MONDO_0007254'

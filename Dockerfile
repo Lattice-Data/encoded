@@ -79,6 +79,8 @@ RUN conda create --name lattice_env python=3.7 && \
 
 ENV PATH=/usr/lib/postgresql/12/bin:/usr/share/elasticsearch/bin:$PATH
 
+RUN sudo sed -i '$d' /etc/java-11-openjdk/security/java.policy && sudo sed -i "$ a permission javax.management.MBeanTrustPermission \"register\";" /etc/java-11-openjdk/security/java.policy && sudo sed -i "$ a };" /etc/java-11-openjdk/security/java.policy
+
 CMD conda run --no-capture-output -n lattice_env /bin/bash dev_servers.sh "dev-servers"
 
 

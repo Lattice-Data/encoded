@@ -15,7 +15,7 @@ services:
     networks:
       - latticed
     healthcheck:
-      test: ['CMD', 'curl', 'localhost:9201']
+      test: ['CMD', 'curl', '-f', 'localhost:9201/_cat/index']
       interval: 5s
       timeout: 5s
       retries: 3

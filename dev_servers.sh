@@ -6,9 +6,6 @@ cd /app
 
 export PATH=/usr/lib/postgresql/12/bin:/usr/share/elasticsearch/bin:$PATH
 
-sudo chown latticed node_modules
-sudo chgrp latticed node_modules
-
 if [ "$BUILDOUT" = "true" ];
 then
     pip install -U setuptools
@@ -26,5 +23,11 @@ if [ "$1" = "pserve" ];
 then
     ./bin/pserve --reload $LATTICE_INI
 else
+    echo "Waiting for $LATTICE_INI..."
+    until [ -f "$LATTICE_INI" ] && [ -f "./bin/dev-servers" ]
+    do
+	sleep 5
+    done
+
     ./bin/dev-servers $LATTICE_INI --app-name app --init --load --clear
 fi

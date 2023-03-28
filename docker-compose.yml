@@ -9,10 +9,9 @@ services:
       - 9201:9201
     environment:
       LATTICE_INI: development-docker.ini
-      BUILDOUT: $BUILDOUT
+      BUILDOUT: false
     volumes:
       - ./:/app
-      - node-dev-servers:/app/node_modules
     networks:
       - latticed
     healthcheck:
@@ -35,7 +34,6 @@ services:
       BUILDOUT: $BUILDOUT
     volumes:
       - ./:/app
-      - node-pserve:/app/node_modules
     networks:
       - latticed
     depends_on:
@@ -48,9 +46,3 @@ services:
 networks:
   latticed:
     driver: bridge
-
-volumes:
-  node-dev-servers:
-    driver: local
-  node-pserve:
-    driver: local

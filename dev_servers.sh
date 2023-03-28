@@ -6,6 +6,9 @@ cd /app
 
 export PATH=/usr/lib/postgresql/12/bin:/usr/share/elasticsearch/bin:$PATH
 
+sudo chown latticed node_modules
+sudo chgrp latticed node_modules
+
 if [ "$BUILDOUT" = "true" ];
 then
     pip install -U setuptools

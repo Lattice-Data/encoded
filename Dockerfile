@@ -69,19 +69,19 @@ RUN wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-5.6.
     dpkg -i elasticsearch-5.6.16.deb && rm elasticsearch-5.6.16.deb && \
     curl -fsSL https://www.postgresql.org/media/keys/ACCC4CF8.asc | gpg --dearmor -o /etc/apt/trusted.gpg.d/postgresql.gpg && \
     echo "deb http://apt.postgresql.org/pub/repos/apt/ `lsb_release -cs`-pgdg main" | tee /etc/apt/sources.list.d/pgdg.list && \
-    apt-get update && apt-get install -y postgresql-12 && rm -rf /var/lib/apt/lists/*
+    apt-get update && apt-get install -y postgresql-11 && rm -rf /var/lib/apt/lists/*
+
+RUN sed -i '$d' /etc/java-11-openjdk/security/java.policy && sed -i "$ a permission javax.management.MBeanTrustPermission \"register\";" /etc/java-11-openjdk/security/java.policy && sed -i "$ a };" /etc/java-11-openjdk/security/java.policy
 
 USER latticed
+
+ENV PATH=/usr/lib/postgresql/11/bin:/usr/share/elasticsearch/bin:$PATH
 
 RUN conda create --name lattice_env python=3.7 && \
     conda config --append channels conda-forge && \
     conda install -n lattice_env -c anaconda psycopg2==2.8.4
 
-ENV PATH=/usr/lib/postgresql/12/bin:/usr/share/elasticsearch/bin:$PATH
-
-RUN sudo sed -i '$d' /etc/java-11-openjdk/security/java.policy && sudo sed -i "$ a permission javax.management.MBeanTrustPermission \"register\";" /etc/java-11-openjdk/security/java.policy && sudo sed -i "$ a };" /etc/java-11-openjdk/security/java.policy
-
-CMD conda run --no-capture-output -n lattice_env /bin/bash dev_servers.sh "dev-servers"
+CMD echo "In the container's terminal, run:\n> /bin/bash dev_servers.sh \"dev-servers\"" && tail -f /dev/null
 
 
 FROM base as pserve

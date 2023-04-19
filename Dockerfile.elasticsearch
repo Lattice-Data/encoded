@@ -1,0 +1,28 @@
+FROM ubuntu:20.04
+
+ENV DEBIAN_FRONTEND=noninteractive
+
+RUN apt-get update && apt-get install -y \
+    sudo \
+    wget \
+    curl \
+    systemctl \
+    default-jre \
+    default-jdk \
+    apt-transport-https \
+    && rm -rf /var/lib/apt/lists/* \
+    && useradd -m --groups sudo esearch \
+    && echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
+
+USER esearch
+
+WORKDIR /home/esearch/
+
+RUN wget "https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-5.6.16.tar.gz" \
+    && tar -xf elasticsearch-5.6.16.tar.gz
+
+COPY --chown=esearch ./conf/prod /home/esearch/elasticsearch-5.6.16/config
+
+CMD sysctl -w vm.max_map_count=262144
+ENTRYPOINT sudo chown -R esearch:esearch /home/esearch/elasticsearch-5.6.16/data && \
+    ./elasticsearch-5.6.16/bin/elasticsearch

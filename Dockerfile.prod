@@ -1,0 +1,126 @@
+FROM ubuntu:20.04 AS base
+# Ubuntu 20 is the last compatible version for node@10
+
+ENV DEBIAN_FRONTEND=noninteractive
+
+ENV BRANCH dev
+ENV ES_IP localhost
+ENV ES_PORT 9201
+ENV PG_URI postgresql:///encoded
+ENV ENCD_INDEX_PRIMARY true
+ENV ENCD_REGION_INDEX false
+ENV ENCD_INDEX_VIS false
+ENV ENCD_APP_WORKERS 6
+ENV AWS_ACCESS_KEY 123
+ENV AWS_SECRET_ACCESS_KEY 123
+
+RUN apt-get update && apt-get install -y \
+    build-essential \
+    sudo \
+    g++ \
+    wget \
+    curl \
+    git \
+    python2 \
+    ruby \
+    ruby-dev \
+    libffi-dev \
+    libbz2-dev \
+    libpq-dev \
+    libyaml-cpp-dev \
+    libyaml-dev \
+    libarchive-tools \
+    libxml2-dev \
+    libssl-dev \
+    libxslt1-dev \
+    openssl \
+    zlib1g-dev \
+    zlib1g \
+    libjpeg-dev \
+    tk-dev \
+    tcl-dev \
+    uuid-dev \
+    lzma-dev \
+    liblzma-dev \
+    default-jre \
+    default-jdk \
+    apt-transport-https \
+    nginx \
+    libmagic-dev \
+    graphviz \
+    apache2 \
+    apache2-dev \
+    apache2-utils \
+    debhelper \
+    dh-autoreconf \
+    ssl-cert \
+    libapache2-mod-wsgi-py3 \
+    python3-distutils \
+    python-is-python3 \
+    python3-dev \
+    && rm -rf /var/lib/apt/lists/* \
+    && curl -sL https://deb.nodesource.com/setup_10.x | bash - && apt-get install -y nodejs \
+    && gem install compass
+
+# Install Python 3.7.6 and set up encoded user and codebase
+RUN wget https://www.python.org/ftp/python/3.7.6/Python-3.7.6.tgz && \
+    tar xzvf Python-3.7.6.tgz && \
+    cd Python-3.7.6 && \
+    ./configure --enable-shared --quiet && \
+    make && \
+    make install && \
+    cd .. && rm -r Python-3.7.6.tgz Python-3.7.6/ && \
+    ldconfig /usr/local/lib && \
+    mkdir -p /srv/encoded && \
+    git clone https://github.com/Lattice-Data/encoded.git /srv/encoded && \
+    cd /srv/encoded && git checkout $BRANCH && \
+    useradd -m -d /srv/encoded --groups sudo encoded && \
+    chown encoded:encoded -R /srv/encoded && \
+    echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
+
+RUN mkdir -p /opt/Mod_Wsgi_Build
+
+# Config Apache2
+COPY ./etc/logging-apache.conf /etc/apache2/conf-available/logging.conf
+COPY ./conf/wsgi_source/4.6.5.tar.gz /opt/Mod_Wsgi_Build
+
+# Compiling Apache mod_wsgi
+RUN cd /opt/Mod_Wsgi_Build && \
+    tar xzf 4.6.5.tar.gz --strip-components 1 && \
+    ./configure --with-python=/usr/local/bin/python3 && \
+    make -j $(cat /proc/cpuinfo | grep processor | wc -l) && \
+    make -j $(cat /proc/cpuinfo | grep processor | wc -l) install
+
+USER encoded
+
+WORKDIR /srv/encoded
+
+RUN python3 -m venv lattice-venv && \
+    . ./lattice-venv/bin/activate && \
+    pip3 install -r requirements.txt && \
+    buildout bootstrap && \
+    bin/buildout buildout:create_tables=false buildout:es-ip=$ES_IP buildout:es-port=$ES_PORT buildout:pg-uri=$PG_URI && \
+    cat /dev/urandom | head -c 256 | base64 > session-secret.b64 && \
+    mkdir -p /srv/encoded/.aws && \
+    printf "[encoded-files-upload]\naws_access_key_id = $AWS_ACCESS_KEY\naws_secret_access_key = $AWS_SECRET_ACCESS_KEY" > /srv/encoded/.aws/credentials && \
+    sudo -E sh -c ' \
+    /srv/encoded/cloud-config/configs/apache/build-conf.sh /srv/encoded/cloud-config/configs/apache/ /etc/apache2/sites-available/encoded.conf && \
+    a2dismod mpm_event && \
+    a2enmod headers && \
+    a2enmod proxy_http && \
+    a2enmod rewrite && \
+    a2enmod ssl && \
+    a2enmod log_forensic && \
+    a2enmod mpm_worker && \
+    a2ensite encoded.conf && \
+    a2dissite 000-default && \
+    a2enconf logging && \
+    a2disconf charset && \
+    a2disconf security && \
+    a2disconf localized-error-pages && \
+    a2disconf other-vhosts-access-log && \
+    a2disconf serve-cgi-bin'
+
+COPY --chown=encoded ./prod_server.sh /srv/encoded/prod_server.sh
+
+ENTRYPOINT exec sh prod_server.sh

@@ -341,7 +341,10 @@ def make_request(testapp, item_type, method):
             }
 
             url = row['_url']
-            row['_response'] = json_method(url, value, status='*')
+            try:
+                row['_response'] = json_method(url, value, status='*')
+            except ValueError as e:
+                print('Unable to load {} with UUID: {}. {}'.format(url, value.get('uuid'), str(e)))
 
             yield row
 

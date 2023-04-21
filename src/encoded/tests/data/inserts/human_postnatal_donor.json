@@ -35,6 +35,7 @@
         "smoker": "current",
         "alcohol_history": "3 drinks a week",
         "cause_of_death": "car accident",
+        "causes_of_death": ["NCIT_C34344"],
         "ancestry": [
             {
                 "ancestry_group":  "HANCESTRO_0005", "fraction": 0.3
@@ -116,7 +117,6 @@
             "lattice:insulin"
         ],
         "uuid": "2db646f0-d910-11ea-87d0-0242ac130003",
-        "cause_of_death": "heart failure",
         "body_mass_index": "22-23",
         "weight": "138",
         "weight_unit": "lb",
@@ -157,7 +157,6 @@
         "menopausal_status": "perimenopausal",
         "ethnicity": ["HANCESTRO_0008"],
         "uuid": "f9b6ee3f-22f0-4544-9b69-d396b0425371",
-        "cause_of_death": "kidney failure",
         "living_at_sample_collection": false,
         "body_mass_index": "24.3",
         "weight": "158",

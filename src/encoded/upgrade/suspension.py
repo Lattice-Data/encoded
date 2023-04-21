@@ -25,3 +25,9 @@ def suspension_4_5(value, system):
 	if 'red_blood_cell_lysis' in value:
 		value['red_blood_cell_removal'] = value['red_blood_cell_lysis']
 		del value['red_blood_cell_lysis']
+
+
+@upgrade_step('suspension', '5', '6')
+def suspension_5_6(value, system):
+	if 'enrichment_factors' in value:
+		value['enrichment_factors'] = ','.split(value['red_blood_cell_lysis'])

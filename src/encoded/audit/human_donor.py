@@ -141,15 +141,13 @@ def audit_donor_dev_stage(value, system):
                 return
         elif value.get('conceptional_age_units') == 'week' and conc_age > 8:
             week = conc_age
-            if week %1 != 0:
-                week += 1
+            week += 1
             week = int(week//1)
             expected = ordinalize(str(week)) + pre_term_end_wk
         elif value.get('conceptional_age_units') == 'day' and conc_age > 56:
             days = conc_age
             week = days//7
-            if days%7 != 0:
-                week += 1
+            week += 1
             expected = ordinalize(str(week)) + pre_term_end_wk
         else:
             return
@@ -167,6 +165,17 @@ def audit_donor_dev_stage(value, system):
         else:
             years = int(value['age'])//12
             expected = str(years) + post_term_end_yr
+    elif value.get('age_units') == 'day':
+        if float(value['age']) <= 30:
+            expected = 'newborn human stage'
+        else:
+            months = value['age'] //30
+            if months <= 23:
+                expected = str(months) + post_term_end_mo
+            else:
+                years = months//12
+                expected = str(years) + post_term_end_yr
+
     elif value['age_display'] == 'variable':
         expected = 'variable'
 

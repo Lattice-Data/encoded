@@ -21,21 +21,25 @@ def mappings_antibodies(value,system):
             yield AuditFailure('antibody_mapping error', detail, 'ERROR')
 
         antibodies = []
+        suspensions = []
         for l in value['libraries']:
             for susp in l['derived_from']:
-                antibodies.extend(susp.get('feature_antibodies',[]))
+                if susp['@id'] not in suspensions:
+                    antibodies.extend(susp.get('feature_antibodies',[]))
+                    suspensions.append(susp['@id'])
         for am in value['antibody_mappings']:
             if am['antibody']['@id'] not in antibodies:
-                detail = ('File {} contains {} in antibody_mappings but is not linked to this Antibody.'.format(
+                detail = ('File {} contains {} in antibody_mappings but is not linked to this Antibody. These Suspensions are currently linked: {}'.format(
                     audit_link(value['accession'], value['@id']),
-                    am['antibody']['@id']
+                    am['antibody']['@id'],
+                    ','.join(suspensions)
                     )
                 )
                 yield AuditFailure('antibody_mapping error', detail, 'ERROR')
 
-            target_orgs = [t['organism'] for t in am['antibody']['targets']]
-            if '/organisms/human/' not in target_orgs:
-                detail = ('File {} contains {} in antibody_mappings that does not target human.'.format(
+            target_orgs = [t['organism'] for t in am['antibody'].get('targets', [{'organism': 'control'}])]
+            if '/organisms/human/' not in target_orgs and 'control' not in target_orgs:
+                detail = ('File {} contains {} in antibody_mappings that does not target human or a control.'.format(
                     audit_link(value['accession'], value['@id']),
                     am['antibody']['@id']
                     )

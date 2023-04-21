@@ -27,7 +27,11 @@
             "my_other_cell_labels"
         ],
         "derivation_process": ["single cell analysis pipeline"],
-        "demultiplexed_donor_column": "Donor"
+        "demultiplexed_donor_column": "Donor",
+        "spatial_s3_uri": "s3://submissions-czi000aaa/my_lib/spatial/",
+        "aliases": [
+            "bogi-andersen:my_matrix"
+        ]
     },
     {
         "aliases": [

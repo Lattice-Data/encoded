@@ -29,3 +29,13 @@ def test_suspension_upgrade_4_5(upgrader, suspension_base):
 	assert value['red_blood_cell_removal'] == True
 	assert 'red_blood_cell_lysis' not in value
 	assert value['schema_version'] == '5'
+
+
+def test_suspension_upgrade_5_6(upgrader, suspension_base):
+	suspension_base['enrichment_factors'] = "CD45+,CD14+,CD16+"
+	value = upgrader.upgrade('suspension', suspension_base, current_version='5', target_version='6')
+	assert "CD16+" in value['enrichment_factors']
+	assert "CD14+" in value['enrichment_factors']
+	assert "CD45+" in value['enrichment_factors']
+	assert len(value['enrichment_factors']) == 3
+	assert value['schema_version'] == '6'

@@ -436,6 +436,7 @@ class ProcessedMatrixFile(AnalysisFile):
         'antibody_mappings',
         'antibody_mappings.antibody',
         'antibody_mappings.antibody.targets',
+        'antibody_mappings.antibody.targets.organism',
         'cell_annotations',
         'cell_annotations.cell_ontology',
         'experimental_variable_disease'

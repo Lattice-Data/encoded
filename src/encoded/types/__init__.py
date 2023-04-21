@@ -88,5 +88,6 @@ class Antibody(Item):
     schema = load_schema('encoded:schemas/antibody.json')
     embedded = [
         'targets',
-        'targets.organism'
+        'targets.organism',
+        'host_organism'
         ]

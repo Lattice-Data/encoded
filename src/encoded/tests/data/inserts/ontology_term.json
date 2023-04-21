@@ -3334,5 +3334,35 @@
         "term_id": "HANCESTRO:0013",
         "term_name": "Native American",
         "uuid": "3aaa6a84-7beb-4d2a-a998-a3221fb390a9"
+    },
+    {
+        "status": "in progress",
+        "term_id": "PATO:0000461",
+        "term_name": "normal",
+        "uuid": "3d0b6dcc-a323-44ee-8560-1ac8045b3114"
+    },
+    {
+        "status": "in progress",
+        "term_id": "PATO:0000383",
+        "term_name": "female",
+        "uuid": "d407afaa-c5b8-4e9b-b871-8b6a598b41ef"
+    },
+    {
+        "status": "in progress",
+        "term_id": "PATO:0000384",
+        "term_name": "male",
+        "uuid": "099a891a-bc3c-4c26-af78-eeb3b4ee72b3"
+    },
+    {
+        "status": "in progress",
+        "term_id": "NCBITaxon:9606",
+        "term_name": "Homo sapiens",
+        "uuid": "9bb79861-f137-4b28-a0c2-4cebe8660822"
+    },
+    {
+        "status": "in progress",
+        "term_id": "NCIT:C34344",
+        "term_name": "Automobile Accident",
+        "uuid": "1af1ab96-fc15-4f8e-a7da-e73c7b471064"
     }
 ]

@@ -229,6 +229,7 @@
         "alcohol_history": {
             "title": "Alcohol history",
             "description": "Assessment of alcohol use in the form # unit per time frame. E.g. 2 drinks a day.",
+            "comment": "Donors with a recorded history of no alcohol history should be filled in as 'none'. Donors with unrecorded alcohol history should leave this empty.",
             "type": "string"
         },
         "cause_of_death": {
@@ -261,7 +262,7 @@
         },
         "medical_history": {
             "title": "Medical history",
-            "description": "Notes pertaining to the personal medical history of the donor.",
+            "description": "Notes on medical procedures/treatments, length of time associated with a diagnosis, or past diseases from which the donor is healed or cured.",
             "type": "string"
         },
         "test_results": {

@@ -78,7 +78,7 @@
             "items": {
                 "type": "object",
                 "additionalProperties": false,
-                "required": ["present"],
+                "required": ["present","diagnosis"],
                 "properties": {
                     "diagnosis": {
                         "title": "Diagnosis",
@@ -182,7 +182,7 @@
         },
         "phenotype": {
             "title": "Phenotype",
-            "description": "Any notable phenotype that is not captured in another field.",
+            "description": "Any condition not included in MONDO, or additional histological, spatial, or disease subtype notes about diseases included in the 'disease' field.",
             "type": "string"
         }
     }

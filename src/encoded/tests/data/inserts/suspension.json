@@ -862,7 +862,7 @@
         "enriched_cell_types": [
             "CL_0000127"
         ],
-        "enrichment_factors": "ATF3"
+        "enrichment_factors": ["ATF3"]
     },
     {
         "accession": "LATSU873AAA",
@@ -889,7 +889,7 @@
         "enriched_cell_types": [
             "CL_0000127"
         ],
-        "enrichment_factors": "ATF3"
+        "enrichment_factors": ["ATF3"]
     },
     {
         "accession": "LATSU876AAA",
@@ -916,7 +916,7 @@
         "enriched_cell_types": [
             "CL_0000127"
         ],
-        "enrichment_factors": "ATF3"
+        "enrichment_factors": ["ATF3"]
     },
     {
         "accession": "LATSU600AAA",

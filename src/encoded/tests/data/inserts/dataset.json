@@ -10,7 +10,8 @@
             "alan-mullen:ds1",
             "neil-henderson:ds1",
             "ramanuj-dasgupta:ds1",
-            "dominic-grün:ds1"
+            "dominic-grün:ds1",
+            "anna-williams:dataset2"
         ],
         "dataset_title": "Dataset with a multiplexed Library",
         "description": "Used to test tools with pooling and demultiplexing",

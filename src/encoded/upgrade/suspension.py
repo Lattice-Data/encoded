@@ -30,4 +30,4 @@ def suspension_4_5(value, system):
 @upgrade_step('suspension', '5', '6')
 def suspension_5_6(value, system):
 	if 'enrichment_factors' in value:
-		value['enrichment_factors'] = ','.split(value['red_blood_cell_lysis'])
+		value['enrichment_factors'] = ','.split(value['enrichment_factors'])

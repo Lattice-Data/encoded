@@ -9,7 +9,7 @@ from .formatter import (
 
 
 def no_platform(value, system):
-    if value['status'] in ['deleted']:
+    if value['status'] in ['deleted','archived']:
         return
 
     if not value.get('platform'):
@@ -26,7 +26,7 @@ def audit_read_counts(value, system):
     All sequence files belonging to a SequencingRun
     should have the same number of reads.
     '''
-    if value['status'] in ['deleted']:
+    if value['status'] in ['deleted','archived']:
         return
 
     read_count_lib = set()
@@ -49,7 +49,7 @@ def audit_flowcell(value, system):
     All sequence files belonging to a SequencingRun
     should have the same flowcell_details.
     '''
-    if value['status'] in ['deleted']:
+    if value['status'] in ['deleted','archived']:
         return
 
     #compile all flowcell_details present in any attached files
@@ -82,7 +82,7 @@ def audit_required_files(value, system):
     All sequence files belonging to a SequencingRun
     should have the same number of reads.
     '''
-    if value['status'] in ['deleted']:
+    if value['status'] in ['deleted','archived']:
         return
 
     not_found = []
@@ -108,7 +108,7 @@ def audit_duplicated_read_types(value, system):
     Should not have multiple reads assigned to this SequencingRun
     if they are the same read_type
     '''
-    if value['status'] in ['deleted']:
+    if value['status'] in ['deleted','archived']:
         return
 
     read_types = {}

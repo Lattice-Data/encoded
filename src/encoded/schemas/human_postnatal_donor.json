@@ -68,14 +68,6 @@
                 }
             }
         },
-        "cause_of_death": {
-            "required": ["living_at_sample_collection"],
-            "properties": {
-                "living_at_sample_collection": {
-                    "enum": [false]
-                }
-            }
-        },
         "causes_of_death": {
             "required": ["living_at_sample_collection"],
             "properties": {
@@ -167,7 +159,7 @@
     },
     "properties": {
         "schema_version": {
-            "default": "6"
+            "default": "7"
         },
         "age": {
             "comment": "For privacy purposes, any age 90 years or above is listed as '>89'. Submit 'variable' if samples in the database represent collection points when the donor was a different age and specify the appropriate age in the Tissue objects.",
@@ -238,12 +230,6 @@
             "title": "Alcohol history",
             "description": "Assessment of alcohol use in the form # unit per time frame. E.g. 2 drinks a day.",
             "comment": "Donors with a recorded history of no alcohol history should be filled in as 'none'. Donors with unrecorded alcohol history should leave this empty.",
-            "type": "string"
-        },
-        "cause_of_death": {
-            "title": "Cause of death",
-            "description": "Description of medical/accidental cause of death of the donor. Leave blank if the donor is living.",
-            "comment": "DO NOT USE: Is being deprecated in favor of causes_of_death",
             "type": "string"
         },
         "causes_of_death": {

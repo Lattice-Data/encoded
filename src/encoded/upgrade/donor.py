@@ -52,3 +52,9 @@ def human_donor_smoker_family_history(value, system):
 				'present': True
 			}]
 		del value['family_members_history_breast_cancer']
+
+
+@upgrade_step('human_postnatal_donor', '6', '7')
+def human_donor_cause_of_death_removal(value, system):
+	if 'cause_of_death' in value:
+		del value['cause_of_death']

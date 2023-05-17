@@ -28,17 +28,5 @@ ntrs = [
         "name": "Tikari",
         "synonyms": [],
         "child_of": ["HANCESTRO:0011"]
-    },
-    {
-        "term_id": "NCIT:C17998",
-        "name": "unknown",
-        "synonyms": [],
-        "child_of": []
-    },
-    {
-        "term_id": "NCIT:C54166",
-        "name": "variable",
-        "synonyms": [],
-        "child_of": []
     }
 ]

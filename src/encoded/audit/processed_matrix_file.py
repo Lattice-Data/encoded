@@ -144,13 +144,29 @@ def cellxgene_links(value, system):
         yield AuditFailure('missing cellxgene link', detail, 'ERROR')
 
 
+def check_author_columns(value, system):
+    reserved = ['assay','cell_type','development_stage',
+        'disease','self_reported_ethnicity','organism',
+        'sex','tissue','donor_id','is_primary_data','suspension_type']
+
+    clash = [c for c in value.get('author_columns',[]) if c in reserved]
+    if clash:
+        detail = ('File {} lists reserved fields in author_columns: {}.'.format(
+            audit_link(value['accession'], value['@id']),
+            ','.join(clash)
+            )
+        )
+        yield AuditFailure('CxG schema clash', detail, 'ERROR')
+
+
 function_dispatcher = {
     'ontology_check_dis': ontology_check_dis,
     'duplicated_derfrom': duplicated_derfrom,
     'mappings_antibodies': mappings_antibodies,
     'mappings_donors': mappings_donors,
     'mappings_matrices': mappings_matrices,
-    'cellxgene_links': cellxgene_links
+    'cellxgene_links': cellxgene_links,
+    'check_author_columns': check_author_columns
 }
 
 @audit_checker('ProcessedMatrixFile',

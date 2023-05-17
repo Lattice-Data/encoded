@@ -204,7 +204,7 @@ class HumanPrenatalDonor(HumanDonor):
 class HumanPostnatalDonor(HumanDonor):
     item_type = 'human_postnatal_donor'
     schema = load_schema('encoded:schemas/human_postnatal_donor.json')
-    embedded = HumanDonor.embedded + []
+    embedded = HumanDonor.embedded + ['causes_of_death']
     rev = {
         'children': ('HumanDonor', 'parents')
     }

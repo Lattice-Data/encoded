@@ -190,7 +190,10 @@ class HumanPrenatalDonor(HumanDonor):
         "permission": "import_items",
         "type": "boolean"
     })
-    def age_development_stage_redundancy(self):
+    def age_development_stage_redundancy(self, request, development_ontology, conceptional_age, conceptional_age_units=None):
+        dev_stage = request.embed(development_ontology, '@@object?skip_calculated=true').get('term_name')
+        if conceptional_age_units == 'week' and '.' not in conceptional_age and '-' not in conceptional_age:
+            return True
         return False
 
 
@@ -217,12 +220,21 @@ class HumanPostnatalDonor(HumanDonor):
         "permission": "import_items",
         "type": "boolean"
     })
-    def age_development_stage_redundancy(self, age, age_units=None):
-        if age != 'unknown' and '-' not in age and '>' not in age and '.' not in age:
-            if age_units == 'year':
-                return True
-            elif age_units == 'month' and int(age) > 24:
-                return True
+    def age_development_stage_redundancy(self, request, development_ontology, age, age_units=None):
+        decades = {
+            'third decade human stage': '20-30 years',
+            'fourth decade human stage': '30-40 years',
+            'fifth decade human stage': '40-50 years',
+            'sixth decade human stage': '50-60 years',
+            'seventh decade human stage': '60-70 years',
+            'eighth decade human stage': '70-80 years'
+
+        }
+        dev_stage = request.embed(development_ontology, '@@object?skip_calculated=true').get('term_name')
+        if dev_stage == f'{age}-{str(age_units)}-old human stage':
+            return True
+        elif decades.get(dev_stage) == age + str(age_units) + 's':
+            return True
 
         return False
 

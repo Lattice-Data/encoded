@@ -104,17 +104,15 @@ def audit_donor_dev_stage(value, system):
     post_term_end_yr = '-year-old human stage'
     pre_term_end_wk = ' week post-fertilization human stage'
 
-    if '>' in value['age_display'] or '<' in value['age_display']:
-        return
-    elif dev == 'variable' and value['age_display'] != 'variable':
+    if dev == 'variable' and value['age_display'] != 'variable':
         detail = ('Donor {} of development_ontology variable expected age variable.'.format(
             audit_link(value['accession'], value['@id'])
             )
         )
         yield AuditFailure('inconsistent age, development', detail, level='ERROR')
         return
-    elif value['age_display'] == 'unknown' or '-' in value.get('age','') or '-' in value.get('conceptional_age',''):
-        if dev.endswith(post_term_end_yr) or dev.endswith(pre_term_end_wk):
+    elif value['age_display'] == 'unknown' or '-' in value['age_display'] or '>' in value['age_display'] or '<' in value['age_display']:
+        if dev.endswith(post_term_end_yr) or dev.endswith(post_term_end_mo) or dev.endswith(pre_term_end_wk):
             detail = ('Donor {} of age {} not expected age-specific development_ontology ({}).'.format(
                 audit_link(value['accession'], value['@id']),
                 value.get('age_display'),
@@ -300,6 +298,20 @@ def audit_ancestry(value, system):
             yield AuditFailure('ancestry error', detail, 'ERROR')
 
 
+def qa_cause_of_death(value, system):
+    if 'causes_of_death' in value:
+        need = ['Cause of Death','Disease, Disorder or Finding','Suicide']
+        for c in value['causes_of_death']:
+            qa_terms_incl = [e for e in c.get('qa_slims', []) if e in need]
+            if qa_terms_incl == []:
+                detail = ('Donor {} causes_of_death {} is not descendant of NCIT:C81239, NCIT:C7057, or NCIT:C3394.'.format(
+                    audit_link(value['accession'], value['@id']),
+                    c['term_name']
+                    )
+                )
+                yield AuditFailure('causes_of_death error', detail, 'ERROR')
+
+
 function_dispatcher = {
     'family_med_history': family_med_history,
     'audit_bmi': audit_bmi,
@@ -309,7 +321,8 @@ function_dispatcher = {
     'ontology_check_eth': ontology_check_eth,
     'ontology_check_dis': ontology_check_dis,
     'ontology_check_anc': ontology_check_anc,
-    'audit_ancestry': audit_ancestry
+    'audit_ancestry': audit_ancestry,
+    'qa_cause_of_death': qa_cause_of_death
 }
 
 @audit_checker('HumanDonor',
@@ -319,7 +332,8 @@ function_dispatcher = {
                 'development_ontology',
                 'ethnicity',
                 'ancestry.ancestry_group',
-                'diseases'
+                'diseases',
+                'causes_of_death'
                 ])
 def audit_donor(value, system):
     for function_name in function_dispatcher.keys():

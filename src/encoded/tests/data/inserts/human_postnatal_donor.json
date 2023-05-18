@@ -34,7 +34,6 @@
         "smoking_history": "1 pack a week for 10 years",
         "smoker": "current",
         "alcohol_history": "3 drinks a week",
-        "cause_of_death": "car accident",
         "causes_of_death": ["NCIT_C34344"],
         "ancestry": [
             {

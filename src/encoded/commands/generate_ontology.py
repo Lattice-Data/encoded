@@ -1,11 +1,12 @@
 from rdflib import ConjunctiveGraph, exceptions, Namespace
 from rdflib import RDFS, RDF, BNode
 from rdflib.collection import Collection
-from .ntr_terms import (
-    ntrs
-)
-from .manual_slims import slim_shims
+from ntr_terms import ntrs
+from manual_slims import slim_shims
+from datetime import date
 import json
+import time
+
 
 EPILOG = __doc__
 
@@ -305,6 +306,7 @@ def main():
     cl_url = 'http://purl.obolibrary.org/obo/cl.owl'
     hsapdv_url = 'http://purl.obolibrary.org/obo/hsapdv.owl'
     mmusdv_url = 'http://purl.obolibrary.org/obo/mmusdv.owl'
+    ncit_url = 'http://purl.obolibrary.org/obo/ncit.owl'
 
     url_whitelist = {
         uberon_url: ['UBERON', 'CL'],
@@ -313,12 +315,14 @@ def main():
         hancestro_url: ['HANCESTRO'],
         cl_url: ['CL'],
         hsapdv_url: ['HsapDv'],
-        mmusdv_url: ['MmusDv']
+        mmusdv_url: ['MmusDv'],
+        ncit_url: ['NCIT']
         }
 
     terms = {}
     # Run on ontologies defined in whitelist
     for url in url_whitelist.keys():
+        print(url)
         data = Inspector(url)
         for c in data.allclasses:
             if isBlankNode(c):
@@ -394,6 +398,7 @@ def main():
                             terms[term_id]['synonyms'].append(syn.__str__())
                         except:
                             pass
+
     for term in terms:
         terms[term]['data'] = list(set(terms[term]['parents']) | set(terms[term]['part_of']) | set(
             terms[term]['derives_from']))
@@ -425,8 +430,12 @@ def main():
             'ancestors': list(ancestors)
         }
 
-    with open('ontology.json', 'w') as outfile:
+    ont_file = f'ontology-{date.today()}.json'
+    with open(ont_file, 'w') as outfile:
         json.dump(terms, outfile)
+
+    print(ont_file + ' written. Upload to S3 using:')
+    print(f'$ aws s3 cp {ont_file} s3://latticed-build/ontology/ --acl public-read')
 
 
 if __name__ == '__main__':

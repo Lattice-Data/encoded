@@ -5,7 +5,7 @@
         ],
         "status": "released",
         "uuid": "01037d11-79b3-428a-b734-71bf87e682ef",
-        "file_format": "mex",
+        "file_format": "hdf5",
         "file_size": 100000,
         "lab": "hca-general",
         "output_types": [
@@ -50,7 +50,7 @@
         ],
         "status": "released",
         "uuid": "03f48740-db8c-4cfe-a734-21b8d6f11eb9",
-        "file_format": "rds",
+        "file_format": "hdf5",
         "file_size": 100000,
         "lab": "anna-greka",
         "output_types": [
@@ -96,7 +96,7 @@
         ],
         "status": "released",
         "uuid": "b8231d1d-abdb-4848-a567-269e89c243ab",
-        "file_format": "tsv",
+        "file_format": "hdf5",
         "file_size": 100000,
         "lab": "anna-greka",
         "output_types": [
@@ -184,7 +184,7 @@
         ],
         "status": "released",
         "uuid": "b5c2bdb7-7673-4b6b-bf03-d8f850485acc",
-        "file_format": "mtx",
+        "file_format": "hdf5",
         "file_size": 100000,
         "lab": "anna-greka",
         "output_types": [
@@ -228,7 +228,6 @@
         ],
         "status": "released",
         "uuid": "05a0d43d-92c8-4521-845b-56c5d167324c",
-        "file_format": "hdf5",
         "file_size": 100000,
         "lab": "anna-greka",
         "output_types": [
@@ -3251,7 +3250,7 @@
         "uuid": "2040b7ed-5ad9-4de2-968e-fa8e6a908761",
         "no_file_available": false,
         "status": "in progress",
-        "file_format": "mtx",
+        "file_format": "hdf5",
         "file_size": 50000,
         "lab": "jimmie-ye",
         "output_types": [
@@ -3289,7 +3288,7 @@
         "uuid": "e1932055-e775-4b56-8cc4-a6b1c069cee0",
         "no_file_available": false,
         "status": "in progress",
-        "file_format": "mtx",
+        "file_format": "hdf5",
         "file_size": 50000,
         "lab": "jimmie-ye",
         "output_types": [
@@ -3327,7 +3326,7 @@
         "uuid": "265ef860-698c-4368-ba15-cffd5238c158",
         "no_file_available": false,
         "status": "in progress",
-        "file_format": "mtx",
+        "file_format": "hdf5",
         "file_size": 50000,
         "lab": "jimmie-ye",
         "output_types": [
@@ -3365,7 +3364,7 @@
         "uuid": "8bbe5a65-57ae-43bc-bc95-2b3e7b618a7e",
         "no_file_available": false,
         "status": "in progress",
-        "file_format": "mtx",
+        "file_format": "hdf5",
         "file_size": 50000,
         "lab": "jimmie-ye",
         "output_types": [
@@ -3403,7 +3402,7 @@
         "uuid": "631c4d53-d44f-4fad-bf39-f4a3a0c49a62",
         "no_file_available": false,
         "status": "in progress",
-        "file_format": "mtx",
+        "file_format": "hdf5",
         "file_size": 50000,
         "lab": "jimmie-ye",
         "output_types": [
@@ -3441,7 +3440,7 @@
         "uuid": "6673ef75-e243-43e5-b872-9f6249013a7c",
         "no_file_available": false,
         "status": "in progress",
-        "file_format": "mtx",
+        "file_format": "hdf5",
         "file_size": 50000,
         "lab": "jimmie-ye",
         "output_types": [
@@ -3479,7 +3478,7 @@
         "uuid": "49af2a2a-4770-4878-84ca-91b6b68952cf",
         "no_file_available": false,
         "status": "in progress",
-        "file_format": "mtx",
+        "file_format": "hdf5",
         "file_size": 50000,
         "lab": "jimmie-ye",
         "output_types": [
@@ -3517,7 +3516,7 @@
         "uuid": "43a7e68b-44c3-4201-ae1c-b3283aad9f92",
         "no_file_available": false,
         "status": "in progress",
-        "file_format": "mtx",
+        "file_format": "hdf5",
         "file_size": 50000,
         "lab": "jimmie-ye",
         "output_types": [
@@ -3555,7 +3554,7 @@
         "uuid": "009e4a9c-1153-4594-945d-8785472f9a5c",
         "no_file_available": false,
         "status": "in progress",
-        "file_format": "mtx",
+        "file_format": "hdf5",
         "file_size": 50000,
         "lab": "jimmie-ye",
         "output_types": [
@@ -3593,7 +3592,7 @@
         "uuid": "76740870-efb1-4302-b45b-842fff8f3d09",
         "no_file_available": false,
         "status": "in progress",
-        "file_format": "mtx",
+        "file_format": "hdf5",
         "file_size": 50000,
         "lab": "jimmie-ye",
         "output_types": [
@@ -3632,7 +3631,7 @@
         "uuid": "1767e954-29ac-4a92-9a76-7924cba20c7f",
         "no_file_available": false,
         "status": "in progress",
-        "file_format": "mtx",
+        "file_format": "hdf5",
         "file_size": 50000,
         "lab": "jimmie-ye",
         "output_types": [
@@ -3671,7 +3670,7 @@
         "uuid": "2edd39f7-59cb-4e59-bb63-924cd38e6b90",
         "no_file_available": false,
         "status": "in progress",
-        "file_format": "mtx",
+        "file_format": "hdf5",
         "file_size": 50000,
         "lab": "jimmie-ye",
         "output_types": [
@@ -3710,7 +3709,7 @@
         "uuid": "ee3db7e0-27f9-48e8-a762-c965cde290b1",
         "no_file_available": false,
         "status": "in progress",
-        "file_format": "mtx",
+        "file_format": "hdf5",
         "file_size": 50000,
         "lab": "jimmie-ye",
         "output_types": [
@@ -3749,7 +3748,7 @@
         "uuid": "00293348-8047-4504-9ca8-980c7a218435",
         "no_file_available": false,
         "status": "in progress",
-        "file_format": "mtx",
+        "file_format": "hdf5",
         "file_size": 50000,
         "lab": "jimmie-ye",
         "output_types": [
@@ -3788,7 +3787,7 @@
         "uuid": "aa14bdc8-6a9e-4e67-94cd-18469a7b8ec1",
         "no_file_available": false,
         "status": "in progress",
-        "file_format": "mtx",
+        "file_format": "hdf5",
         "file_size": 50000,
         "lab": "jimmie-ye",
         "output_types": [
@@ -3827,7 +3826,7 @@
         "uuid": "1e98085f-4b2e-46c6-8273-ee0d92f7f505",
         "no_file_available": false,
         "status": "in progress",
-        "file_format": "mtx",
+        "file_format": "hdf5",
         "file_size": 50000,
         "lab": "jimmie-ye",
         "output_types": [
@@ -3866,7 +3865,7 @@
         "uuid": "931a1d1c-ccb9-49f0-bf3f-04aaf591769d",
         "no_file_available": false,
         "status": "in progress",
-        "file_format": "mtx",
+        "file_format": "hdf5",
         "file_size": 50000,
         "lab": "jimmie-ye",
         "output_types": [
@@ -3905,7 +3904,7 @@
         "uuid": "e5031922-05c0-497c-a852-3afb2292833e",
         "no_file_available": false,
         "status": "in progress",
-        "file_format": "mtx",
+        "file_format": "hdf5",
         "file_size": 50000,
         "lab": "jimmie-ye",
         "output_types": [
@@ -3944,7 +3943,7 @@
         "uuid": "e7c90149-b46f-4d3f-b2c5-d28a5c307023",
         "no_file_available": false,
         "status": "in progress",
-        "file_format": "mtx",
+        "file_format": "hdf5",
         "file_size": 50000,
         "lab": "jimmie-ye",
         "output_types": [
@@ -3983,7 +3982,7 @@
         "uuid": "3d8ddae2-bb5b-4676-bd0f-486e15005954",
         "no_file_available": false,
         "status": "in progress",
-        "file_format": "mtx",
+        "file_format": "hdf5",
         "file_size": 50000,
         "lab": "jimmie-ye",
         "output_types": [
@@ -4022,7 +4021,7 @@
         "uuid": "a223b710-b692-45c8-a9f8-b14c9cea9191",
         "no_file_available": false,
         "status": "in progress",
-        "file_format": "mtx",
+        "file_format": "hdf5",
         "file_size": 50000,
         "lab": "jimmie-ye",
         "output_types": [
@@ -4061,7 +4060,7 @@
         "uuid": "1981374b-608d-4be8-b8fa-f1189b9f5d92",
         "no_file_available": false,
         "status": "in progress",
-        "file_format": "mtx",
+        "file_format": "hdf5",
         "file_size": 50000,
         "lab": "jimmie-ye",
         "output_types": [
@@ -4100,7 +4099,7 @@
         "uuid": "eceaa0c5-f459-48b6-8815-3691e47fd241",
         "no_file_available": false,
         "status": "in progress",
-        "file_format": "mtx",
+        "file_format": "hdf5",
         "file_size": 50000,
         "lab": "jimmie-ye",
         "output_types": [
@@ -4139,7 +4138,7 @@
         "uuid": "cd725009-9a22-4be6-a25f-a61f4089ca42",
         "no_file_available": false,
         "status": "in progress",
-        "file_format": "mtx",
+        "file_format": "hdf5",
         "file_size": 50000,
         "lab": "jimmie-ye",
         "output_types": [
@@ -4178,7 +4177,7 @@
         "uuid": "eea9fee3-83ab-4243-a1e7-2d90735dcccd",
         "no_file_available": false,
         "status": "in progress",
-        "file_format": "mtx",
+        "file_format": "hdf5",
         "file_size": 50000,
         "lab": "jimmie-ye",
         "output_types": [
@@ -4217,7 +4216,7 @@
         "uuid": "17bb7890-a486-482d-aa89-413ad25144a6",
         "no_file_available": false,
         "status": "in progress",
-        "file_format": "mtx",
+        "file_format": "hdf5",
         "file_size": 50000,
         "lab": "jimmie-ye",
         "output_types": [
@@ -4256,7 +4255,7 @@
         "uuid": "a54bcccf-9936-44df-9119-de4407112efc",
         "no_file_available": false,
         "status": "in progress",
-        "file_format": "mtx",
+        "file_format": "hdf5",
         "file_size": 50000,
         "lab": "jimmie-ye",
         "output_types": [
@@ -4295,7 +4294,7 @@
         "uuid": "8f8a4e54-82ad-451a-8b44-404d12b306aa",
         "no_file_available": false,
         "status": "released",
-        "file_format": "mtx",
+        "file_format": "hdf5",
         "file_size": 50000,
         "lab": "peter-sims",
         "output_types": [
@@ -4331,7 +4330,7 @@
         "uuid": "87e204a6-bb4d-4643-81ab-dd0dfeddf85e",
         "no_file_available": false,
         "status": "released",
-        "file_format": "mtx",
+        "file_format": "hdf5",
         "file_size": 50000,
         "lab": "peter-sims",
         "output_types": [
@@ -4367,7 +4366,7 @@
         "uuid": "81e7945f-34dd-4621-96c4-5f7385957dde",
         "no_file_available": false,
         "status": "released",
-        "file_format": "mtx",
+        "file_format": "hdf5",
         "file_size": 50000,
         "lab": "peter-sims",
         "output_types": [
@@ -4403,7 +4402,7 @@
         "uuid": "9c9f2155-fbe4-457c-ad59-fe8bf33e8720",
         "no_file_available": false,
         "status": "released",
-        "file_format": "mtx",
+        "file_format": "hdf5",
         "file_size": 50000,
         "lab": "peter-sims",
         "output_types": [
@@ -4439,7 +4438,7 @@
         "uuid": "f65f3927-35ae-41ab-8dde-f6fc7db7f7ab",
         "no_file_available": false,
         "status": "released",
-        "file_format": "mtx",
+        "file_format": "hdf5",
         "file_size": 50000,
         "lab": "peter-sims",
         "output_types": [
@@ -4475,7 +4474,7 @@
         "uuid": "866290c6-1b90-4564-9ee1-1e1fa1d0c090",
         "no_file_available": false,
         "status": "released",
-        "file_format": "mtx",
+        "file_format": "hdf5",
         "file_size": 50000,
         "lab": "peter-sims",
         "output_types": [
@@ -4511,7 +4510,7 @@
         "uuid": "dcdab72d-22e2-467a-8ef5-93047ca0ec19",
         "no_file_available": false,
         "status": "released",
-        "file_format": "mtx",
+        "file_format": "hdf5",
         "file_size": 50000,
         "lab": "peter-sims",
         "output_types": [
@@ -4547,7 +4546,7 @@
         "uuid": "7ff69e7a-eaf8-44b9-bf68-63b51f3b71d9",
         "no_file_available": false,
         "status": "released",
-        "file_format": "mtx",
+        "file_format": "hdf5",
         "file_size": 50000,
         "lab": "peter-sims",
         "output_types": [
@@ -4583,7 +4582,7 @@
         "uuid": "0c4b86e7-ab7e-4b2f-b0c9-7f107af847b5",
         "no_file_available": false,
         "status": "released",
-        "file_format": "mtx",
+        "file_format": "hdf5",
         "file_size": 50000,
         "lab": "peter-sims",
         "output_types": [
@@ -4619,7 +4618,7 @@
         "uuid": "cd49e62b-6b07-40e7-a661-9d87c05746f4",
         "no_file_available": false,
         "status": "released",
-        "file_format": "mtx",
+        "file_format": "hdf5",
         "file_size": 50000,
         "lab": "peter-sims",
         "output_types": [
@@ -4656,7 +4655,7 @@
         "uuid": "6eff74d2-8a24-45ce-8737-68570d4fecc6",
         "no_file_available": false,
         "status": "released",
-        "file_format": "mtx",
+        "file_format": "hdf5",
         "file_size": 50000,
         "lab": "peter-sims",
         "output_types": [
@@ -4693,7 +4692,7 @@
         "uuid": "a01f5d06-0402-4278-9a0c-a49e37583e05",
         "no_file_available": false,
         "status": "released",
-        "file_format": "mtx",
+        "file_format": "hdf5",
         "file_size": 50000,
         "lab": "peter-sims",
         "output_types": [
@@ -4732,7 +4731,7 @@
         "uuid": "49453b99-cf44-400a-b590-7eefa4412feb",
         "no_file_available": false,
         "status": "released",
-        "file_format": "mtx",
+        "file_format": "hdf5",
         "file_size": 50000,
         "lab": "peter-sims",
         "output_types": [
@@ -4771,7 +4770,7 @@
         "uuid": "3f0bb6c2-174a-41bc-919a-547d4d6ba5cb",
         "no_file_available": false,
         "status": "released",
-        "file_format": "mtx",
+        "file_format": "hdf5",
         "file_size": 50000,
         "lab": "peter-sims",
         "output_types": [
@@ -4810,7 +4809,7 @@
         "uuid": "c4627be4-adb5-4570-9437-e8a14bb82cfa",
         "no_file_available": false,
         "status": "released",
-        "file_format": "mtx",
+        "file_format": "hdf5",
         "file_size": 50000,
         "lab": "peter-sims",
         "output_types": [
@@ -4849,7 +4848,7 @@
         "uuid": "84cec172-6c83-424d-9f0e-8bb8b234c770",
         "no_file_available": false,
         "status": "released",
-        "file_format": "mtx",
+        "file_format": "hdf5",
         "file_size": 50000,
         "lab": "peter-sims",
         "output_types": [
@@ -4888,7 +4887,7 @@
         "uuid": "9b87596c-9b83-4afa-9cde-b111ea7783ce",
         "no_file_available": false,
         "status": "released",
-        "file_format": "mtx",
+        "file_format": "hdf5",
         "file_size": 50000,
         "lab": "peter-sims",
         "output_types": [
@@ -4926,7 +4925,7 @@
         "uuid": "359f2af6-8daf-41c5-b53f-450b1f165567",
         "no_file_available": false,
         "status": "released",
-        "file_format": "mtx",
+        "file_format": "hdf5",
         "file_size": 50000,
         "lab": "peter-sims",
         "output_types": [
@@ -4962,7 +4961,7 @@
         "uuid": "e33a457b-13c6-4931-8bc0-4c20c8f0992c",
         "no_file_available": false,
         "status": "released",
-        "file_format": "mtx",
+        "file_format": "hdf5",
         "lab": "peter-sims",
         "output_types": [
             "gene quantifications"

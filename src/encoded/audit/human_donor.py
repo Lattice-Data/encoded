@@ -111,7 +111,7 @@ def audit_donor_dev_stage(value, system):
         )
         yield AuditFailure('inconsistent age, development', detail, level='ERROR')
         return
-    elif value['age_display'] == 'unknown' or '-' in value['age_display'] or '>' in value['age_display'] or '<' in value['age_display']:
+    elif value['age_display'] == 'unknown' or '-' in value['age_display'].replace('post-conception','') or '>' in value['age_display'] or '<' in value['age_display']:
         if dev.endswith(post_term_end_yr) or dev.endswith(post_term_end_mo) or dev.endswith(pre_term_end_wk):
             detail = ('Donor {} of age {} not expected age-specific development_ontology ({}).'.format(
                 audit_link(value['accession'], value['@id']),

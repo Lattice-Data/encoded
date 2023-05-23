@@ -233,7 +233,7 @@ class HumanPostnatalDonor(HumanDonor):
         dev_stage = request.embed(development_ontology, '@@object?skip_calculated=true').get('term_name')
         if dev_stage == f'{age}-{str(age_units)}-old human stage':
             return True
-        elif decades.get(dev_stage) == age + str(age_units) + 's':
+        elif decades.get(dev_stage) == age + ' ' + str(age_units) + 's':
             return True
 
         return False

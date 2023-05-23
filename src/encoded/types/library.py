@@ -42,12 +42,14 @@ class Library(Item,
         'protocol.assay_ontology',
         'donors',
         'donors.ethnicity',
+        'donors.causes_of_death',
         'donors.diseases',
         'donors.development_ontology',
         'donors.organism',
         'biosample_ontologies',
         'derived_from',
-        'derived_from.enriched_cell_types'
+        'derived_from.enriched_cell_types',
+        'derived_from.depleted_cell_types'
     ]
 
 

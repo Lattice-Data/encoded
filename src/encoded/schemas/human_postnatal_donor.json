@@ -72,7 +72,7 @@
             "required": ["living_at_sample_collection"],
             "properties": {
                 "living_at_sample_collection": {
-                    "enum": [false]
+                    "enum": ["False"]
                 }
             }
         },
@@ -80,7 +80,7 @@
             "required": ["living_at_sample_collection"],
             "properties": {
                 "living_at_sample_collection": {
-                    "enum": [false]
+                    "enum": ["False"]
                 }
             }
         },

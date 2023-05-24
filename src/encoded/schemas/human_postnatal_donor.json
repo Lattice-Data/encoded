@@ -159,7 +159,7 @@
     },
     "properties": {
         "schema_version": {
-            "default": "7"
+            "default": "8"
         },
         "age": {
             "comment": "For privacy purposes, any age 90 years or above is listed as '>89'. Submit 'variable' if samples in the database represent collection points when the donor was a different age and specify the appropriate age in the Tissue objects.",
@@ -191,9 +191,10 @@
             ]
         },
         "living_at_sample_collection": {
-            "title": "Living at sample collection",
-            "description": "If true, the donor was alive at the time of sample collection.",
-            "type": "boolean"
+            "enum": [
+                "True",
+                "False"
+            ]
         },
         "death_type": {
             "title": "Death type",

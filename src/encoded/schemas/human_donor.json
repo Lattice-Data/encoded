@@ -65,6 +65,11 @@
                 "linkTo": "OntologyTerm"
             }
         },
+        "living_at_sample_collection": {
+            "title": "Living at sample collection",
+            "description": "If true, the donor was alive at the time of sample collection.",
+            "type": "string"
+        },
         "reported_ethnicity": {
             "title": "Reported ethnicity",
             "description": "Free text value recorded as the ethnic group to which the donor belongs.",

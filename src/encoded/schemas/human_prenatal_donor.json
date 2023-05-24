@@ -83,6 +83,12 @@
             "title": "Carnegie stage basis",
             "description": "Measurement or phenotype used to assign Cargnegie stage for a human embryonic donor.",
             "type": "string"
+        },
+        "living_at_sample_collection": {
+            "default": "na",
+            "enum": [
+                "na"
+            ]
         }
     },
     "facets": {

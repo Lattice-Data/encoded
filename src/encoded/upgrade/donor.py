@@ -61,6 +61,6 @@ def human_donor_cause_of_death_removal(value, system):
 
 
 @upgrade_step('human_postnatal_donor', '7', '8')
-def human_donor_cause_of_death_removal(value, system):
+def human_donor_living_at_sample_collection_stringify(value, system):
 	if 'living_at_sample_collection' in value:
 		value['living_at_sample_collection'] = str(value['living_at_sample_collection'])

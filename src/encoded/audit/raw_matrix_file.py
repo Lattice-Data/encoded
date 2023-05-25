@@ -127,6 +127,26 @@ def audit_validated(value, system):
 			return
 
 
+def audit_gene_count(value, system):
+	'''
+	We check fastq metadata against the expected values based on the
+	library protocol used to generate the sequence data.
+	'''
+	if value['status'] in ['deleted']:
+		return
+
+	if value.get('feature_counts'):
+		for fc in value['feature_counts']:
+			if fc['feature_type'] == 'gene' and fc['feature_count'] < 16000:
+				detail = ('File {} has {} gene count, we require more to improve reusability.'.format(
+					audit_link(path_to_text(value['@id']), value['@id']),
+					fc['feature_count']
+					)
+				)
+				yield AuditFailure('low gene count', detail, level='ERROR')
+				return
+
+
 def metrics_types(value, system):
 	assays = value['assays']
 
@@ -177,6 +197,7 @@ function_dispatcher = {
 	'audit_complete_derived_from': audit_complete_derived_from,
 	'audit_read_count_compare': audit_read_count_compare,
 	'audit_validated': audit_validated,
+	'audit_gene_count': audit_gene_count,
 	'metrics_types': metrics_types
 }
 

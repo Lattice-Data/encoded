@@ -58,3 +58,9 @@ def human_donor_smoker_family_history(value, system):
 def human_donor_cause_of_death_removal(value, system):
 	if 'cause_of_death' in value:
 		del value['cause_of_death']
+
+
+@upgrade_step('human_postnatal_donor', '7', '8')
+def human_donor_cause_of_death_removal(value, system):
+	if 'living_at_sample_collection' in value:
+		value['living_at_sample_collection'] = str(value['living_at_sample_collection'])

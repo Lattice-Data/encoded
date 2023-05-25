@@ -143,7 +143,7 @@ def audit_gene_count(value, system):
 					fc['feature_count']
 					)
 				)
-				yield AuditFailure('file access not specified', detail, level='WARNING')
+				yield AuditFailure('low gene count', detail, level='ERROR')
 				return
 
 

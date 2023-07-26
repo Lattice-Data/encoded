@@ -104,6 +104,7 @@
                 "deactivation",
                 "medication",
                 "intervention",
+                "immunization",
                 "stimulation"
             ]
         },
@@ -157,7 +158,8 @@
                 "irradiation",
                 "protein",
                 "fasting",
-                "virus"
+                "virus",
+                "vaccine"
             ]
         },
         "treatment_term_id": {

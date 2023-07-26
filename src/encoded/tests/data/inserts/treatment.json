@@ -54,7 +54,7 @@
         "status": "released",
         "treatment_term_name": "mRNA COVID-19 Vaccine",
         "treatment_term_id": "NCIT:C181140",
-        "treatment_type": "antibody",
-        "purpose": "medication"
+        "treatment_type": "vaccine",
+        "purpose": "immunization"
     }
 ]

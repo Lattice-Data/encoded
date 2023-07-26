@@ -11,7 +11,11 @@
             "neil-henderson:ds1",
             "ramanuj-dasgupta:ds1",
             "dominic-grün:ds1",
-            "anna-williams:dataset2"
+            "anna-williams:dataset2",
+            "calliope-dendrou:dataset1",
+            "roser-vento-tormo:dataset23",
+            "jose-ordovas-montanes:ds2023",
+            "yu-hua-tseng:my_dataset"
         ],
         "dataset_title": "Dataset with a multiplexed Library",
         "description": "Used to test tools with pooling and demultiplexing",

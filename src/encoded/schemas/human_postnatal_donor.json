@@ -335,12 +335,17 @@
                 },
                 "fasting_glucose": {
                     "title": "Fasting plasma glucose or fasting blood glucose",
-                    "comment": "Healthy values: 3.5-5.5 g/dL",
+                    "comment": "Healthy values: 70-100 mg/dL (3.9-5.6 mmol/L)",
                     "type": "string"
                 },
                 "BUN": {
                     "title": "blood urea nitrogen test",
                     "comment": "Healthy values: 6-24 mg/dL (2.1-8.5 mmol/L ) but variable",
+                    "type": "string"
+                },
+                "leptin": {
+                    "title": "leptin",
+                    "comment": "Healthy values: female: 0.5-15.2 ng/mL, male: 0.5-12.5 ng/mL",
                     "type": "string"
                 },
                 "sCr": {

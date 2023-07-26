@@ -102,7 +102,7 @@
             "anna-greka:fetal_human_donorC"
         ],
         "derivation_process": [
-            "dissection"
+            "swab"
         ],
         "biosample_ontology": "UBERON_0002113",
         "collection_to_preservation_interval": "6",

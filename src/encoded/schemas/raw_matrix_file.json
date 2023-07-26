@@ -203,6 +203,7 @@
             "title": "Value units",
             "description": "The units for the expression values.",
             "type": "array",
+            "uniqueItems": true,
             "items": {
                 "type": "string",
                 "enum": [

@@ -17,7 +17,8 @@
         "notes": "proximal_tubule",
         "aliases": [
             "lattice:special_cell_type"
-        ]
+        ],
+        "cell_state": "differentiating"
     },
     {
         "uuid": "4c571596-2b0e-41f6-aaf2-950abfd04f58",

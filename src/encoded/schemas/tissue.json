@@ -138,7 +138,8 @@
                     "open biopsy",
                     "aspiration",
                     "density centrifugation",
-                    "enzymatic digestion"
+                    "enzymatic digestion",
+                    "swab"
                 ]
             }
         },
@@ -285,6 +286,10 @@
         },
         "biosample_ontology.term_name": {
             "title": "Biosample term name",
+            "type": "typeahead"
+        },
+        "source": {
+            "title": "Source",
             "type": "typeahead"
         },
         "diseases.term_name": {

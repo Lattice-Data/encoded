@@ -83,7 +83,7 @@
             "anna-greka:sc_donorA1_S1_L002_R2_001.fastq"
         ],
         "assembly": "GRCh38",
-        "genome_annotation": "GENCODE 32",
+        "genome_annotation": "GENCODE 42",
         "md5sum": "30c7622f6007434c37f4c6d30e42d465",
         "validated": true,
         "accession": "LATDF671HHT",

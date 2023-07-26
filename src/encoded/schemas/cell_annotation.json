@@ -53,6 +53,7 @@
             "description": "The distinguishing state of a cell that allows for futher cell subtyping, but not meant to be capture in the CL ontologies",
             "type": "string",
             "enum": [
+                "differentiating",
                 "proliferating",
                 "activated",
                 "resting"

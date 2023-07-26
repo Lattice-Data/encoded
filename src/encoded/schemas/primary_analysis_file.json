@@ -21,6 +21,13 @@
             "description": "Genome annotation that file was generated with.",
             "type": "string",
             "enum": [
+                "GENCODE 44",
+                "GENCODE 43",
+                "GENCODE 42",
+                "GENCODE 41",
+                "GENCODE 40",
+                "GENCODE 39",
+                "GENCODE 38",
                 "GENCODE 37",
                 "GENCODE 36",
                 "GENCODE 35",

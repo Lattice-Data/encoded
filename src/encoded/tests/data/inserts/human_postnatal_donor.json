@@ -29,7 +29,8 @@
         "height_unit": "in",
         "test_results": {
             "HIV-1/HBV/HCV": "negative",
-            "GFFR": "105"
+            "GFFR": "105",
+            "leptin": "5.2 ng/mL"
         },
         "smoking_history": "1 pack a week for 10 years",
         "smoker": "current",

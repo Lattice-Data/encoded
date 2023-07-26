@@ -8,6 +8,17 @@ from .formatter import (
 )
 
 
+def cell_type_col_in_author_cols(value,system):
+    if value.get('author_columns') and value.get('author_cell_type_column'):
+        if value['author_cell_type_column'] in value['author_columns']:
+            detail = ('File {} lists {} in author_columns and author_cell_type_column.'.format(
+                audit_link(value['accession'], value['@id']),
+                value['author_cell_type_column']
+                )
+            )
+            yield AuditFailure('author_cell_type_column in author_columns', detail, 'ERROR')
+
+
 def mappings_antibodies(value,system):
     if value.get('antibody_mappings'):
         labels = [am['label'] for am in value['antibody_mappings']]
@@ -160,6 +171,7 @@ def check_author_columns(value, system):
 
 
 function_dispatcher = {
+    'cell_type_col_in_author_cols': cell_type_col_in_author_cols,
     'ontology_check_dis': ontology_check_dis,
     'duplicated_derfrom': duplicated_derfrom,
     'mappings_antibodies': mappings_antibodies,

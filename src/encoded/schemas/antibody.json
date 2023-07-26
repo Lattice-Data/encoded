@@ -48,6 +48,7 @@
             "title": "Product IDs",
             "description": "The product identifier provided by the originating lab or vendor.",
             "type": "array",
+            "uniqueItems": true,
             "items": {
                 "title": "Product ID",
                 "type": "string",
@@ -99,6 +100,7 @@
             "title": "Targets",
             "description": "The object representing the protein, protein complex, etc. that is the intended target of the Antibody.",
             "type": "array",
+            "uniqueItems": true,
             "items": {
                 "title": "Target",
                 "type": "string",

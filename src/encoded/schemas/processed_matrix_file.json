@@ -182,6 +182,7 @@
             "title": "Author columns",
             "description": "A list of column labels in the matrix that should be retained when transferring the data to cellxgene.",
             "type": "array",
+            "uniqueItems": true,
             "items": {
                 "title": "Author column",
                 "type": "string"
@@ -226,6 +227,7 @@
                     "title": "Values",
                     "description": "The values in the corresponding obs field that should be annotated as primary:True",
                     "type": "array",
+                    "uniqueItems": true,
                     "items": {
                         "type": "string"
                     }

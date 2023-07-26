@@ -8,7 +8,8 @@
         "amount": 50,
         "amount_units": "mg",
         "treatment_type": "chemical",
-        "treatment_term_name": "EFO:0003316",
+        "treatment_term_id": "EFO:0003316",
+        "treatment_term_name": "basic fibroblast growth factor",
         "purpose": "activation",
         "duration": 1,
         "duration_units": "day"
@@ -44,5 +45,16 @@
         "treatment_term_name": "mock epidermal growth factor",
         "treatment_type": "protein",
         "purpose": "control"
+    },
+    {
+        "uuid": "11f29b2d-de32-444d-b2e1-e5e11a19ba79",
+        "aliases": [
+            "lattice:vax"
+        ],
+        "status": "released",
+        "treatment_term_name": "mRNA COVID-19 Vaccine",
+        "treatment_term_id": "NCIT:C181140",
+        "treatment_type": "vaccine",
+        "purpose": "immunization"
     }
 ]

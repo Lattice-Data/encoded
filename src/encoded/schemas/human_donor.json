@@ -80,6 +80,7 @@
             "title": "Family medical history",
             "description": "A list of known conditions present in the donor's family and details of that history.",
             "type": "array",
+            "uniqueItems": true,
             "items": {
                 "type": "object",
                 "additionalProperties": false,

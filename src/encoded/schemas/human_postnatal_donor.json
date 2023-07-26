@@ -237,6 +237,7 @@
             "title": "Causes of death",
             "description": "Description of medical/accidental causes of death of the donor. Leave blank if the donor is living.",
             "type": "array",
+            "uniqueItems": true,
             "items": {
                 "title": "Cause of death",
                 "type": "string",

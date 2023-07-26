@@ -107,6 +107,7 @@
             "title": "Genetic modifications",
             "description": "Any genetic alteration of a biosample.",
             "type": "array",
+            "uniqueItems": true,
             "items": {
                 "type": "string"
             }

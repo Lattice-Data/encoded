@@ -183,6 +183,7 @@
             "title": "Enrichment factors",
             "description": "The protein targets of antibodies or gene targets of genetic labeling or other enrichment factor.",
             "type": "array",
+            "uniqueItems": true,
             "items": {
                 "title": "Enrichment factor",
                 "type": "string"

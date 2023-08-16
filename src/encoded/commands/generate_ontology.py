@@ -299,11 +299,11 @@ def getTermStructure():
 def main():
     ''' Downloads various ontologies and create a JSON file '''
 
-    efo_url = 'http://www.ebi.ac.uk/efo/efo.owl'
-    uberon_url = 'http://purl.obolibrary.org/obo/uberon.owl'
-    mondo_url = 'http://purl.obolibrary.org/obo/mondo.owl'
-    hancestro_url = 'http://purl.obolibrary.org/obo/hancestro.owl'
-    cl_url = 'http://purl.obolibrary.org/obo/cl.owl'
+    efo_url = 'https://github.com/EBISPOT/efo/releases/download/v3.56.0/efo.owl'
+    uberon_url = 'https://github.com/obophenotype/uberon/releases/download/v2023-06-28/uberon.owl'
+    mondo_url = 'https://github.com/monarch-initiative/mondo/releases/download/v2023-07-03/mondo.owl'
+    hancestro_url = 'https://github.com/EBISPOT/ancestro/raw/2.6/hancestro.owl'
+    cl_url = 'https://github.com/obophenotype/cell-ontology/releases/download/v2023-06-22/cl.owl'
     hsapdv_url = 'http://purl.obolibrary.org/obo/hsapdv.owl'
     mmusdv_url = 'http://purl.obolibrary.org/obo/mmusdv.owl'
     ncit_url = 'http://purl.obolibrary.org/obo/ncit.owl'

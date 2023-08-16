@@ -53,6 +53,6 @@ How to update the ontology versions
 [OLS-MmusDv]: https://www.ebi.ac.uk/ols4/ontologies/mmusdv
 [NCI Thesaurus (NCIT)]: https://github.com/NCI-Thesaurus/thesaurus-obo-edition
 [OLS-NCIT]: https://www.ebi.ac.uk/ols4/ontologies/ncit
-[generate_ontology.py]: ../commands/generate_ontology.py
+[generate_ontology.py]: ../commands/generate_ontology.py#L302
 [CELLxGENE schema]: https://github.com/chanzuckerberg/single-cell-curation/tree/main/schema
 [buildout.cfg]: ../../../buildout.cfg

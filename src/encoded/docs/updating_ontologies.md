@@ -22,7 +22,7 @@ Ontologies used
 How to update the ontology versions
 ---------------- 
 
-1. Update the `*_url` variables in `src/encoded/commands/generate_ontology.py` (starting Ln302) based on corresponding .owl **Download** links found in the current [CELLxGENE schema]. NCIT is not a part of the CELLxGENE schema so use the version found at OLS, which will have a stable URL.
+1. Update the `*_url` variables in [generate_ontology.py] (starting Ln302) based on the corresponding .owl **Download** links found in the current [CELLxGENE schema]. NCIT is not a part of the CELLxGENE schema so use the version found at OLS, which will have a stable URL.
 
 2. Run `python src/encoded/commands/generate_ontology.py` to generate a file named `ontology-YYYY-MM-DD.json`
 
@@ -34,10 +34,10 @@ How to update the ontology versions
 
 	`curl -o ontology.json https://latticed-build.s3-us-west-2.amazonaws.com/ontology/ontology-YYYY-MM-DD.json`
 
-5. Update the **Version in use** and **Current ontology.json:** above
+5. Update the links for **File used**, **Version in use** and **Current ontology.json:** above
 
 
-[Uber-anatomy ontology (UBERON)]: http://uberon.org
+[Uber-anatomy ontology (UBERON)]: http://obophenotype.github.io/uberon/
 [UBERON]: https://github.com/obophenotype/uberon/releases/tag/v2023-06-28
 [Cell Ontology (CL)]: https://github.com/obophenotype/cell-ontology
 [CL]: https://github.com/obophenotype/cell-ontology/releases/tag/v2023-06-22
@@ -53,5 +53,6 @@ How to update the ontology versions
 [OLS-MmusDv]: https://www.ebi.ac.uk/ols4/ontologies/mmusdv
 [NCI Thesaurus (NCIT)]: https://github.com/NCI-Thesaurus/thesaurus-obo-edition
 [OLS-NCIT]: https://www.ebi.ac.uk/ols4/ontologies/ncit
+[generate_ontology.py]: ../commands/generate_ontology.py
 [CELLxGENE schema]: https://github.com/chanzuckerberg/single-cell-curation/tree/main/schema
 [buildout.cfg]: ../../../buildout.cfg

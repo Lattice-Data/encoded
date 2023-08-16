@@ -164,6 +164,14 @@ def cellxgene_links(value, system):
         )
         yield AuditFailure('missing cellxgene link', detail, 'ERROR')
 
+    elif 'cellxgene_uuid' not in value and len(value['dataset']['cellxgene_urls']) > 0:
+        detail = ('{} has cellxgene_urls but File {} has no cellxgene_uuid.'.format(
+            value['dataset']['accession'],
+            audit_link(value['accession'], value['@id'])
+            )
+        )
+        yield AuditFailure('missing cellxgene uuid', detail, 'ERROR')
+
 
 def check_author_columns(value, system):
     reserved = ['assay','cell_type','development_stage',

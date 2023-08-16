@@ -95,6 +95,16 @@ def mappings_matrices(value,system):
             )
             yield AuditFailure('cell_label_mappings error', detail, 'ERROR')
 
+        mxs = [clm['raw_matrix'] for clm in value['cell_label_mappings']]
+        dups = [m for m in mxs if mxs.count(m) > 1]
+        if dups:
+            detail = ('File {} contains duplicate raw_matrix {} in cell_label_mappings.'.format(
+                audit_link(value['accession'], value['@id']),
+                ','.join(set(dups))
+                )
+            )
+            yield AuditFailure('cell_label_mappings error', detail, 'ERROR')
+
         for clm in value['cell_label_mappings']:
             derived_from = [d['@id'] for d in value['derived_from']]
             if clm['raw_matrix'] not in derived_from:

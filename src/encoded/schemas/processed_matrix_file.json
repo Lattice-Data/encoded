@@ -4,7 +4,7 @@
     "id": "/profiles/processed_matrix_file.json",
     "$schema": "http://json-schema.org/draft-04/schema#",
     "type": "object",
-    "required": ["dataset", "description", "output_types", "derived_from", "is_primary_data", "X_normalized"],
+    "required": ["dataset", "description", "output_types", "derived_from", "is_primary_data", "X_normalized", "feature_keys"],
     "identifyingProperties": ["uuid", "accession", "aliases"],
     "additionalProperties": false,
     "mixinProperties": [

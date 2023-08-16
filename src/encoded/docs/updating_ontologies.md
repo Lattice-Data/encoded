@@ -22,7 +22,7 @@ Ontologies used
 How to update the ontology versions
 ---------------- 
 
-1. Update the `*_url` variables in [generate_ontology.py] (starting Ln302) based on the corresponding .owl **Download** links found in the current [CELLxGENE schema]. NCIT is not a part of the CELLxGENE schema so use the version found at OLS, which will have a stable URL.
+1. Update the `*_url` variables in [generate_ontology.py] based on the corresponding .owl **Download** links found in the current [CELLxGENE schema]. NCIT is not a part of the CELLxGENE schema so use the version found at OLS, which will have a stable URL.
 
 2. Run `python src/encoded/commands/generate_ontology.py` to generate a file named `ontology-YYYY-MM-DD.json`
 
@@ -55,4 +55,4 @@ How to update the ontology versions
 [OLS-NCIT]: https://www.ebi.ac.uk/ols4/ontologies/ncit
 [generate_ontology.py]: ../commands/generate_ontology.py#L302
 [CELLxGENE schema]: https://github.com/chanzuckerberg/single-cell-curation/tree/main/schema
-[buildout.cfg]: ../../../buildout.cfg
+[buildout.cfg]: ../../../buildout.cfg#L202

@@ -193,12 +193,27 @@ def metrics_types(value, system):
 			yield AuditFailure('redundant metrics', detail, level='ERROR')
 
 
+def annotation_not_genes(value, system):
+	if value['status'] in ['deleted']:
+		return
+
+	if value.get('genome_annotation'):
+		if 'gene quantifications' not in value.get('output_types') and 'transcript quantifications' not in value.get('output_types'):
+			detail = ('File {} has genome_annotation but does not have gene/transcript quantifications.'.format(
+				audit_link(path_to_text(value['@id']), value['@id'])
+				)
+			)
+			yield AuditFailure('annotation without gene quantifications', detail, level='ERROR')
+			return
+
+
 function_dispatcher = {
 	'audit_complete_derived_from': audit_complete_derived_from,
 	'audit_read_count_compare': audit_read_count_compare,
 	'audit_validated': audit_validated,
 	'audit_gene_count': audit_gene_count,
-	'metrics_types': metrics_types
+	'metrics_types': metrics_types,
+	'annotation_not_genes': annotation_not_genes
 }
 
 @audit_checker('RawMatrixFile',

@@ -140,6 +140,9 @@
                 ]
             }
         },
+        "genome_annotation": {
+            "comment": "Only submit if reads were mapped to this transcriptome (not if the transcriptome was used to convert peaks to genes)."
+        },
         "background_barcodes_included": {
             "title": "Background barcodes included",
             "description": "True if non-biological observations are expected to be in the data.",

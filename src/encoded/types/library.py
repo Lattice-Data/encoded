@@ -118,16 +118,7 @@ class Library(Item,
         "title": "Assay",
         "description": "The general assay used for this Library.",
         "comment": "Do not submit. This is a calculated property",
-        "type": "string",
-        "enum": [
-            "snATAC-seq",
-            "scRNA-seq",
-            "snRNA-seq",
-            "CITE-seq",
-            "bulk ATAC-seq",
-            "bulk RNA-seq",
-            "spatial transcriptomics"
-        ]
+        "type": "string"
     })
     def assay(self, request, derived_from, protocol):
         protocolObject = request.embed(protocol, '@@object?skip_calculated=true')

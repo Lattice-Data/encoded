@@ -15,6 +15,9 @@
         "output_types": [
             "gene quantifications"
         ],
+        "feature_keys": [
+            "gene symbol"
+        ],
         "uuid": "e7e83b90-a02d-497c-937f-83c475477949",
         "accession": "LATDF417SAQ",
         "description": "There's organoid data in this one!",

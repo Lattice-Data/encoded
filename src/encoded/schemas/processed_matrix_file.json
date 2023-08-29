@@ -4,7 +4,7 @@
     "id": "/profiles/processed_matrix_file.json",
     "$schema": "http://json-schema.org/draft-04/schema#",
     "type": "object",
-    "required": ["dataset", "description", "output_types", "derived_from", "is_primary_data", "X_normalized"],
+    "required": ["dataset", "description", "output_types", "derived_from", "is_primary_data", "X_normalized", "feature_keys"],
     "identifyingProperties": ["uuid", "accession", "aliases"],
     "additionalProperties": false,
     "mixinProperties": [
@@ -82,6 +82,16 @@
             "properties": {
                 "is_primary_data": {
                     "enum": ["mixed"]
+                }
+            }
+        },
+        "gene_activity_genome_annotation": {
+            "required": ["output_types"],
+            "properties": {
+                "output_types": {
+                    "enum": [
+                        ["gene quantifications"]
+                    ]
                 }
             }
         },
@@ -353,6 +363,12 @@
                     }
                 }
             }
+        },
+        "gene_activity_genome_annotation": {
+            "title": "Gene activity genome annotation",
+            "description": "Information regarding the reference used to convert from peaks to gene activity that wranglers used to map symbols to Ensembl IDs - could be a software package, a file name or ftp link, etc.",
+            "type": "string",
+            "comment": "Should only be submitted for a matrix with gene features (not peaks) from an epigenetic assay (e.g. ATAC-seq, Methyl-seq)."
         },
         "antibody_mappings": {
             "title": "Antibody mappings",

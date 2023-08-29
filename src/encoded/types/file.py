@@ -523,15 +523,16 @@ class ProcessedMatrixFile(AnalysisFile):
         },
         "notSubmittable": True,
     })
-    def genome_annotations(self, request, derived_from):
-        refs = set()
-        for f in derived_from:
-            obj = request.embed(f, '@@object')
-            if obj.get('genome_annotation'):
-                refs.add(obj.get('genome_annotation'))
-            elif obj.get('genome_annotations'):
-                refs.update(obj.get('genome_annotations'))
-        return sorted(refs)
+    def genome_annotations(self, request, derived_from, gene_activity_genome_annotation=None):
+        if not gene_activity_genome_annotation:
+            refs = set()
+            for f in derived_from:
+                obj = request.embed(f, '@@object')
+                if obj.get('genome_annotation'):
+                    refs.add(obj.get('genome_annotation'))
+                elif obj.get('genome_annotations'):
+                    refs.update(obj.get('genome_annotations'))
+            return sorted(refs)
 
 
     @calculated_property(schema={

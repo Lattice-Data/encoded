@@ -85,6 +85,16 @@
                 }
             }
         },
+        "gene_activity_genome_annotation": {
+            "required": ["output_types"],
+            "properties": {
+                "output_types": {
+                    "enum": [
+                        ["gene quantifications"]
+                    ]
+                }
+            }
+        },
         "is_primary_data": {
             "oneOf": [
                 {
@@ -353,6 +363,12 @@
                     }
                 }
             }
+        },
+        "gene_activity_genome_annotation": {
+            "title": "Gene activity genome annotation",
+            "description": "Information regarding the reference used to convert from peaks to gene activity that wranglers used to map symbols to Ensembl IDs - could be a software package, a file name or ftp link, etc.",
+            "type": "string",
+            "comment": "Should only be submitted for a matrix with gene features (not peaks) from an epigenetic assay (e.g. ATAC-seq, Methyl-seq)."
         },
         "antibody_mappings": {
             "title": "Antibody mappings",

@@ -156,7 +156,7 @@ def duplicated_derfrom(value, system):
 
 
 def cellxgene_links(value, system):
-    if 'cellxgene_uuid' in value and len(value['dataset']['cellxgene_urls']) == 0:
+    if 'cellxgene_uuid' in value and len(value['dataset'].get('cellxgene_urls',[])) == 0:
         detail = ('File {} has cellxgene_uuid but {} has no cellxgene_urls.'.format(
             audit_link(value['accession'], value['@id']),
             value['dataset']['accession']
@@ -164,7 +164,7 @@ def cellxgene_links(value, system):
         )
         yield AuditFailure('missing cellxgene link', detail, 'ERROR')
 
-    elif 'cellxgene_uuid' not in value and len(value['dataset']['cellxgene_urls']) > 0:
+    elif 'cellxgene_uuid' not in value and len(value['dataset'].get('cellxgene_urls',[])) > 0:
         detail = ('{} has cellxgene_urls but File {} has no cellxgene_uuid.'.format(
             value['dataset']['accession'],
             audit_link(value['accession'], value['@id'])
@@ -188,6 +188,33 @@ def check_author_columns(value, system):
         yield AuditFailure('CxG schema clash', detail, 'ERROR')
 
 
+def gene_activity_genome_annotation(value, system):
+    gene_act_assays = ['snATAC-seq','scMethyl-seq','snMethyl-seq']
+    matching_assays = [a for a in value.get('assays',[]) if a in gene_act_assays]
+
+    if value.get('gene_activity_genome_annotation'):
+        if value.get('output_types') != ['gene quantifications']:
+            detail = ('File {} has gene_activity_genome_annotation but output_types is not gene quantifications.'.format(
+                audit_link(value['accession'], value['@id'])
+                )
+            )
+            yield AuditFailure('gene activity inconsistency', detail, 'ERROR')
+
+        if len(matching_assays) == 0:
+            detail = ('File {} has gene_activity_genome_annotation but no epigenetic assay.'.format(
+                audit_link(value['accession'], value['@id'])
+                )
+            )
+            yield AuditFailure('gene activity inconsistency', detail, 'ERROR')
+
+    elif value.get('output_types') == ['gene quantifications'] and len(matching_assays) == len(value.get('assays',[])):
+        detail = ('File {} has no gene_activity_genome_annotation filled in.'.format(
+            audit_link(value['accession'], value['@id'])
+            )
+        )
+        yield AuditFailure('gene activity inconsistency', detail, 'ERROR')
+
+
 function_dispatcher = {
     'cell_type_col_in_author_cols': cell_type_col_in_author_cols,
     'ontology_check_dis': ontology_check_dis,
@@ -196,7 +223,8 @@ function_dispatcher = {
     'mappings_donors': mappings_donors,
     'mappings_matrices': mappings_matrices,
     'cellxgene_links': cellxgene_links,
-    'check_author_columns': check_author_columns
+    'check_author_columns': check_author_columns,
+    'gene_activity_genome_annotation': gene_activity_genome_annotation
 }
 
 @audit_checker('ProcessedMatrixFile',

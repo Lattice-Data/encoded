@@ -15,7 +15,12 @@
             "calliope-dendrou:dataset1",
             "roser-vento-tormo:dataset23",
             "jose-ordovas-montanes:ds2023",
-            "yu-hua-tseng:my_dataset"
+            "yu-hua-tseng:my_dataset",
+            "anuradhani-kasturiratne:the_one",
+            "khadija-irfan-khawaja:the_one",
+            "partha-majumder:the_one",
+            "varodom-charoensawan:the_one",
+            "yulia-medvedeva:the_one"
         ],
         "dataset_title": "Dataset with a multiplexed Library",
         "description": "Used to test tools with pooling and demultiplexing",

@@ -288,6 +288,9 @@
         "read_count": {
             "title": "Read count"
         },
+        "donors.donor_id": {
+            "title": "Donor ID"
+        },
         "donors.age_display": {
             "title": "Donor age"
         },

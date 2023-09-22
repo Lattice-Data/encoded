@@ -32,7 +32,7 @@ def audit_term(value, system):
         return
 
     if term_id not in ontology:
-        detail = ('BiosampleType {} specifies a term_id {} '
+        detail = ('OntologyTerm {} specifies a term_id {} '
             'that is not part of the {} ontology.'.format(
                 audit_link(path_to_text(value['@id']), value['@id']),
                 term_id,

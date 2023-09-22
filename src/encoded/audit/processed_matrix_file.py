@@ -165,18 +165,20 @@ def cellxgene_links(value, system):
         yield AuditFailure('missing cellxgene link', detail, 'ERROR')
 
     elif 'cellxgene_uuid' not in value and len(value['dataset'].get('cellxgene_urls',[])) > 0:
-        detail = ('{} has cellxgene_urls but File {} has no cellxgene_uuid.'.format(
-            value['dataset']['accession'],
-            audit_link(value['accession'], value['@id'])
+        if value['output_types'] == ['gene quantifications']:
+            detail = ('{} has cellxgene_urls but File {} has no cellxgene_uuid.'.format(
+                value['dataset']['accession'],
+                audit_link(value['accession'], value['@id'])
+                )
             )
-        )
-        yield AuditFailure('missing cellxgene uuid', detail, 'ERROR')
+            yield AuditFailure('missing cellxgene uuid', detail, 'ERROR')
 
 
 def check_author_columns(value, system):
     reserved = ['assay','cell_type','development_stage',
         'disease','self_reported_ethnicity','organism',
-        'sex','tissue','donor_id','is_primary_data','suspension_type']
+        'sex','tissue','donor_id','is_primary_data','suspension_type',
+        'tissue_type']
 
     clash = [c for c in value.get('author_columns',[]) if c in reserved]
     if clash:

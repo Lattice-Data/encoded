@@ -399,7 +399,8 @@
             "title": "CELLxGENE UUID",
             "description": "The UUID of the CELLxGENE Dataset representing this matrix",
             "type": "string",
-            "pattern": "^([0-9a-f]{8}\\-[0-9a-f]{4}\\-[0-9a-f]{4}\\-[0-9a-f]{4}\\-[0-9a-f]{12})$"
+            "pattern": "^([0-9a-f]{8}\\-[0-9a-f]{4}\\-[0-9a-f]{4}\\-[0-9a-f]{4}\\-[0-9a-f]{12})$",
+            "uniqueKey": "processed_matrix_file:cellxgene_uuid"
         },
         "spatial_s3_uri": {
             "title": "Spatial s3 URI",

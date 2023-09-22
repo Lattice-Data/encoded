@@ -85,35 +85,46 @@ def mappings_donors(value,system):
 
 def mappings_matrices(value,system):
     if value.get('cell_label_mappings'):
+        derived_from = [d['@id'] for d in value['derived_from']]
+        mxs = [clm['raw_matrix'] for clm in value['cell_label_mappings']]
         labels = [clm['label'] for clm in value['cell_label_mappings']]
-        dups = [l for l in labels if labels.count(l) > 1]
-        if dups:
+
+        dup_labels = [l for l in labels if labels.count(l) > 1]
+        if dup_labels:
             detail = ('File {} contains duplicate labels {} in cell_label_mappings.'.format(
                 audit_link(value['accession'], value['@id']),
-                ','.join(set(dups))
+                ','.join(set(dup_labels))
                 )
             )
             yield AuditFailure('cell_label_mappings error', detail, 'ERROR')
 
-        mxs = [clm['raw_matrix'] for clm in value['cell_label_mappings']]
-        dups = [m for m in mxs if mxs.count(m) > 1]
-        if dups:
+        dup_mxs = [m for m in mxs if mxs.count(m) > 1]
+        if dup_mxs:
             detail = ('File {} contains duplicate raw_matrix {} in cell_label_mappings.'.format(
                 audit_link(value['accession'], value['@id']),
-                ','.join(set(dups))
+                ','.join(set(dup_mxs))
                 )
             )
             yield AuditFailure('cell_label_mappings error', detail, 'ERROR')
 
-        for clm in value['cell_label_mappings']:
-            derived_from = [d['@id'] for d in value['derived_from']]
-            if clm['raw_matrix'] not in derived_from:
-                detail = ('File {} contains {} in cell_label_mappings but not derived_from.'.format(
-                    audit_link(value['accession'], value['@id']),
-                    clm['raw_matrix']
-                    )
+
+        missing_in_df = [m for m in mxs if m not in derived_from]
+        if missing_in_df:
+            detail = ('File {} contains {} in cell_label_mappings but not derived_from.'.format(
+                audit_link(value['accession'], value['@id']),
+                ','.join(missing_in_df)
                 )
-                yield AuditFailure('cell_label_mappings error', detail, 'ERROR')
+            )
+            yield AuditFailure('cell_label_mappings error', detail, 'ERROR')
+
+        missing_in_clm = [d for d in derived_from if d not in mxs]
+        if missing_in_clm:
+            detail = ('File {} contains {} in derived_from but not cell_label_mappings.'.format(
+                audit_link(value['accession'], value['@id']),
+                ','.join(missing_in_clm)
+                )
+            )
+            yield AuditFailure('cell_label_mappings error', detail, 'ERROR')
 
 
 def ontology_check_dis(value, system):
@@ -165,18 +176,20 @@ def cellxgene_links(value, system):
         yield AuditFailure('missing cellxgene link', detail, 'ERROR')
 
     elif 'cellxgene_uuid' not in value and len(value['dataset'].get('cellxgene_urls',[])) > 0:
-        detail = ('{} has cellxgene_urls but File {} has no cellxgene_uuid.'.format(
-            value['dataset']['accession'],
-            audit_link(value['accession'], value['@id'])
+        if value['output_types'] == ['gene quantifications']:
+            detail = ('{} has cellxgene_urls but File {} has no cellxgene_uuid.'.format(
+                value['dataset']['accession'],
+                audit_link(value['accession'], value['@id'])
+                )
             )
-        )
-        yield AuditFailure('missing cellxgene uuid', detail, 'ERROR')
+            yield AuditFailure('missing cellxgene uuid', detail, 'ERROR')
 
 
 def check_author_columns(value, system):
     reserved = ['assay','cell_type','development_stage',
         'disease','self_reported_ethnicity','organism',
-        'sex','tissue','donor_id','is_primary_data','suspension_type']
+        'sex','tissue','donor_id','is_primary_data','suspension_type',
+        'tissue_type']
 
     clash = [c for c in value.get('author_columns',[]) if c in reserved]
     if clash:

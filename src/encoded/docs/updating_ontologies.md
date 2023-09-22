@@ -12,7 +12,7 @@ Ontologies used
 | [Cell Ontology (CL)] | `cl.owl` from [CL] | 2023-06-22 |
 | [Experimental Factor Ontology (EFO)] | `efo.owl` from [EFO] | 3.56.0 |
 | [Mondo Disease Ontology (MONDO)] | `mondo.owl` from [MONDO] | 2023-07-03 |
-| [Human Ancestry Ontology (HANCESTRO)] | `hancestro.owl` from [HANCESTRO] | 2023-07-08 |
+| [Human Ancestry Ontology (HANCESTRO)] | `hancestro.owl` from [HANCESTRO] | 2.6 |
 | [Human Developmental Stage Ontology (HsapDv)] | `hsapdv.owl` from [OLS-HsapDv] | 2020-03-10 |
 | [Mouse Developmental Stage Ontology (MmusDv)] | `mmusdv.owl` from [OLS-MmusDv] | 2020-03-10 |
 | [NCI Thesaurus (NCIT)] | `ncit.owl` from [OLS-NCIT] | 2022-08-19 |

@@ -14,7 +14,6 @@
         {"$ref": "mixins.json#/uuid"},
         {"$ref": "mixins.json#/accession"},
         {"$ref": "mixins.json#/submitted"},
-        {"$ref": "mixins.json#/supersedes"},
         {"$ref": "mixins.json#/notes"},
         {"$ref": "mixins.json#/references"},
         {"$ref": "mixins.json#/documents"},
@@ -109,13 +108,6 @@
         },
         "documents": {
             "description": "Protocols or other documents that describe the assay or the results (not data files)."
-        },
-        "supersedes": {
-            "items": {
-                "title": "Supersedes",
-                "type": "string",
-                "linkTo": "Dataset"
-            }
         }
     },
     "facets": {

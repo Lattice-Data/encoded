@@ -549,13 +549,10 @@ PHASE1_PIPELINES = {
         remove_keys('lab', 'submits_for'),
     ],
     'dataset': [
-        remove_keys('related_files', 'supersedes'),
+        remove_keys('related_files'),
     ],
     'human_postnatal_donor': [
         remove_keys('parents', 'children', 'siblings', 'twin'),
-    ],
-    'file': [
-        remove_keys('supersedes')
     ]
 }
 

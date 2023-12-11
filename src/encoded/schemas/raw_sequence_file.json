@@ -14,7 +14,6 @@
         {"$ref": "mixins.json#/accession"},
         {"$ref": "mixins.json#/dbxrefs"},
         {"$ref": "mixins.json#/notes"},
-        {"$ref": "mixins.json#/supersedes"},
         {"$ref": "mixins.json#/software"},
         {"$ref": "mixins.json#/submitted"},
         {"$ref": "mixins.json#/lab"},
@@ -49,13 +48,6 @@
     "properties": {
         "schema_version": {
             "default": "3"
-        },
-        "supersedes": {
-            "items": {
-                "title": "Supersedes",
-                "type": "string",
-                "linkTo": "RawSequenceFile"
-            }
         },
         "dbxrefs": {
             "items": {

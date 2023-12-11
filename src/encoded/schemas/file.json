@@ -22,7 +22,8 @@
         "s3_uri": {
             "title": "S3 URI",
             "description": "The S3 URI of public file object.",
-            "type": "string"
+            "type": "string",
+            "pattern": "^(s3:\/\/submissions-)"
         },
         "external_uri": {
             "title": "External URI",

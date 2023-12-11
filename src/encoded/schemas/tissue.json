@@ -130,6 +130,7 @@
                 "type": "string",
                 "enum": [
                     "biopsy",
+                    "bronchoalveolar lavage",
                     "dissection",
                     "resection",
                     "cryosection",
@@ -201,6 +202,16 @@
             "description": "Body mass index as defined by weight in kilograms divided by the square of height in meters.",
             "type": "string",
             "pattern": "(^[<>]?[0-9]+(.[0-9]+)?$)|(^[0-9]+(.[0-9]+)-[0-9]+(.[0-9]+)$)"
+        },
+        "menstrual_phase_at_collection": {
+            "title": "Menstrual phase at collection",
+            "description": "",
+            "type": "string",
+            "enum": [
+                "luteal",
+                "follicular",
+                "not applicable"
+            ]
         },
         "death_to_preservation_interval_units": {
             "title": "Death to preservation interval units",

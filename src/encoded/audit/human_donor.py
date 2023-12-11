@@ -300,11 +300,11 @@ def audit_ancestry(value, system):
 
 def qa_cause_of_death(value, system):
     if 'causes_of_death' in value:
-        need = ['Cause of Death','Disease, Disorder or Finding','Suicide']
+        need = ['Cause of Death','Disease, Disorder or Finding','Suicide','Death by Natural Cause']
         for c in value['causes_of_death']:
             qa_terms_incl = [e for e in c.get('qa_slims', []) if e in need]
-            if qa_terms_incl == []:
-                detail = ('Donor {} causes_of_death {} is not descendant of NCIT:C81239, NCIT:C7057, or NCIT:C3394.'.format(
+            if qa_terms_incl == [] and c['term_name'] != 'Unknown':
+                detail = ('Donor {} causes_of_death {} neither NCIT:C17998 (Unknown) nor a descendant of NCIT:C81239, NCIT:C7057, NCIT:C82465, or NCIT:C3394.'.format(
                     audit_link(value['accession'], value['@id']),
                     c['term_name']
                     )

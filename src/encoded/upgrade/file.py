@@ -78,3 +78,9 @@ def processed_matrix_file_8_9(value, system):
 def file_remove_file_name(value, system):
 	if 'submitted_file_name' in value:
 		del value['submitted_file_name']
+
+@upgrade_step('raw_sequence_file', '3', '4')
+@upgrade_step('raw_matrix_file', '5', '6')
+def file_remove_supersedes(value, system):
+	if 'supersedes' in value:
+		del value['supersedes']

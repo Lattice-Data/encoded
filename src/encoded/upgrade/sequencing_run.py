@@ -11,3 +11,8 @@ def sequencing_run_1_2(value, system):
 def sequencing_run_2_3(value, system):
 	if 'flowcell_details' in value:
 		del value['flowcell_details']
+
+@upgrade_step('sequencing_run', '3', '4')
+def sequencing_run_3_4(value, system):
+	if 'supersedes' in value:
+		del value['supersedes']

@@ -81,7 +81,7 @@
     },
     "properties": {
         "schema_version": {
-            "default": "5"
+            "default": "6"
         },
         "description": {
             "description": "The text describing the matrix, will be displayed as the title at cellxgene."

@@ -428,7 +428,10 @@ class ProcessedMatrixFile(AnalysisFile):
         'cell_annotations': ('CellAnnotation', 'matrix_files'),
         'quality_metrics': ('Metrics', 'quality_metric_of')
     })
-    audit_inherit = DataFile.audit_inherit + ['cell_annotations']
+    audit_inherit = DataFile.audit_inherit + [
+        'cell_annotations',
+        'cell_annotations.cell_ontology'
+        ]
 
 
     @calculated_property(schema={

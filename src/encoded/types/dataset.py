@@ -63,6 +63,7 @@ class Dataset(Item):
         'files',
         'files.derived_from',
         'files.cell_annotations',
+        'files.cell_annotations.cell_ontology',
         'libraries',
         'libraries.donors',
         'libraries.derived_from',

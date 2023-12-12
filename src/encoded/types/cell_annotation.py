@@ -21,6 +21,7 @@ class CellAnnotation(Item):
         'cell_ontology',
         'tissues_sampled'
     ]
+    audit_inherit = ['cell_ontology']
 
 
     @calculated_property(schema={

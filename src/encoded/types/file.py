@@ -181,25 +181,7 @@ class DataFile(File, CalculatedAward):
     public_s3_statuses = ['released', 'archived']
     private_s3_statuses = ['in progress', 'replaced', 'deleted', 'revoked']
     audit_inherit = File.audit_inherit + []
-    rev = {
-        'superseded_by': ('DataFile', 'supersedes')
-    }
-
-
-    @calculated_property(schema={
-        "title": "Superseded by",
-        "description": "The File that supersedes this one.",
-        "comment": "Do not submit. This is a calculated property",
-        "type": "array",
-        "items": {
-            "type": ['string', 'object'],
-            "linkFrom": "DataFile.supersedes",
-        },
-        "notSubmittable": True,
-    })
-    def superseded_by(self, request, superseded_by=None):
-        if superseded_by:
-            return paths_filtered_by_status(request, superseded_by)
+    rev = {}
 
 
     @calculated_property(schema={
@@ -446,7 +428,10 @@ class ProcessedMatrixFile(AnalysisFile):
         'cell_annotations': ('CellAnnotation', 'matrix_files'),
         'quality_metrics': ('Metrics', 'quality_metric_of')
     })
-    audit_inherit = DataFile.audit_inherit + ['cell_annotations']
+    audit_inherit = DataFile.audit_inherit + [
+        'cell_annotations',
+        'cell_annotations.cell_ontology'
+        ]
 
 
     @calculated_property(schema={

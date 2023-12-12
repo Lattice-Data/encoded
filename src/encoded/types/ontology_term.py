@@ -190,7 +190,8 @@ qa_slim_terms = {
     "EFO:0010183": "single cell library construction",
     'NCIT:C81239': 'Cause of Death',
     'NCIT:C7057': 'Disease, Disorder or Finding',
-    'NCIT:C3394': 'Suicide'
+    'NCIT:C3394': 'Suicide',
+    'NCIT:C82465': 'Death by Natural Cause'
 }
 
 

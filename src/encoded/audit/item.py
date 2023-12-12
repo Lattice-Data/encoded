@@ -88,40 +88,7 @@ def audit_item_relations_status(value, system):
     request = system['request']
 
     for schema_path in context.type_info.schema_links:
-        if schema_path in ['supersedes']:
-            for path in simple_path_ids(value, schema_path):
-                linked_value = request.embed(path + '@@object')
-                if 'status' not in linked_value:
-                    continue
-                else:
-                    linked_level = STATUS_LEVEL.get(
-                        linked_value['status'], 50)
-                    detail = ('{} {} with status \'{}\' supersedes {} {} with status \'{}\'.'.format(
-                        space_in_words(value['@type'][0]).capitalize(),
-                        audit_link(path_to_text(value['@id']), value['@id']),
-                        value['status'],
-                        space_in_words(linked_value['@type'][0]).lower(),
-                        audit_link(path_to_text(linked_value['@id']), linked_value['@id']),
-                        linked_value['status']
-                        )
-                    )
-                    if level == 100 and linked_level in [0, 50, 100]:
-                        yield AuditFailure(
-                            'mismatched status',
-                            detail,
-                            level='INTERNAL_ACTION')
-                    elif level == 50 and linked_level in [0, 50]:
-                        yield AuditFailure(
-                            'mismatched status',
-                            detail,
-                            level='INTERNAL_ACTION')
-                    elif level in [30, 40] and linked_level in [0, 50, 100]:
-                        yield AuditFailure(
-                            'mismatched status',
-                            detail,
-                            level='INTERNAL_ACTION')
-
-        elif schema_path == 'derived_from':
+        if schema_path == 'derived_from':
             message = 'is derived from'
             for path in simple_path_ids(value, schema_path):
                 linked_value = request.embed(path + '@@object')

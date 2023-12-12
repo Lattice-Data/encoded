@@ -8,16 +8,16 @@ Ontologies used
 
 | Ontology |  File used | Version in use |
 |:--|:--|:--|
-| [Uber-anatomy ontology (UBERON)] | `uberon.owl` from [UBERON] | 2023-06-28 |
-| [Cell Ontology (CL)] | `cl.owl` from [CL] | 2023-06-22 |
-| [Experimental Factor Ontology (EFO)] | `efo.owl` from [EFO] | 3.56.0 |
-| [Mondo Disease Ontology (MONDO)] | `mondo.owl` from [MONDO] | 2023-07-03 |
-| [Human Ancestry Ontology (HANCESTRO)] | `hancestro.owl` from [HANCESTRO] | 2.6 |
+| [Uber-anatomy ontology (UBERON)] | `uberon.owl` from [UBERON] | 2023-09-05 |
+| [Cell Ontology (CL)] | `cl.owl` from [CL] | 2023-08-24 |
+| [Experimental Factor Ontology (EFO)] | `efo.owl` from [EFO] | 3.57.0 |
+| [Mondo Disease Ontology (MONDO)] | `mondo.owl` from [MONDO] | 2023-08-02 |
+| [Human Ancestry Ontology (HANCESTRO)] | `hancestro.owl` from [HANCESTRO] | 3.0 |
 | [Human Developmental Stage Ontology (HsapDv)] | `hsapdv.owl` from [OLS-HsapDv] | 2020-03-10 |
 | [Mouse Developmental Stage Ontology (MmusDv)] | `mmusdv.owl` from [OLS-MmusDv] | 2020-03-10 |
-| [NCI Thesaurus (NCIT)] | `ncit.owl` from [OLS-NCIT] | 2022-08-19 |
+| [NCI Thesaurus (NCIT)] | `ncit.owl` from [OLS-NCIT] | 2023-10-19 |
 
-**Current ontology.json:** `ontology-2023-08-15.json`
+**Current ontology.json:** `ontology-2023-12-08.json`
 
 How to update the ontology versions
 ---------------- 

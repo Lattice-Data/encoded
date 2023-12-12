@@ -16,7 +16,7 @@
             "demultiplexing"
         ],
         "validated": true,
-        "s3_uri": "s3://bucket/run3_r2.fastq.gz",
+        "s3_uri": "s3://submissions-bucket/run3_r2.fastq.gz",
         "file_size": 8,
         "read_length": 91,
         "md5sum": "11aaa0a073e01af2839c972711467c04",
@@ -47,7 +47,7 @@
             "demultiplexing"
         ],
         "validated": true,
-        "s3_uri": "s3://bucket/run3_r1.fastq.gz",
+        "s3_uri": "s3://submissions-bucket/run3_r1.fastq.gz",
         "file_size": 8,
         "read_length": 28,
         "md5sum": "11aaa0a073e01af2839c972711467c04",
@@ -78,7 +78,7 @@
             "demultiplexing"
         ],
         "validated": true,
-        "s3_uri": "s3://bucket/run2_r2.fastq.gz",
+        "s3_uri": "s3://submissions-bucket/run2_r2.fastq.gz",
         "file_size": 8,
         "read_length": 91,
         "md5sum": "11aaa0a073e01af2839c972711467c04",
@@ -109,7 +109,7 @@
             "demultiplexing"
         ],
         "validated": true,
-        "s3_uri": "s3://bucket/run2_r1.fastq.gz",
+        "s3_uri": "s3://submissions-bucket/run2_r1.fastq.gz",
         "file_size": 8,
         "read_length": 28,
         "md5sum": "11aaa0a073e01af2839c972711467c04",
@@ -140,7 +140,7 @@
             "demultiplexing"
         ],
         "validated": true,
-        "s3_uri": "s3://bucket/run1_r2.fastq.gz",
+        "s3_uri": "s3://submissions-bucket/run1_r2.fastq.gz",
         "file_size": 8,
         "read_length": 91,
         "md5sum": "11aaa0a073e01af2839c972711467c04",
@@ -171,7 +171,7 @@
             "demultiplexing"
         ],
         "validated": true,
-        "s3_uri": "s3://bucket/run1_r1.fastq.gz",
+        "s3_uri": "s3://submissions-bucket/run1_r1.fastq.gz",
         "file_size": 8,
         "read_length": 28,
         "md5sum": "11aaa0a073e01af2839c972711467c04",

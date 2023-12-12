@@ -135,16 +135,36 @@ def audit_gene_count(value, system):
 	if value['status'] in ['deleted']:
 		return
 
+	cellranger_ref_feature_counts = {
+		32738: 'GENCODE 19',
+		33694: 'GENCODE 24',
+		33538: 'GENCODE 28',
+		36601: 'GENCODE 32'
+	}
+
 	if value.get('feature_counts'):
 		for fc in value['feature_counts']:
-			if fc['feature_type'] == 'gene' and fc['feature_count'] < 16000:
-				detail = ('File {} has {} gene count, we require more to improve reusability.'.format(
-					audit_link(path_to_text(value['@id']), value['@id']),
-					fc['feature_count']
+			if fc['feature_type'] == 'gene':
+				if fc['feature_count'] < 16000:
+					detail = ('File {} has {} gene count, we require more to improve reusability.'.format(
+						audit_link(path_to_text(value['@id']), value['@id']),
+						fc['feature_count']
+						)
 					)
-				)
-				yield AuditFailure('low gene count', detail, level='ERROR')
-				return
+					yield AuditFailure('low gene count', detail, level='ERROR')
+					return
+				tenx_software = [s for s in value.get('software', []) if s.startswith('Cell Ranger') or s.startswith('Space Ranger')]
+				if tenx_software and fc['feature_count'] in cellranger_ref_feature_counts:
+					if value.get('genome_annotation','') != cellranger_ref_feature_counts[fc['feature_count']]:
+						detail = ('File {} has genome_annotation {}, expecting {} based on {} genes using 10x software.'.format(
+							audit_link(path_to_text(value['@id']), value['@id']),
+							value['genome_annotation'],
+							cellranger_ref_feature_counts[fc['feature_count']],
+							fc['feature_count']
+							)
+						)
+						yield AuditFailure('10x reference inconsistency', detail, level='ERROR')
+						return
 
 
 def metrics_types(value, system):

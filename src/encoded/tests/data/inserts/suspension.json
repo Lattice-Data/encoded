@@ -220,7 +220,7 @@
         "suspension_type": "cell",
         "starting_quantity": "1000",
         "starting_quantity_units": "cells/\u03bcl",
-        "cell_viability_method": "nucleus shape",
+        "cell_viability_method": "DAPI",
         "percent_cell_viability": "95",
         "single_cell_isolation_method": "10x",
         "single_cell_isolation_method_version": 1,

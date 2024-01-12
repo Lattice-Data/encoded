@@ -191,7 +191,7 @@ qa_slim_terms = {
     'NCIT:C81239': 'Cause of Death',
     'NCIT:C7057': 'Disease, Disorder or Finding',
     'NCIT:C3394': 'Suicide',
-    'NCIT:C82465': 'Death by Natural Cause'
+    'NCIT:C28554': 'Dead'
 }
 
 

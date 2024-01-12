@@ -84,3 +84,8 @@ def file_remove_file_name(value, system):
 def file_remove_supersedes(value, system):
 	if 'supersedes' in value:
 		del value['supersedes']
+
+@upgrade_step('raw_sequence_file', '4', '5')
+def file_remove_dbxrefs(value, system):
+	if 'dbxrefs' in value:
+		del value['dbxrefs']

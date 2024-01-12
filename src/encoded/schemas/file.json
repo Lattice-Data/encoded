@@ -6,14 +6,6 @@
     "$schema": "http://json-schema.org/draft-04/schema#",
     "type": "object",
     "properties": {
-        "external_accession": {
-            "title": "External accession",
-            "description": "For files that were not accessioned at our site but have an accession elsewhere.",
-            "comment": "Do not submit. Only admins are allowed to set or update this value.",
-            "type": "string",
-            "permission": "import_items",
-            "uniqueKey": "accession"
-        },
         "file_format": {
             "title": "File format",
             "description": "The format structure of the file.",

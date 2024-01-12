@@ -57,6 +57,12 @@
                 "pattern": "^(SRA:SRR\\d+|ENA:ERR\\d+)$"
             }
         },
+        "external_accession": {
+            "title": "External accession",
+            "description": "For files that were not accessioned at our site but have an accession elsewhere.",
+            "type": "string",
+            "uniqueKey": "accession"
+        },
         "derived_from": {
             "title": "Derived from",
             "description": "The sequencing run designation for the file.",

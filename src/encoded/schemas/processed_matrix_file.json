@@ -85,11 +85,16 @@
             }
         },
         "gene_activity_genome_annotation": {
-            "required": ["output_types"],
+            "required": ["output_types","feature_keys"],
             "properties": {
                 "output_types": {
                     "enum": [
                         ["gene quantifications"]
+                    ]
+                },
+                "feature_keys": {
+                    "enum": [
+                        ["Ensembl gene ID"]
                     ]
                 }
             }

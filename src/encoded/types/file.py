@@ -487,6 +487,9 @@ class ProcessedMatrixFile(AnalysisFile):
             for a in ['snATAC-seq','scMethyl-seq','snMethyl-seq']:
                 if a in assays:
                     assays.remove(a)
+        if 'antibody target' not in feature_keys:
+            if 'CITE-seq' in assays:
+                assays.remove('CITE-seq')
         return assays
 
 

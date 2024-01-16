@@ -30,7 +30,6 @@ pytest_plugins = [
     'encoded.tests.fixtures.schemas.library_protocol',
     'encoded.tests.fixtures.schemas.raw_matrix_file',
     'encoded.tests.fixtures.schemas.processed_matrix_file',
-    'encoded.tests.fixtures.schemas.mouse_donor',
     'encoded.tests.fixtures.schemas.ontology_term',
     'encoded.tests.fixtures.schemas.organism',
     'encoded.tests.fixtures.schemas.page',

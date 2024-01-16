@@ -25,7 +25,7 @@
     },
     {
         "aliases": [
-            "anna-greka:mouse.wgEncodeSydhHist"
+            "anna-greka:human.wgEncodeSydhHist"
         ],
         "status": "released",
         "attachment": "mouse.wgEncodeSydhHist.txt",

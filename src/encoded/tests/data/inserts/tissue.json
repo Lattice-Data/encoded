@@ -146,14 +146,14 @@
     {
         "accession": "LATBS870DDD",
         "aliases": [
-            "anna-greka:mouse_tissue_donorE"
+            "anna-greka:human_tissue_donorE"
         ],
 		"status": "released",
-        "description": "adult mouse tissue donorD",
+        "description": "adult human tissue donorD",
         "uuid": "fac3e4d3-058a-474a-97df-43de594f827e",
         "submitted_by": "abbeclarke@broadinstitute.org",
         "derived_from": [
-            "anna-greka:adult_mouse_donorE"
+            "anna-greka:adult_human_donorE"
         ],
         "derivation_process": [
             "bronchoalveolar lavage"
@@ -173,14 +173,14 @@
     {
         "accession": "LATBS875DDD",
         "aliases": [
-            "anna-greka:mouse_tissue_donorF"
+            "anna-greka:human_tissue_donorF"
         ],
 		"status": "released",
-        "description": "adult mouse tissue donorF",
+        "description": "adult human tissue donorF",
         "uuid": "887840af-d67a-4f71-bb2c-b33a2fa20c07",
         "submitted_by": "abbeclarke@broadinstitute.org",
         "derived_from": [
-            "anna-greka:adult_mouse_donorF"
+            "anna-greka:adult_human_donorF"
         ],
         "derivation_process": [
             "dissection"
@@ -200,14 +200,14 @@
     {
         "accession": "LATBS880DDD",
         "aliases": [
-            "anna-greka:mouse_tissue_donorG"
+            "anna-greka:human_tissue_donorG"
         ],
 		"status": "released",
-        "description": "adult mouse tissue donorD",
+        "description": "adult human tissue donorD",
         "uuid": "9162f685-d46c-4e03-b21a-24d00b68f0cd",
         "submitted_by": "abbeclarke@broadinstitute.org",
         "derived_from": [
-            "anna-greka:embryonic_mouse_donorG"
+            "anna-greka:embryonic_human_donorG"
         ],
         "derivation_process": [
             "dissection"
@@ -227,14 +227,14 @@
     {
         "accession": "LATBS885DDD",
         "aliases": [
-            "anna-greka:mouse_tissue_donorH"
+            "anna-greka:human_tissue_donorH"
         ],
 		"status": "released",
-        "description": "adult mouse tissue donorF",
+        "description": "adult human tissue donorF",
         "uuid": "b13bed91-6566-4c21-91a0-c02d87fed2da",
         "submitted_by": "abbeclarke@broadinstitute.org",
         "derived_from": [
-            "anna-greka:embryonic_mouse_donorH"
+            "anna-greka:embryonic_human_donorH"
         ],
         "derivation_process": [
             "dissection"

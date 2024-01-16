@@ -26,8 +26,6 @@ ORDER = [
     'treatment',
     'human_postnatal_donor',
     'human_prenatal_donor',
-    'mouse_postnatal_donor',
-    'mouse_prenatal_donor',
     'tissue',
     'cell_culture',
     'organoid',
@@ -517,11 +515,7 @@ def get_pipeline(testapp, docsdir, test_only, item_type, phase=None, method=None
         remove_keys('schema_version'),
         warn_keys_with_unknown_value_except_for(
             'lot_id', 'sex', 'life_stage', 'health_status', 'ethnicity',
-            'strain_background', 'age', 'version',
-            'model_organism_health_status',
-            'model_organism_age',
-            'model_organism_sex',
-            'mouse_life_stage',
+            'strain_background', 'age', 'version'
             # 'flowcell_details.machine',
         ),
         add_attachments(docsdir),

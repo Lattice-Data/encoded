@@ -18,7 +18,7 @@
         },
         "name": {
             "title": "Name",
-            "description": "A short unique name for the organism (e.g. 'mouse' or 'human').",
+            "description": "A short unique name for the organism (e.g. 'human').",
             "type": "string",
             "pattern": "^[a-z0-9\\-]+$",
             "uniqueKey": true

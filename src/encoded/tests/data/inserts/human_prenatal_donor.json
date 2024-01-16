@@ -1,5 +1,27 @@
 [
     {
+        "accession": "LATHD071XYZ",
+        "aliases": [
+            "anna-greka:embryonic_human_donorG"
+        ],
+        "uuid": "7b2dc0c0-4e9d-44f9-b623-b0539f2f87b8",
+        "conceptional_age": "unknown",
+        "development_ontology": "HsapDv_0000072",
+        "donor_id": "donorG",
+        "sex": "male"
+    },
+    {
+        "accession": "LATHD070XYZ",
+        "aliases": [
+            "anna-greka:embryonic_human_donorH"
+        ],
+        "uuid": "689227d8-ecf0-427b-a3e4-b1c6de756ce2",
+        "conceptional_age": "unknown",
+        "development_ontology": "HsapDv_0000072",
+        "donor_id": "donorH",
+        "sex": "female"
+    },
+    {
         "accession": "LATHD070DDD",
         "aliases": [
             "anna-greka:fetal_human_donorC"

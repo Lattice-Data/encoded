@@ -163,12 +163,7 @@ development_slim_terms = {
     "HsapDv:0000262": "infant stage",
     "HsapDv:0000265": "child stage",
     "HsapDv:0000271": "adolescent stage",
-    "HsapDv:0000258": "human adult stage",
-    "MmusDv:0000002": "embryonic mouse stage",
-    "MmusDv:0000031": "fetal stage",
-    "MmusDv:0000036": "Theiler stage 27",
-    "MmusDv:0000112": "premature stage",
-    "MmusDv:0000110": "mature stage"
+    "HsapDv:0000258": "human adult stage"
 }
 
 ethnicity_slim_terms = {

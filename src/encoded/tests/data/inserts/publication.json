@@ -4,8 +4,8 @@
             "lattice:Greka_Clark_2019_large_dataset",
             "lattice:Litviňuková_Teichmann_2020_heart"
         ],
-        "title": "A comprehensive dataset with human, mouse, and CITEseq",
-        "abstract": "A comprehensive dataset of kidney with human, mouse, and CITEseq",
+        "title": "A comprehensive dataset with human and CITEseq",
+        "abstract": "A comprehensive dataset of kidney with human and CITEseq",
         "authors": "Anna Greka, Abbe Clark",
         "journal": "BMC Bioinformatics",
         "publication_year": 2019,

@@ -1375,12 +1375,6 @@
     },
     {
         "status": "in progress",
-        "term_id": "MmusDv:0000036",
-        "term_name": "Theiler stage 27",
-        "uuid": "8b170094-633e-4296-b7c0-c36bc69395ec"
-    },
-    {
-        "status": "in progress",
         "term_id": "HsapDv:0000208",
         "term_name": "82-year-old human stage",
         "uuid": "90ca0f3a-80ee-4968-9664-cbb73eaaad52"
@@ -1390,12 +1384,6 @@
         "term_id": "UBERON:0016632",
         "term_name": "isthmus of fallopian tube",
         "uuid": "b95c1785-4a3e-45cd-b89f-335ec431426d"
-    },
-    {
-        "status": "in progress",
-        "term_id": "MmusDv:0000112",
-        "term_name": "premature stage",
-        "uuid": "f722158c-f7c2-41b1-8ccd-94c3e50fb7e4"
     },
     {
         "status": "in progress",
@@ -1777,12 +1765,6 @@
     },
     {
         "status": "in progress",
-        "term_id": "MmusDv:0000031",
-        "term_name": "fetal stage",
-        "uuid": "1b97bbfa-33c5-465d-b738-66658cf86270"
-    },
-    {
-        "status": "in progress",
         "term_id": "HsapDv:0000212",
         "term_name": "86-year-old human stage",
         "uuid": "250efe35-43be-44a1-a732-5973fe346397"
@@ -1840,12 +1822,6 @@
         "term_id": "HsapDv:0000081",
         "term_name": "child stage",
         "uuid": "750d2db1-b05c-4db3-9e13-eb622e8d6883"
-    },
-    {
-        "status": "in progress",
-        "term_id": "MmusDv:0000110",
-        "term_name": "mature stage",
-        "uuid": "404120ef-fedf-4be6-a197-34c0962a7f72"
     },
     {
         "status": "in progress",
@@ -2032,12 +2008,6 @@
         "term_id": "HsapDv:0000049",
         "term_name": "12th week post-fertilization human stage",
         "uuid": "15f21cb1-c099-4214-9b78-db165427b9b7"
-    },
-    {
-        "status": "in progress",
-        "term_id": "MmusDv:0000002",
-        "term_name": "embryonic mouse stage",
-        "uuid": "157fedc8-9522-48de-9b8e-77dd997f8d04"
     },
     {
         "status": "in progress",

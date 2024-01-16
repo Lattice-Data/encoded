@@ -4535,9 +4535,6 @@
             "lane_id_location": 1,
             "barcode_location": 3
         },
-        "dbxrefs": [
-            "SRA:SRR7191896"
-        ],
         "derived_from": ["a7cfa2ba-e8a2-455d-8387-cbd23e73b679"],
         "md5sum": "0b6a36391e49bcebb773fcfee79a4b69"
     },
@@ -4572,9 +4569,6 @@
             "lane_id_location": 1,
             "barcode_location": 3
         },
-        "dbxrefs": [
-            "SRA:SRR7191897"
-        ],
         "derived_from": ["a7cfa2ba-e8a2-455d-8387-cbd23e73b679"],
         "md5sum": "55b6ccb954b024a8054f25c6619948e4"
     },
@@ -4609,9 +4603,6 @@
             "lane_id_location": 1,
             "barcode_location": 3
         },
-        "dbxrefs": [
-            "SRA:SRR7191898"
-        ],
         "derived_from": ["a7cfa2ba-e8a2-455d-8387-cbd23e73b679"],
         "md5sum": "e5d299e84a2559823d107a8d116d5dc0"
     },
@@ -4646,9 +4637,6 @@
             "lane_id_location": 1,
             "barcode_location": 3
         },
-        "dbxrefs": [
-            "SRA:SRR7191899"
-        ],
         "derived_from": ["3ca3d763-50a2-45b7-9dd1-fd9f0d92109d"],
         "md5sum": "f8f6b885de9776d5a105a01f1596c610"
     },
@@ -4683,9 +4671,6 @@
             "lane_id_location": 1,
             "barcode_location": 3
         },
-        "dbxrefs": [
-            "SRA:SRR7191810"
-        ],
         "derived_from": ["3ca3d763-50a2-45b7-9dd1-fd9f0d92109d"],
         "md5sum": "82bb3625e311bd480178e8ccdc4e0543"
     },
@@ -4720,9 +4705,6 @@
             "lane_id_location": 1,
             "barcode_location": 3
         },
-        "dbxrefs": [
-            "SRA:SRR7191811"
-        ],
         "derived_from": ["3ca3d763-50a2-45b7-9dd1-fd9f0d92109d"],
         "md5sum": "28cd2ec22e94c633a586f29d58fb1f9f"
     },
@@ -4757,9 +4739,6 @@
             "lane_id_location": 1,
             "barcode_location": 3
         },
-        "dbxrefs": [
-            "SRA:SRR7191812"
-        ],
         "derived_from": ["c6bac386-c37c-4d6d-8ffc-637de37d30a8"],
         "md5sum": "3f1b31a03e746428ff6a901e00c68456"
     },
@@ -4794,9 +4773,6 @@
             "lane_id_location": 1,
             "barcode_location": 3
         },
-        "dbxrefs": [
-            "SRA:SRR7191813"
-        ],
         "derived_from": ["c6bac386-c37c-4d6d-8ffc-637de37d30a8"],
         "md5sum": "566eae936304827d4b2b4e1e445b83f2"
     },
@@ -4831,9 +4807,6 @@
             "lane_id_location": 1,
             "barcode_location": 3
         },
-        "dbxrefs": [
-            "SRA:SRR7191814"
-        ],
         "derived_from": ["c6bac386-c37c-4d6d-8ffc-637de37d30a8"],
         "md5sum": "392d4b4625e6612c2120444aee4b5e20"
     },
@@ -4868,9 +4841,6 @@
             "lane_id_location": 1,
             "barcode_location": 3
         },
-        "dbxrefs": [
-            "SRA:SRR7191815"
-        ],
         "derived_from": ["0c5b7e8c-375f-40cc-a18a-914e878b34fd"],
         "md5sum": "263545056a1d23e9187c842b3c0587cf"
     },
@@ -4905,9 +4875,6 @@
             "lane_id_location": 1,
             "barcode_location": 3
         },
-        "dbxrefs": [
-            "SRA:SRR7191816"
-        ],
         "derived_from": ["0c5b7e8c-375f-40cc-a18a-914e878b34fd"],
         "md5sum": "afe65c9fcd4845db7d899f06b7cbc419"
     },
@@ -4942,9 +4909,6 @@
             "lane_id_location": 1,
             "barcode_location": 3
         },
-        "dbxrefs": [
-            "SRA:SRR7191817"
-        ],
         "derived_from": ["0c5b7e8c-375f-40cc-a18a-914e878b34fd"],
         "md5sum": "07f09cdee0a70898e2bcd9551cfd7c2a"
     },
@@ -4979,9 +4943,6 @@
             "lane_id_location": 1,
             "barcode_location": 3
         },
-        "dbxrefs": [
-            "SRA:SRR7191818"
-        ],
         "derived_from": ["9a55c381-72ff-4cc2-a68d-c21244651431"],
         "md5sum": "a4ce3583b3727198a4174639863e04fe"
     },
@@ -5016,9 +4977,6 @@
             "lane_id_location": 1,
             "barcode_location": 3
         },
-        "dbxrefs": [
-            "SRA:SRR7191819"
-        ],
         "derived_from": ["9a55c381-72ff-4cc2-a68d-c21244651431"],
         "md5sum": "18067a1feb14c67c8f8611c34fe26d85"
     },
@@ -5053,9 +5011,6 @@
             "lane_id_location": 1,
             "barcode_location": 3
         },
-        "dbxrefs": [
-            "SRA:SRR7191820"
-        ],
         "derived_from": ["9a55c381-72ff-4cc2-a68d-c21244651431"],
         "md5sum": "6f4930d9471ea29ada57f5a2f762481c"
     },
@@ -5090,9 +5045,6 @@
             "lane_id_location": 1,
             "barcode_location": 3
         },
-        "dbxrefs": [
-            "SRA:SRR7191821"
-        ],
         "derived_from": ["9cd890e1-2e9e-4994-ad35-271a78553248"],
         "md5sum": "dca58015fca72e008d7da759611954d6"
     },
@@ -5127,9 +5079,6 @@
             "lane_id_location": 1,
             "barcode_location": 3
         },
-        "dbxrefs": [
-            "SRA:SRR7191822"
-        ],
         "derived_from": ["9cd890e1-2e9e-4994-ad35-271a78553248"],
         "md5sum": "c435dfcb7b4ece23f4a1892f0da5e707"
     },
@@ -5164,9 +5113,6 @@
             "lane_id_location": 1,
             "barcode_location": 3
         },
-        "dbxrefs": [
-            "SRA:SRR7191823"
-        ],
         "derived_from": ["9cd890e1-2e9e-4994-ad35-271a78553248"],
         "md5sum": "d5e319e700f2655e78508488254940ff"
     },
@@ -5201,9 +5147,6 @@
             "lane_id_location": 1,
             "barcode_location": 3
         },
-        "dbxrefs": [
-            "SRA:SRR7191824"
-        ],
         "derived_from": ["3dd59186-0407-4e29-9025-8443485fac53"],
         "md5sum": "843eddc70922e214bf3e52a8cbf348be"
     },
@@ -5238,9 +5181,6 @@
             "lane_id_location": 1,
             "barcode_location": 3
         },
-        "dbxrefs": [
-            "SRA:SRR7191825"
-        ],
         "derived_from": ["3dd59186-0407-4e29-9025-8443485fac53"],
         "md5sum": "dbb09a0dffd307484cc328d8dd2094cc"
     },
@@ -5275,9 +5215,6 @@
             "lane_id_location": 1,
             "barcode_location": 3
         },
-        "dbxrefs": [
-            "SRA:SRR7191826"
-        ],
         "derived_from": ["3dd59186-0407-4e29-9025-8443485fac53"],
         "md5sum": "53124e5ea45744f5e2f7c9b9e50d6519"
     },
@@ -5312,9 +5249,6 @@
             "lane_id_location": 1,
             "barcode_location": 3
         },
-        "dbxrefs": [
-            "SRA:SRR7191827"
-        ],
         "derived_from": ["bb75eed3-ac1d-4e8c-a989-dc12aabaa0df"],
         "md5sum": "dd6d83da4e0faad0004a4dd30ab77fb7"
     },
@@ -5349,9 +5283,6 @@
             "lane_id_location": 1,
             "barcode_location": 3
         },
-        "dbxrefs": [
-            "SRA:SRR7191828"
-        ],
         "derived_from": ["bb75eed3-ac1d-4e8c-a989-dc12aabaa0df"],
         "md5sum": "1f5d2dfa93a1aa9b98d155e7f0d05ad0"
     },
@@ -5386,9 +5317,6 @@
             "lane_id_location": 1,
             "barcode_location": 3
         },
-        "dbxrefs": [
-            "SRA:SRR7191829"
-        ],
         "derived_from": ["bb75eed3-ac1d-4e8c-a989-dc12aabaa0df"],
         "md5sum": "5f2d8ed013b61a8a14cb1ef68a2cec21"
     },
@@ -5423,9 +5351,6 @@
             "lane_id_location": 1,
             "barcode_location": 3
         },
-        "dbxrefs": [
-            "SRA:SRR7191830"
-        ],
         "derived_from": ["74ab76b9-0a74-4263-b1ef-75755938e939"],
         "md5sum": "ce62387106f8ec07a72e50592d17b892"
     },
@@ -5460,9 +5385,6 @@
             "lane_id_location": 1,
             "barcode_location": 3
         },
-        "dbxrefs": [
-            "SRA:SRR7191831"
-        ],
         "derived_from": ["74ab76b9-0a74-4263-b1ef-75755938e939"],
         "md5sum": "a7b49835b618f463c9ec071c7bf04eaa"
     },
@@ -5497,9 +5419,6 @@
             "lane_id_location": 1,
             "barcode_location": 3
         },
-        "dbxrefs": [
-            "SRA:SRR7191832"
-        ],
         "derived_from": ["74ab76b9-0a74-4263-b1ef-75755938e939"],
         "md5sum": "95f46cf0ad80459caf585f68919ed73d"
     }

@@ -479,11 +479,11 @@ class ProcessedMatrixFile(AnalysisFile):
         for l in libraries:
             l_obj = request.embed(l, '@@object')
             assays.add(l_obj['assay'])
-        if ('Ensembl gene ID' not in feature_keys and 'gene symbol' not in feature_keys) or gene_activity_genome_annotation is None:
+        if ('Ensembl gene ID' not in feature_keys and 'gene symbol' not in feature_keys) or gene_activity_genome_annotation is not None:
             for a in ['scRNA-seq','snRNA-seq']:
                 if a in assays:
                     assays.remove(a)
-        if feature_keys != ['genomic coordinates'] and not gene_activity_genome_annotation:
+        if feature_keys != ['genomic coordinates'] and gene_activity_genome_annotation is None:
             for a in ['snATAC-seq','scMethyl-seq','snMethyl-seq']:
                 if a in assays:
                     assays.remove(a)

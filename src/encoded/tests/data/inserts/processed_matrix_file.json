@@ -100,7 +100,9 @@
             "peter-sims:prenatal_3a_filtered_matrix",
             "peter-sims:prenatal_3b_filtered_matrix"
         ],
-        "experimental_variable_disease": "MONDO_0005296",
+        "experimental_variable_disease": [
+            "MONDO_0005296"
+        ],
         "md5sum": "2e883306013203954eb1b69ae063eef1",
         "cell_label_location": "suffix",
         "cell_label_mappings": [

@@ -159,16 +159,11 @@ disease_slim_terms = {
 development_slim_terms = {
     "HsapDv:0000002": "embryonic human stage",
     "HsapDv:0000037": "fetal stage",
-    "HsapDv:0000082": "newborn human stage",
-    "HsapDv:0000083": "infant stage",
-    "HsapDv:0000081": "child stage",
-    "HsapDv:0000086": "adolescent stage",
-    "HsapDv:0000087": "human adult stage",
-    "MmusDv:0000002": "embryonic mouse stage",
-    "MmusDv:0000031": "fetal stage",
-    "MmusDv:0000036": "Theiler stage 27",
-    "MmusDv:0000112": "premature stage",
-    "MmusDv:0000110": "mature stage"
+    "HsapDv:0000260": "newborn human stage",
+    "HsapDv:0000262": "infant stage",
+    "HsapDv:0000265": "child stage",
+    "HsapDv:0000271": "adolescent stage",
+    "HsapDv:0000258": "human adult stage"
 }
 
 ethnicity_slim_terms = {
@@ -191,7 +186,7 @@ qa_slim_terms = {
     'NCIT:C81239': 'Cause of Death',
     'NCIT:C7057': 'Disease, Disorder or Finding',
     'NCIT:C3394': 'Suicide',
-    'NCIT:C82465': 'Death by Natural Cause'
+    'NCIT:C28554': 'Dead'
 }
 
 

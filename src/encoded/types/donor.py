@@ -58,32 +58,6 @@ class Donor(Item, CalculatedTreatmentSummary):
 
 
 @abstract_collection(
-    name='mouse-donors',
-    unique_key='accession',
-    properties={
-        'title': 'Mouse donors',
-        'description': 'Listing Biosample Donors'
-    })
-class MouseDonor(Donor):
-    item_type = 'mouse_donor'
-    base_types = ['MouseDonor'] + Donor.base_types
-    schema = load_schema('encoded:schemas/mouse_donor.json')
-    embedded = Donor.embedded + []
-
-
-    @calculated_property(schema={
-        "title": "Organism",
-        "description": "Common name of donor organism.",
-        "comment": "Do not submit. This is a calculated property",
-        "permission": "import_items",
-        "type": "string",
-        "linkTo": "Organism"
-    })
-    def organism(self):
-        return "/organism/mouse"
-
-
-@abstract_collection(
     name='human-donors',
     unique_key='accession',
     properties={
@@ -142,32 +116,6 @@ class HumanDonor(Donor):
                     return s
 
             return 'multiethnic'
-
-
-@collection(
-    name='mouse-prenatal-donors',
-    unique_key='accession',
-    properties={
-        'title': 'Mouse prenatal donors',
-        'description': 'Listing Biosample Donors'
-    })
-class MousePrenatalDonor(MouseDonor):
-    item_type = 'mouse_prenatal_donor'
-    schema = load_schema('encoded:schemas/mouse_prenatal_donor.json')
-    embedded = MouseDonor.embedded + []
-
-
-@collection(
-    name='mouse-postnatal-donors',
-    unique_key='accession',
-    properties={
-        'title': 'Mouse postnatal donors',
-        'description': 'Listing Biosample Donors'
-    })
-class MousePostnatalDonor(MouseDonor):
-    item_type = 'mouse_postnatal_donor'
-    schema = load_schema('encoded:schemas/mouse_postnatal_donor.json')
-    embedded = MouseDonor.embedded + []
 
 
 @collection(

@@ -131,19 +131,20 @@ def ontology_check_dis(value, system):
     field = 'experimental_variable_disease'
     dbs = ['MONDO']
 
-    ontobj = value.get(field)
-    if ontobj:
-        term = ontobj['term_id']
-        ont_db = term.split(':')[0]
-        if ont_db not in dbs:
-            detail = ('File {} {} {} not from {}.'.format(
-                audit_link(value['accession'], value['@id']),
-                field,
-                term,
-                ','.join(dbs)
+    ontobjs = value.get(field)
+    if ontobjs:
+        for ontobj in ontobjs:
+            term = ontobj['term_id']
+            ont_db = term.split(':')[0]
+            if ont_db not in dbs:
+                detail = ('File {} {} {} not from {}.'.format(
+                    audit_link(value['accession'], value['@id']),
+                    field,
+                    term,
+                    ','.join(dbs)
+                    )
                 )
-            )
-            yield AuditFailure('incorrect ontology term', detail, 'ERROR')
+                yield AuditFailure('incorrect ontology term', detail, 'ERROR')
 
 
 def duplicated_derfrom(value, system):

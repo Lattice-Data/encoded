@@ -12,7 +12,6 @@
         {"$ref": "mixins.json#/dataset"},
         {"$ref": "mixins.json#/documents"},
         {"$ref": "mixins.json#/accession"},
-        {"$ref": "mixins.json#/dbxrefs"},
         {"$ref": "mixins.json#/notes"},
         {"$ref": "mixins.json#/software"},
         {"$ref": "mixins.json#/submitted"},
@@ -47,15 +46,13 @@
     },
     "properties": {
         "schema_version": {
-            "default": "4"
+            "default": "5"
         },
-        "dbxrefs": {
-            "items": {
-                "title": "External identifier",
-                "description": "Identifier from an external resource that may have 1-to-1 or 1-to-many relationships with Lattice objects.",
-                "type":  "string",
-                "pattern": "^(SRA:SRR\\d+|ENA:ERR\\d+)$"
-            }
+        "external_accession": {
+            "title": "External accession",
+            "description": "For files that were not accessioned at our site but have an accession elsewhere.",
+            "type": "string",
+            "uniqueKey": "accession"
         },
         "derived_from": {
             "title": "Derived from",

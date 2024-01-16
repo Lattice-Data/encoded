@@ -471,7 +471,7 @@
             "BioSample:SAMN144237"
         ],
         "documents": [
-            "anna-greka:mouse.wgEncodeSydhHist"
+            "anna-greka:human.wgEncodeSydhHist"
         ]
     },
     {
@@ -482,9 +482,9 @@
         ],
         "status": "released",
         "derived_from": [
-            "anna-greka:mouse_tissue_donorE"
+            "anna-greka:human_tissue_donorE"
         ],
-        "description": "scRNAseq mouse suspension from donorE",
+        "description": "scRNAseq human suspension from donorE",
         "derivation_process": [
             "enzymatic dissociation",
             "mechanical dissociation",
@@ -527,9 +527,9 @@
         ],
         "status": "released",
         "derived_from": [
-            "anna-greka:mouse_tissue_donorF"
+            "anna-greka:human_tissue_donorF"
         ],
-        "description": "scRNAseq mouse suspension from donorF",
+        "description": "scRNAseq human suspension from donorF",
         "derivation_process": [
             "enzymatic dissociation",
             "mechanical dissociation",
@@ -572,9 +572,9 @@
         ],
         "status": "released",
         "derived_from": [
-            "anna-greka:mouse_tissue_donorG"
+            "anna-greka:human_tissue_donorG"
         ],
-        "description": "scRNAseq mouse suspension from donorG",
+        "description": "scRNAseq human suspension from donorG",
         "derivation_process": [
             "enzymatic dissociation",
             "mechanical dissociation",
@@ -617,9 +617,9 @@
         ],
         "status": "released",
         "derived_from": [
-            "anna-greka:mouse_tissue_donorH"
+            "anna-greka:human_tissue_donorH"
         ],
-        "description": "scRNAseq mouse suspension from donorH",
+        "description": "scRNAseq human suspension from donorH",
         "derivation_process": [
             "enzymatic dissociation",
             "mechanical dissociation",
@@ -662,9 +662,9 @@
         ],
         "status": "released",
         "derived_from": [
-            "anna-greka:mouse_tissue_donorE"
+            "anna-greka:human_tissue_donorE"
         ],
-        "description": "snATACseq mouse suspension from donorE",
+        "description": "snATACseq human suspension from donorE",
         "derivation_process": [
             "enzymatic dissociation",
             "mechanical dissociation",
@@ -700,9 +700,9 @@
         ],
         "status": "released",
         "derived_from": [
-            "anna-greka:mouse_tissue_donorF"
+            "anna-greka:human_tissue_donorF"
         ],
-        "description": "snATACseq mouse suspension from donorF",
+        "description": "snATACseq human suspension from donorF",
         "derivation_process": [
             "enzymatic dissociation",
             "mechanical dissociation",
@@ -738,9 +738,9 @@
         ],
         "status": "released",
         "derived_from": [
-            "anna-greka:mouse_tissue_donorG"
+            "anna-greka:human_tissue_donorG"
         ],
-        "description": "snATACseq mouse suspension from donorG",
+        "description": "snATACseq human suspension from donorG",
         "derivation_process": [
             "enzymatic dissociation",
             "mechanical dissociation",
@@ -776,9 +776,9 @@
         ],
         "status": "released",
         "derived_from": [
-            "anna-greka:mouse_tissue_donorH"
+            "anna-greka:human_tissue_donorH"
         ],
-        "description": "snATACseq mouse suspension from donorH",
+        "description": "snATACseq human suspension from donorH",
         "derivation_process": [
             "enzymatic dissociation",
             "mechanical dissociation",

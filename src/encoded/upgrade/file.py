@@ -84,3 +84,14 @@ def file_remove_file_name(value, system):
 def file_remove_supersedes(value, system):
 	if 'supersedes' in value:
 		del value['supersedes']
+
+@upgrade_step('raw_sequence_file', '4', '5')
+def file_remove_dbxrefs(value, system):
+	if 'dbxrefs' in value:
+		del value['dbxrefs']
+
+
+@upgrade_step('processed_matrix_file', '9', '10')
+def processed_matrix_file_9_10(value, system):
+	if 'experimental_variable_disease' in value:
+		value['experimental_variable_disease'] = [value['experimental_variable_disease']]

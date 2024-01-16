@@ -300,7 +300,7 @@ def audit_ancestry(value, system):
 
 def qa_cause_of_death(value, system):
     if 'causes_of_death' in value:
-        need = ['Cause of Death','Disease, Disorder or Finding','Suicide','Death by Natural Cause']
+        need = ['Cause of Death','Disease, Disorder or Finding','Suicide','Dead']
         for c in value['causes_of_death']:
             qa_terms_incl = [e for e in c.get('qa_slims', []) if e in need]
             if qa_terms_incl == [] and c['term_name'] != 'Unknown':

@@ -85,11 +85,16 @@
             }
         },
         "gene_activity_genome_annotation": {
-            "required": ["output_types"],
+            "required": ["output_types","feature_keys"],
             "properties": {
                 "output_types": {
                     "enum": [
                         ["gene quantifications"]
+                    ]
+                },
+                "feature_keys": {
+                    "enum": [
+                        ["Ensembl gene ID"]
                     ]
                 }
             }
@@ -116,7 +121,7 @@
     },
     "properties": {
         "schema_version": {
-            "default": "9"
+            "default": "10"
         },
         "description": {
             "description": "The text describing the matrix, will be displayed as the title at cellxgene."
@@ -199,8 +204,12 @@
         "experimental_variable_disease": {
             "title": "Experimental variable disease",
             "description": "The primary disease variable used in the analysis of data within this matrix, distinguishing the disease group from the control, or normal, group.",
-            "type": "string",
-            "linkTo": "OntologyTerm"
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+                "type": "string",
+                "linkTo": "OntologyTerm"
+            }
         },
         "is_primary_data": {
             "title": "Is primary data",

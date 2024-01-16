@@ -44,7 +44,7 @@
         },
         "genotype": {
             "title": "Genotype",
-            "description": "For human, known genetic variants. For mouse, the genetic alleles for the genetic modifications.",
+            "description": "For human, known genetic variants.",
             "type": "string"
         },
         "weight": {

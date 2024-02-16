@@ -4,7 +4,7 @@
     "id": "/profiles/cell_annotation.json",
     "$schema": "http://json-schema.org/draft-04/schema#",
     "type": "object",
-    "required": ["author_cell_type"],
+    "required": ["author_cell_type","cell_ontology"],
     "identifyingProperties": ["uuid", "aliases"],
     "additionalProperties": false,
     "mixinProperties": [
@@ -16,7 +16,7 @@
     ],
     "properties": {
         "schema_version": {
-            "default": "1"
+            "default": "2"
         },
         "author_cell_type": {
             "title": "Author cell type",

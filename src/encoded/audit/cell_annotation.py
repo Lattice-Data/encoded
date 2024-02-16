@@ -11,15 +11,17 @@ from .formatter import (
 def ontology_check_cell(value, system):
     field = 'cell_ontology'
     dbs = ['CL']
+    terms = ['NCIT:C17998']
 
     term = value[field]['term_id']
     ont_db = term.split(':')[0]
-    if ont_db not in dbs:
-        detail = ('CellAnnotation {} {} {} not from {}.'.format(
+    if ont_db not in dbs and term not in terms:
+        detail = ('CellAnnotation {} {} {} not from {} or {}.'.format(
             audit_link(value['@id'], value['@id']),
             field,
             term,
-            ','.join(dbs)
+            ','.join(dbs),
+            ','.join(terms)
             )
         )
         yield AuditFailure('incorrect ontology term', detail, 'ERROR')

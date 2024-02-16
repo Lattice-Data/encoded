@@ -57,41 +57,45 @@ class Suspension(Item,
         self, request, biosample_classification, derived_from,
         collection_to_dissociation_interval=None, collection_to_dissociation_interval_units=None,
         death_to_dissociation_interval=None, death_to_dissociation_interval_units=None):
-        intervals = []
         if collection_to_dissociation_interval:
-            intervals.append((collection_to_dissociation_interval, collection_to_dissociation_interval_units))
+            return pluralize(collection_to_dissociation_interval, collection_to_dissociation_interval_units)
         if death_to_dissociation_interval:
-            intervals.append((death_to_dissociation_interval, death_to_dissociation_interval_units))
+            return pluralize(death_to_dissociation_interval, death_to_dissociation_interval_units)
 
-        derfrObject = request.embed(derived_from[0], '@@object')
-        if derfrObject['@type'][0] == 'Tissue':
-            if len(derived_from) == 1:
+        intervals = {'collection': [], 'death': []}
+        for df in derived_from:
+            derfrObject = request.embed(df, '@@object')
+            if derfrObject['@type'][0] == 'Tissue':
                 if 'collection_to_preservation_interval' in derfrObject:
                     interval = derfrObject['collection_to_preservation_interval']
                     units = derfrObject['collection_to_preservation_interval_units']
-                    intervals.append((interval, units))
+                    intervals['collection'].append(pluralize(interval, units))
+                else:
+                    intervals['collection'].append('unknown')
                 if 'death_to_preservation_interval' in derfrObject:
                     interval = derfrObject['death_to_preservation_interval']
                     units = derfrObject['death_to_preservation_interval_units']
-                    intervals.append((interval, units))
+                    intervals['death'].append(pluralize(interval, units))
+                else:
+                    intervals['death'].append('unknown')
 
-        elif derfrObject['@type'][0] == 'Suspension':
-            doubleDerfrObject = request.embed(derfrObject['derived_from'][0], '@@object')
-            if doubleDerfrObject['@type'][0] == 'Tissue':
-                all_derives = []
-                for d in derived_from:
-                    df_obj = request.embed(d, '@@object')
-                    for dd in df_obj['derived_from']:
-                        if dd not in all_derives:
-                            all_derives.append(dd)
-                if len(all_derives) == 1:
-                    if 'collection_to_preservation_interval' in doubleDerfrObject:
-                        interval = doubleDerfrObject['collection_to_preservation_interval']
-                        units = doubleDerfrObject['collection_to_preservation_interval_units']
-                        intervals.append((interval, units))
-                    if 'death_to_preservation_interval' in doubleDerfrObject:
-                        interval = doubleDerfrObject['death_to_preservation_interval']
-                        units = doubleDerfrObject['death_to_preservation_interval_units']
-                        intervals.append((interval, units))
-        if len(intervals) == 1:
-            return pluralize(intervals[0][0], intervals[0][1])
+            elif derfrObject['@type'][0] == 'Suspension':
+                for dfdf in derfrObject['derived_from']:
+                    doubleDerfrObject = request.embed(dfdf, '@@object')
+                    if doubleDerfrObject['@type'][0] == 'Tissue':
+                        if 'collection_to_preservation_interval' in doubleDerfrObject:
+                            interval = doubleDerfrObject['collection_to_preservation_interval']
+                            units = doubleDerfrObject['collection_to_preservation_interval_units']
+                            intervals['collection'].append(pluralize(interval, units))
+                        else:
+                            intervals['collection'].append('unknown')
+                        if 'death_to_preservation_interval' in doubleDerfrObject:
+                            interval = doubleDerfrObject['death_to_preservation_interval']
+                            units = doubleDerfrObject['death_to_preservation_interval_units']
+                            intervals['death'].append(pluralize(interval, units))
+                        else:
+                            intervals['death'].append('unknown')
+        if set(intervals['death']) == {'unknown'} and set(intervals['collection']) != {'unknown'}:
+            return ','.join(set(intervals['collection']))
+        if set(intervals['death']) != {'unknown'} and set(intervals['collection']) == {'unknown'}:
+            return ','.join(set(intervals['death']))

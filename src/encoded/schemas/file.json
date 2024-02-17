@@ -17,11 +17,6 @@
             "type": "string",
             "pattern": "^(s3:\/\/submissions-)"
         },
-        "external_uri": {
-            "title": "External URI",
-            "description": "The URI of public file object that is not hosted at the Lattice AWS S3.",
-            "type": "string"
-        },
         "md5sum": {
             "title": "MD5sum",
             "description": "The md5sum of the file.",

@@ -95,3 +95,11 @@ def file_remove_dbxrefs(value, system):
 def processed_matrix_file_9_10(value, system):
 	if 'experimental_variable_disease' in value:
 		value['experimental_variable_disease'] = [value['experimental_variable_disease']]
+
+
+@upgrade_step('sequence_alignment_file', '3', '4')
+@upgrade_step('raw_matrix_file', '6', '7')
+@upgrade_step('processed_matrix_file', '10', '11')
+def file_remove_no_file_available(value, system):
+	if 'no_file_available' in value:
+		del value['no_file_available']

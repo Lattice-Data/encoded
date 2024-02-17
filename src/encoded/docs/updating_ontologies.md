@@ -8,16 +8,16 @@ Ontologies used
 
 | Ontology |  File used | Version in use |
 |:--|:--|:--|
-| [Uber-anatomy ontology (UBERON)] | `uberon.owl` from [UBERON] | 2023-09-05 |
-| [Cell Ontology (CL)] | `cl.owl` from [CL] | 2023-08-24 |
-| [Experimental Factor Ontology (EFO)] | `efo.owl` from [EFO] | 3.57.0 |
-| [Mondo Disease Ontology (MONDO)] | `mondo.owl` from [MONDO] | 2023-08-02 |
+| [Uber-anatomy ontology (UBERON)] | `uberon.owl` from [UBERON] | v2024-01-18 |
+| [Cell Ontology (CL)] | `cl.owl` from [CL] | v2024-01-04 |
+| [Experimental Factor Ontology (EFO)] | `efo.owl` from [EFO] | v3.62.0 |
+| [Mondo Disease Ontology (MONDO)] | `mondo.owl` from [MONDO] | v2024-01-03 |
 | [Human Ancestry Ontology (HANCESTRO)] | `hancestro.owl` from [HANCESTRO] | 3.0 |
 | [Human Developmental Stage Ontology (HsapDv)] | `hsapdv.owl` from [OLS-HsapDv] | 2020-03-10 |
 | [Mouse Developmental Stage Ontology (MmusDv)] | `mmusdv.owl` from [OLS-MmusDv] | 2020-03-10 |
 | [NCI Thesaurus (NCIT)] | `ncit.owl` from [OLS-NCIT] | 2023-10-19 |
 
-**Current ontology.json:** `ontology-2023-12-08.json`
+**Current ontology.json:** `ontology-2024-02-16.json`
 
 How to update the ontology versions
 ---------------- 
@@ -38,13 +38,13 @@ How to update the ontology versions
 
 
 [Uber-anatomy ontology (UBERON)]: http://obophenotype.github.io/uberon/
-[UBERON]: https://github.com/obophenotype/uberon/releases/tag/v2023-06-28
+[UBERON]: https://github.com/obophenotype/uberon/releases/tag/v2024-01-18
 [Cell Ontology (CL)]: https://github.com/obophenotype/cell-ontology
-[CL]: https://github.com/obophenotype/cell-ontology/releases/tag/v2023-06-22
+[CL]: https://github.com/obophenotype/cell-ontology/releases/tag/v2024-01-04
 [Experimental Factor Ontology (EFO)]: http://www.ebi.ac.uk/efo
-[EFO]: https://github.com/EBISPOT/efo/releases/tag/v3.56.0
+[EFO]: https://github.com/EBISPOT/efo/releases/tag/v3.62.0
 [Mondo Disease Ontology (MONDO)]: http://obofoundry.org/ontology/mondo.html
-[MONDO]: https://github.com/monarch-initiative/mondo/releases/tag/v2023-07-03
+[MONDO]: https://github.com/monarch-initiative/mondo/releases/tag/v2024-01-03
 [Human Ancestry Ontology (HANCESTRO)]: https://github.com/EBISPOT/ancestro
 [HANCESTRO]: https://github.com/EBISPOT/hancestro/tree/2.6
 [Human Developmental Stage Ontology (HsapDv)]: https://github.com/obophenotype/developmental-stage-ontologies/wiki/HsapDv

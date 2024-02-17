@@ -109,22 +109,21 @@ def audit_validated(value, system):
 	if value['status'] in ['deleted']:
 		return
 
-	if value.get('no_file_available') != True:
-		if value.get('s3_uri') or value.get('external_uri'):
-			if value.get('validated') != True and value.get('file_format') in ['hdf5']:
-				detail = ('File {} has not been validated.'.format(
-					audit_link(path_to_text(value['@id']), value['@id'])
-					)
-				)
-				yield AuditFailure('file not validated', detail, level='ERROR')
-				return
-		else:
-			detail = ('File {} has no s3_uri, external_uri, and is not marked as no_file_available.'.format(
+	if value.get('s3_uri'):
+		if value.get('validated') != True and value.get('file_format') in ['hdf5']:
+			detail = ('File {} has not been validated.'.format(
 				audit_link(path_to_text(value['@id']), value['@id'])
 				)
 			)
-			yield AuditFailure('file access not specified', detail, level='WARNING')
+			yield AuditFailure('file not validated', detail, level='ERROR')
 			return
+	else:
+		detail = ('File {} has no s3_uri.'.format(
+			audit_link(path_to_text(value['@id']), value['@id'])
+			)
+		)
+		yield AuditFailure('file access not specified', detail, level='WARNING')
+		return
 
 
 def audit_gene_count(value, system):
@@ -227,13 +226,31 @@ def annotation_not_genes(value, system):
 			return
 
 
+def audit_Visium_h5s(value, system):
+	if value['status'] in ['deleted']:
+		return
+
+	for l in value['libraries']:
+		if l['protocol']['title'] == 'Visium 10x GE' and value.get('s3_uri'):
+			file_ext = value['s3_uri'].split('.')[-1]
+			if file_ext != 'h5':
+				detail = ('File {} is from Visium and a .h5 is needed, not {}.'.format(
+					audit_link(path_to_text(value['@id']), value['@id']),
+					file_ext
+					)
+				)
+				yield AuditFailure('Visium raw matrix format error', detail, level='ERROR')
+				return
+
+
 function_dispatcher = {
 	'audit_complete_derived_from': audit_complete_derived_from,
 	'audit_read_count_compare': audit_read_count_compare,
 	'audit_validated': audit_validated,
 	'audit_gene_count': audit_gene_count,
 	'metrics_types': metrics_types,
-	'annotation_not_genes': annotation_not_genes
+	'annotation_not_genes': annotation_not_genes,
+	'audit_Visium_h5s': audit_Visium_h5s
 }
 
 @audit_checker('RawMatrixFile',
@@ -241,7 +258,9 @@ function_dispatcher = {
 				   'derived_from',
 				   'derived_from.derived_from',
 				   'derived_from.libraries',
-				   'quality_metrics'
+				   'quality_metrics',
+				   'libraries',
+				   'libraries.protocol'
 			   ])
 def audit_raw_matrix_file(value, system):
 	for function_name in function_dispatcher.keys():

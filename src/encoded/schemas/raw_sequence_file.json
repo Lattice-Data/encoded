@@ -28,20 +28,6 @@
             "not": {
                 "required": ["accession"]
             }
-        },
-        "revoke_detail": {
-            "properties": {
-                "status": {
-                    "enum": ["revoked"]
-                }
-            }
-        },
-        "content_error_detail":{
-            "properties": {
-                "status": {
-                    "enum": ["content error"]
-                }
-            }
         }
     },
     "properties": {
@@ -94,8 +80,7 @@
         },
         "file_format": {
             "enum": [
-                "fastq",
-                "sra"
+                "fastq"
             ],
             "default": "fastq"
         },
@@ -163,7 +148,6 @@
             "items": {
                 "type": "string",
                 "enum": [
-                    "undetermined reads",
                     "assigned reads"
                 ]
             },
@@ -208,6 +192,18 @@
                     }
                 }
             }
+        },
+        "no_file_available": {
+            "title": "No file available",
+            "permission":"import_items",
+            "description": "A flag to indicate whether this file is available to download.",
+            "default": false,
+            "type": "boolean"
+        },
+        "external_uri": {
+            "title": "External URI",
+            "description": "The URI of public file object that is not hosted at the Lattice AWS S3.",
+            "type": "string"
         }
     },
     "facets": {
@@ -216,12 +212,6 @@
         },
         "sequence_elements": {
             "title": "Sequence elements"
-        },
-        "output_types": {
-            "title": "Output type"
-        },
-        "file_format": {
-            "title": "File format"
         },
         "lab.title": {
             "title": "Lab"
@@ -252,9 +242,6 @@
         "sequence_elements": {
             "title": "Sequence elements"
         },
-        "file_format": {
-            "title": "File Format"
-        },
         "s3_uri": {
             "title": "S3 URI"
         },
@@ -269,9 +256,6 @@
         },
         "read_length_units": {
             "title": "Read length units"
-        },
-        "output_types": {
-            "title": "Output types"
         },
         "lab.title": {
             "title": "Lab"

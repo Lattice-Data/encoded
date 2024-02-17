@@ -96,6 +96,12 @@ class Suspension(Item,
                         else:
                             intervals['death'].append('unknown')
         if set(intervals['death']) == {'unknown'} and set(intervals['collection']) != {'unknown'}:
-            return ','.join(set(intervals['collection']))
+            if len(intervals['collection']) > 1:
+                return f"pooled [{','.join(set(intervals['collection']))}]"
+            else:
+                return ','.join(intervals['collection'])
         if set(intervals['death']) != {'unknown'} and set(intervals['collection']) == {'unknown'}:
-            return ','.join(set(intervals['death']))
+            if len(set(intervals['death'])) > 1:
+                return f"pooled [{','.join(set(intervals['death']))}]"
+            else:
+                return ','.join(intervals['death'])

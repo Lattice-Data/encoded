@@ -43,7 +43,7 @@
         }
     },
     "facets": {
-        "organism.name": {
+        "organism": {
             "title": "Organism"
         },
         "label": {

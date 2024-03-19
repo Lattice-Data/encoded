@@ -53,7 +53,8 @@ class Dataset(Item):
         'award.coordinating_pi',
         'references',
         'corresponding_contributors',
-        'contributors'
+        'contributors',
+        'internal_contact'
     ]
     rev = {
         'libraries': ('Library','dataset'),

@@ -31,6 +31,7 @@
         ],
         "derivation_process": ["single cell analysis pipeline"],
         "demultiplexed_donor_column": "Donor",
+        "fullres_s3_uri": "s3://submissions-czi000aaa/my_lib/all_the_res_image.tiff",
         "spatial_s3_uri": "s3://submissions-czi000aaa/my_lib/spatial/",
         "aliases": [
             "bogi-andersen:my_matrix"

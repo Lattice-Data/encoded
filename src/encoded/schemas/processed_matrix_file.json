@@ -385,10 +385,16 @@
         },
         "spatial_s3_uri": {
             "title": "Spatial s3 URI",
-            "description": "The S3 URI of spatial/ directory.",
+            "description": "The S3 URI of spatial/ directory for Visium data.",
             "comment": "This should contain: scalefactors_json.json, tissue_hires_image.png, tissue_lowres_image.png, and tissue_positions.csv OR tissue_positions_list.csv",
             "type": "string",
             "pattern": "^s3:\/\/submissions-(\\w|\/)+\/$"
+        },
+        "fullres_s3_uri": {
+            "title": "Fullres s3 URI",
+            "description": "The S3 URI of fullres image for Visium data.",
+            "type": "string",
+            "pattern": "^(s3:\/\/submissions-)"
         }
     },
     "facets": {

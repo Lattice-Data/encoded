@@ -53,7 +53,8 @@ class Dataset(Item):
         'award.coordinating_pi',
         'references',
         'corresponding_contributors',
-        'contributors'
+        'contributors',
+        'internal_contact'
     ]
     rev = {
         'libraries': ('Library','dataset'),
@@ -281,7 +282,7 @@ class Dataset(Item):
     })
     def hca_portal_urls(self, request, urls=None):
         if urls:
-            return gather_urls(urls, 'https://data.humancellatlas.org/explore/projects/')
+            return gather_urls(urls, 'https://explore.data.humancellatlas.org/projects/')
 
 
     @calculated_property(define=True, schema={

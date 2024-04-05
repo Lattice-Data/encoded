@@ -46,9 +46,6 @@ class Dataset(Item):
     name_key = 'accession'
     embedded = [
         'libraries',
-        'libraries.protocol',
-        'libraries.lab',
-        'libraries.biosample_ontologies',
         'award',
         'award.coordinating_pi',
         'references',

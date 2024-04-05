@@ -114,10 +114,7 @@
         "libraries.assay": {
             "title": "Assay type"
         },
-        "libraries.protocol.title": {
-            "title": "Library protocol"
-        },
-        "libraries.protocol.title": {
+        "libraries.protocol": {
             "title": "Library protocol"
         },
         "libraries.biosample_classification": {

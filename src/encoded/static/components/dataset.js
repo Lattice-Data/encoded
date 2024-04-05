@@ -458,9 +458,9 @@ const DatasetComponent = ({ context, auditIndicators, auditDetail }, reactContex
     // Make a list of url links, if any.
     const urls = urlList(context.urls);
 
-    function libraryProtocolList(values, field) {
+    function libraryProtocolList(values) {
         if (values && values.length > 0) {
-            return Array.from(new Set(values.map(function(value) { return value.protocol[field] }))).join(", ");
+            return Array.from(new Set(values.map(function(value) { return value.protocol }))).join(", ");
         }
         return null;
     }
@@ -490,7 +490,7 @@ const DatasetComponent = ({ context, auditIndicators, auditDetail }, reactContex
     }
 
     const library_types  = libraryList(context.libraries, 'assay');
-    const library_titles = libraryProtocolList(context.libraries, 'title');
+    const library_titles = libraryProtocolList(context.libraries);
     const biosample_classification = libraryListList(context.libraries, 'biosample_classification');
     const corresponding_contributors = contribList(context.corresponding_contributors);
     const contributors = contribList(context.contributors);

@@ -61,8 +61,8 @@ class Dataset(Item):
         'original_files': ('DataFile','dataset')
     }
     audit_inherit = [
-        'files',
-        'files.derived_from',
+        'original_files',
+        'original_files.derived_from',
         'libraries',
         'libraries.donors',
         'libraries.derived_from',
@@ -203,39 +203,6 @@ class Dataset(Item):
             if contributing:
                 return contributing
 
-
-    @calculated_property(schema={
-        "title": "Files",
-        "description": "The DataFiles that belong to this Dataset, filtered by status relative to the status of the Dataset.",
-        "comment": "Do not submit. This is a calculated property",
-        "type": "array",
-        "items": {
-            "type": "string",
-            "linkTo": "DataFile",
-        },
-    })
-    def files(self, request, status, original_files=None):
-        if original_files:
-            if status in ('in progress'):
-                return paths_filtered_by_status(
-                    request, original_files,
-                    include=('released', 'in progress'),
-                )
-            elif status in ('released'):
-                return paths_filtered_by_status(
-                    request, original_files,
-                    include=('released'),
-                )
-            elif status in ('archived'):
-                return paths_filtered_by_status(
-                    request, original_files,
-                    include=('released', 'archived'),
-                )
-            else:
-                return paths_filtered_by_status(
-                    request, original_files,
-                    exclude=('revoked', 'deleted', 'replaced'),
-                )
 
     @calculated_property(schema={
         "title": "Revoked files",

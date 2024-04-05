@@ -113,7 +113,7 @@ STATUS_HIERARCHY = {
 }
 
 
-def paths_filtered_by_status(request, paths, exclude=('deleted', 'replaced', 'archived'), include=None):
+def paths_filtered_by_status(request, paths, exclude=('deleted', 'replaced', 'archived', 'revoked'), include=None):
     if include is not None:
         return [
             path for path in paths

@@ -133,7 +133,7 @@ def audit_library_protocol_standards(value, system):
                     elif rl_spec == 'minimum' and value.get('read_length') < my_standards['read_length']:
                         audit_level = 'ERROR'
                         std_flag = True
-                    elif rl_spec == 'ideal':
+                    elif rl_spec == 'ideal' and value.get('read_length') < my_standards['read_length']:
                         rl_spec = 'ideally'
                         audit_level = 'WARNING'
                         std_flag = True

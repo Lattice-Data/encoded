@@ -425,8 +425,7 @@ class ProcessedMatrixFile(AnalysisFile):
         ]
     rev = DataFile.rev.copy()
     rev.update({
-        'cell_annotations': ('CellAnnotation', 'matrix_files'),
-        'quality_metrics': ('Metrics', 'quality_metric_of')
+        'cell_annotations': ('CellAnnotation', 'matrix_files')
     })
     audit_inherit = DataFile.audit_inherit + [
         'cell_annotations',
@@ -446,22 +445,6 @@ class ProcessedMatrixFile(AnalysisFile):
             if s3_uri.endswith('_curated.h5ad'):
                 ext = s3_uri.split('_')[-2]
                 return s3_uri.replace(f'_{ext}_curated.h5ad', f'.{ext}')
-
-
-    @calculated_property(schema={
-        "title": "Quality metrics",
-        "description": "The list of QC metric objects associated with this file.",
-        "comment": "Do not submit. Values in the list are reverse links of a quality metric with this file in quality_metric_of field.",
-        "type": "array",
-        "items": {
-            "type": ['string', 'object'],
-            "linkFrom": "Metrics.quality_metric_of",
-        },
-        "notSubmittable": True,
-    })
-    def quality_metrics(self, request, quality_metrics=None):
-        if quality_metrics:
-            return paths_filtered_by_status(request, quality_metrics)
 
 
     @calculated_property(schema={

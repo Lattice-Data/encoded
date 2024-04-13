@@ -86,10 +86,6 @@
         "depleted_marker_genes": {
             "title": "Depleted marker genes",
             "type": "typeahead"
-        },
-        "tissues_sampled.organ_slims": {
-            "title": "Organ sampled",
-            "type": "typeahead"
         }
     },
     "columns": {
@@ -107,12 +103,6 @@
         },
         "depleted_marker_genes": {
             "title": "Depleted marker genes"
-        },
-        "tissues_sampled.term_name": {
-            "title": "Tissue sampled"
-        },
-        "tissues_sampled.organ_slims": {
-            "title": "Organ sampled"
         }
     },
     "changelog": "/profiles/changelogs/cell_annotation.md"

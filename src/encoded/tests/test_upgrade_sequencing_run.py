@@ -13,3 +13,10 @@ def test_sequencing_run_upgrade_2_3(upgrader, sequencing_run_base):
 	value = upgrader.upgrade('sequencing_run', sequencing_run_base, current_version='2', target_version='3')
 	assert 'flowcell_details' not in value
 	assert value['schema_version'] == '3'
+
+
+def test_sequencing_run_upgrade_4_5(upgrader, sequencing_run_base):
+	sequencing_run_base['platform'] = 'Illumina NextSeq 550'
+	value = upgrader.upgrade('sequencing_run', sequencing_run_base, current_version='2', target_version='3')
+	assert value['platform'] = ['Illumina NextSeq 550']
+	assert value['schema_version'] == '5'

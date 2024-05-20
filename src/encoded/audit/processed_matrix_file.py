@@ -8,6 +8,43 @@ from .formatter import (
 )
 
 
+def spatial(value,system):
+    spatial_protocols = [
+        'Visium-10x-GE',
+        'Slide-seq2'
+    ]
+    assays = [l['protocol'] for l in value['libraries']]
+    spatial_match = [p for p in assays if p.split('/')[2] in spatial_protocols]
+    if spatial_match:
+        if len(set(assays)) > 1:
+            detail = ('File {} is data integrated from unexpected assays: {}.'.format(
+                audit_link(value['accession'], value['@id']),
+                ','.join(set(assays))
+                )
+            )
+            yield AuditFailure('spatial cross-assay integration', detail, 'ERROR')
+    if set(assays) == {'/library-protocols/Visium-10x-GE/'} and len(value['libraries']) == 1:
+        for df in value['derived_from']:
+            if df['background_barcodes_included'] != True:
+                detail = ('File {} is derived_from some files without background_barcodes_included.'.format(
+                    audit_link(value['accession'], value['@id'])
+                    )
+                )
+                yield AuditFailure('single Visium needs background barcodes', detail, 'ERROR')
+        if not value.get('spatial_s3_uri'):
+            detail = ('File {} is from a single Visium Library missing spatial_s3_uri.'.format(
+                audit_link(value['accession'], value['@id'])
+                )
+            )
+            yield AuditFailure('missing spatial_s3_uri', detail, 'ERROR')
+    elif value.get('spatial_s3_uri'):
+        detail = ('File {} has spatial_s3_uri but is not from a single Visium Library.'.format(
+            audit_link(value['accession'], value['@id'])
+            )
+        )
+        yield AuditFailure('non-single-Visium with spatial_s3_uri', detail, 'ERROR')
+
+
 def cell_type_col_in_author_cols(value,system):
     if value.get('author_columns') and value.get('author_cell_type_column'):
         if value['author_cell_type_column'] in value['author_columns']:
@@ -230,6 +267,7 @@ def gene_activity_genome_annotation(value, system):
 
 
 function_dispatcher = {
+    'spatial': spatial,
     'cell_type_col_in_author_cols': cell_type_col_in_author_cols,
     'ontology_check_dis': ontology_check_dis,
     'duplicated_derfrom': duplicated_derfrom,

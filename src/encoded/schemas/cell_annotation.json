@@ -71,6 +71,10 @@
         }
     },
     "facets": {
+        "author_cell_type": {
+            "title": "Author cell type",
+            "type": "typeahead"
+        },
         "cell_ontology.cell_slims": {
             "title": "Cell ontology cell type",
             "type": "typeahead"

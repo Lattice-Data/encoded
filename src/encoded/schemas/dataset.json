@@ -173,7 +173,7 @@
         "observation_count": {
             "title": "Observation count"
         },
-        "libraries.protocol.title": {
+        "libraries.protocol": {
             "title": "Library protocol"
         },
         "libraries.assay": {

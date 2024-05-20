@@ -16,3 +16,8 @@ def sequencing_run_2_3(value, system):
 def sequencing_run_3_4(value, system):
 	if 'supersedes' in value:
 		del value['supersedes']
+
+@upgrade_step('sequencing_run', '4', '5')
+def sequencing_run_4_5(value, system):
+	if 'platform' in value:
+		value['platform'] = [value['platform']]

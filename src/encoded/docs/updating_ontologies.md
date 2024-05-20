@@ -8,10 +8,10 @@ Ontologies used
 
 | Ontology |  File used | Version in use |
 |:--|:--|:--|
-| [Uber-anatomy ontology (UBERON)] | `uberon.owl` from [UBERON] | v2024-01-18 |
-| [Cell Ontology (CL)] | `cl.owl` from [CL] | v2024-01-04 |
-| [Experimental Factor Ontology (EFO)] | `efo.owl` from [EFO] | v3.62.0 |
-| [Mondo Disease Ontology (MONDO)] | `mondo.owl` from [MONDO] | v2024-01-03 |
+| [Uber-anatomy ontology (UBERON)] | `uberon.owl` from [UBERON] | v2024-03-22 |
+| [Cell Ontology (CL)] | `cl.owl` from [CL] | v2024-04-05 |
+| [Experimental Factor Ontology (EFO)] | `efo.owl` from [EFO] | v3.65.0 |
+| [Mondo Disease Ontology (MONDO)] | `mondo.owl` from [MONDO] | v2024-05-08 |
 | [Human Ancestry Ontology (HANCESTRO)] | `hancestro.owl` from [HANCESTRO] | 3.0 |
 | [Human Developmental Stage Ontology (HsapDv)] | `hsapdv.owl` from [OLS-HsapDv] | 2020-03-10 |
 | [Mouse Developmental Stage Ontology (MmusDv)] | `mmusdv.owl` from [OLS-MmusDv] | 2020-03-10 |

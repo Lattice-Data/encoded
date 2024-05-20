@@ -8,7 +8,7 @@
         ],
         "uuid": "93bfa031-44a2-47ce-bbf0-f5b912ff41ea",
         "demultiplexed_link": "anindita-basu:suspension_A",
-        "platform": "Illumina NextSeq 550"
+        "platform": ["Illumina NextSeq 550"]
     },
     {
         "aliases": [
@@ -19,7 +19,7 @@
         ],
         "uuid": "71beedec-18ef-449a-bb5c-15f34d7ad5cd",
         "demultiplexed_link": "anna-greka:sc_citeseq_suspension_donorB",
-        "platform": "Illumina NovaSeq 6000"
+        "platform": ["Illumina NovaSeq 6000"]
     },
     {
         "aliases": [
@@ -31,7 +31,7 @@
         ],
         "uuid": "457805b8-7000-4e77-acfb-66f0da50ed92",
         "demultiplexed_link": "anna-greka:sc_citeseq_suspension_donorA",
-        "platform": "Illumina HiSeq 3000"
+        "platform": ["Illumina HiSeq 3000"]
     },
     {
         "aliases": [
@@ -41,7 +41,7 @@
         "derived_from": [
             "anna-greka:citeseq_library_donorA1"
         ],
-        "platform": "Illumina NextSeq 500",
+        "platform": ["Illumina NextSeq 500"],
         "uuid": "2a12eb7b-ed78-466a-9552-7512bdd7f45f",
         "dbxrefs": [
             "SRA:SRR11111"
@@ -55,7 +55,7 @@
         "derived_from": [
             "anna-greka:citeseq_library_donorA2"
         ],
-        "platform": "MGI DNBSEQ-G400",
+        "platform": ["MGI DNBSEQ-G400"],
         "uuid": "3f5c30e4-f5de-48d2-847f-959f3824931f",
         "dbxrefs": [
             "SRA:SRR11112"
@@ -69,7 +69,7 @@
         "derived_from": [
             "anna-greka:citeseq_library_donorB1"
         ],
-        "platform": "Illumina HiSeq 4000",
+        "platform": ["Illumina HiSeq 4000"],
         "uuid": "6ca560bd-5278-441d-8256-06f3e3c16e35",
         "dbxrefs": [
             "ENA:ERR11111"
@@ -83,7 +83,7 @@
         "derived_from": [
             "anna-greka:citeseq_library_donorB2"
         ],
-        "platform": "Illumina NextSeq 2000",
+        "platform": ["Illumina NextSeq 2000"],
         "uuid": "4b503f3d-73fb-448b-a2a7-c4c9a2e3e9f7",
         "dbxrefs": [
             "ENA:ERR11112"
@@ -97,7 +97,7 @@
         "derived_from": [
             "anna-greka:citeseq_library_donorA1"
         ],
-        "platform": "Illumina HiSeq 4000",
+        "platform": ["Illumina HiSeq 4000"],
         "uuid": "6a0ee005-4d3e-418b-bf47-498547ba3c53"
     },
     {
@@ -108,7 +108,7 @@
         "derived_from": [
             "anna-greka:citeseq_library_donorA2"
         ],
-        "platform": "Illumina HiSeq 4000",
+        "platform": ["Illumina HiSeq 4000","Illumina NovaSeq X Plus"],
         "uuid": "7f3577cf-29dd-4c1c-8328-d82f01e0bc69"
     },
     {
@@ -119,7 +119,7 @@
         "derived_from": [
             "anna-greka:citeseq_library_donorB1"
         ],
-        "platform": "Illumina HiSeq 4000",
+        "platform": ["Illumina HiSeq 4000"],
         "uuid": "681d29a4-6058-4a9b-a946-f5a0e19a6e1e"
     },
     {
@@ -130,7 +130,7 @@
         "derived_from": [
             "anna-greka:citeseq_library_donorB2"
         ],
-        "platform": "Illumina HiSeq 4000",
+        "platform": ["Illumina HiSeq 4000"],
         "uuid": "d25b4ce3-6a01-4e01-8c96-d1cf4e9fb08c"
     },
     {
@@ -141,7 +141,7 @@
         "derived_from": [
             "anna-greka:sc_library_donorA1"
         ],
-        "platform": "Illumina HiSeq 4000",
+        "platform": ["Illumina HiSeq 4000"],
         "uuid": "aecf582a-3fb4-4262-9cfb-76b92847119c"
     },
     {
@@ -152,7 +152,7 @@
         "derived_from": [
             "anna-greka:sc_library_donorA2"
         ],
-        "platform": "Illumina HiSeq 4000",
+        "platform": ["Illumina HiSeq 4000"],
         "uuid": "8aafdc5b-11bc-42cc-a002-34fbf1fdd970"
     },
     {
@@ -163,7 +163,7 @@
         "derived_from": [
             "anna-greka:sc_library_donorB1"
         ],
-        "platform": "Illumina HiSeq 4000",
+        "platform": ["Illumina HiSeq 4000"],
         "uuid": "0629dab5-2389-4153-a010-165fc8414344"
     },
     {
@@ -174,7 +174,7 @@
         "derived_from": [
             "anna-greka:sc_library_donorB2"
         ],
-        "platform": "Illumina HiSeq 4000",
+        "platform": ["Illumina HiSeq 4000"],
         "uuid": "7083435b-9c6d-4296-be7d-768d71584320"
     },
     {
@@ -185,7 +185,7 @@
         "derived_from": [
             "anna-greka:snATAC_library_donorA1"
         ],
-        "platform": "Illumina HiSeq 4000",
+        "platform": ["Illumina HiSeq 4000"],
         "uuid": "908a258c-d674-4311-84c0-ad5e15717c19"
     },
     {
@@ -196,7 +196,7 @@
         "derived_from": [
             "anna-greka:snATAC_library_donorA2"
         ],
-        "platform": "Illumina HiSeq 4000",
+        "platform": ["Illumina HiSeq 4000"],
         "uuid": "ce4a4b84-efc4-4402-aee2-3ca67483aa7e"
     },
     {
@@ -207,7 +207,7 @@
         "derived_from": [
             "anna-greka:snATAC_library_donorB1"
         ],
-        "platform": "Illumina HiSeq 4000",
+        "platform": ["Illumina HiSeq 4000"],
         "uuid": "b244ad71-1ae3-45b8-b87c-67e244e03dda"
     },
     {
@@ -218,7 +218,7 @@
         "derived_from": [
             "anna-greka:snATAC_library_donorB2"
         ],
-        "platform": "Illumina HiSeq 4000",
+        "platform": ["Illumina HiSeq 4000"],
         "uuid": "543d528c-2a00-47f3-8b7f-17a7780dc2cf"
     },
     {
@@ -229,7 +229,7 @@
         "derived_from": [
             "anna-greka:sc_library_donorC1a"
         ],
-        "platform": "Illumina HiSeq 4000",
+        "platform": ["Illumina HiSeq 4000"],
         "uuid": "15c1b20e-e47e-4f89-8155-0bb3186a6acf"
     },
     {
@@ -240,7 +240,7 @@
         "derived_from": [
             "anna-greka:sc_library_donorC1b"
         ],
-        "platform": "Illumina HiSeq 4000",
+        "platform": ["Illumina HiSeq 4000"],
         "uuid": "fe0c497e-305b-4722-8a29-c67fbd7f25a6"
     },
     {
@@ -251,7 +251,7 @@
         "derived_from": [
             "anna-greka:sc_library_donorC2a"
         ],
-        "platform": "Illumina HiSeq 4000",
+        "platform": ["Illumina HiSeq 4000"],
         "uuid": "c59d40d6-10dc-4951-b8e7-d123124cb2b0"
     },
     {
@@ -262,7 +262,7 @@
         "derived_from": [
             "anna-greka:sc_library_donorC2b"
         ],
-        "platform": "Illumina HiSeq 4000",
+        "platform": ["Illumina HiSeq 4000"],
         "uuid": "e99de6aa-4ffe-4380-95aa-43077129b3c0"
     },
     {
@@ -273,7 +273,7 @@
         "derived_from": [
             "anna-greka:sc_library_donorD1a"
         ],
-        "platform": "Illumina HiSeq 4000",
+        "platform": ["Illumina HiSeq 4000"],
         "uuid": "79e5a7be-4a4f-470b-9f65-fec95d3ff1e4"
     },
     {
@@ -284,7 +284,7 @@
         "derived_from": [
             "anna-greka:sc_library_donorD1b"
         ],
-        "platform": "Illumina HiSeq 4000",
+        "platform": ["Illumina HiSeq 4000"],
         "uuid": "089da0b8-d3de-4437-b9af-9ba9f888fda4"
     },
     {
@@ -295,7 +295,7 @@
         "derived_from": [
             "anna-greka:sc_library_donorD2a"
         ],
-        "platform": "Illumina HiSeq 4000",
+        "platform": ["Illumina HiSeq 4000"],
         "uuid": "44574a0a-e41c-4100-a666-3f60882bc23b"
     },
     {
@@ -306,7 +306,7 @@
         "derived_from": [
             "anna-greka:sc_library_donorD2b"
         ],
-        "platform": "Illumina HiSeq 4000",
+        "platform": ["Illumina HiSeq 4000"],
         "uuid": "b8bd8ecb-ba42-4c8d-8faa-8ea5201475f0"
     },
     {
@@ -317,7 +317,7 @@
         "derived_from": [
             "anna-greka:snATAC_library_donorC1"
         ],
-        "platform": "Illumina HiSeq 4000",
+        "platform": ["Illumina HiSeq 4000"],
         "uuid": "213bf1b5-796d-4825-b7fd-c399fac7fffe"
     },
     {
@@ -328,7 +328,7 @@
         "derived_from": [
             "anna-greka:snATAC_library_donorC2"
         ],
-        "platform": "Illumina HiSeq 4000",
+        "platform": ["Illumina HiSeq 4000"],
         "uuid": "748bf468-5b46-4012-b842-671442460650"
     },
     {
@@ -339,7 +339,7 @@
         "derived_from": [
             "anna-greka:snATAC_library_donorD1"
         ],
-        "platform": "Illumina HiSeq 4000",
+        "platform": ["Illumina HiSeq 4000"],
         "uuid": "ee94a6b7-2663-41c2-a1fd-185bdad9241d"
     },
     {
@@ -350,7 +350,7 @@
         "derived_from": [
             "anna-greka:snATAC_library_donorD2"
         ],
-        "platform": "Illumina HiSeq 4000",
+        "platform": ["Illumina HiSeq 4000"],
         "uuid": "e99740a7-59c6-46ac-b284-d3137af5cc18"
     },
     {
@@ -361,7 +361,7 @@
         "derived_from": [
             "anna-greka:sc_pooled_library_donorCD1"
         ],
-        "platform": "Illumina HiSeq 4000",
+        "platform": ["Illumina HiSeq 4000"],
         "uuid": "6ff9e510-4cd2-41eb-96e9-60d84736d9a2"
     },
     {
@@ -372,7 +372,7 @@
         "derived_from": [
             "anna-greka:sc_pooled_library_donorCD2"
         ],
-        "platform": "Illumina HiSeq 4000",
+        "platform": ["Illumina HiSeq 4000"],
         "uuid": "a074eba7-31cf-41db-9675-d81d869345a9"
     },
     {
@@ -383,7 +383,7 @@
         "derived_from": [
             "anna-greka:sc_pooled_library_donorCD1"
         ],
-        "platform": "Illumina HiSeq 4000",
+        "platform": ["Illumina HiSeq 4000"],
         "uuid": "f2342e08-61e6-4b4a-923f-db5c0507136f"
     },
     {
@@ -394,7 +394,7 @@
         "derived_from": [
             "anna-greka:sc_pooled_library_donorCD2"
         ],
-        "platform": "Illumina HiSeq 4000",
+        "platform": ["Illumina HiSeq 4000"],
         "uuid": "08c14aaf-ae61-4173-ae4e-b8aed2e1142c"
     },
     {
@@ -405,7 +405,7 @@
         "derived_from": [
             "anna-greka:citeseq_library_donorE"
         ],
-        "platform": "Illumina HiSeq 4000",
+        "platform": ["Illumina HiSeq 4000"],
         "uuid": "a246c9ed-c2b0-4e7e-947e-17f1924e2c74"
     },
     {
@@ -416,7 +416,7 @@
         "derived_from": [
             "anna-greka:citeseq_library_donorF"
         ],
-        "platform": "Illumina HiSeq 4000",
+        "platform": ["Illumina HiSeq 4000"],
         "uuid": "caa2e548-8160-4758-a58b-46aaffe4373b"
     },
     {
@@ -427,7 +427,7 @@
         "derived_from": [
             "anna-greka:citeseq_library_donorG"
         ],
-        "platform": "Illumina HiSeq 4000",
+        "platform": ["Illumina HiSeq 4000"],
         "uuid": "a08dac9a-5e04-4105-86e1-e5b05bce9e9b"
     },
     {
@@ -438,7 +438,7 @@
         "derived_from": [
             "anna-greka:citeseq_library_donorH"
         ],
-        "platform": "Illumina HiSeq 4000",
+        "platform": ["Illumina HiSeq 4000"],
         "uuid": "fd4b7148-7209-48e5-944e-2613c50e00d7"
     },
     {
@@ -449,7 +449,7 @@
         "derived_from": [
             "anna-greka:sc_library_donorE"
         ],
-        "platform": "Illumina HiSeq 4000",
+        "platform": ["Illumina HiSeq 4000"],
         "uuid": "38eecbc9-d0db-4a78-aa8c-292010afefb9"
     },
     {
@@ -460,7 +460,7 @@
         "derived_from": [
             "anna-greka:sc_library_donorF"
         ],
-        "platform": "Illumina HiSeq 4000",
+        "platform": ["Illumina HiSeq 4000"],
         "uuid": "cc50396d-d60e-4239-9d8a-ed107b0fa81e"
     },
     {
@@ -471,7 +471,7 @@
         "derived_from": [
             "anna-greka:sc_library_donorG"
         ],
-        "platform": "Illumina HiSeq 4000",
+        "platform": ["Illumina HiSeq 4000"],
         "uuid": "9e302e08-3485-4cb8-9fbb-307bae67ca1a"
     },
     {
@@ -482,7 +482,7 @@
         "derived_from": [
             "anna-greka:sc_library_donorH"
         ],
-        "platform": "Illumina HiSeq 4000",
+        "platform": ["Illumina HiSeq 4000"],
         "uuid": "36bfd7cf-9970-4aeb-be6f-ba109e1c1149"
     },
     {
@@ -493,7 +493,7 @@
         "derived_from": [
             "anna-greka:snATAC_library_donorE1"
         ],
-        "platform": "Illumina HiSeq 4000",
+        "platform": ["Illumina HiSeq 4000"],
         "uuid": "fe496b5d-32ce-4d9d-8b72-2ea150d149a7"
     },
     {
@@ -504,7 +504,7 @@
         "derived_from": [
             "anna-greka:snATAC_library_donorE2"
         ],
-        "platform": "Illumina HiSeq 4000",
+        "platform": ["Illumina HiSeq 4000"],
         "uuid": "10e7e579-1921-488d-9de3-9bc5fe5b6009"
     },
     {
@@ -515,7 +515,7 @@
         "derived_from": [
             "anna-greka:snATAC_library_donorF1"
         ],
-        "platform": "Illumina HiSeq 4000",
+        "platform": ["Illumina HiSeq 4000"],
         "uuid": "2651c433-d313-44fe-9fca-fe460d7a226c"
     },
     {
@@ -526,7 +526,7 @@
         "derived_from": [
             "anna-greka:snATAC_library_donorF2"
         ],
-        "platform": "Illumina HiSeq 4000",
+        "platform": ["Illumina HiSeq 4000"],
         "uuid": "ffb0d705-d0f1-4c64-8d25-93e25c4b1a7e"
     },
     {
@@ -537,7 +537,7 @@
         "derived_from": [
             "anna-greka:snATAC_library_donorG1"
         ],
-        "platform": "Illumina HiSeq 4000",
+        "platform": ["Illumina HiSeq 4000"],
         "uuid": "f36014ab-40c7-400b-9b48-3090ab545f6f"
     },
     {
@@ -548,7 +548,7 @@
         "derived_from": [
             "anna-greka:snATAC_library_donorG2"
         ],
-        "platform": "Illumina HiSeq 4000",
+        "platform": ["Illumina HiSeq 4000"],
         "uuid": "78965e22-cd6f-4d0b-9c97-0a5d39fb616a"
     },
     {
@@ -559,7 +559,7 @@
         "derived_from": [
             "anna-greka:snATAC_library_donorH1"
         ],
-        "platform": "Illumina HiSeq 4000",
+        "platform": ["Illumina HiSeq 4000"],
         "uuid": "3ca06fb5-7648-48b4-97ff-ca84fa24d3a4"
     },
     {
@@ -570,7 +570,7 @@
         "derived_from": [
             "anna-greka:snATAC_library_donorH2"
         ],
-        "platform": "Illumina HiSeq 4000",
+        "platform": ["Illumina HiSeq 4000"],
         "uuid": "31c3f789-5355-494d-9028-08258437fb2c"
     },
     {
@@ -578,7 +578,7 @@
             "jimmie-ye:library_1a"
         ],
         "status": "in progress",
-        "platform": "Illumina NovaSeq 6000",
+        "platform": ["Illumina NovaSeq 6000"],
         "uuid": "d6cbc5f9-d546-4917-9268-7b48b40a93ca"
     },
     {
@@ -586,7 +586,7 @@
             "jimmie-ye:library_1b"
         ],
         "status": "in progress",
-        "platform": "Illumina NovaSeq 6000",
+        "platform": ["Illumina NovaSeq 6000"],
         "uuid": "a460d195-735f-4776-963d-8e8bc18cdd24"
     },
     {
@@ -594,7 +594,7 @@
             "jimmie-ye:library_1c"
         ],
         "status": "in progress",
-        "platform": "Illumina NovaSeq 6000",
+        "platform": ["Illumina NovaSeq 6000"],
         "uuid": "78c30d8c-ae6b-4f1a-901b-f64024de7e83"
     },
     {
@@ -602,7 +602,7 @@
             "jimmie-ye:library_2a"
         ],
         "status": "in progress",
-        "platform": "Illumina NovaSeq 6000",
+        "platform": ["Illumina NovaSeq 6000"],
         "uuid": "ff73f9a8-2137-41db-9a5f-2711874c93ed"
     },
     {
@@ -610,7 +610,7 @@
             "jimmie-ye:library_2b"
         ],
         "status": "in progress",
-        "platform": "Illumina NovaSeq 6000",
+        "platform": ["Illumina NovaSeq 6000"],
         "uuid": "8a2f8e13-6e37-4020-a3f0-92f797a7d8df"
     },
     {
@@ -618,7 +618,7 @@
             "jimmie-ye:library_2c"
         ],
         "status": "in progress",
-        "platform": "Illumina NovaSeq 6000",
+        "platform": ["Illumina NovaSeq 6000"],
         "uuid": "d5830cc6-21f1-495d-a0a1-2187365db146"
     },
     {
@@ -626,7 +626,7 @@
             "jimmie-ye:library_3a"
         ],
         "status": "in progress",
-        "platform": "Illumina NovaSeq 6000",
+        "platform": ["Illumina NovaSeq 6000"],
         "uuid": "72482854-d67c-4e38-aa4d-c8eb0f5c31d3"
     },
     {
@@ -634,7 +634,7 @@
             "jimmie-ye:library_3b"
         ],
         "status": "in progress",
-        "platform": "Illumina NovaSeq 6000",
+        "platform": ["Illumina NovaSeq 6000"],
         "uuid": "31914fbd-df87-4a6e-8145-cc70504c9469"
     },
     {
@@ -642,7 +642,7 @@
             "jimmie-ye:library_3c"
         ],
         "status": "in progress",
-        "platform": "Illumina NovaSeq 6000",
+        "platform": ["Illumina NovaSeq 6000"],
         "uuid": "f14a9538-c3e1-422e-a11c-d7d853512f4a"
     },
     {
@@ -650,7 +650,7 @@
             "peter-sims:library_1a"
         ],
         "status": "released",
-        "platform": "Illumina NovaSeq 6000",
+        "platform": ["Illumina NovaSeq 6000"],
         "uuid": "a7cfa2ba-e8a2-455d-8387-cbd23e73b679"
     },
     {
@@ -658,7 +658,7 @@
             "peter-sims:library_1b"
         ],
         "status": "released",
-        "platform": "Illumina NovaSeq 6000",
+        "platform": ["Illumina NovaSeq 6000"],
         "uuid": "3ca3d763-50a2-45b7-9dd1-fd9f0d92109d"
     },
     {
@@ -666,7 +666,7 @@
             "peter-sims:library_1c"
         ],
         "status": "released",
-        "platform": "Illumina NovaSeq 6000",
+        "platform": ["Illumina NovaSeq 6000"],
         "uuid": "c6bac386-c37c-4d6d-8ffc-637de37d30a8"
     },
     {
@@ -674,7 +674,7 @@
             "peter-sims:library_2a"
         ],
         "status": "released",
-        "platform": "Illumina NovaSeq 6000",
+        "platform": ["Illumina NovaSeq 6000"],
         "uuid": "0c5b7e8c-375f-40cc-a18a-914e878b34fd"
     },
     {
@@ -682,7 +682,7 @@
             "peter-sims:library_2b"
         ],
         "status": "released",
-        "platform": "Illumina NovaSeq 6000",
+        "platform": ["Illumina NovaSeq 6000"],
         "uuid": "9a55c381-72ff-4cc2-a68d-c21244651431"
     },
     {
@@ -690,7 +690,7 @@
             "peter-sims:library_2c"
         ],
         "status": "released",
-        "platform": "Illumina NovaSeq 6000",
+        "platform": ["Illumina NovaSeq 6000"],
         "uuid": "9cd890e1-2e9e-4994-ad35-271a78553248"
     },
     {
@@ -698,7 +698,7 @@
             "peter-sims:library_3a"
         ],
         "status": "released",
-        "platform": "Illumina NovaSeq 6000",
+        "platform": ["Illumina NovaSeq 6000"],
         "uuid": "3dd59186-0407-4e29-9025-8443485fac53"
     },
     {
@@ -706,7 +706,7 @@
             "peter-sims:library_3b"
         ],
         "status": "released",
-        "platform": "Illumina NovaSeq 6000",
+        "platform": ["Illumina NovaSeq 6000"],
         "uuid": "bb75eed3-ac1d-4e8c-a989-dc12aabaa0df"
     },
     {
@@ -714,7 +714,7 @@
             "peter-sims:library_3c"
         ],
         "status": "released",
-        "platform": "Illumina NovaSeq 6000",
+        "platform": ["Illumina NovaSeq 6000"],
         "uuid": "74ab76b9-0a74-4263-b1ef-75755938e939"
     }
 ]

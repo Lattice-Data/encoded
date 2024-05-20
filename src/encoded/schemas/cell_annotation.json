@@ -73,7 +73,8 @@
     "facets": {
         "author_cell_type": {
             "title": "Author cell type",
-            "type": "typeahead"
+            "type": "typeahead",
+            "length": "long"
         },
         "cell_ontology.cell_slims": {
             "title": "Cell ontology cell type",
@@ -81,11 +82,13 @@
         },
         "cell_ontology.term_name": {
             "title": "Cell ontology name",
-            "type": "typeahead"
+            "type": "typeahead",
+            "length": "long"
         },
         "enriched_marker_genes": {
             "title": "Enriched marker genes",
-            "type": "typeahead"
+            "type": "typeahead",
+            "length": "long"
         },
         "depleted_marker_genes": {
             "title": "Depleted marker genes",

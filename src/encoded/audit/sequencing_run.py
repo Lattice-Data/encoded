@@ -8,20 +8,7 @@ from .formatter import (
 )
 
 
-def no_platform(value, system):
-    if value['status'] in ['deleted','archived']:
-        return
-
-    if not value.get('platform'):
-        detail = ('SequencingRun {} has no platform specified.'.format(
-            audit_link(path_to_text(value['@id']), value['@id'])
-            )
-        )
-        yield AuditFailure('no platform specified', detail, level='ERROR')
-        return
-
-
-def audit_read_counts(value, system):
+def audit_read_counts_platform(value, system):
     '''
     All sequence files belonging to a SequencingRun
     should have the same number of reads.
@@ -30,10 +17,13 @@ def audit_read_counts(value, system):
         return
 
     read_count_lib = set()
+    plat_lib = set()
     for f in value.get('files'):
         if f.get('validated') != True:
             return
         read_count_lib.add(f.get('read_count'))
+        if 'platform' in f:
+            plat_lib.add(','.join(f['platform']))
     if len(read_count_lib) != 1:
         detail = ('SequencingRun {} has files of variable read counts - {}.'.format(
             audit_link(path_to_text(value['@id']), value['@id']),
@@ -41,6 +31,14 @@ def audit_read_counts(value, system):
             )
         )
         yield AuditFailure('variable read counts', detail, level='ERROR')
+        return
+    if len(plat_lib) != 1:
+        detail = ('SequencingRun {} has files of variable platforms - {}.'.format(
+            audit_link(path_to_text(value['@id']), value['@id']),
+            plat_lib
+            )
+        )
+        yield AuditFailure('variable platforms', detail, level='ERROR')
         return
 
 
@@ -151,9 +149,8 @@ def audit_duplicated_read_types(value, system):
 
 function_dispatcher = {
     'audit_flowcell': audit_flowcell,
-    'audit_read_counts': audit_read_counts,
+    'audit_read_counts_platform': audit_read_counts_platform,
     'audit_required_files': audit_required_files,
-    'no_platform': no_platform,
     'audit_duplicated_read_types': audit_duplicated_read_types
 }
 

@@ -12,6 +12,9 @@
         "derived_from": [
             "lattice:demux_run_3"
         ],
+        "platform": [
+            "Illumina HiSeq 4000"
+        ],
         "derivation_process": [
             "demultiplexing"
         ],
@@ -42,6 +45,9 @@
         ],
         "derived_from": [
             "lattice:demux_run_3"
+        ],
+        "platform": [
+            "Illumina HiSeq 4000"
         ],
         "derivation_process": [
             "demultiplexing"
@@ -74,6 +80,10 @@
         "derived_from": [
             "lattice:demux_run_2"
         ],
+        "platform": [
+            "Illumina NextSeq 500",
+            "Illumina NextSeq 550"
+        ],
         "derivation_process": [
             "demultiplexing"
         ],
@@ -104,6 +114,10 @@
         ],
         "derived_from": [
             "lattice:demux_run_2"
+        ],
+        "platform": [
+            "Illumina NextSeq 500",
+            "Illumina NextSeq 550"
         ],
         "derivation_process": [
             "demultiplexing"
@@ -136,6 +150,9 @@
         "derived_from": [
             "lattice:demux_run_1"
         ],
+        "platform": [
+            "Illumina NovaSeq X Plus"
+        ],
         "derivation_process": [
             "demultiplexing"
         ],
@@ -166,6 +183,9 @@
         ],
         "derived_from": [
             "lattice:demux_run_1"
+        ],
+        "platform": [
+            "Illumina NovaSeq X Plus"
         ],
         "derivation_process": [
             "demultiplexing"

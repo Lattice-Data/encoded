@@ -103,3 +103,8 @@ def processed_matrix_file_9_10(value, system):
 def file_remove_no_file_available(value, system):
 	if 'no_file_available' in value:
 		del value['no_file_available']
+
+
+@upgrade_step('raw_sequence_file', '5', '6')
+def file_fill_platform(value, system):
+	value['platform'] = value['derived_from'][0]['platform']

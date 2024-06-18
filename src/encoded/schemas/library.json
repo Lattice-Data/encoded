@@ -222,6 +222,9 @@
         "donors.sex": {
             "title": "Donor sex"
         },
+        "diseases": {
+            "title": "Donor and Sample Diseases"
+        },
         "donors.diseases.term_name": {
             "title": "Donor diseases"
         },
@@ -299,6 +302,9 @@
         },
         "donors.sex": {
             "title": "Donor sex"
+        },
+        "diseases": {
+            "title": "Donor and Sample Diseases"
         },
         "donors.diseases.term_name": {
             "title": "Donor diseases"

@@ -179,27 +179,22 @@ def mappings_matrices(value,system):
             yield AuditFailure('cell_label_mappings error', detail, 'ERROR')
 
 
-def ontology_check_dis(value, system):
+def ontology_check_disease(value, system):
     if value['status'] in ['deleted']:
         return
 
-    field = 'experimental_variable_disease'
-    dbs = ['MONDO']
-
-    ontobjs = value.get(field)
-    if ontobjs:
-        for ontobj in ontobjs:
-            term = ontobj['term_id']
-            ont_db = term.split(':')[0]
-            if ont_db not in dbs:
-                detail = ('File {} {} {} not from {}.'.format(
+    if 'experimental_variable_disease' in value:
+        lib_diseases = set()
+        for l in value['libraries']:
+            lib_diseases.update(l.get('diseases'))
+        for d in value['experimental_variable_disease']:
+            if d['term_name'] not in lib_diseases:
+                detail = ('File {} experimental_variable_disease {} not in associated samples and donors.'.format(
                     audit_link(value['accession'], value['@id']),
-                    field,
-                    term,
-                    ','.join(dbs)
+                    d['term_name'],
                     )
                 )
-                yield AuditFailure('incorrect ontology term', detail, 'ERROR')
+                yield AuditFailure('experimental_variable_disease error', detail, 'ERROR')
 
 
 def duplicated_derfrom(value, system):
@@ -299,7 +294,7 @@ def gene_activity_genome_annotation(value, system):
 function_dispatcher = {
     'spatial': spatial,
     'cell_type_col_in_author_cols': cell_type_col_in_author_cols,
-    'ontology_check_dis': ontology_check_dis,
+    'ontology_check_disease': ontology_check_disease,
     'duplicated_derfrom': duplicated_derfrom,
     'mappings_antibodies': mappings_antibodies,
     'mappings_donors': mappings_donors,

@@ -7,8 +7,6 @@ from .formatter import (
     path_to_text,
 )
 
-from .item import STATUS_LEVEL
-
 
 def no_read_type(value, system):
     if value['status'] in ['deleted']:

@@ -108,3 +108,9 @@ def file_remove_no_file_available(value, system):
 @upgrade_step('raw_sequence_file', '5', '6')
 def file_fill_platform(value, system):
 	value['platform'] = value['derived_from'][0]['platform']
+
+
+@upgrade_step('processed_matrix_file', '11', '12')
+def file_block_X_spatial(value, system):
+	if value.get('default_embedding') == 'X_spatial':
+		value['default_embedding'] = 'spatial'

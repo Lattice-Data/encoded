@@ -8,7 +8,7 @@ from .formatter import (
 )
 
 
-def audit_read_counts_platform(value, system):
+def audit_read_types_counts_platform(value, system):
     '''
     All sequence files belonging to a SequencingRun
     should have the same number of reads.
@@ -16,14 +16,29 @@ def audit_read_counts_platform(value, system):
     if value['status'] in ['deleted','archived']:
         return
 
+    read_types = {}
     read_count_lib = set()
     plat_lib = set()
     for f in value.get('files'):
         if f.get('validated') != True:
             return
+        if f.get('read_type'):
+            if f['read_type'] in read_types.keys():
+                read_types[f['read_type']].append(f['uuid'])
+            else:
+                read_types[f['read_type']] = [f['uuid']]
         read_count_lib.add(f.get('read_count'))
         if 'platform' in f:
             plat_lib.add(','.join(f['platform']))
+    for k,v in read_types.items():
+        if len(v) > 1:
+            detail = ('SequencingRun {} has multiple {} files: {}.'.format(
+                audit_link(path_to_text(value['@id']), value['@id']),
+                k,
+                ','.join(v)
+                )
+            )
+            yield AuditFailure('duplicated read type', detail, level='ERROR')
     if len(read_count_lib) != 1:
         detail = ('SequencingRun {} has files of variable read counts - {}.'.format(
             audit_link(path_to_text(value['@id']), value['@id']),
@@ -31,7 +46,6 @@ def audit_read_counts_platform(value, system):
             )
         )
         yield AuditFailure('variable read counts', detail, level='ERROR')
-        return
     if len(plat_lib) != 1:
         detail = ('SequencingRun {} has files of variable platforms - {}.'.format(
             audit_link(path_to_text(value['@id']), value['@id']),
@@ -101,65 +115,20 @@ def audit_required_files(value, system):
             return
 
 
-def audit_duplicated_read_types(value, system):
-    '''
-    Should not have multiple reads assigned to this SequencingRun
-    if they are the same read_type
-    '''
-    if value['status'] in ['deleted','archived']:
-        return
-
-    read_types = {}
-    for f in value.get('files'):
-        if f.get('read_type'):
-            if f['read_type'] in read_types.keys():
-                read_types[f['read_type']].append(f['uuid'])
-            else:
-                read_types[f['read_type']] = [f['uuid']]
-
-    for k,v in read_types.items():
-        if len(v) > 1:
-            detail = ('SequencingRun {} has multiple {} files: {}.'.format(
-                audit_link(path_to_text(value['@id']), value['@id']),
-                k,
-                ','.join(v)
-                )
-            )
-            yield AuditFailure('duplicated read type', detail, level='ERROR')
-    return
-
-
-
-    not_found = []
-    protocol = value['derived_from'][0].get('protocol')
-    for f in protocol['required_files']:
-        file_prop_name = (f + '_file').replace('Read ', 'read_')
-        if not value.get(file_prop_name):
-            not_found.append(f)
-    if not_found:
-        detail = ('SequencingRun {} is missing {}, required based on standards for {}.'.format(
-            audit_link(path_to_text(value['@id']), value['@id']),
-            ','.join(not_found),
-            audit_link(path_to_text(protocol['@id']), protocol['@id'])
-            )
-        )
-        yield AuditFailure('missing required file', detail, level='ERROR')
-        return
-
-
 function_dispatcher = {
     'audit_flowcell': audit_flowcell,
-    'audit_read_counts_platform': audit_read_counts_platform,
-    'audit_required_files': audit_required_files,
-    'audit_duplicated_read_types': audit_duplicated_read_types
+    'audit_read_types_counts_platform': audit_read_types_counts_platform,
+    'audit_required_files': audit_required_files
 }
 
 
 @audit_checker('SequencingRun',
-               frame=['object',
-                      'derived_from',
-                      'derived_from.protocol',
-                      'files'])
+               frame=[
+                    'object',
+                    'derived_from',
+                    'derived_from.protocol',
+                    'files'
+                ])
 def audit_sequencing_run(value, system):
     for function_name in function_dispatcher.keys():
         for failure in function_dispatcher[function_name](value, system):

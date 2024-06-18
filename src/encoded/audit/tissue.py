@@ -15,9 +15,7 @@ def audit_age_collection(value, system):
     if value['status'] in ['deleted']:
         return
 
-    if 'age_at_collection' in value:
-        donor_age = value['donors'][0].get('age')
-        if donor_age != 'variable':
+    if 'age_at_collection' in value and value['donors'][0].get('age') != 'variable':
             detail = ('Tissue {} should not have age_at_collection unless donor age is variable.'.format(
                 audit_link(value['accession'], value['@id'])
                 )
@@ -25,7 +23,7 @@ def audit_age_collection(value, system):
             yield AuditFailure('age_at_collection inconsistency', detail, level='ERROR')
             return
 
-    elif value['donors'][0].get('age') == 'variable':
+    elif 'age_at_collection' not in value and value['donors'][0].get('age') == 'variable':
             detail = ('Tissue {} should have age_at_collection if donor age is variable.'.format(
                 audit_link(value['accession'], value['@id'])
                 )

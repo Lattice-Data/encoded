@@ -9,6 +9,9 @@ from .formatter import (
 
 
 def ontology_check_cell(value, system):
+    if value['status'] in ['deleted']:
+        return
+
     field = 'cell_ontology'
     dbs = ['CL']
     terms = ['NCIT:C17998']
@@ -33,7 +36,7 @@ function_dispatcher = {
 
 @audit_checker('CellAnnotation',
                frame=[
-                'cell_ontology'
+                    'cell_ontology'
                 ])
 def audit_cell_annotation(value, system):
     for function_name in function_dispatcher.keys():

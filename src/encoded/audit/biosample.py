@@ -48,15 +48,10 @@ def audit_death_prop_living_donor(value, system):
     if value['status'] in ['deleted']:
         return
 
-    living_donor_flag = False
     for donor in value['donors']:
-        if donor.get('living_at_sample_collection') == True:
-            living_donor_flag = True
-    for death_prop in ['death_to_preservation_interval']:
-        if living_donor_flag == True and value.get(death_prop):
-            detail = ('Biosample {} has property {} but is associated with at least one donor that is living at sample collection.'.format(
-                audit_link(value['accession'], value['@id']),
-                death_prop
+        if donor.get('living_at_sample_collection') == "True" and value.get('death_to_preservation_interval'):
+            detail = ('Biosample {} has death_to_preservation_interval but is associated with at least one donor that is living at sample collection.'.format(
+                audit_link(value['accession'], value['@id'])
                 )
             )
             yield AuditFailure('death interval for living donor', detail, level='ERROR')
@@ -64,6 +59,9 @@ def audit_death_prop_living_donor(value, system):
 
 
 def ontology_check_dis(value, system):
+    if value['status'] in ['deleted']:
+        return
+
     field = 'diseases'
     dbs = ['MONDO']
 
@@ -94,8 +92,8 @@ function_dispatcher = {
 
 @audit_checker('Biosample',
                frame=[
-                'donors',
-                'diseases'
+                    'donors',
+                    'diseases'
                 ])
 def audit_biosample(value, system):
     for function_name in function_dispatcher.keys():

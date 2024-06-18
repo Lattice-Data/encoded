@@ -27,9 +27,10 @@ def audit_suspension_intervals(value, system):
             for d in value['derived_from']:
                 if 'collection_to_dissociation_interval' in d or 'death_to_dissociation_interval' in d:
                     int_flag = True
-                for dd in d['derived_from']:
-                    if 'collection_to_preservation_interval' in dd or 'death_to_preservation_interval' in dd:
-                        int_flag = True
+                else:
+                    for dd in d['derived_from']:
+                        if 'collection_to_preservation_interval' in dd or 'death_to_preservation_interval' in dd:
+                            int_flag = True
         else:
             for d in value['derived_from']:
                 if 'collection_to_preservation_interval' in d or 'death_to_preservation_interval' in d:
@@ -73,18 +74,20 @@ def audit_death_prop_living_donor(value, system):
     for donor in value['donors']:
         if donor.get('living_at_sample_collection') == True:
             living_donor_flag = True
-    for death_prop in ['death_to_dissociation_interval']:
-        if living_donor_flag == True and value.get(death_prop):
-            detail = ('Biosample {} has property {} but is associated with at least one donor that is living at sample collection.'.format(
-                audit_link(value['accession'], value['@id']),
-                death_prop
-                )
+    if living_donor_flag == True and value.get('death_to_dissociation_interval'):
+        detail = ('Biosample {} has property {} but is associated with at least one donor that is living at sample collection.'.format(
+            audit_link(value['accession'], value['@id']),
+            death_prop
             )
-            yield AuditFailure('death interval for living donor', detail, level='ERROR')
-            return
+        )
+        yield AuditFailure('death interval for living donor', detail, level='ERROR')
+        return
 
 
 def ontology_check_enr(value, system):
+    if value['status'] in ['deleted']:
+        return
+
     field = 'enriched_cell_types'
     dbs = ['CL']
 
@@ -107,6 +110,9 @@ def ontology_check_enr(value, system):
 
 
 def ontology_check_dep(value, system):
+    if value['status'] in ['deleted']:
+        return
+
     field = 'depleted_cell_types'
     dbs = ['CL']
 
@@ -138,11 +144,11 @@ function_dispatcher = {
 
 @audit_checker('Suspension',
                frame=[
-                'donors',
-                'enriched_cell_types',
-                'depleted_cell_types',
-                'derived_from',
-                'derived_from.derived_from'
+                    'donors',
+                    'enriched_cell_types',
+                    'depleted_cell_types',
+                    'derived_from',
+                    'derived_from.derived_from'
                 ])
 def audit_suspension(value, system):
     for function_name in function_dispatcher.keys():

@@ -9,6 +9,9 @@ from .formatter import (
 
 
 def ontology_check_bio(value, system):
+    if value['status'] in ['deleted']:
+        return
+
     field = 'biosample_ontology'
     dbs = ['CL','EFO','NTR']
 
@@ -43,7 +46,7 @@ function_dispatcher = {
 
 @audit_checker('CellCulture',
                frame=[
-                'biosample_ontology'
+                    'biosample_ontology'
                 ])
 def audit_cell_culture(value, system):
     for function_name in function_dispatcher.keys():

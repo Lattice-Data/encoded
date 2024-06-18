@@ -46,14 +46,13 @@ def audit_term(value, system):
     ontology_term_name = ontology[term_id]['name']
     if (ontology_term_name != term_name
         and term_name not in ontology[term_id]['synonyms']):
-        detail = ('OntologyTerm {object_id} has a mismatch between'
-            ' term_id ({term_id}) and term_name ({term_name}),'
-            ' ontology term_name for term_id {term_id} is'
-            ' {ontology_term_name}.'.format(
-                object_id=audit_link(path_to_text(value['@id']), value['@id']),
-                term_id=term_id,
-                term_name=term_name,
-                ontology_term_name=ontology_term_name
+        detail = ('OntologyTerm {} has a mismatch between'
+            ' term_id ({}) and term_name ({}),'
+            ' ontology term_name is {}.'.format(
+                audit_link(path_to_text(value['@id']), value['@id']),
+                term_id,
+                term_name,
+                ontology_term_name
             )
         )
         yield AuditFailure('inconsistent ontology term', detail,

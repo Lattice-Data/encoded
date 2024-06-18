@@ -47,23 +47,26 @@ def family_med_history(value, system):
 def audit_bmi(value,system):
     if value['status'] in ['deleted']:
         return
-    if 'body_mass_index' not in value:
-        if value.get('height') and value.get('weight'):
-            detail = ('Donor {} BMI can be calculated from reported height and weight.'.format(
-                audit_link(value['accession'], value['@id'])
-                )
+
+    if value.get('height') and value.get('weight') and not value.get('body_mass_index'):
+        detail = ('Donor {} BMI can be calculated from reported height and weight.'.format(
+            audit_link(value['accession'], value['@id'])
             )
-            yield AuditFailure('missing BMI', detail, level='ERROR')
-            return
+        )
+        yield AuditFailure('missing BMI', detail, level='ERROR')
+        return
 
 
 def audit_donor_age(value, system):
+    if value['status'] in ['deleted']:
+        return
+
     if value.get('age'):
         age = value['age']
     else:
         age = value['conceptional_age']
 
-    if value['status'] in ['deleted'] or age in ['unknown', 'variable', '>89'] or '>' in age or '<' in age:
+    if age in ['unknown', 'variable'] or '>' in age or '<' in age:
         return
 
     if '-' in age:
@@ -190,6 +193,9 @@ def audit_donor_dev_stage(value, system):
 
 
 def ontology_check_dev(value, system):
+    if value['status'] in ['deleted']:
+        return
+
     field = 'development_ontology'
     dbs = ['HsapDv']
     terms = ['NCIT:C17998','NCIT:C54166']
@@ -209,6 +215,9 @@ def ontology_check_dev(value, system):
 
 
 def ontology_check_eth(value, system):
+    if value['status'] in ['deleted']:
+        return
+
     field = 'ethnicity'
     dbs = ['HANCESTRO']
     terms = ['NCIT:C17998']
@@ -229,6 +238,9 @@ def ontology_check_eth(value, system):
 
 
 def ontology_check_dis(value, system):
+    if value['status'] in ['deleted']:
+        return
+
     field = 'diseases'
     dbs = ['MONDO']
 
@@ -250,31 +262,33 @@ def ontology_check_dis(value, system):
         yield AuditFailure('incorrect ontology term', detail, 'ERROR')
 
 
-def ontology_check_anc(value, system):
+def audit_ancestry(value, system):
+    if value['status'] in ['deleted']:
+        return
+
     field = 'ancestry'
     dbs = ['HANCESTRO', 'NTR']
 
-    invalid = []
-    for d in value.get(field, []):
-        term = d['ancestry_group']['term_id']
-        ont_db = term.split(':')[0]
-        if ont_db not in dbs:
-            invalid.append(term)
+    if field in value:
+        invalid = []
+        for d in value.get(field):
+            term = d['ancestry_group']['term_id']
+            ont_db = term.split(':')[0]
+            if ont_db not in dbs:
+                invalid.append(term)
 
-    if invalid:
-        detail = ('Donor {} {} {} not from {}.'.format(
-            audit_link(value['accession'], value['@id']),
-            field,
-            ','.join(invalid),
-            ','.join(dbs)
+        if invalid:
+            detail = ('Donor {} {} {} not from {}.'.format(
+                audit_link(value['accession'], value['@id']),
+                field,
+                ','.join(invalid),
+                ','.join(dbs)
+                )
             )
-        )
-        yield AuditFailure('incorrect ontology term', detail, 'ERROR')
+            yield AuditFailure('incorrect ontology term', detail, 'ERROR')
 
 
-def audit_ancestry(value, system):
-    if 'ancestry' in value:
-        total_frac = sum([a['fraction'] for a in value['ancestry']])
+        total_frac = sum([a['fraction'] for a in value[field]])
         if round(total_frac,2) != 1:
             detail = ('Donor {} ancestry fractions total {}, expecting 1.'.format(
                 audit_link(value['accession'], value['@id']),
@@ -285,7 +299,7 @@ def audit_ancestry(value, system):
 
 
         dup_groups = []
-        anc_groups = [a['ancestry_group']['term_id'] for a in value['ancestry']]
+        anc_groups = [a['ancestry_group']['term_id'] for a in value[field]]
         for a in anc_groups:
             if anc_groups.count(a) > 1 and a not in dup_groups:
                 dup_groups.append(a)
@@ -299,6 +313,9 @@ def audit_ancestry(value, system):
 
 
 def qa_cause_of_death(value, system):
+    if value['status'] in ['deleted']:
+        return
+
     if 'causes_of_death' in value:
         need = ['Cause of Death','Disease, Disorder or Finding','Suicide','Dead']
         for c in value['causes_of_death']:
@@ -320,20 +337,19 @@ function_dispatcher = {
     'ontology_check_dev': ontology_check_dev,
     'ontology_check_eth': ontology_check_eth,
     'ontology_check_dis': ontology_check_dis,
-    'ontology_check_anc': ontology_check_anc,
     'audit_ancestry': audit_ancestry,
     'qa_cause_of_death': qa_cause_of_death
 }
 
 @audit_checker('HumanDonor',
                frame=[
-                'family_medical_history',
-                'family_medical_history.diagnosis',
-                'development_ontology',
-                'ethnicity',
-                'ancestry.ancestry_group',
-                'diseases',
-                'causes_of_death'
+                    'family_medical_history',
+                    'family_medical_history.diagnosis',
+                    'development_ontology',
+                    'ethnicity',
+                    'ancestry.ancestry_group',
+                    'diseases',
+                    'causes_of_death'
                 ])
 def audit_donor(value, system):
     for function_name in function_dispatcher.keys():

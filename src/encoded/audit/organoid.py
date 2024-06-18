@@ -9,6 +9,9 @@ from .formatter import (
 
 
 def ontology_check_bio(value, system):
+    if value['status'] in ['deleted']:
+        return
+
     field = 'biosample_ontology'
     dbs = ['UBERON','NTR']
 
@@ -31,7 +34,7 @@ function_dispatcher = {
 
 @audit_checker('Organoid',
                frame=[
-                'biosample_ontology'
+                    'biosample_ontology'
                 ])
 def audit_organoid(value, system):
     for function_name in function_dispatcher.keys():

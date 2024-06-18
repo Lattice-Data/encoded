@@ -7,34 +7,6 @@ from .formatter import (
     path_to_text,
 )
 
-from .item import STATUS_LEVEL
-
-
-def audit_file_ref_info(value, system):
-    '''
-    A file's reference metadata should match the reference
-    metadata of any file it was derived from
-    '''
-    if value['status'] in ['deleted']:
-        return
-
-    for f in value['derived_from']:
-        for ref_prop in ['assembly', 'genome_annotation']:
-            if f.get(ref_prop) and value.get(ref_prop) and \
-               f.get(ref_prop) != value.get(ref_prop):
-                detail = ('Processed file {} {} {} '
-                    'does not match {} {} of the file {} '
-                    'it was derived from.'.format(
-                        audit_link(path_to_text(value['@id']), value['@id']),
-                        ref_prop,
-                        value[ref_prop],
-                        ref_prop,
-                        f[ref_prop],
-                        audit_link(path_to_text(f['@id']), f['@id'])
-                    )
-                )
-                yield AuditFailure('inconsistent reference', detail, level='ERROR')
-
 
 def audit_analysis_library_types(value, system):
     '''
@@ -67,15 +39,16 @@ def audit_analysis_library_types(value, system):
 
 
 function_dispatcher = {
-    'audit_file_ref_info': audit_file_ref_info,
     'audit_analysis_library_types': audit_analysis_library_types
 }
 
 
-@audit_checker('AnalysisFile',
-               frame=['derived_from',
-                      'libraries',
-                      'libraries.protocol'])
+@audit_checker('SequenceAlignmentFile',
+               frame=[
+                    'derived_from',
+                    'libraries',
+                    'libraries.protocol'
+                ])
 def audit_file(value, system):
     for function_name in function_dispatcher.keys():
         for failure in function_dispatcher[function_name](value, system):

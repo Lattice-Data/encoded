@@ -14,13 +14,12 @@ def no_read_type(value, system):
     if value['status'] in ['deleted']:
         return
 
-    if value.get('no_file_available') != True:
-        if not value.get('read_type'):
-            detail = ('File {} does not have a read_type.'.format(
-                audit_link(path_to_text(value['@id']), value['@id'])
-                )
+    if value.get('no_file_available') != True and not value.get('read_type'):
+        detail = ('File {} does not have a read_type.'.format(
+            audit_link(path_to_text(value['@id']), value['@id'])
             )
-            yield AuditFailure('no read_type', detail, level='ERROR')
+        )
+        yield AuditFailure('no read_type', detail, level='ERROR')
 
 
 def no_file_stats(value, system):
@@ -46,14 +45,13 @@ def not_validated(value, system):
     if value['status'] in ['deleted']:
         return
 
-    if value.get('no_file_available') != True:
-        if value.get('validated') != True:
-            detail = ('File {} has not been validated.'.format(
-                audit_link(path_to_text(value['@id']), value['@id'])
-                )
+    if value.get('no_file_available') != True and value.get('validated') != True:
+        detail = ('File {} has not been validated.'.format(
+            audit_link(path_to_text(value['@id']), value['@id'])
             )
-            yield AuditFailure('file not validated', detail, level='ERROR')
-            return
+        )
+        yield AuditFailure('file not validated', detail, level='ERROR')
+        return
 
 
 def no_uri(value, system):
@@ -79,75 +77,60 @@ def audit_library_protocol_standards(value, system):
         return
 
     if value.get('no_file_available') != True and value.get('validated') == True:
-        lib_prots = set()
-        for l in value.get('libraries'):
-            lp_name = l['protocol']['name']
-            lib_prots.add(lp_name)
-        if len(lib_prots) != 1:
-            detail = ('File {} derives from Libraries of variable library protocols - {}.'.format(
+        prot = value['libraries'][0]['protocol']
+        stds_flag = False
+        for standard in prot.get('sequence_file_standards',[]):
+            if standard['read_type'] == value.get('read_type'):
+                my_standard = standard
+                stds_flag = True
+        if not stds_flag:
+            detail = ('File {} derives from Library Protocol {} with no noted standards for read_type {}.'.format(
                 audit_link(path_to_text(value['@id']), value['@id']),
-                lib_prots
+                audit_link(path_to_text(prot['@id']), prot['@id']),
+                value.get('read_type')
                 )
             )
-            yield AuditFailure('variable library protocols', detail, level='ERROR')
+            yield AuditFailure('no protocol standards', detail, level='ERROR')
             return
-        else:
-            no_stds_flag = False
-            if not value['libraries'][0]['protocol'].get('sequence_file_standards'):
-                no_stds_flag = True
-            else:
-                my_standards = ''
-                for standard in value['libraries'][0]['protocol'].get('sequence_file_standards'):
-                    if standard['read_type'] == value.get('read_type'):
-                        my_standards = standard
-                        break
-                if no_stds_flag == True or my_standards == '':
-                    detail = ('File {} derives from Library Protocol {} with no noted standards for read_type {}.'.format(
-                        audit_link(path_to_text(value['@id']), value['@id']),
-                        audit_link(path_to_text(value['libraries'][0]['protocol']['@id']), value['libraries'][0]['protocol']['@id']),
-                        value.get('read_type')
-                        )
+
+        for k in ['sequence_elements', 'demultiplexed_type']:
+            if my_standard[k] != value.get(k):
+                detail = ('{} of file {} should be {} but is {}'.format(
+                    k,
+                    audit_link(path_to_text(value['@id']), value['@id']),
+                    my_standard[k],
+                    value.get(k)
                     )
-                    yield AuditFailure('no protocol standards', detail, level='ERROR')
-                    return
-                for k in ['sequence_elements', 'demultiplexed_type']:
-                    if my_standards[k] != value.get(k):
-                        detail = ('{} of file {} should be {} but is {}'.format(
-                            k,
-                            audit_link(path_to_text(value['@id']), value['@id']),
-                            my_standards[k],
-                            value.get(k)
-                            )
-                        )
-                        yield AuditFailure('does not meet protocol standards', detail, level='INTERNAL_ACTION')
-                if my_standards['read_length'] != value.get('read_length'):
-                    std_flag = False
-                    rl_spec = my_standards['read_length_specification']
-                    if not value.get('read_length'):
-                        audit_level = 'ERROR'
-                        std_flag = True
-                    elif rl_spec == 'exact':
-                        rl_spec = 'exactly'
-                        audit_level = 'ERROR'
-                        std_flag = True
-                    elif rl_spec == 'minimum' and value.get('read_length') < my_standards['read_length']:
-                        audit_level = 'ERROR'
-                        std_flag = True
-                    elif rl_spec == 'ideal' and value.get('read_length') < my_standards['read_length']:
-                        rl_spec = 'ideally'
-                        audit_level = 'WARNING'
-                        std_flag = True
-                    if std_flag == True:
-                        detail = ('{} of file {} is {}, should be {} {} based on standards for {}'.format(
-                            'read_length',
-                            audit_link(path_to_text(value['@id']), value['@id']),
-                            value.get('read_length'),
-                            rl_spec,
-                            my_standards['read_length'],
-                            audit_link(path_to_text(value['libraries'][0]['protocol']['@id']), value['libraries'][0]['protocol']['@id'])
-                            )
-                        )
-                        yield AuditFailure('does not meet protocol standards', detail, level=audit_level)
+                )
+                yield AuditFailure('does not meet protocol standards', detail, level='INTERNAL_ACTION')
+        if my_standard['read_length'] != value.get('read_length'):
+            fail_flag = False
+            rl_spec = my_standard['read_length_specification']
+            if not value.get('read_length'):
+                audit_level = 'ERROR'
+                fail_flag = True
+            elif rl_spec == 'exact':
+                rl_spec = 'exactly'
+                audit_level = 'ERROR'
+                fail_flag = True
+            elif rl_spec == 'minimum' and value.get('read_length') < my_standard['read_length']:
+                audit_level = 'ERROR'
+                fail_flag = True
+            elif rl_spec == 'ideal' and value.get('read_length') < my_standard['read_length']:
+                rl_spec = 'ideally'
+                audit_level = 'WARNING'
+                fail_flag = True
+            if fail_flag == True:
+                detail = ('{} of file {} is {}, should be {} {} based on standards for {}'.format(
+                    'read_length',
+                    audit_link(path_to_text(value['@id']), value['@id']),
+                    value.get('read_length'),
+                    rl_spec,
+                    my_standard['read_length'],
+                    audit_link(path_to_text(prot['@id']), prot['@id'])
+                    )
+                )
+                yield AuditFailure('does not meet protocol standards', detail, level=audit_level)
 
 
 function_dispatcher = {

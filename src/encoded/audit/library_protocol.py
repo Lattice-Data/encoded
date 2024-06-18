@@ -9,29 +9,17 @@ from .formatter import (
 
 
 def ontology_check_assay(value, system):
+    if value['status'] in ['deleted']:
+        return
+
     field = 'assay_ontology'
-    dbs = ['EFO']
-
-    ontobj = value.get(field)
-    if ontobj:
-        term = ontobj['term_id']
-        ont_db = term.split(':')[0]
-        if ont_db not in dbs:
-            detail = ('LibraryProtocol {} {} {} not from {}.'.format(
-                audit_link(value['@id'], value['@id']),
-                field,
-                term,
-                ','.join(dbs)
-                )
-            )
-            yield AuditFailure('incorrect ontology term', detail, 'ERROR')
-
-        req_anc = 'single cell library construction [EFO:0010183]'
-        if req_anc.split(' [')[0] not in value[field].get('qa_slims',[]):
+    req_anc = 'single cell library construction'
+    if value.get(field):
+        if req_anc not in value[field].get('qa_slims',[]):
             detail = ('LibraryProtocol {} {} {} not a descendent of {}.'.format(
                 audit_link(value['@id'], value['@id']),
                 field,
-                term,
+                value[field]['term_id'],
                 req_anc
                 )
             )
@@ -44,7 +32,7 @@ function_dispatcher = {
 
 @audit_checker('LibraryProtocol',
                frame=[
-                'assay_ontology'
+                    'assay_ontology'
                 ])
 def audit_library_protocol(value, system):
     for function_name in function_dispatcher.keys():

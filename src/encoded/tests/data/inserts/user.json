@@ -117,7 +117,8 @@
             "CZI003CNS",
             "community"
         ],
-        "uuid": "332d0e03-a907-4f53-8358-bb00118277c8"
+        "uuid": "332d0e03-a907-4f53-8358-bb00118277c8",
+        "institute_name": "Stanford University"
     },
     {
         "email": "jychien@stanford.edu",
@@ -137,7 +138,8 @@
             "CZI003CNS",
             "community"
         ],
-        "uuid": "71c7b6d6-f6dd-4ed4-826c-6b3003a8ad9b"
+        "uuid": "71c7b6d6-f6dd-4ed4-826c-6b3003a8ad9b",
+        "institute_name": "Stanford University"
     },
     {
         "email": "pedroh@stanford.edu",
@@ -157,7 +159,8 @@
             "CZI003CNS",
             "community"
         ],
-        "uuid": "71c7b6d6-f6dd-4ed4-826c-6b3003a8ad9c"
+        "uuid": "71c7b6d6-f6dd-4ed4-826c-6b3003a8ad9c",
+        "institute_name": "Stanford University"
     },
     {
         "email": "jlz@stanford.edu",
@@ -176,7 +179,8 @@
         "viewing_groups": [
             "pilot"
         ],
-        "uuid": "454435fe-702d-4657-a955-641e5631982c"
+        "uuid": "454435fe-702d-4657-a955-641e5631982c",
+        "institute_name": "Stanford University"
     },
     {
         "email": "massa.porta@varius.mauris",
@@ -189,7 +193,8 @@
         "submits_for": [
             "J. Michael Cherry, Stanford"
         ],
-        "uuid": "860c4750-8d3c-40f5-8f2c-90c5e5d19e88"
+        "uuid": "860c4750-8d3c-40f5-8f2c-90c5e5d19e88",
+        "institute_name": "Stanford University"
     },
     {
         "email": "metus.donec@nisl.montes",
@@ -199,14 +204,16 @@
         "submits_for": [
             "Peter Sims, Columbia"
         ],
-        "uuid": "e74547f3-1676-43de-bcfc-9b946f0024c9"
+        "uuid": "e74547f3-1676-43de-bcfc-9b946f0024c9",
+        "institute_name": "Stanford University"
     },
     {
         "email": "quisque.consequat@venenatis.magna",
         "first_name": "Sam",
         "last_name": "Hill",
         "status": "current",
-        "uuid": "f1ef8d70-12a8-4a75-81cc-8167e375c35f"
+        "uuid": "f1ef8d70-12a8-4a75-81cc-8167e375c35f",
+        "institute_name": "Stanford University"
     },
     {
         "email": "netus.lorem@risus.lobortis",

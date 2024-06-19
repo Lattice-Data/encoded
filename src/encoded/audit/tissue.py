@@ -15,9 +15,7 @@ def audit_age_collection(value, system):
     if value['status'] in ['deleted']:
         return
 
-    if 'age_at_collection' in value:
-        donor_age = value['donors'][0].get('age')
-        if donor_age != 'variable':
+    if 'age_at_collection' in value and value['donors'][0].get('age') != 'variable':
             detail = ('Tissue {} should not have age_at_collection unless donor age is variable.'.format(
                 audit_link(value['accession'], value['@id'])
                 )
@@ -25,7 +23,7 @@ def audit_age_collection(value, system):
             yield AuditFailure('age_at_collection inconsistency', detail, level='ERROR')
             return
 
-    elif value['donors'][0].get('age') == 'variable':
+    elif 'age_at_collection' not in value and value['donors'][0].get('age') == 'variable':
             detail = ('Tissue {} should have age_at_collection if donor age is variable.'.format(
                 audit_link(value['accession'], value['@id'])
                 )
@@ -36,6 +34,8 @@ def audit_age_collection(value, system):
 
 def ontology_check_bio(value, system):
     field = 'biosample_ontology'
+    if value['status'] in ['deleted'] or field not in value:
+        return
     dbs = ['UBERON','NTR']
 
     term = value[field]['term_id']
@@ -53,6 +53,8 @@ def ontology_check_bio(value, system):
 
 def ontology_check_dev(value, system):
     field = 'development_ontology_at_collection'
+    if value['status'] in ['deleted'] or field not in value:
+        return
     dbs = ['HsapDv']
 
     ontobj = value.get(field)
@@ -78,9 +80,9 @@ function_dispatcher = {
 
 @audit_checker('Tissue',
                frame=[
-                'donors',
-                'biosample_ontology',
-                'development_ontology_at_collection'
+                    'donors',
+                    'biosample_ontology',
+                    'development_ontology_at_collection'
                 ])
 def audit_tissue(value, system):
     for function_name in function_dispatcher.keys():

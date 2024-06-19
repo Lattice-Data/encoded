@@ -13,31 +13,17 @@ def audit_bmi(value, system):
         return
 
     if 'body_mass_index_at_collection' in value:
+        request = system['request']
         for d in value['donors']:
-            if d.get('body_mass_index') != 'variable':
+            donor = request.embed(d + '@@object')
+            if donor.get('body_mass_index') != 'variable':
                 detail = ('Biosample {} has BMI at collection specific but donor {} BMI is not variable.'.format(
                     audit_link(value['accession'], value['@id']),
-                    d['accession']
+                    donor['accession']
                     )
                 )
                 yield AuditFailure('inconsistent BMI', detail, level='ERROR')
                 return
-
-
-def audit_biosample_donor(value, system):
-    '''
-    A biosample should have a donor.
-    '''
-    if value['status'] in ['deleted']:
-        return
-
-    if not value['donors']:
-        detail = ('Biosample {} is not associated with any donor.'.format(
-            audit_link(value['accession'], value['@id'])
-            )
-        )
-        yield AuditFailure('missing donor', detail, level='ERROR')
-        return
 
 
 def audit_death_prop_living_donor(value, system):
@@ -48,23 +34,24 @@ def audit_death_prop_living_donor(value, system):
     if value['status'] in ['deleted']:
         return
 
-    living_donor_flag = False
-    for donor in value['donors']:
-        if donor.get('living_at_sample_collection') == True:
-            living_donor_flag = True
-    for death_prop in ['death_to_preservation_interval']:
-        if living_donor_flag == True and value.get(death_prop):
-            detail = ('Biosample {} has property {} but is associated with at least one donor that is living at sample collection.'.format(
-                audit_link(value['accession'], value['@id']),
-                death_prop
+    if 'death_to_preservation_interval' in value:
+        request = system['request']
+        for d in value['donors']:
+            donor = request.embed(d + '@@object')
+            if donor.get('living_at_sample_collection') == 'True':
+                detail = ('Biosample {} has death_to_preservation_interval but is associated with at least one donor that is living at sample collection.'.format(
+                    audit_link(value['accession'], value['@id'])
+                    )
                 )
-            )
-            yield AuditFailure('death interval for living donor', detail, level='ERROR')
-            return
+                yield AuditFailure('death interval for living donor', detail, level='ERROR')
+                return
 
 
 def ontology_check_dis(value, system):
     field = 'diseases'
+    if value['status'] in ['deleted'] or field not in value:
+        return
+
     dbs = ['MONDO']
 
     invalid  = []
@@ -87,15 +74,13 @@ def ontology_check_dis(value, system):
 
 function_dispatcher = {
     'audit_bmi': audit_bmi,
-    'audit_donor': audit_biosample_donor,
     'audit_death_prop_living_donor': audit_death_prop_living_donor,
     'ontology_check_dis': ontology_check_dis
 }
 
 @audit_checker('Biosample',
                frame=[
-                'donors',
-                'diseases'
+                    'diseases'
                 ])
 def audit_biosample(value, system):
     for function_name in function_dispatcher.keys():

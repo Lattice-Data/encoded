@@ -161,6 +161,38 @@ class Library(Item,
         return sorted(all_donors)
 
 
+    @calculated_property(condition='derived_from', schema={
+        "title": "Diseases",
+        "description": "The diseases effecting both the donor and the specific sample used to generate this Library.",
+        "comment": "Do not submit. This is a calculated property",
+        "type": "array",
+        "items": {
+            "type": "string"
+        },
+    })
+    def diseases(self, request, derived_from):
+        all_diseases = set()
+
+        seen = set()
+        remaining = derived_from
+        while remaining:
+            seen.update(remaining)
+            next_remaining = set()
+            for i in remaining:
+                temp_obj = request.embed(i, '@@object')
+                if 'diseases' in temp_obj:
+                    for d in temp_obj['diseases']:
+                        if d not in seen:
+                            ont = request.embed(d, '@@object')
+                            all_diseases.add(ont['term_name'])
+                            seen.add(d)
+                if temp_obj.get('derived_from'):
+                    next_remaining.update(temp_obj['derived_from'])
+            remaining = next_remaining - seen
+
+        return sorted(all_diseases)
+
+
     summary_matrix = {
         'x': {
             'group_by': 'donors.ethnicity.term_name'

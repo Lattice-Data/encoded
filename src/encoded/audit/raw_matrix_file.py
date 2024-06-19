@@ -8,6 +8,37 @@ from .formatter import (
 )
 
 
+def audit_analysis_library_types(value, system):
+    '''
+    An AnalysisFile should only have cellranger_assay_chemistry metadata
+    if it is from an RNA-seq library.
+    We expect CITE-seq libraries to be paired with RNA-seq libraries.
+    '''
+    if value['status'] in ['deleted']:
+        return
+
+    lib_types = set()
+    for l in value.get('libraries'):
+        lib_types.add(l['protocol'].get('library_type'))
+    if 'RNA-seq' not in lib_types:
+	    if value.get('cellranger_assay_chemistry'):
+	        detail = ('File {} has {} and does not derive from any RNA-seq library'.format(
+	            audit_link(path_to_text(value['@id']), value['@id']),
+	            'cellranger_assay_chemistry',
+	            )
+	        )
+	        yield AuditFailure('cellranger spec inconsistent with library_type', detail, level="ERROR")
+
+	    if 'CITE-seq' in lib_types:
+	        detail = ('File {} derives from at least one CITE-seq library but does not derive from any RNA-seq library'.format(
+	            audit_link(path_to_text(value['@id']), value['@id']),
+	            'cellranger_assay_chemistry',
+	            )
+	        )
+	        yield AuditFailure('no RNA-seq Library with CITE-seq Library', detail, level="ERROR")
+	        return
+
+
 def audit_complete_derived_from(value, system):
 	if value['status'] in ['deleted']:
 		return
@@ -101,31 +132,6 @@ def audit_read_count_compare(value, system):
 					yield AuditFailure('inconsistent read counts', detail, level='ERROR')
 
 
-def audit_validated(value, system):
-	'''
-	We check fastq metadata against the expected values based on the
-	library protocol used to generate the sequence data.
-	'''
-	if value['status'] in ['deleted']:
-		return
-
-	if value.get('s3_uri'):
-		if value.get('validated') != True and value.get('file_format') in ['hdf5']:
-			detail = ('File {} has not been validated.'.format(
-				audit_link(path_to_text(value['@id']), value['@id'])
-				)
-			)
-			yield AuditFailure('file not validated', detail, level='ERROR')
-			return
-	else:
-		detail = ('File {} has no s3_uri.'.format(
-			audit_link(path_to_text(value['@id']), value['@id'])
-			)
-		)
-		yield AuditFailure('file access not specified', detail, level='WARNING')
-		return
-
-
 def audit_gene_count(value, system):
 	'''
 	We check fastq metadata against the expected values based on the
@@ -138,7 +144,8 @@ def audit_gene_count(value, system):
 		32738: 'GENCODE 19',
 		33694: 'GENCODE 24',
 		33538: 'GENCODE 28',
-		36601: 'GENCODE 32'
+		36601: 'GENCODE 32',
+		38606: 'GENCODE 44'
 	}
 
 	if value.get('feature_counts'):
@@ -167,6 +174,9 @@ def audit_gene_count(value, system):
 
 
 def metrics_types(value, system):
+	if value['status'] in ['deleted']:
+		return
+
 	assays = value['assays']
 
 	all_types = []
@@ -244,9 +254,9 @@ def audit_Visium_h5s(value, system):
 
 
 function_dispatcher = {
+	'audit_analysis_library_types': audit_analysis_library_types,
 	'audit_complete_derived_from': audit_complete_derived_from,
 	'audit_read_count_compare': audit_read_count_compare,
-	'audit_validated': audit_validated,
 	'audit_gene_count': audit_gene_count,
 	'metrics_types': metrics_types,
 	'annotation_not_genes': annotation_not_genes,

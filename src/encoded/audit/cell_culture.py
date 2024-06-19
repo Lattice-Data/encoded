@@ -10,6 +10,9 @@ from .formatter import (
 
 def ontology_check_bio(value, system):
     field = 'biosample_ontology'
+    if value['status'] in ['deleted'] or field not in value:
+        return
+
     dbs = ['CL','EFO','NTR']
 
     term = value[field]['term_id']
@@ -43,7 +46,7 @@ function_dispatcher = {
 
 @audit_checker('CellCulture',
                frame=[
-                'biosample_ontology'
+                    'biosample_ontology'
                 ])
 def audit_cell_culture(value, system):
     for function_name in function_dispatcher.keys():

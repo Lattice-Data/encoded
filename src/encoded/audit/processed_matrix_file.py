@@ -9,6 +9,9 @@ from .formatter import (
 
 
 def spatial(value,system):
+    if value['status'] in ['deleted']:
+        return
+
     spatial_protocols = [
         'Visium-10x-GE',
         'Slide-seq2'
@@ -46,6 +49,9 @@ def spatial(value,system):
 
 
 def cell_type_col_in_author_cols(value,system):
+    if value['status'] in ['deleted']:
+        return
+
     if value.get('author_columns') and value.get('author_cell_type_column'):
         if value['author_cell_type_column'] in value['author_columns']:
             detail = ('File {} lists {} in author_columns and author_cell_type_column.'.format(
@@ -57,7 +63,11 @@ def cell_type_col_in_author_cols(value,system):
 
 
 def mappings_antibodies(value,system):
+    if value['status'] in ['deleted']:
+        return
+
     if value.get('antibody_mappings'):
+        request = system['request']
         labels = [am['label'] for am in value['antibody_mappings']]
         dups = [l for l in labels if labels.count(l) > 1]
         if dups:
@@ -71,7 +81,8 @@ def mappings_antibodies(value,system):
         antibodies = []
         suspensions = []
         for l in value['libraries']:
-            for susp in l['derived_from']:
+            for s in l['derived_from']:
+                susp = request.embed(s + '@@object')
                 if susp['@id'] not in suspensions:
                     antibodies.extend(susp.get('feature_antibodies',[]))
                     suspensions.append(susp['@id'])
@@ -96,6 +107,9 @@ def mappings_antibodies(value,system):
 
 
 def mappings_donors(value,system):
+    if value['status'] in ['deleted']:
+        return
+
     if value.get('donor_mappings'):
         labels = [dm['label'] for dm in value['donor_mappings']]
         dups = [l for l in labels if labels.count(l) > 1]
@@ -121,6 +135,9 @@ def mappings_donors(value,system):
 
 
 def mappings_matrices(value,system):
+    if value['status'] in ['deleted']:
+        return
+
     if value.get('cell_label_mappings'):
         derived_from = [d['@id'] for d in value['derived_from']]
         mxs = [clm['raw_matrix'] for clm in value['cell_label_mappings']]
@@ -164,27 +181,28 @@ def mappings_matrices(value,system):
             yield AuditFailure('cell_label_mappings error', detail, 'ERROR')
 
 
-def ontology_check_dis(value, system):
-    field = 'experimental_variable_disease'
-    dbs = ['MONDO']
+def ontology_check_disease(value, system):
+    if value['status'] in ['deleted']:
+        return
 
-    ontobjs = value.get(field)
-    if ontobjs:
-        for ontobj in ontobjs:
-            term = ontobj['term_id']
-            ont_db = term.split(':')[0]
-            if ont_db not in dbs:
-                detail = ('File {} {} {} not from {}.'.format(
+    if 'experimental_variable_disease' in value:
+        lib_diseases = set()
+        for l in value['libraries']:
+            lib_diseases.update(l.get('diseases'))
+        for d in value['experimental_variable_disease']:
+            if d['term_name'] not in lib_diseases:
+                detail = ('File {} experimental_variable_disease {} not in associated samples and donors.'.format(
                     audit_link(value['accession'], value['@id']),
-                    field,
-                    term,
-                    ','.join(dbs)
+                    d['term_name'],
                     )
                 )
-                yield AuditFailure('incorrect ontology term', detail, 'ERROR')
+                yield AuditFailure('experimental_variable_disease error', detail, 'ERROR')
 
 
 def duplicated_derfrom(value, system):
+    if value['status'] in ['deleted']:
+        return
+
     all_seq_files = {}
     for raw in value['derived_from']:
         for seqfile in raw['derived_from']:
@@ -205,6 +223,9 @@ def duplicated_derfrom(value, system):
 
 
 def cellxgene_links(value, system):
+    if value['status'] in ['deleted']:
+        return
+
     if 'cellxgene_uuid' in value and len(value['dataset'].get('cellxgene_urls',[])) == 0:
         detail = ('File {} has cellxgene_uuid but {} has no cellxgene_urls.'.format(
             audit_link(value['accession'], value['@id']),
@@ -212,8 +233,9 @@ def cellxgene_links(value, system):
             )
         )
         yield AuditFailure('missing cellxgene link', detail, 'ERROR')
+        return
 
-    elif 'cellxgene_uuid' not in value and len(value['dataset'].get('cellxgene_urls',[])) > 0:
+    if 'cellxgene_uuid' not in value and len(value['dataset'].get('cellxgene_urls',[])) > 0:
         if value['output_types'] == ['gene quantifications']:
             detail = ('{} has cellxgene_urls but File {} has no cellxgene_uuid.'.format(
                 value['dataset']['accession'],
@@ -221,25 +243,34 @@ def cellxgene_links(value, system):
                 )
             )
             yield AuditFailure('missing cellxgene uuid', detail, 'ERROR')
+            return
 
 
 def check_author_columns(value, system):
-    reserved = ['assay','cell_type','development_stage',
-        'disease','self_reported_ethnicity','organism',
-        'sex','tissue','donor_id','is_primary_data','suspension_type',
-        'tissue_type']
+    if value['status'] in ['deleted']:
+        return
 
-    clash = [c for c in value.get('author_columns',[]) if c in reserved]
-    if clash:
-        detail = ('File {} lists reserved fields in author_columns: {}.'.format(
-            audit_link(value['accession'], value['@id']),
-            ','.join(clash)
+    if 'author_columns' in value:
+
+        reserved = ['assay','cell_type','development_stage',
+            'disease','self_reported_ethnicity','organism',
+            'sex','tissue','donor_id','is_primary_data','suspension_type',
+            'tissue_type']
+
+        clash = [c for c in value['author_columns'] if c in reserved]
+        if clash:
+            detail = ('File {} lists reserved fields in author_columns: {}.'.format(
+                audit_link(value['accession'], value['@id']),
+                ','.join(clash)
+                )
             )
-        )
-        yield AuditFailure('CxG schema clash', detail, 'ERROR')
+            yield AuditFailure('CxG schema clash', detail, 'ERROR')
 
 
 def gene_activity_genome_annotation(value, system):
+    if value['status'] in ['deleted']:
+        return
+
     gene_act_assays = ['snATAC-seq','scMethyl-seq','snMethyl-seq']
     matching_assays = [a for a in value.get('assays',[]) if a in gene_act_assays]
 
@@ -269,7 +300,7 @@ def gene_activity_genome_annotation(value, system):
 function_dispatcher = {
     'spatial': spatial,
     'cell_type_col_in_author_cols': cell_type_col_in_author_cols,
-    'ontology_check_dis': ontology_check_dis,
+    'ontology_check_disease': ontology_check_disease,
     'duplicated_derfrom': duplicated_derfrom,
     'mappings_antibodies': mappings_antibodies,
     'mappings_donors': mappings_donors,
@@ -281,14 +312,13 @@ function_dispatcher = {
 
 @audit_checker('ProcessedMatrixFile',
                frame=[
-                'antibody_mappings',
-                'antibody_mappings.antibody',
-                'antibody_mappings.antibody.targets',
-                'experimental_variable_disease',
-                'derived_from',
-                'libraries',
-                'libraries.derived_from',
-                'dataset'
+                    'antibody_mappings',
+                    'antibody_mappings.antibody',
+                    'antibody_mappings.antibody.targets',
+                    'experimental_variable_disease',
+                    'derived_from',
+                    'libraries',
+                    'dataset'
                 ])
 def audit_processed_matrix_file(value, system):
     for function_name in function_dispatcher.keys():

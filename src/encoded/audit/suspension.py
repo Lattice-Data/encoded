@@ -27,9 +27,10 @@ def audit_suspension_intervals(value, system):
             for d in value['derived_from']:
                 if 'collection_to_dissociation_interval' in d or 'death_to_dissociation_interval' in d:
                     int_flag = True
-                for dd in d['derived_from']:
-                    if 'collection_to_preservation_interval' in dd or 'death_to_preservation_interval' in dd:
-                        int_flag = True
+                else:
+                    for dd in d['derived_from']:
+                        if 'collection_to_preservation_interval' in dd or 'death_to_preservation_interval' in dd:
+                            int_flag = True
         else:
             for d in value['derived_from']:
                 if 'collection_to_preservation_interval' in d or 'death_to_preservation_interval' in d:
@@ -45,22 +46,6 @@ def audit_suspension_intervals(value, system):
             return
 
 
-def audit_suspension_donor(value, system):
-    '''
-    A Suspension should have a donor.
-    '''
-    if value['status'] in ['deleted']:
-        return
-
-    if not value['donors']:
-        detail = ('Suspension {} is not associated with any donor.'.format(
-            audit_link(value['accession'], value['@id'])
-            )
-        )
-        yield AuditFailure('missing donor', detail, level='ERROR')
-        return
-
-
 def audit_death_prop_living_donor(value, system):
     '''
     A suspension should not have a property indicating time since death
@@ -69,12 +54,12 @@ def audit_death_prop_living_donor(value, system):
     if value['status'] in ['deleted']:
         return
 
-    living_donor_flag = False
-    for donor in value['donors']:
-        if donor.get('living_at_sample_collection') == True:
-            living_donor_flag = True
-    for death_prop in ['death_to_dissociation_interval']:
-        if living_donor_flag == True and value.get(death_prop):
+    if 'death_to_dissociation_interval' in value:
+        living_donor_flag = False
+        for donor in value['donors']:
+            if donor.get('living_at_sample_collection') == True:
+                living_donor_flag = True
+        if living_donor_flag == True:
             detail = ('Biosample {} has property {} but is associated with at least one donor that is living at sample collection.'.format(
                 audit_link(value['accession'], value['@id']),
                 death_prop
@@ -86,6 +71,9 @@ def audit_death_prop_living_donor(value, system):
 
 def ontology_check_enr(value, system):
     field = 'enriched_cell_types'
+    if value['status'] in ['deleted'] or field not in value:
+        return
+
     dbs = ['CL']
 
     invalid = []
@@ -108,6 +96,9 @@ def ontology_check_enr(value, system):
 
 def ontology_check_dep(value, system):
     field = 'depleted_cell_types'
+    if value['status'] in ['deleted'] or field not in value:
+        return
+
     dbs = ['CL']
 
     invalid = []
@@ -130,7 +121,6 @@ def ontology_check_dep(value, system):
 
 function_dispatcher = {
     'audit_suspension_intervals': audit_suspension_intervals,
-    'audit_donor': audit_suspension_donor,
     'audit_death_prop_living_donor': audit_death_prop_living_donor,
     'ontology_check_enr': ontology_check_enr,
     'ontology_check_dep': ontology_check_dep
@@ -138,11 +128,11 @@ function_dispatcher = {
 
 @audit_checker('Suspension',
                frame=[
-                'donors',
-                'enriched_cell_types',
-                'depleted_cell_types',
-                'derived_from',
-                'derived_from.derived_from'
+                    'donors',
+                    'enriched_cell_types',
+                    'depleted_cell_types',
+                    'derived_from',
+                    'derived_from.derived_from'
                 ])
 def audit_suspension(value, system):
     for function_name in function_dispatcher.keys():

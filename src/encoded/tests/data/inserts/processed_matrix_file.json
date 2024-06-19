@@ -145,7 +145,7 @@
         "aliases": [
             "anna-greka:donorAB_merged_sc_citeseq_matrix"
         ],
-        "default_embedding": "X_spatial",
+        "default_embedding": "spatial",
         "status": "released",
         "uuid": "81525748-42a0-4c5b-8273-200d7126ed41",
         "file_format": "hdf5",

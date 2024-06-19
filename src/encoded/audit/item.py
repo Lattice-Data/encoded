@@ -56,98 +56,25 @@ def audit_item_schema(value, system):
         yield AuditFailure(category, detail, level='INTERNAL_ACTION')
 
 
-STATUS_LEVEL = {
-    # public statuses
-    'released': 100,
-    'current': 100,
-
-    # 'discouraged for use' public statuses
-    'archived': 40,
-    'revoked': 30,
-
-    # private statuses (visible for consortium members only)
-    'in progress': 50,
-    'submitted': 50,
-    'content error': 50,
-
-    # invisible statuses (visible for admins only)
-    'deleted': 0,
-    'replaced': 0,
-    'disabled': 0
-}
-
-
-@audit_checker('Item', frame='object')
-def audit_item_relations_status(value, system):
-    if 'status' not in value:
-        return
-
-    level = STATUS_LEVEL.get(value['status'], 50)
-
-    context = system['context']
-    request = system['request']
-
-    for schema_path in context.type_info.schema_links:
-        if schema_path == 'derived_from':
-            message = 'is derived from'
-            for path in simple_path_ids(value, schema_path):
-                linked_value = request.embed(path + '@@object')
-                if 'status' not in linked_value:
-                    continue
-                else:
-                    linked_level = STATUS_LEVEL.get(
-                        linked_value['status'], 50)
-                    if level > linked_level:
-                        detail = ('{} {} with status \'{}\' {} {} {} with status \'{}\'.'.format(
-                            space_in_words(value['@type'][0]).capitalize(),
-                            audit_link(path_to_text(value['@id']), value['@id']),
-                            value['status'],
-                            message,
-                            space_in_words(linked_value['@type'][0]).lower(),
-                            audit_link(path_to_text(linked_value['@id']), linked_value['@id']),
-                            linked_value['status']
-                            )
-                        )
-                        yield AuditFailure(
-                            'mismatched status',
-                            detail,
-                            level='INTERNAL_ACTION')
-
-
 @audit_checker('Item', frame='object')
 def audit_item_status(value, system):
     if 'status' not in value:
         return
-
-    level = STATUS_LEVEL.get(value['status'], 50)
-
-    if level == 0:
+    if value['status'] == 'deleted':
         return
-
-    if value['status'] in ['revoked', 'archived']:
-        level += 50
 
     context = system['context']
     request = system['request']
     linked = set()
 
     for schema_path in context.type_info.schema_links:
-        if schema_path in ['supersedes',
-                           'derived_from']:
-            continue
-        else:
-            linked.update(simple_path_ids(value, schema_path))
+        linked.update(simple_path_ids(value, schema_path))
 
     for path in linked:
         linked_value = request.embed(path + '@@object')
         if 'status' not in linked_value:
             continue
-        if linked_value['status'] == 'disabled':
-            continue
-        linked_level = STATUS_LEVEL.get(linked_value['status'], 50)
-        if linked_value['status'] in ['revoked', 'archived']:
-            linked_level += 50
-        if linked_level == 0:
+        if linked_value['status'] == 'deleted':
             detail = ('{} {} {} has {} subobject {} {}'.format(
                 value['status'].capitalize(),
                 space_in_words(value['@type'][0]).lower(),
@@ -157,15 +84,4 @@ def audit_item_status(value, system):
                 audit_link(path_to_text(linked_value['@id']), linked_value['@id'])
                 )
             )
-            yield AuditFailure('mismatched status', detail, level='INTERNAL_ACTION')
-        elif linked_level < level:
-            detail = ('{} {} {} has {} subobject {} {}'.format(
-                value['status'].capitalize(),
-                space_in_words(value['@type'][0]).lower(),
-                audit_link(path_to_text(value['@id']), value['@id']),
-                linked_value['status'],
-                space_in_words(linked_value['@type'][0]).lower(),
-                audit_link(path_to_text(linked_value['@id']), linked_value['@id'])
-                )
-            )
-            yield AuditFailure('mismatched status', detail, level='INTERNAL_ACTION')
+            yield AuditFailure('mismatched status', detail, level='ERROR')

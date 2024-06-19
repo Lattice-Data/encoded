@@ -4,7 +4,7 @@
     "id": "/profiles/raw_sequence_file.json",
     "$schema": "http://json-schema.org/draft-04/schema#",
     "type": "object",
-    "required": ["dataset", "derived_from"],
+    "required": ["dataset", "derived_from", "read_type"],
     "identifyingProperties": ["uuid", "accession", "aliases"],
     "additionalProperties": false,
     "mixinProperties": [
@@ -32,7 +32,7 @@
     },
     "properties": {
         "schema_version": {
-            "default": "5"
+            "default": "6"
         },
         "external_accession": {
             "title": "External accession",
@@ -204,14 +204,43 @@
             "title": "External URI",
             "description": "The URI of public file object that is not hosted at the Lattice AWS S3.",
             "type": "string"
+        },
+        "platform": {
+            "title": "Platform",
+            "description": "The device(s) used to sequence data.",
+            "comment":  "Do not submit. This will be filled in during checkfiles validation.",
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+                "type": "string",
+                "enum": [
+                    "Illumina NextSeq 500",
+                    "Illumina NextSeq 550",
+                    "Illumina NextSeq 2000",
+                    "Illumina NovaSeq 6000",
+                    "Illumina NovaSeq X Plus",
+                    "Illumina HiSeq X",
+                    "Illumina HiSeq 4000",
+                    "Illumina HiSeq 3000",
+                    "Illumina HiSeq 2500",
+                    "Illumina HiSeq 1500",
+                    "MGI DNBSEQ-G400"
+                ]
+            }
         }
     },
     "facets": {
+        "validated": {
+            "title": "Validated"
+        },
         "read_type": {
             "title": "Read type"
         },
         "sequence_elements": {
             "title": "Sequence elements"
+        },
+        "platform": {
+            "title": "Platform"
         },
         "lab.title": {
             "title": "Lab"
@@ -236,11 +265,17 @@
         "libraries": {
             "title": "Library"
         },
+        "validated": {
+            "title": "Validated"
+        },
         "read_type": {
             "title": "Read type"
         },
         "sequence_elements": {
             "title": "Sequence elements"
+        },
+        "platform": {
+            "title": "Platform"
         },
         "s3_uri": {
             "title": "S3 URI"

@@ -7,6 +7,7 @@ def disabled_user(testapp, lab_base):
         'first_name': 'ENCODE',
         'last_name': 'Submitter',
         'email': 'no_login_submitter@example.org',
+        "institute_name": "Stanford University",
         'submits_for': [lab_base['@id']],
         'status': 'disabled',
     }
@@ -21,6 +22,7 @@ def user_base():
         'first_name': 'Benjamin',
         'last_name': 'Hitz',
         'email': 'hitz@stanford.edu',
+        "institute_name": "Stanford University"
     }
 
 
@@ -83,6 +85,7 @@ def admin(testapp):
         'last_name': 'Admin',
         'email': 'admin@example.org',
         'groups': ['admin'],
+        "institute_name": "Stanford University"
     }
     # User @@object view has keys omitted.
     res = testapp.post_json('/user', item)
@@ -98,6 +101,7 @@ def wrangler(testapp):
         'last_name': 'Admin',
         'email': 'wrangler@example.org',
         'groups': ['admin'],
+        "institute_name": "Stanford University"
     }
     # User @@object view has keys omitted.
     res = testapp.post_json('/user', item)
@@ -111,6 +115,7 @@ def verified_member(testapp):
         'last_name': 'VerifiedMember',
         'email': 'Verified_member@example.org',
         'groups': ['verified'],
+        "institute_name": "Stanford University"
     }
     # User @@object view has keys omitted.
     res = testapp.post_json('/user', item)
@@ -123,6 +128,7 @@ def unverified_member(testapp):
         'first_name': 'ENCODE',
         'last_name': 'NonVerifiedMember',
         'email': 'Non_verified_member@example.org',
+        "institute_name": "Stanford University"
     }
     # User @@object view has keys omitted.
     res = testapp.post_json('/user', item)
@@ -136,6 +142,7 @@ def submitter(testapp, lab_base):
         'last_name': 'Submitter',
         'email': 'encode_submitter@example.org',
         'submits_for': [lab_base['@id']],
+        "institute_name": "Stanford University"
     }
     # User @@object view has keys omitted.
     res = testapp.post_json('/user', item)
@@ -149,6 +156,7 @@ def viewing_group_member(testapp, award_base):
         'last_name': 'Group',
         'email': 'viewing_group_member@example.org',
         'viewing_groups': award_base['viewing_groups'],
+        "institute_name": "Stanford University"
     }
     # User @@object view has keys omitted.
     res = testapp.post_json('/user', item)

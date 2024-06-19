@@ -8,38 +8,6 @@ from .formatter import (
 )
 
 
-def audit_contributor_institute(value, system):
-    if value['status'] in ['deleted']:
-        return
-
-    need_inst = []
-    if 'corresponding_contributors' in value:
-        for user in value['corresponding_contributors']:
-            if not user.get('institute_name'):
-                need_inst.append(user.get('uuid'))
-    if need_inst:
-        detail = ('Dataset {} contains corresponding_contributors {} that do not have an institute_name.'.format(
-                audit_link(path_to_text(value['@id']), value['@id']),
-                ', '.join(need_inst)
-            )
-        )
-        yield AuditFailure('no contributor institute', detail, level='ERROR')
-
-    need_inst = []
-    if 'contributors' in value:
-        for user in value['contributors']:
-            if not user.get('institute_name'):
-                need_inst.append(user.get('uuid'))
-    if need_inst:
-        detail = ('Dataset {} contains contributors {} that do not have an institute_name.'.format(
-                audit_link(path_to_text(value['@id']), value['@id']),
-                ', '.join(need_inst)
-            )
-        )
-        yield AuditFailure('no contributor institute', detail, level='ERROR')
-    return
-
-
 def audit_contributor_email(value, system):
     if value['status'] in ['deleted']:
         return
@@ -139,7 +107,6 @@ def audit_dataset_dcp_required_properties(value, system):
 
 
 function_dispatcher_with_files = {
-    'audit_contributor_institute': audit_contributor_institute,
     'audit_contributor_email': audit_contributor_email,
     'audit_contributor_lists': audit_contributor_lists,
     'audit_dataset_raw_files': audit_dataset_raw_files,

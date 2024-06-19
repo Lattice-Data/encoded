@@ -24,22 +24,6 @@ def audit_bmi(value, system):
                 return
 
 
-def audit_biosample_donor(value, system):
-    '''
-    A biosample should have a donor.
-    '''
-    if value['status'] in ['deleted']:
-        return
-
-    if not value['donors']:
-        detail = ('Biosample {} is not associated with any donor.'.format(
-            audit_link(value['accession'], value['@id'])
-            )
-        )
-        yield AuditFailure('missing donor', detail, level='ERROR')
-        return
-
-
 def audit_death_prop_living_donor(value, system):
     '''
     A biosample should not have a property indicating time since death
@@ -85,7 +69,6 @@ def ontology_check_dis(value, system):
 
 function_dispatcher = {
     'audit_bmi': audit_bmi,
-    'audit_donor': audit_biosample_donor,
     'audit_death_prop_living_donor': audit_death_prop_living_donor,
     'ontology_check_dis': ontology_check_dis
 }

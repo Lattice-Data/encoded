@@ -46,22 +46,6 @@ def audit_suspension_intervals(value, system):
             return
 
 
-def audit_suspension_donor(value, system):
-    '''
-    A Suspension should have a donor.
-    '''
-    if value['status'] in ['deleted']:
-        return
-
-    if not value['donors']:
-        detail = ('Suspension {} is not associated with any donor.'.format(
-            audit_link(value['accession'], value['@id'])
-            )
-        )
-        yield AuditFailure('missing donor', detail, level='ERROR')
-        return
-
-
 def audit_death_prop_living_donor(value, system):
     '''
     A suspension should not have a property indicating time since death
@@ -136,7 +120,6 @@ def ontology_check_dep(value, system):
 
 function_dispatcher = {
     'audit_suspension_intervals': audit_suspension_intervals,
-    'audit_donor': audit_suspension_donor,
     'audit_death_prop_living_donor': audit_death_prop_living_donor,
     'ontology_check_enr': ontology_check_enr,
     'ontology_check_dep': ontology_check_dep

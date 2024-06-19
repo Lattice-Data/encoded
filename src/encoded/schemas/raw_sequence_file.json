@@ -4,7 +4,7 @@
     "id": "/profiles/raw_sequence_file.json",
     "$schema": "http://json-schema.org/draft-04/schema#",
     "type": "object",
-    "required": ["dataset", "derived_from"],
+    "required": ["dataset", "derived_from", "read_type"],
     "identifyingProperties": ["uuid", "accession", "aliases"],
     "additionalProperties": false,
     "mixinProperties": [

@@ -8,18 +8,6 @@ from .formatter import (
 )
 
 
-def no_read_type(value, system):
-    if value['status'] in ['deleted']:
-        return
-
-    if value.get('no_file_available') != True and not value.get('read_type'):
-        detail = ('File {} does not have a read_type.'.format(
-            audit_link(path_to_text(value['@id']), value['@id'])
-            )
-        )
-        yield AuditFailure('no read_type', detail, level='ERROR')
-
-
 def no_file_stats(value, system):
     if value['status'] in ['deleted']:
         return
@@ -105,7 +93,6 @@ def audit_library_protocol_standards(value, system):
 
 
 function_dispatcher = {
-    'no_read_type': no_read_type,
     'no_file_stats': no_file_stats,
     'audit_library_protocol_standards': audit_library_protocol_standards
 }

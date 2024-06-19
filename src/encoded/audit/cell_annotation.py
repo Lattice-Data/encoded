@@ -9,10 +9,10 @@ from .formatter import (
 
 
 def ontology_check_cell(value, system):
-    if value['status'] in ['deleted']:
+    field = 'cell_ontology'
+    if value['status'] in ['deleted'] or field not in value:
         return
 
-    field = 'cell_ontology'
     dbs = ['CL']
     terms = ['NCIT:C17998']
 

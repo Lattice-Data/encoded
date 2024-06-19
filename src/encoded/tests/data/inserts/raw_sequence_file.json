@@ -314,6 +314,7 @@
         "date_created": "2019-08-18T16:46:18.670068+00:00",
         "file_format": "fastq",
         "lab": "anna-greka",
+        "read_type": "Read 1",
         "output_types": [
             "assigned reads"
         ],

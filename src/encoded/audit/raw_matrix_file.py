@@ -20,22 +20,23 @@ def audit_analysis_library_types(value, system):
     lib_types = set()
     for l in value.get('libraries'):
         lib_types.add(l['protocol'].get('library_type'))
-    if 'RNA-seq' not in lib_types and value.get('cellranger_assay_chemistry'):
-        detail = ('File {} has {} and does not derive from any RNA-seq library'.format(
-            audit_link(path_to_text(value['@id']), value['@id']),
-            'cellranger_assay_chemistry',
-            )
-        )
-        yield AuditFailure('cellranger spec inconsistent with library_type', detail, level="ERROR")
+    if 'RNA-seq' not in lib_types:
+	    if value.get('cellranger_assay_chemistry'):
+	        detail = ('File {} has {} and does not derive from any RNA-seq library'.format(
+	            audit_link(path_to_text(value['@id']), value['@id']),
+	            'cellranger_assay_chemistry',
+	            )
+	        )
+	        yield AuditFailure('cellranger spec inconsistent with library_type', detail, level="ERROR")
 
-    if 'CITE-seq' in lib_types and 'RNA-seq' not in lib_types:
-        detail = ('File {} derives from at least one CITE-seq library but does not derive from any RNA-seq library'.format(
-            audit_link(path_to_text(value['@id']), value['@id']),
-            'cellranger_assay_chemistry',
-            )
-        )
-        yield AuditFailure('no RNA-seq Library with CITE-seq Library', detail, level="ERROR")
-        return
+	    if 'CITE-seq' in lib_types:
+	        detail = ('File {} derives from at least one CITE-seq library but does not derive from any RNA-seq library'.format(
+	            audit_link(path_to_text(value['@id']), value['@id']),
+	            'cellranger_assay_chemistry',
+	            )
+	        )
+	        yield AuditFailure('no RNA-seq Library with CITE-seq Library', detail, level="ERROR")
+	        return
 
 
 def audit_complete_derived_from(value, system):
@@ -143,7 +144,8 @@ def audit_gene_count(value, system):
 		32738: 'GENCODE 19',
 		33694: 'GENCODE 24',
 		33538: 'GENCODE 28',
-		36601: 'GENCODE 32'
+		36601: 'GENCODE 32',
+		38606: 'GENCODE 44'
 	}
 
 	if value.get('feature_counts'):

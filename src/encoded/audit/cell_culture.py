@@ -9,10 +9,10 @@ from .formatter import (
 
 
 def ontology_check_bio(value, system):
-    if value['status'] in ['deleted']:
+    field = 'biosample_ontology'
+    if value['status'] in ['deleted'] or field not in value:
         return
 
-    field = 'biosample_ontology'
     dbs = ['CL','EFO','NTR']
 
     term = value[field]['term_id']

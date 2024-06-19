@@ -67,6 +67,7 @@ def mappings_antibodies(value,system):
         return
 
     if value.get('antibody_mappings'):
+        request = system['request']
         labels = [am['label'] for am in value['antibody_mappings']]
         dups = [l for l in labels if labels.count(l) > 1]
         if dups:
@@ -80,7 +81,8 @@ def mappings_antibodies(value,system):
         antibodies = []
         suspensions = []
         for l in value['libraries']:
-            for susp in l['derived_from']:
+            for s in l['derived_from']:
+                susp = request.embed(s + '@@object')
                 if susp['@id'] not in suspensions:
                     antibodies.extend(susp.get('feature_antibodies',[]))
                     suspensions.append(susp['@id'])
@@ -231,8 +233,9 @@ def cellxgene_links(value, system):
             )
         )
         yield AuditFailure('missing cellxgene link', detail, 'ERROR')
+        return
 
-    elif 'cellxgene_uuid' not in value and len(value['dataset'].get('cellxgene_urls',[])) > 0:
+    if 'cellxgene_uuid' not in value and len(value['dataset'].get('cellxgene_urls',[])) > 0:
         if value['output_types'] == ['gene quantifications']:
             detail = ('{} has cellxgene_urls but File {} has no cellxgene_uuid.'.format(
                 value['dataset']['accession'],
@@ -240,25 +243,28 @@ def cellxgene_links(value, system):
                 )
             )
             yield AuditFailure('missing cellxgene uuid', detail, 'ERROR')
+            return
 
 
 def check_author_columns(value, system):
     if value['status'] in ['deleted']:
         return
 
-    reserved = ['assay','cell_type','development_stage',
-        'disease','self_reported_ethnicity','organism',
-        'sex','tissue','donor_id','is_primary_data','suspension_type',
-        'tissue_type']
+    if 'author_columns' in value:
 
-    clash = [c for c in value.get('author_columns',[]) if c in reserved]
-    if clash:
-        detail = ('File {} lists reserved fields in author_columns: {}.'.format(
-            audit_link(value['accession'], value['@id']),
-            ','.join(clash)
+        reserved = ['assay','cell_type','development_stage',
+            'disease','self_reported_ethnicity','organism',
+            'sex','tissue','donor_id','is_primary_data','suspension_type',
+            'tissue_type']
+
+        clash = [c for c in value['author_columns'] if c in reserved]
+        if clash:
+            detail = ('File {} lists reserved fields in author_columns: {}.'.format(
+                audit_link(value['accession'], value['@id']),
+                ','.join(clash)
+                )
             )
-        )
-        yield AuditFailure('CxG schema clash', detail, 'ERROR')
+            yield AuditFailure('CxG schema clash', detail, 'ERROR')
 
 
 def gene_activity_genome_annotation(value, system):
@@ -312,7 +318,6 @@ function_dispatcher = {
                     'experimental_variable_disease',
                     'derived_from',
                     'libraries',
-                    'libraries.derived_from',
                     'dataset'
                 ])
 def audit_processed_matrix_file(value, system):

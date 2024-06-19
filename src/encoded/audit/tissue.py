@@ -34,6 +34,8 @@ def audit_age_collection(value, system):
 
 def ontology_check_bio(value, system):
     field = 'biosample_ontology'
+    if value['status'] in ['deleted'] or field not in value:
+        return
     dbs = ['UBERON','NTR']
 
     term = value[field]['term_id']
@@ -51,6 +53,8 @@ def ontology_check_bio(value, system):
 
 def ontology_check_dev(value, system):
     field = 'development_ontology_at_collection'
+    if value['status'] in ['deleted'] or field not in value:
+        return
     dbs = ['HsapDv']
 
     ontobj = value.get(field)
@@ -76,9 +80,9 @@ function_dispatcher = {
 
 @audit_checker('Tissue',
                frame=[
-                'donors',
-                'biosample_ontology',
-                'development_ontology_at_collection'
+                    'donors',
+                    'biosample_ontology',
+                    'development_ontology_at_collection'
                 ])
 def audit_tissue(value, system):
     for function_name in function_dispatcher.keys():

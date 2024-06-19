@@ -9,10 +9,10 @@ from .formatter import (
 
 
 def ontology_check_assay(value, system):
-    if value['status'] in ['deleted']:
+    field = 'assay_ontology'
+    if value['status'] in ['deleted'] or field not in value:
         return
 
-    field = 'assay_ontology'
     req_anc = 'single cell library construction'
     if value.get(field):
         if req_anc not in value[field].get('qa_slims',[]):

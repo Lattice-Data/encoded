@@ -13,11 +13,13 @@ def audit_bmi(value, system):
         return
 
     if 'body_mass_index_at_collection' in value:
+        request = system['request']
         for d in value['donors']:
-            if d.get('body_mass_index') != 'variable':
+            donor = request.embed(d + '@@object')
+            if donor.get('body_mass_index') != 'variable':
                 detail = ('Biosample {} has BMI at collection specific but donor {} BMI is not variable.'.format(
                     audit_link(value['accession'], value['@id']),
-                    d['accession']
+                    donor['accession']
                     )
                 )
                 yield AuditFailure('inconsistent BMI', detail, level='ERROR')
@@ -32,21 +34,24 @@ def audit_death_prop_living_donor(value, system):
     if value['status'] in ['deleted']:
         return
 
-    for donor in value['donors']:
-        if donor.get('living_at_sample_collection') == "True" and value.get('death_to_preservation_interval'):
-            detail = ('Biosample {} has death_to_preservation_interval but is associated with at least one donor that is living at sample collection.'.format(
-                audit_link(value['accession'], value['@id'])
+    if 'death_to_preservation_interval' in value:
+        request = system['request']
+        for d in value['donors']:
+            donor = request.embed(d + '@@object')
+            if donor.get('living_at_sample_collection') == 'True':
+                detail = ('Biosample {} has death_to_preservation_interval but is associated with at least one donor that is living at sample collection.'.format(
+                    audit_link(value['accession'], value['@id'])
+                    )
                 )
-            )
-            yield AuditFailure('death interval for living donor', detail, level='ERROR')
-            return
+                yield AuditFailure('death interval for living donor', detail, level='ERROR')
+                return
 
 
 def ontology_check_dis(value, system):
-    if value['status'] in ['deleted']:
+    field = 'diseases'
+    if value['status'] in ['deleted'] or field not in value:
         return
 
-    field = 'diseases'
     dbs = ['MONDO']
 
     invalid  = []
@@ -75,7 +80,6 @@ function_dispatcher = {
 
 @audit_checker('Biosample',
                frame=[
-                    'donors',
                     'diseases'
                 ])
 def audit_biosample(value, system):

@@ -54,25 +54,26 @@ def audit_death_prop_living_donor(value, system):
     if value['status'] in ['deleted']:
         return
 
-    living_donor_flag = False
-    for donor in value['donors']:
-        if donor.get('living_at_sample_collection') == True:
-            living_donor_flag = True
-    if living_donor_flag == True and value.get('death_to_dissociation_interval'):
-        detail = ('Biosample {} has property {} but is associated with at least one donor that is living at sample collection.'.format(
-            audit_link(value['accession'], value['@id']),
-            death_prop
+    if 'death_to_dissociation_interval' in value:
+        living_donor_flag = False
+        for donor in value['donors']:
+            if donor.get('living_at_sample_collection') == True:
+                living_donor_flag = True
+        if living_donor_flag == True:
+            detail = ('Biosample {} has property {} but is associated with at least one donor that is living at sample collection.'.format(
+                audit_link(value['accession'], value['@id']),
+                death_prop
+                )
             )
-        )
-        yield AuditFailure('death interval for living donor', detail, level='ERROR')
-        return
+            yield AuditFailure('death interval for living donor', detail, level='ERROR')
+            return
 
 
 def ontology_check_enr(value, system):
-    if value['status'] in ['deleted']:
+    field = 'enriched_cell_types'
+    if value['status'] in ['deleted'] or field not in value:
         return
 
-    field = 'enriched_cell_types'
     dbs = ['CL']
 
     invalid = []
@@ -94,10 +95,10 @@ def ontology_check_enr(value, system):
 
 
 def ontology_check_dep(value, system):
-    if value['status'] in ['deleted']:
+    field = 'depleted_cell_types'
+    if value['status'] in ['deleted'] or field not in value:
         return
 
-    field = 'depleted_cell_types'
     dbs = ['CL']
 
     invalid = []

@@ -131,31 +131,6 @@ def audit_read_count_compare(value, system):
 					yield AuditFailure('inconsistent read counts', detail, level='ERROR')
 
 
-def audit_validated(value, system):
-	'''
-	We check fastq metadata against the expected values based on the
-	library protocol used to generate the sequence data.
-	'''
-	if value['status'] in ['deleted']:
-		return
-
-	if value.get('s3_uri'):
-		if value.get('validated') != True and value.get('file_format') in ['hdf5']:
-			detail = ('File {} has not been validated.'.format(
-				audit_link(path_to_text(value['@id']), value['@id'])
-				)
-			)
-			yield AuditFailure('file not validated', detail, level='ERROR')
-			return
-	else:
-		detail = ('File {} has no s3_uri.'.format(
-			audit_link(path_to_text(value['@id']), value['@id'])
-			)
-		)
-		yield AuditFailure('file access not specified', detail, level='WARNING')
-		return
-
-
 def audit_gene_count(value, system):
 	'''
 	We check fastq metadata against the expected values based on the
@@ -280,7 +255,6 @@ function_dispatcher = {
 	'audit_analysis_library_types': audit_analysis_library_types,
 	'audit_complete_derived_from': audit_complete_derived_from,
 	'audit_read_count_compare': audit_read_count_compare,
-	'audit_validated': audit_validated,
 	'audit_gene_count': audit_gene_count,
 	'metrics_types': metrics_types,
 	'annotation_not_genes': annotation_not_genes,

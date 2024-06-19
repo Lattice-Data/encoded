@@ -230,6 +230,9 @@
         }
     },
     "facets": {
+        "validated": {
+            "title": "Validated"
+        },
         "read_type": {
             "title": "Read type"
         },
@@ -261,6 +264,9 @@
         },
         "libraries": {
             "title": "Library"
+        },
+        "validated": {
+            "title": "Validated"
         },
         "read_type": {
             "title": "Read type"

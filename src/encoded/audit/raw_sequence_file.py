@@ -39,33 +39,6 @@ def no_file_stats(value, system):
             return
 
 
-def not_validated(value, system):
-    if value['status'] in ['deleted']:
-        return
-
-    if value.get('no_file_available') != True and value.get('validated') != True:
-        detail = ('File {} has not been validated.'.format(
-            audit_link(path_to_text(value['@id']), value['@id'])
-            )
-        )
-        yield AuditFailure('file not validated', detail, level='ERROR')
-        return
-
-
-def no_uri(value, system):
-    if value['status'] in ['deleted']:
-        return
-
-    if value.get('no_file_available') != True:
-        if not (value.get('s3_uri') or value.get('external_uri')):
-            detail = ('File {} has no s3_uri, external_uri, and is not marked as no_file_available.'.format(
-                audit_link(path_to_text(value['@id']), value['@id'])
-                )
-            )
-            yield AuditFailure('file access not specified', detail, level='ERROR')
-            return
-
-
 def audit_library_protocol_standards(value, system):
     '''
     We check fastq metadata against the expected values based on the
@@ -134,15 +107,15 @@ def audit_library_protocol_standards(value, system):
 function_dispatcher = {
     'no_read_type': no_read_type,
     'no_file_stats': no_file_stats,
-    'not_validated': not_validated,
-    'no_uri': no_uri,
     'audit_library_protocol_standards': audit_library_protocol_standards
 }
 
 
 @audit_checker('RawSequenceFile',
-               frame=['libraries',
-                      'libraries.protocol'])
+               frame=[
+                    'libraries',
+                    'libraries.protocol']
+                )
 def audit_file(value, system):
     for function_name in function_dispatcher.keys():
         for failure in function_dispatcher[function_name](value, system):

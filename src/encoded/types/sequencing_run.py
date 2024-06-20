@@ -93,7 +93,10 @@ class SequencingRun(Item):
                 file_obj = request.embed(file_id, '@@object?skip_calculated=true')
                 read_type = file_obj.get('read_type')
                 if read_type == 'Read 1':
-                    return file_obj['accession']
+                    if 'accession' in file_obj:
+                        return file_obj['accession']
+                    else:
+                        return file_obj['external_accession']
 
 
     @calculated_property(schema={
@@ -110,7 +113,10 @@ class SequencingRun(Item):
                 file_obj = request.embed(file_id, '@@object?skip_calculated=true')
                 read_type = file_obj.get('read_type')
                 if read_type == 'Read 2':
-                    return file_obj['accession']
+                    if 'accession' in file_obj:
+                        return file_obj['accession']
+                    else:
+                        return file_obj['external_accession']
 
 
     @calculated_property(schema={
@@ -127,7 +133,10 @@ class SequencingRun(Item):
                 file_obj = request.embed(file_id, '@@object?skip_calculated=true')
                 read_type = file_obj.get('read_type')
                 if read_type == 'Read 1N':
-                    return file_obj['accession']
+                    if 'accession' in file_obj:
+                        return file_obj['accession']
+                    else:
+                        return file_obj['external_accession']
 
 
     @calculated_property(schema={
@@ -144,7 +153,10 @@ class SequencingRun(Item):
                 file_obj = request.embed(file_id, '@@object?skip_calculated=true')
                 read_type = file_obj.get('read_type')
                 if read_type == 'Read 2N':
-                    return file_obj['accession']
+                    if 'accession' in file_obj:
+                        return file_obj['accession']
+                    else:
+                        return file_obj['external_accession']
 
 
     @calculated_property(schema={
@@ -161,7 +173,10 @@ class SequencingRun(Item):
                 file_obj = request.embed(file_id, '@@object?skip_calculated=true')
                 read_type = file_obj.get('read_type')
                 if read_type == 'i5 index':
-                    return file_obj['accession']
+                    if 'accession' in file_obj:
+                        return file_obj['accession']
+                    else:
+                        return file_obj['external_accession']
 
 
     @calculated_property(schema={
@@ -178,4 +193,7 @@ class SequencingRun(Item):
                 file_obj = request.embed(file_id, '@@object?skip_calculated=true')
                 read_type = file_obj.get('read_type')
                 if read_type == 'i7 index':
-                    return file_obj['accession']
+                    if 'accession' in file_obj:
+                        return file_obj['accession']
+                    else:
+                        return file_obj['external_accession']

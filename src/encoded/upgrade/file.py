@@ -1,4 +1,7 @@
-from snovault import upgrade_step
+from snovault import (
+    CONNECTION,
+    upgrade_step,
+)
 
 
 @upgrade_step('raw_sequence_file', '1', '2')
@@ -107,8 +110,8 @@ def file_remove_no_file_available(value, system):
 
 @upgrade_step('raw_sequence_file', '5', '6')
 def file_fill_platform(value, system):
-	request = system['request']
-	seqrun = request.embed(value['derived_from'][0] + '@@object')
+	conn = system['registry'][CONNECTION]
+	seqrun = conn.get_by_uuid(value['derived_from'][0])
 	value['platform'] = seqrun['platform']
 
 

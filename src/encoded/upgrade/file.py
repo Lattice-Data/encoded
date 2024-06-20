@@ -107,7 +107,9 @@ def file_remove_no_file_available(value, system):
 
 @upgrade_step('raw_sequence_file', '5', '6')
 def file_fill_platform(value, system):
-	value['platform'] = value['derived_from'][0]['platform']
+	request = system['request']
+	seqrun = request.embed(value['derived_from'][0] + '@@object')
+	value['platform'] = seqrun['platform']
 
 
 @upgrade_step('processed_matrix_file', '11', '12')

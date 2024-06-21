@@ -112,7 +112,7 @@ def file_remove_no_file_available(value, system):
 def file_fill_platform(value, system):
 	conn = system['registry'][CONNECTION]
 	seqrun = conn.get_by_uuid(value['derived_from'][0])
-	value['platform'] = str(seqrun.properties['platform'])
+	value['platform'] = seqrun.properties['platform']
 
 
 @upgrade_step('processed_matrix_file', '11', '12')

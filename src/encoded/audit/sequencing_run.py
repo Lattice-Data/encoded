@@ -43,14 +43,14 @@ def audit_read_types_counts_platform(value, system):
         if len(read_count_lib) > 1:
             detail = ('SequencingRun {} has files of variable read counts - {}.'.format(
                 audit_link(path_to_text(value['@id']), value['@id']),
-                ','.join(read_count_lib)
+                read_count_lib
                 )
             )
             yield AuditFailure('variable read counts', detail, level='ERROR')
         if len(plat_lib) > 1:
             detail = ('SequencingRun {} has files of variable platforms - {}.'.format(
                 audit_link(path_to_text(value['@id']), value['@id']),
-                ','.join(plat_lib)
+                plat_lib
                 )
             )
             yield AuditFailure('variable platforms', detail, level='ERROR')

@@ -16,44 +16,45 @@ def audit_read_types_counts_platform(value, system):
     if value['status'] in ['deleted','archived']:
         return
 
-    read_types = {}
-    read_count_lib = set()
-    plat_lib = set()
-    for f in value.get('files'):
-        if f.get('validated') != True:
-            return
-        if f.get('read_type'):
-            if f['read_type'] in read_types.keys():
-                read_types[f['read_type']].append(f['uuid'])
-            else:
-                read_types[f['read_type']] = [f['uuid']]
-        read_count_lib.add(f.get('read_count'))
-        if 'platform' in f:
-            plat_lib.add(','.join(f['platform']))
-    for k,v in read_types.items():
-        if len(v) > 1:
-            detail = ('SequencingRun {} has multiple {} files: {}.'.format(
+    if value.get('files'):
+        read_types = {}
+        read_count_lib = set()
+        plat_lib = set()
+        for f in value.get('files'):
+            if f.get('validated') != True:
+                return
+            if f.get('read_type'):
+                if f['read_type'] in read_types.keys():
+                    read_types[f['read_type']].append(f['uuid'])
+                else:
+                    read_types[f['read_type']] = [f['uuid']]
+            read_count_lib.add(f.get('read_count'))
+            if 'platform' in f:
+                plat_lib.add(','.join(f['platform']))
+        for k,v in read_types.items():
+            if len(v) > 1:
+                detail = ('SequencingRun {} has multiple {} files: {}.'.format(
+                    audit_link(path_to_text(value['@id']), value['@id']),
+                    k,
+                    ','.join(v)
+                    )
+                )
+                yield AuditFailure('duplicated read type', detail, level='ERROR')
+        if len(read_count_lib) > 1:
+            detail = ('SequencingRun {} has files of variable read counts - {}.'.format(
                 audit_link(path_to_text(value['@id']), value['@id']),
-                k,
-                ','.join(v)
+                ','.join(read_count_lib)
                 )
             )
-            yield AuditFailure('duplicated read type', detail, level='ERROR')
-    if len(read_count_lib) != 1:
-        detail = ('SequencingRun {} has files of variable read counts - {}.'.format(
-            audit_link(path_to_text(value['@id']), value['@id']),
-            read_count_lib
+            yield AuditFailure('variable read counts', detail, level='ERROR')
+        if len(plat_lib) > 1:
+            detail = ('SequencingRun {} has files of variable platforms - {}.'.format(
+                audit_link(path_to_text(value['@id']), value['@id']),
+                ','.join(plat_lib)
+                )
             )
-        )
-        yield AuditFailure('variable read counts', detail, level='ERROR')
-    if len(plat_lib) != 1:
-        detail = ('SequencingRun {} has files of variable platforms - {}.'.format(
-            audit_link(path_to_text(value['@id']), value['@id']),
-            plat_lib
-            )
-        )
-        yield AuditFailure('variable platforms', detail, level='ERROR')
-        return
+            yield AuditFailure('variable platforms', detail, level='ERROR')
+            return
 
 
 def audit_required_files(value, system):

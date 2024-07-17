@@ -80,6 +80,25 @@ class SequencingRun(Item):
 
 
     @calculated_property(schema={
+        "title": "Platform",
+        "description": "The device(s) used to sequence data.",
+        "comment": "Do not submit. This is a calculated property",
+        "type": "array",
+        "notSubmittable": True,
+        "items": {
+            "type": "string"
+        }
+    })
+    def platform(self, request, registry, files):
+        plats = set()
+        for file_id in files:
+            file_obj = request.embed(file_id, '@@object?skip_calculated=true')
+            p = file_obj.get('platform', [])
+            plats.update(p)
+        return list(plats)
+
+
+    @calculated_property(schema={
         "title": "Read 1 file",
         "description": "The Read 1 DataFile belonging to this sequencing run.",
         "comment": "Do not submit. This is a calculated property",

@@ -75,18 +75,6 @@ class HumanDonor(Donor):
 
 
     @calculated_property(schema={
-        "title": "Organism",
-        "description": "Common name of donor organism.",
-        "comment": "Do not submit. This is a calculated property",
-        "permission": "import_items",
-        "type": "string",
-        "linkTo": "Organism"
-    })
-    def organism(self):
-        return "/organism/human"
-
-
-    @calculated_property(schema={
         "title": "Summary ethnicity",
         "description": "A single ethnicity term until CELLxGENE enables an array.",
         "comment": "Do not submit. This is a calculated property",

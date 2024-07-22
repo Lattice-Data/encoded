@@ -47,19 +47,3 @@ class Publication(Item):
                 return firstauth_lastname + ' et al. ' + str(publication_year)
             else:
                 return firstauth_lastname + ' et al.'
-
-
-    @calculated_property(schema={
-        "title": "Datasets",
-        "description": "The Datasets that are used in this Publication.",
-        "comment": "Do not submit. This is a calculated property",
-        "type": "array",
-        "items": {
-            "type": ['string', 'object'],
-            "linkFrom": "Dataset.references",
-        },
-        "notSubmittable": True,
-    })
-    def datasets(self, request, datasets=None):
-        if datasets:
-            return paths_filtered_by_status(request, datasets)

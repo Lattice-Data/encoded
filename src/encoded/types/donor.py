@@ -144,9 +144,7 @@ class HumanPostnatalDonor(HumanDonor):
     item_type = 'human_postnatal_donor'
     schema = load_schema('encoded:schemas/human_postnatal_donor.json')
     embedded = HumanDonor.embedded + ['causes_of_death']
-    rev = {
-        'children': ('HumanDonor', 'parents')
-    }
+    rev = {}
 
 
     @calculated_property(schema={
@@ -173,19 +171,3 @@ class HumanPostnatalDonor(HumanDonor):
             return True
 
         return False
-
-
-    @calculated_property(schema={
-        "description": "Human donor(s) that have this human donor in their parent property.",
-        "comment": "Do not submit. This is a calculated property",
-        "title": "Children",
-        "type": "array",
-        "items": {
-            "type": ['string', 'object'],
-            "linkFrom": "HumanDonor.parents"
-        },
-        "notSubmittable": True,
-    })
-    def children(self, request, children=None):
-        if children:
-            return paths_filtered_by_status(request, children)

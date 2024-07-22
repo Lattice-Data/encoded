@@ -152,47 +152,6 @@
                 }
             }
         },
-        "parents": {
-            "title": "Parents",
-            "description": "Biological parents of this donor",
-            "comment":"This is a link for cases when families are all donors in our system. Children will be calculated from this link.",
-            "type":  "array",
-            "uniqueItems": true,
-            "items": {
-                "title": "Parent",
-                "description": "Biological parent of this donor.",
-                "type": "string",
-                "linkTo": "HumanDonor"
-            }
-        },
-        "siblings": {
-            "title": "Siblings",
-            "description": "Donors that have at least one parent in common with this donor.",
-            "comment":"This is a link for cases when families are all donors in our system.",
-            "type":  "array",
-            "uniqueItems": true,
-            "items": {
-                "title": "Sibling",
-                "description": "A donor that has at least one parent in common.",
-                "type": "string",
-                "linkTo": "HumanDonor"
-            }
-        },
-        "twin": {
-            "title": "Twin",
-            "description": "A human donor that is a twin sibling of this human donor.",
-            "type": "string",
-            "linkTo": "HumanDonor"
-        },
-        "twin_type": {
-            "title": "Twin type",
-            "description": "Type of twin genetic relatedness.",
-            "type": "string",
-            "enum": [
-                "dizygotic",
-                "monozygotic"
-            ]
-        },
         "phenotype": {
             "title": "Phenotype",
             "description": "Any condition not included in MONDO, or additional histological, spatial, or disease subtype notes about diseases included in the 'disease' field.",

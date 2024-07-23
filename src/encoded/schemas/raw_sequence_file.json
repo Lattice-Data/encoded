@@ -235,9 +235,6 @@
         "read_type": {
             "title": "Read type"
         },
-        "sequence_elements": {
-            "title": "Sequence elements"
-        },
         "platform": {
             "title": "Platform"
         },
@@ -269,9 +266,6 @@
         },
         "read_type": {
             "title": "Read type"
-        },
-        "sequence_elements": {
-            "title": "Sequence elements"
         },
         "platform": {
             "title": "Platform"

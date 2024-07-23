@@ -14,19 +14,6 @@ from .shared_calculated_properties import (
 )
 
 
-def inherit_protocol_prop(request, seqrun_id, propname, read_type):
-    seqrun_obj = request.embed(seqrun_id, '@@object?skip_calculated=true')
-    lib_id = seqrun_obj.get('derived_from')[0]
-    lib_obj = request.embed(lib_id, '@@object?skip_calculated=true')
-    libprot_id = lib_obj.get('protocol')
-    libprot_obj = request.embed(libprot_id, '@@object?skip_calculated=true')
-    if 'sequence_file_standards' in libprot_obj:
-        standards = libprot_obj.get('sequence_file_standards')
-        for s in standards:
-            if s.get('read_type') == read_type:
-                return s.get(propname)
-
-
 RAW_OUTPUT_TYPES = ['reads', 'rejected reads', 'raw data', 'reporter code counts', 'intensity values', 'idat red channel', 'idat green channel']
 
 
@@ -215,31 +202,6 @@ class RawSequenceFile(DataFile):
         seqrun_obj = request.embed(seqrun_id, '@@object?skip_calculated=true')
         lib_id = seqrun_obj.get('derived_from')[0]
         return [lib_id]
-
-
-    @calculated_property(define=True,
-                         schema={"title": "Sequence elements",
-                                 "description": "The biological content of the sequence reads.",
-                                 "comment": "Do not submit. This is a calculated property",
-                                 "type": "array",
-                                 "items": {
-                                    "type": "string"
-                                 }
-                                })
-    def sequence_elements(self, request, derived_from, read_type=None):
-        if read_type:
-            return inherit_protocol_prop(request, derived_from[0], 'sequence_elements', read_type)
-
-
-    @calculated_property(define=True,
-                         schema={"title": "Demultiplexed type",
-                                 "description": "The read assignment after sample demultiplexing for fastq files.",
-                                 "comment": "Do not submit. This is a calculated property",
-                                 "type": "string"
-                                })
-    def demultiplexed_type(self, request, derived_from, read_type=None):
-        if read_type:
-            return inherit_protocol_prop(request, derived_from[0], 'demultiplexed_type', read_type)
 
 
 @collection(

@@ -132,12 +132,6 @@
         "references.hca_publication": {
             "title": "HCA publication"
         },
-        "reference_assembly": {
-            "title": "Genome assembly"
-        },
-        "reference_annotation": {
-            "title": "Genome annotation"
-        },
         "status": {
             "title": "Status"
         }

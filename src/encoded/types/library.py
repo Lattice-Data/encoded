@@ -9,7 +9,6 @@ from .base import (
 )
 from .shared_calculated_properties import (
     CalculatedAward,
-    CalculatedBiosampleOntologies,
     CalculatedBiosampleClassification,
     CalculatedBiosampleSummary,
 )
@@ -24,7 +23,6 @@ from .shared_calculated_properties import (
     })
 class Library(Item,
             CalculatedAward,
-            CalculatedBiosampleOntologies,
             CalculatedBiosampleClassification,
             CalculatedBiosampleSummary):
     item_type = 'library'

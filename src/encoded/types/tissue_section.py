@@ -8,7 +8,6 @@ from .base import (
 )
 from .shared_calculated_properties import (
     CalculatedDonors,
-    CalculatedBiosampleOntologies,
     CalculatedBiosampleClassification,
     CalculatedBiosampleSummary,
 )
@@ -23,7 +22,6 @@ from .shared_calculated_properties import (
     })
 class TissueSection(Item, 
                 CalculatedDonors,
-                CalculatedBiosampleOntologies,
                 CalculatedBiosampleClassification,
                 CalculatedBiosampleSummary):
     item_type = 'tissue_section'

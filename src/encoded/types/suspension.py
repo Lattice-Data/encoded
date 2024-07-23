@@ -9,7 +9,6 @@ from .base import (
 )
 from .shared_calculated_properties import (
     CalculatedDonors,
-    CalculatedBiosampleOntologies,
     CalculatedBiosampleClassification,
     CalculatedBiosampleSummary,
     CalculatedTreatmentSummary,
@@ -25,7 +24,6 @@ from .shared_calculated_properties import (
     })
 class Suspension(Item, 
                 CalculatedDonors,
-                CalculatedBiosampleOntologies,
                 CalculatedBiosampleClassification,
                 CalculatedBiosampleSummary,
                 CalculatedTreatmentSummary):

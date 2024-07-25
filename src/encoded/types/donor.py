@@ -74,50 +74,6 @@ class HumanDonor(Donor):
         'family_medical_history.diagnosis']
 
 
-    @calculated_property(schema={
-        "title": "Organism",
-        "description": "Common name of donor organism.",
-        "comment": "Do not submit. This is a calculated property",
-        "permission": "import_items",
-        "type": "string",
-        "linkTo": "Organism"
-    })
-    def organism(self):
-        return "/organism/human"
-
-
-    @calculated_property(schema={
-        "title": "Summary ethnicity",
-        "description": "A single ethnicity term until CELLxGENE enables an array.",
-        "comment": "Do not submit. This is a calculated property",
-        "permission": "import_items",
-        "type": "string"
-    })
-    def summary_ethnicity(self, request, ethnicity):
-        if len(ethnicity) == 1:
-            e = ethnicity[0].replace(':','_')
-            term = request.embed(e, '@@object')['term_id']
-            if term == 'NCIT:C17998':
-                return 'unknown'
-            else:
-                return term
-        else:
-            all_slims = []
-            for e in ethnicity:
-                e = e.replace(':','_')
-                slims = request.embed(e, '@@object').get('ethnicity_slims')
-                if not slims:
-                    return 'multiethnic'
-                all_slims.append(slims)
-
-            unpacked = [i for e in all_slims for i in e]
-            for s in all_slims[0]:
-                if unpacked.count(s) == len(all_slims):
-                    return s
-
-            return 'multiethnic'
-
-
 @collection(
     name='human-prenatal-donors',
     unique_key='accession',
@@ -156,9 +112,7 @@ class HumanPostnatalDonor(HumanDonor):
     item_type = 'human_postnatal_donor'
     schema = load_schema('encoded:schemas/human_postnatal_donor.json')
     embedded = HumanDonor.embedded + ['causes_of_death']
-    rev = {
-        'children': ('HumanDonor', 'parents')
-    }
+    rev = {}
 
 
     @calculated_property(schema={
@@ -185,19 +139,3 @@ class HumanPostnatalDonor(HumanDonor):
             return True
 
         return False
-
-
-    @calculated_property(schema={
-        "description": "Human donor(s) that have this human donor in their parent property.",
-        "comment": "Do not submit. This is a calculated property",
-        "title": "Children",
-        "type": "array",
-        "items": {
-            "type": ['string', 'object'],
-            "linkFrom": "HumanDonor.parents"
-        },
-        "notSubmittable": True,
-    })
-    def children(self, request, children=None):
-        if children:
-            return paths_filtered_by_status(request, children)

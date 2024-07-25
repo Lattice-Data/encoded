@@ -25,6 +25,13 @@
                 "pattern": "^(LATHD\\d{3}[A-Z]{3})$"
             }
         },
+        "organism": {
+            "title": "Organism",
+            "description": "Common name of donor organism.",
+            "type": "string",
+            "linkTo": "Organism",
+            "default": "d4499d6e-bf11-41be-84e3-9e42919721a1"
+        },
         "ancestry_method" : {
             "title": "Ancestry method",
             "description": "The method used to determine the ancestry of the donor.",
@@ -144,47 +151,6 @@
                     }
                 }
             }
-        },
-        "parents": {
-            "title": "Parents",
-            "description": "Biological parents of this donor",
-            "comment":"This is a link for cases when families are all donors in our system. Children will be calculated from this link.",
-            "type":  "array",
-            "uniqueItems": true,
-            "items": {
-                "title": "Parent",
-                "description": "Biological parent of this donor.",
-                "type": "string",
-                "linkTo": "HumanDonor"
-            }
-        },
-        "siblings": {
-            "title": "Siblings",
-            "description": "Donors that have at least one parent in common with this donor.",
-            "comment":"This is a link for cases when families are all donors in our system.",
-            "type":  "array",
-            "uniqueItems": true,
-            "items": {
-                "title": "Sibling",
-                "description": "A donor that has at least one parent in common.",
-                "type": "string",
-                "linkTo": "HumanDonor"
-            }
-        },
-        "twin": {
-            "title": "Twin",
-            "description": "A human donor that is a twin sibling of this human donor.",
-            "type": "string",
-            "linkTo": "HumanDonor"
-        },
-        "twin_type": {
-            "title": "Twin type",
-            "description": "Type of twin genetic relatedness.",
-            "type": "string",
-            "enum": [
-                "dizygotic",
-                "monozygotic"
-            ]
         },
         "phenotype": {
             "title": "Phenotype",

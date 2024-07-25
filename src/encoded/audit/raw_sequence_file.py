@@ -52,16 +52,6 @@ def audit_library_protocol_standards(value, system):
             yield AuditFailure('no protocol standards', detail, level='ERROR')
             return
 
-        for k in ['sequence_elements', 'demultiplexed_type']:
-            if my_standard[k] != value.get(k):
-                detail = ('{} of file {} should be {} but is {}'.format(
-                    k,
-                    audit_link(path_to_text(value['@id']), value['@id']),
-                    my_standard[k],
-                    value.get(k)
-                    )
-                )
-                yield AuditFailure('does not meet protocol standards', detail, level='INTERNAL_ACTION')
         if my_standard['read_length'] != value.get('read_length'):
             fail_flag = False
             rl_spec = my_standard['read_length_specification']

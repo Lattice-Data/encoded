@@ -9,35 +9,9 @@ from .base import (
     Item,
     paths_filtered_by_status,
 )
-from pyramid.httpexceptions import (
-    HTTPTemporaryRedirect,
-    HTTPNotFound,
-)
-from pyramid.settings import asbool
-from pyramid.view import view_config
-from urllib.parse import (
-    parse_qs,
-    urlparse,
-)
 from .shared_calculated_properties import (
     CalculatedAward,
 )
-import boto3
-import datetime
-import pytz
-
-
-def inherit_protocol_prop(request, seqrun_id, propname, read_type):
-    seqrun_obj = request.embed(seqrun_id, '@@object?skip_calculated=true')
-    lib_id = seqrun_obj.get('derived_from')[0]
-    lib_obj = request.embed(lib_id, '@@object?skip_calculated=true')
-    libprot_id = lib_obj.get('protocol')
-    libprot_obj = request.embed(libprot_id, '@@object?skip_calculated=true')
-    if 'sequence_file_standards' in libprot_obj:
-        standards = libprot_obj.get('sequence_file_standards')
-        for s in standards:
-            if s.get('read_type') == read_type:
-                return s.get(propname)
 
 
 RAW_OUTPUT_TYPES = ['reads', 'rejected reads', 'raw data', 'reporter code counts', 'intensity values', 'idat red channel', 'idat green channel']
@@ -96,74 +70,6 @@ class File(Item):
     })
     def title(self, accession=None, external_accession=None):
         return accession or external_accession
-
-
-    @calculated_property(schema={
-        "title": "Download URL",
-        "description": "The download path for S3 to obtain the actual file.",
-        "comment": "Do not submit. This is a calculated property",
-        "type": "string",
-    })
-    def href(self, request, file_format, accession=None, external_accession=None, s3_uri=None, external_uri=None):
-        uri = s3_uri or external_uri
-        if uri:
-            accession = accession or external_accession
-            if uri.split('.')[-1] == 'gz':
-                file_extension = uri.split('.')[-2] + '.gz'
-            else:
-                file_extension = uri.split('.')[-1]
-            filename = '{}.{}'.format(accession, file_extension)
-            return request.resource_path(self, '@@download', filename)
-
-
-@view_config(name='download', context=File, request_method='GET',
-             permission='view', subpath_segments=[0, 1])
-def download(context, request):
-    properties = context.upgrade_properties()
-    uri = properties.get('s3_uri') or properties.get('external_uri')
-    if uri:
-        if uri.split('.')[-1] == 'gz':
-            file_extension = uri.split('.')[-2] + '.gz'
-        else:
-            file_extension = uri.split('.')[-1]
-        accession_or_external = properties.get('accession') or properties['external_accession']
-        filename = '{}.{}'.format(accession_or_external, file_extension)
-        if request.subpath:
-            _filename, = request.subpath
-            if filename != _filename:
-                raise HTTPNotFound(_filename)
-
-        if properties.get('external_uri'):
-            raise HTTPTemporaryRedirect(location=properties.get('external_uri'))
-
-        if properties.get('s3_uri'):
-            conn = boto3.client('s3')
-
-            parsed_href = urlparse(properties.get('s3_uri'), allow_fragments=False)
-            bucket = parsed_href.netloc
-            key    = parsed_href.path.lstrip('/')
-
-            location = conn.generate_presigned_url(
-                ClientMethod='get_object',
-                Params={
-                    'Bucket': bucket,
-                    'Key': key,
-                    'ResponseContentDisposition': 'attachment; filename=' + filename
-                },
-                ExpiresIn=36*60*60
-            )
-        else:
-            raise HTTPNotFound(
-                detail='S3 URI not present'
-            )
-        if asbool(request.params.get('soft')):
-            expires = int(parse_qs(urlparse(location).query)['Expires'][0])
-            return {
-                '@type': ['SoftRedirect'],
-                'location': location,
-                'expires': datetime.datetime.fromtimestamp(expires, pytz.utc).isoformat(),
-            }
-        raise HTTPTemporaryRedirect(location=location)
 
 
 @abstract_collection(
@@ -258,27 +164,8 @@ class RawSequenceFile(DataFile):
     item_type = 'raw_sequence_file'
     schema = load_schema('encoded:schemas/raw_sequence_file.json')
     rev = DataFile.rev.copy()
-    rev.update({
-        'raw_matrix_files': ('RawMatrixFile', 'derived_from')
-    })
     embedded = DataFile.embedded + ['derived_from']
     audit_inherit = DataFile.audit_inherit + ['derived_from']
-
-
-    @calculated_property(schema={
-        "title": "Raw matrix files",
-        "description": "The list raw matrix files that derive from this file.",
-        "comment": "Do not submit.",
-        "type": "array",
-        "items": {
-            "type": ['string', 'object'],
-            "linkFrom": "RawMatrixFile.derived_from",
-        },
-        "notSubmittable": True,
-    })
-    def raw_matrix_files(self, request, raw_matrix_files=None):
-        if raw_matrix_files:
-            return paths_filtered_by_status(request, raw_matrix_files)
 
 
     @calculated_property(define=True,
@@ -296,31 +183,6 @@ class RawSequenceFile(DataFile):
         seqrun_obj = request.embed(seqrun_id, '@@object?skip_calculated=true')
         lib_id = seqrun_obj.get('derived_from')[0]
         return [lib_id]
-
-
-    @calculated_property(define=True,
-                         schema={"title": "Sequence elements",
-                                 "description": "The biological content of the sequence reads.",
-                                 "comment": "Do not submit. This is a calculated property",
-                                 "type": "array",
-                                 "items": {
-                                    "type": "string"
-                                 }
-                                })
-    def sequence_elements(self, request, derived_from, read_type=None):
-        if read_type:
-            return inherit_protocol_prop(request, derived_from[0], 'sequence_elements', read_type)
-
-
-    @calculated_property(define=True,
-                         schema={"title": "Demultiplexed type",
-                                 "description": "The read assignment after sample demultiplexing for fastq files.",
-                                 "comment": "Do not submit. This is a calculated property",
-                                 "type": "string"
-                                })
-    def demultiplexed_type(self, request, derived_from, read_type=None):
-        if read_type:
-            return inherit_protocol_prop(request, derived_from[0], 'demultiplexed_type', read_type)
 
 
 @collection(
@@ -372,36 +234,6 @@ class RawMatrixFile(AnalysisFile):
             l_obj = request.embed(l, '@@object')
             assays.add(l_obj['assay'])
         return list(assays)
-
-
-    @calculated_property(schema={
-        "title": "Value scale",
-        "description": "The factor by which the expression values have been scaled; linear if not scaled.",
-        "comment": "Do not submit. Value is filled in by the system as it is expected to be consistent for all instances of this class.",
-        "type": "string"
-        })
-    def value_scale(self):
-        return "linear"
-
-
-    @calculated_property(schema={
-        "title": "Normalized",
-        "description": "A flag to indicate whether the expression values have been normalized.",
-        "comment": "Do not submit. Value is filled in by the system as it is expected to be consistent for all instances of this class.",
-        "type": "boolean"
-        })
-    def normalized(self):
-        return False
-
-
-    @calculated_property(schema={
-        "title": "Scaled",
-        "description": "A flag to indicate whether the expression values have been scaled.",
-        "comment": "Do not submit. Value is filled in by the system as it is expected to be consistent for all instances of this class.",
-        "type": "boolean"
-        })
-    def scaled(self):
-        return False
 
 
 @collection(

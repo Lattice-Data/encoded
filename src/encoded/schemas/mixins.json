@@ -207,6 +207,14 @@
             "linkSubmitsFor": true
         }
     },
+    "institute_name": {
+        "institute_name": {
+            "title": "Institute",
+            "description": "The name for the institute the user is associated with.",
+            "type": "string",
+            "pattern": "^(\\S+(\\s|\\S)*\\S+|\\S)$|^$"
+        }
+    },
     "attachment": {
         "attachment": {
             "title": "Attachment",

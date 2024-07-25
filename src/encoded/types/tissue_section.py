@@ -8,7 +8,6 @@ from .base import (
 )
 from .shared_calculated_properties import (
     CalculatedDonors,
-    CalculatedBiosampleOntologies,
     CalculatedBiosampleClassification,
     CalculatedBiosampleSummary,
 )
@@ -23,14 +22,12 @@ from .shared_calculated_properties import (
     })
 class TissueSection(Item, 
                 CalculatedDonors,
-                CalculatedBiosampleOntologies,
                 CalculatedBiosampleClassification,
                 CalculatedBiosampleSummary):
     item_type = 'tissue_section'
     schema = load_schema('encoded:schemas/tissue_section.json')
     name_key = 'accession'
     embedded = [
-        'biosample_ontologies',
         'donors',
         'donors.organism',
         'donors.ethnicity',

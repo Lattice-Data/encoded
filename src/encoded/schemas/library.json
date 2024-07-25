@@ -212,10 +212,6 @@
         "protocol.title": {
             "title": "Library protocol"
         },
-        "observation_count": {
-            "type": "exists",
-            "title": "Has raw count matrix"
-        },
         "donors.development_ontology.development_slims": {
             "title": "Donor life stage"
         },
@@ -284,12 +280,6 @@
         },
         "protocol.title": {
             "title": "Library protocol"
-        },
-        "observation_count": {
-            "title": "Observation count"
-        },
-        "read_count": {
-            "title": "Read count"
         },
         "donors.donor_id": {
             "title": "Donor ID"

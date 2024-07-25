@@ -9,7 +9,6 @@ from .base import (
 )
 from .shared_calculated_properties import (
     CalculatedDonors,
-    CalculatedBiosampleOntologies,
     CalculatedBiosampleClassification,
     CalculatedBiosampleSummary,
     CalculatedTreatmentSummary,
@@ -25,7 +24,6 @@ from .shared_calculated_properties import (
     })
 class Suspension(Item, 
                 CalculatedDonors,
-                CalculatedBiosampleOntologies,
                 CalculatedBiosampleClassification,
                 CalculatedBiosampleSummary,
                 CalculatedTreatmentSummary):
@@ -33,7 +31,6 @@ class Suspension(Item,
     schema = load_schema('encoded:schemas/suspension.json')
     name_key = 'accession'
     embedded = [
-        'biosample_ontologies',
         'donors',
         'donors.organism',
         'enriched_cell_types',

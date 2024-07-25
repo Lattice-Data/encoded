@@ -64,3 +64,9 @@ def human_donor_cause_of_death_removal(value, system):
 def human_donor_living_at_sample_collection_stringify(value, system):
 	if 'living_at_sample_collection' in value:
 		value['living_at_sample_collection'] = str(value['living_at_sample_collection'])
+
+
+@upgrade_step('human_postnatal_donor', '8', '9')
+@upgrade_step('human_prenatal_donor', '3', '4')
+def human_donor_set_organism(value, system):
+	value['organism'] = 'd4499d6e-bf11-41be-84e3-9e42919721a1'

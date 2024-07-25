@@ -12,7 +12,8 @@
         { "$ref": "mixins.json#/schema_version" },
         { "$ref": "mixins.json#/uuid" },
         { "$ref": "mixins.json#/shared_status" },
-        { "$ref": "mixins.json#/viewing_groups" }
+        { "$ref": "mixins.json#/viewing_groups" },
+        { "$ref": "mixins.json#/institute_name" }
     ],
     "properties": {
         "schema_version": {
@@ -34,12 +35,6 @@
             "title": "Last name",
             "description": "The user's last (family) name.",
             "type": "string"
-        },
-        "institute_name": {
-            "title": "Institute",
-            "description": "The name for the institute the user is associated with.",
-            "type": "string",
-            "pattern": "^(\\S+(\\s|\\S)*\\S+|\\S)$|^$"
         },
         "submits_for": {
             "title": "Submits for",
@@ -93,7 +88,7 @@
             "length": "long"
         },
         "institute_name": {
-            "title": "Institute",
+            "title": "Institute name",
             "type": "typeahead"
         }
     },
@@ -102,7 +97,7 @@
             "title": "Title"
         },
         "institute_name": {
-            "title": "Institute"
+            "title": "Institute name"
         }
     },
     "changelog": "/profiles/changelogs/user.md"

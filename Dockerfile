@@ -37,7 +37,7 @@ RUN apt-get update && apt-get install -y \
     graphviz \
     && rm -rf /var/lib/apt/lists/* \
     && curl -sL https://deb.nodesource.com/setup_10.x | bash - && apt-get install -y nodejs \
-    && gem install compass
+    && gem install ffi -v 1.16.3 && gem install compass
 
 # Install Python 3.7.6
 RUN wget https://www.python.org/ftp/python/3.7.6/Python-3.7.6.tgz && \

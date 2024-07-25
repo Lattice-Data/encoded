@@ -21,3 +21,8 @@ def sequencing_run_3_4(value, system):
 def sequencing_run_4_5(value, system):
 	if 'platform' in value:
 		value['platform'] = [value['platform']]
+
+@upgrade_step('sequencing_run', '5', '6')
+def sequencing_run_5_6(value, system):
+	if 'platform' in value:
+		del value['platform']

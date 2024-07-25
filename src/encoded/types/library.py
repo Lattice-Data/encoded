@@ -145,7 +145,7 @@ class Library(Item,
         for df in derived_from:
             df_obj = request.embed(df, '@@object')
             if df_obj.get('biosample_ontology'):
-                onts.add(bs_obj['biosample_ontology'])
+                onts.add(df_obj['biosample_ontology'])
             else:
                 for doubdf in df_obj['derived_from']:
                     doubdf_obj = request.embed(doubdf, '@@object')

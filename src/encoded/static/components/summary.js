@@ -327,7 +327,6 @@ class SummaryBody extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            cellCount: 0,
             donorCount: 0,
         }
         const searchQuery = url.parse(this.props.context['@id']).search;
@@ -336,20 +335,7 @@ class SummaryBody extends React.Component {
 
     componentDidMount() {
         const query_url = this.props.context.search_base.replace('/search/?', '')
-        this.getCellCount(query_url);
         this.getDonorCount(query_url);
-    }
-
-    getCellCount(searchBase) {
-        requestSearch(searchBase + '&observation_count=*&limit=all').then((results) => {
-            if (Object.keys(results).length > 0 && results['@graph'].length > 0) {
-                var cell_count = 0
-                results['@graph'].forEach(y => cell_count += y['observation_count']);
-                this.setState({
-                    cellCount: cell_count
-                })
-            }
-        })
     }
 
     getDonorCount(searchBase) {
@@ -373,7 +359,6 @@ class SummaryBody extends React.Component {
             if (vertFacetNames.includes(x.field)) vertFacets.push(x);
             })
 
-        const cell_count = this.state.cellCount.toLocaleString();
         const donor_count = this.state.donorCount.toLocaleString();
 
         return (
@@ -384,7 +369,6 @@ class SummaryBody extends React.Component {
                 <div className="search-results__report-list">
                     <h4>{this.props.context.total} {this.props.context.total > 1 ? 'libraries' : 'library'}</h4>
                     <h4>{donor_count} donors</h4>
-                    <h4>{cell_count} cells/nuclei</h4>
                     <div className="view-controls-container">
                         <ViewControls results={this.props.context} alternativeNames={['Tabular report']} />
                     </div>

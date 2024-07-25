@@ -52,67 +52,6 @@ class Library(Item,
     ]
 
 
-    @calculated_property(schema={
-        "title": "Observation count",
-        "description": "The number of cells and nuclei from this library that have raw counts submitted.",
-        "comment": "Do not submit.",
-        "type": "integer",
-        "notSubmittable": True,
-    })
-    def observation_count(self, request, sequencing_runs, direct_raw_mx=None):
-        matrices = set()
-
-        if direct_raw_mx:
-            matrices.update(paths_filtered_by_status(request, direct_raw_mx))
-        for sr in sequencing_runs:
-            sr_obj = request.embed(sr, '@@object')
-            if sr_obj.get('files'):
-                for f in sr_obj['files']:
-                    f_obj = request.embed(f, '@@object')
-                    if f_obj.get('raw_matrix_files'):
-                        matrices.update(f_obj['raw_matrix_files'])
-        count = 0
-        for m in matrices:
-            mx_obj = request.embed(m, '@@object?skip_calculated=true')
-            if mx_obj.get('observation_count') and mx_obj.get('background_barcodes_included') != True:
-                count += mx_obj['observation_count']
-
-        if count > 0:
-            return count
-
-
-    @calculated_property(schema={
-        "title": "Sequencing runs",
-        "description": "The sequencing runs that derive from this library.",
-        "comment": "Do not submit. This is a calculated property",
-        "type": "array",
-        "items": {
-            "type": ['string', 'object'],
-            "linkFrom": "SequencingRun.derived_from",
-        },
-        "notSubmittable": True,
-    })
-    def sequencing_runs(self, request, sequencing_runs=None):
-        if sequencing_runs:
-            return paths_filtered_by_status(request, sequencing_runs)
-
-
-    @calculated_property(schema={
-        "title": "Read count",
-        "description": "The number of reads sequenced from this library.",
-        "comment": "Do not submit. This is a calculated property",
-        "type": "integer",
-        "notSubmittable": True,
-    })
-    def read_count(self, request, sequencing_runs):
-        count = 0
-        for sr in sequencing_runs:
-            props = request.embed(sr, '@@object')
-            count += props.get('read_count',0)
-        if count > 0:
-            return count
-
-
     @calculated_property(condition='protocol', schema={
         "title": "Assay",
         "description": "The general assay used for this Library.",

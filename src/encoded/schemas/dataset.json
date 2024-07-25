@@ -161,12 +161,6 @@
         "library_count": {
             "title": "Library count"
         },
-        "read_count": {
-            "title": "Read count"
-        },
-        "observation_count": {
-            "title": "Observation count"
-        },
         "libraries.protocol": {
             "title": "Library protocol"
         },

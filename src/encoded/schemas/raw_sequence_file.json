@@ -84,21 +84,6 @@
             ],
             "default": "fastq"
         },
-        "fastq_signature": {
-            "title": "Fastq signature",
-            "description": "Fastq file flowcell based unique signature to reference a file.",
-            "comment": "Do not submit. This value is calculated and posted by checkfiles script upon submission.",
-            "type": "array",
-            "uniqueItems": true,
-            "permission": "import_items",
-            "items": {
-                "title": "Flowcell based fastq signature part",
-                "description": "Fastq file flowcell based unique signature to reference a file.",
-                "comment": "Current convention is based on the Illumina unique sequence identifier, colon separated flowcell, lane, read_end(1/2/3) and barcode.",
-                "type":  "string",
-                "pattern": "^[a-zA-Z0-9_-]+:[0-9]+:[123]:.*:.*$"
-            }
-        },
         "read_length": {
             "title": "Read length",
             "description": "For high-throughput sequencing, the number of contiguous nucleotides determined by sequencing.",

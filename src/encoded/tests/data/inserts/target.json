@@ -7,7 +7,7 @@
 		"dbxrefs": [
 			"UniProtKB:P08571"
 		],
-		"organism": "7745b647-ff15-4ff3-9ced-b897d4e2983c",
+		"organism": "d4499d6e-bf11-41be-84e3-9e42919721a1",
 		"label": "CD14"
 	},
 	{
@@ -18,7 +18,7 @@
 		"dbxrefs": [
 			"UniProtKB:P15391"
 		],
-		"organism": "7745b647-ff15-4ff3-9ced-b897d4e2983c",
+		"organism": "d4499d6e-bf11-41be-84e3-9e42919721a1",
 		"label": "CD19"
 	},
 	{
@@ -29,7 +29,7 @@
 		"dbxrefs": [
 			"UniProtKB:P07766"
 		],
-		"organism": "7745b647-ff15-4ff3-9ced-b897d4e2983c",
+		"organism": "d4499d6e-bf11-41be-84e3-9e42919721a1",
 		"label": "CD3E"
 	},
 	{
@@ -40,7 +40,7 @@
 		"dbxrefs": [
 			"UniProtKB:P09693"
 		],
-		"organism": "7745b647-ff15-4ff3-9ced-b897d4e2983c",
+		"organism": "d4499d6e-bf11-41be-84e3-9e42919721a1",
 		"label": "CD3G"
 	},
 	{
@@ -51,7 +51,7 @@
 		"dbxrefs": [
 			"UniProtKB:P01732"
 		],
-		"organism": "7745b647-ff15-4ff3-9ced-b897d4e2983c",
+		"organism": "d4499d6e-bf11-41be-84e3-9e42919721a1",
 		"label": "CD8A"
 	},
 	{
@@ -62,7 +62,7 @@
 		"dbxrefs": [
 			"ComplexPortal:CPX-2158"
 		],
-		"organism": "7745b647-ff15-4ff3-9ced-b897d4e2983c",
+		"organism": "d4499d6e-bf11-41be-84e3-9e42919721a1",
 		"label": "HbA"
 	}
 ]

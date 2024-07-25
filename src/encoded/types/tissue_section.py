@@ -28,7 +28,6 @@ class TissueSection(Item,
     schema = load_schema('encoded:schemas/tissue_section.json')
     name_key = 'accession'
     embedded = [
-        'biosample_ontologies',
         'donors',
         'donors.organism',
         'donors.ethnicity',

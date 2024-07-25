@@ -31,7 +31,6 @@ class Suspension(Item,
     schema = load_schema('encoded:schemas/suspension.json')
     name_key = 'accession'
     embedded = [
-        'biosample_ontologies',
         'donors',
         'donors.organism',
         'enriched_cell_types',

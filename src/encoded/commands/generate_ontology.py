@@ -20,6 +20,7 @@ Thing = OWLNS["Thing"]
 OnProperty = OWLNS["onProperty"]
 SomeValuesFrom = OWLNS["someValuesFrom"]
 IntersectionOf = OWLNS["intersectionOf"]
+Deprecated = OWLNS['deprecated']
 
 PART_OF = "http://purl.obolibrary.org/obo/BFO_0000050"
 DERIVES_FROM = "http://www.obofoundry.org/ro/ro.owl#derives_from"
@@ -189,6 +190,11 @@ class Inspector(object):
             temp += [o]
         return temp
 
+    def entityDeprecated(self, anEntity, getall=True):
+        for o in self.rdfGraph.objects(anEntity, Deprecated):
+            return o
+        return False
+
     def classFind(self, name, exact=False):
         temp = []
         if name:
@@ -299,23 +305,21 @@ def getTermStructure():
 def main():
     ''' Downloads various ontologies and create a JSON file '''
 
-    efo_url = 'https://github.com/EBISPOT/efo/releases/download/v3.65.0/efo.owl'
-    uberon_url = 'https://github.com/obophenotype/uberon/releases/download/v2024-03-22/uberon.owl'
-    mondo_url = 'https://github.com/monarch-initiative/mondo/releases/download/v2024-05-08/mondo.owl'
+    cl_url = 'https://github.com/obophenotype/cell-ontology/releases/download/v2024-08-16/cl.owl'
+    efo_url = 'https://github.com/EBISPOT/efo/releases/download/v3.69.0/efo.owl'
     hancestro_url = 'https://raw.githubusercontent.com/EBISPOT/hancestro/3.0/hancestro-base.owl'
-    cl_url = 'https://github.com/obophenotype/cell-ontology/releases/download/v2024-04-05/cl.owl'
-    hsapdv_url = 'http://purl.obolibrary.org/obo/hsapdv.owl'
-    mmusdv_url = 'http://purl.obolibrary.org/obo/mmusdv.owl'
-    ncit_url = 'http://purl.obolibrary.org/obo/ncit.owl'
+    hsapdv_url = 'https://github.com/obophenotype/developmental-stage-ontologies/releases/download/v2024-05-28/hsapdv.owl'
+    mondo_url = 'https://github.com/monarch-initiative/mondo/releases/download/v2024-08-06/mondo.owl'
+    uberon_url = 'https://github.com/obophenotype/uberon/releases/download/v2024-08-07/uberon.owl'
+    ncit_url = 'http://purl.obolibrary.org/obo/ncit/releases/2024-05-07/ncit.owl'
 
     url_whitelist = {
         uberon_url: ['UBERON', 'CL'],
         efo_url: ['EFO'],
         mondo_url: ['MONDO'],
-        hancestro_url: ['HANCESTRO'],
+        hancestro_url: ['HANCESTRO', 'AfPO'],
         cl_url: ['CL'],
         hsapdv_url: ['HsapDv'],
-        mmusdv_url: ['MmusDv'],
         ncit_url: ['NCIT']
         }
 
@@ -325,79 +329,80 @@ def main():
         print(url)
         data = Inspector(url)
         for c in data.allclasses:
-            if isBlankNode(c):
-                for o in data.rdfGraph.objects(c, RDFS.subClassOf):
-                    if isBlankNode(o):
-                        pass
-                    else:
-                        for o1 in data.rdfGraph.objects(c, IntersectionOf):
-                            collection = Collection(data.rdfGraph, o1)
-                            col_list = []
-                            for col in data.rdfGraph.objects(collection[1]):
-                                col_list.append(col.__str__())
-                            if PART_OF in col_list:
-                                for subC in data.rdfGraph.objects(c, RDFS.subClassOf):
-                                    term_id = splitNameFromNamespace(
-                                        collection[0])[0].replace('_', ':')
-                                    if term_id.split(':')[0] in url_whitelist[url]:
-                                        if term_id not in terms:
-                                            terms[term_id] = getTermStructure()
-                                        terms[term_id]['part_of'].append(
-                                            splitNameFromNamespace(subC)[0].replace('_', ':'))
-            else:
-                term_id = splitNameFromNamespace(c)[0].replace('_', ':')
-                if term_id.split(':')[0] in url_whitelist[url]:
-                    if term_id not in terms:
-                        terms[term_id] = getTermStructure()
-                    terms[term_id]['id'] = term_id
-
-                    try:
-                        terms[term_id]['name'] = data.rdfGraph.label(c).__str__()
-                    except:
-                        terms[term_id]['name'] = ''
-
-                    # Get all parents
-                    for parent in data.get_classDirectSupers(c, excludeBnodes=False):
-                        if isBlankNode(parent):
-                            for s, v, o in data.rdfGraph.triples((parent, OnProperty, None)):
-                                if o.__str__() == PART_OF:
-                                    for o1 in data.rdfGraph.objects(parent, SomeValuesFrom):
-                                        if not isBlankNode(o1):
-                                            terms[term_id]['part_of'].append(
-                                                splitNameFromNamespace(o1)[0].replace('_', ':'))
-                                elif o.__str__() == DERIVES_FROM:
-                                    for o1 in data.rdfGraph.objects(parent, SomeValuesFrom):
-                                        if not isBlankNode(o1):
-                                            terms[term_id]['derives_from'].append(
-                                                splitNameFromNamespace(o1)[0].replace('_', ':'))
-                                        else:
-                                            for o2 in data.rdfGraph.objects(o1, IntersectionOf):
-                                                for o3 in data.rdfGraph.objects(o2, RDF.first):
-                                                    if not isBlankNode(o3):
-                                                        terms[term_id]['derives_from'].append(
-                                                            splitNameFromNamespace(o3)[0].replace('_', ':'))
-                                                for o3 in data.rdfGraph.objects(o2, RDF.rest):
-                                                    for o4 in data.rdfGraph.objects(o3, RDF.first):
-                                                        for o5 in data.rdfGraph.objects(o4, SomeValuesFrom):
-                                                            for o6 in data.rdfGraph.objects(o5, IntersectionOf):
-                                                                for o7 in data.rdfGraph.objects(o6, RDF.first):
-                                                                    if not isBlankNode(o7):
-                                                                        terms[term_id]['derives_from'].append(
-                                                                            splitNameFromNamespace(o7)[0].replace('_', ':'))
-                                                                        for o8 in data.rdfGraph.objects(o6, RDF.rest):
-                                                                            for o9 in data.rdfGraph.objects(o8, RDF.first):
-                                                                                if not isBlankNode(o9):
-                                                                                    terms[term_id]['derives_from'].append(
-                                                                                        splitNameFromNamespace(o9)[0].replace('_', ':'))
-                        else:
-                            terms[term_id]['parents'].append(
-                                splitNameFromNamespace(parent)[0].replace('_', ':'))
-
-                    for syn in data.entitySynonyms(c):
-                        try:
-                            terms[term_id]['synonyms'].append(syn.__str__())
-                        except:
+            if not data.entityDeprecated(c):
+                if isBlankNode(c):
+                    for o in data.rdfGraph.objects(c, RDFS.subClassOf):
+                        if isBlankNode(o):
                             pass
+                        else:
+                            for o1 in data.rdfGraph.objects(c, IntersectionOf):
+                                collection = Collection(data.rdfGraph, o1)
+                                col_list = []
+                                for col in data.rdfGraph.objects(collection[1]):
+                                    col_list.append(col.__str__())
+                                if PART_OF in col_list:
+                                    for subC in data.rdfGraph.objects(c, RDFS.subClassOf):
+                                        term_id = splitNameFromNamespace(
+                                            collection[0])[0].replace('_', ':')
+                                        if term_id.split(':')[0] in url_whitelist[url]:
+                                            if term_id not in terms:
+                                                terms[term_id] = getTermStructure()
+                                            terms[term_id]['part_of'].append(
+                                                splitNameFromNamespace(subC)[0].replace('_', ':'))
+                else:
+                    term_id = splitNameFromNamespace(c)[0].replace('_', ':')
+                    if term_id.split(':')[0] in url_whitelist[url]:
+                        if term_id not in terms:
+                            terms[term_id] = getTermStructure()
+                        terms[term_id]['id'] = term_id
+
+                        try:
+                            terms[term_id]['name'] = data.rdfGraph.label(c).__str__()
+                        except:
+                            terms[term_id]['name'] = ''
+
+                        # Get all parents
+                        for parent in data.get_classDirectSupers(c, excludeBnodes=False):
+                            if isBlankNode(parent):
+                                for s, v, o in data.rdfGraph.triples((parent, OnProperty, None)):
+                                    if o.__str__() == PART_OF:
+                                        for o1 in data.rdfGraph.objects(parent, SomeValuesFrom):
+                                            if not isBlankNode(o1):
+                                                terms[term_id]['part_of'].append(
+                                                    splitNameFromNamespace(o1)[0].replace('_', ':'))
+                                    elif o.__str__() == DERIVES_FROM:
+                                        for o1 in data.rdfGraph.objects(parent, SomeValuesFrom):
+                                            if not isBlankNode(o1):
+                                                terms[term_id]['derives_from'].append(
+                                                    splitNameFromNamespace(o1)[0].replace('_', ':'))
+                                            else:
+                                                for o2 in data.rdfGraph.objects(o1, IntersectionOf):
+                                                    for o3 in data.rdfGraph.objects(o2, RDF.first):
+                                                        if not isBlankNode(o3):
+                                                            terms[term_id]['derives_from'].append(
+                                                                splitNameFromNamespace(o3)[0].replace('_', ':'))
+                                                    for o3 in data.rdfGraph.objects(o2, RDF.rest):
+                                                        for o4 in data.rdfGraph.objects(o3, RDF.first):
+                                                            for o5 in data.rdfGraph.objects(o4, SomeValuesFrom):
+                                                                for o6 in data.rdfGraph.objects(o5, IntersectionOf):
+                                                                    for o7 in data.rdfGraph.objects(o6, RDF.first):
+                                                                        if not isBlankNode(o7):
+                                                                            terms[term_id]['derives_from'].append(
+                                                                                splitNameFromNamespace(o7)[0].replace('_', ':'))
+                                                                            for o8 in data.rdfGraph.objects(o6, RDF.rest):
+                                                                                for o9 in data.rdfGraph.objects(o8, RDF.first):
+                                                                                    if not isBlankNode(o9):
+                                                                                        terms[term_id]['derives_from'].append(
+                                                                                            splitNameFromNamespace(o9)[0].replace('_', ':'))
+                            else:
+                                terms[term_id]['parents'].append(
+                                    splitNameFromNamespace(parent)[0].replace('_', ':'))
+
+                        for syn in data.entitySynonyms(c):
+                            try:
+                                terms[term_id]['synonyms'].append(syn.__str__())
+                            except:
+                                pass
 
     for term in terms:
         terms[term]['data'] = list(set(terms[term]['parents']) | set(terms[term]['part_of']) | set(

@@ -8,16 +8,15 @@ Ontologies used
 
 | Ontology |  File used | Version in use |
 |:--|:--|:--|
-| [Uber-anatomy ontology (UBERON)] | `uberon.owl` from [UBERON] | v2024-03-22 |
-| [Cell Ontology (CL)] | `cl.owl` from [CL] | v2024-04-05 |
-| [Experimental Factor Ontology (EFO)] | `efo.owl` from [EFO] | v3.65.0 |
-| [Mondo Disease Ontology (MONDO)] | `mondo.owl` from [MONDO] | v2024-05-08 |
+| [Cell Ontology (CL)] | `cl.owl` from [CL] | v2024-08-16 |
+| [Experimental Factor Ontology (EFO)] | `efo.owl` from [EFO] | v3.69.0 |
 | [Human Ancestry Ontology (HANCESTRO)] | `hancestro.owl` from [HANCESTRO] | 3.0 |
-| [Human Developmental Stage Ontology (HsapDv)] | `hsapdv.owl` from [OLS-HsapDv] | 2020-03-10 |
-| [Mouse Developmental Stage Ontology (MmusDv)] | `mmusdv.owl` from [OLS-MmusDv] | 2020-03-10 |
-| [NCI Thesaurus (NCIT)] | `ncit.owl` from [OLS-NCIT] | 2023-10-19 |
+| [Human Developmental Stage Ontology (HsapDv)] | `hsapdv.owl` from [OLS-HsapDv] | 2024-05-28 |
+| [Mondo Disease Ontology (MONDO)] | `mondo.owl` from [MONDO] | 2024-08-06 |
+| [Uber-anatomy ontology (UBERON)] | `uberon.owl` from [UBERON] | v2024-08-07 |
+| [NCI Thesaurus (NCIT)] | `ncit.owl` from [OLS-NCIT] | 2024-05-07 |
 
-**Current ontology.json:** `ontology-2024-02-16.json`
+**Current ontology.json:** `ontology-2024-09-18.json`
 
 How to update the ontology versions
 ---------------- 
@@ -49,8 +48,6 @@ How to update the ontology versions
 [HANCESTRO]: https://github.com/EBISPOT/hancestro/tree/2.6
 [Human Developmental Stage Ontology (HsapDv)]: https://github.com/obophenotype/developmental-stage-ontologies/wiki/HsapDv
 [OLS-HsapDv]: https://www.ebi.ac.uk/ols4/ontologies/hsapdv
-[Mouse Developmental Stage Ontology (MmusDv)]: https://github.com/obophenotype/developmental-stage-ontologies/wiki/MmusDv
-[OLS-MmusDv]: https://www.ebi.ac.uk/ols4/ontologies/mmusdv
 [NCI Thesaurus (NCIT)]: https://github.com/NCI-Thesaurus/thesaurus-obo-edition
 [OLS-NCIT]: https://www.ebi.ac.uk/ols4/ontologies/ncit
 [generate_ontology.py]: ../commands/generate_ontology.py#L302

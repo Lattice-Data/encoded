@@ -195,7 +195,7 @@ def ontology_check_eth(value, system):
     if value['status'] in ['deleted'] or field not in value:
         return
 
-    dbs = ['HANCESTRO']
+    dbs = ['HANCESTRO', 'AfPO']
     terms = ['NCIT:C17998']
 
     for e in value[field]:
@@ -243,7 +243,7 @@ def audit_ancestry(value, system):
     if value['status'] in ['deleted'] or field not in value:
         return
 
-    dbs = ['HANCESTRO', 'NTR']
+    dbs = ['HANCESTRO', 'AfPO', 'NTR']
 
     invalid = []
     for d in value.get(field):

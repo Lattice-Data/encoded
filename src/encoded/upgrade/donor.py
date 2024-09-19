@@ -70,3 +70,32 @@ def human_donor_living_at_sample_collection_stringify(value, system):
 @upgrade_step('human_prenatal_donor', '3', '4')
 def human_donor_set_organism(value, system):
 	value['organism'] = 'd4499d6e-bf11-41be-84e3-9e42919721a1'
+
+age_dv = {
+	'<30 years': '6b94bf2b-e009-4864-8ff8-6bc168b5de4c', #HsapDv:0010000/postnatal stage
+	'>13 years': '6b94bf2b-e009-4864-8ff8-6bc168b5de4c', #HsapDv:0010000/postnatal stage
+	'>18 years': 'e7399eed-71f6-4336-8bc0-30c25fdd9ed6', #HsapDv:0000258/adult stage
+	'>19 years': 'e7399eed-71f6-4336-8bc0-30c25fdd9ed6', #HsapDv:0000258/adult stage
+	'>50 years': 'e7399eed-71f6-4336-8bc0-30c25fdd9ed6', #HsapDv:0000258/adult stage
+	'>60 years': '2bfb340f-b7d9-44b9-98ca-827cede51d49', #HsapDv:0000227/late adult stage
+	'15-30 years': '1ef63c6e-5c3d-4553-8574-8993ab74a8a9', #HsapDv:0000266/young adult stage
+	'13-18 years': '6b94bf2b-e009-4864-8ff8-6bc168b5de4c', #HsapDv:0010000/postnatal stage
+	'18-34 years': '1ef63c6e-5c3d-4553-8574-8993ab74a8a9', #HsapDv:0000266/young adult stage
+	'18-49 years': 'a8e80fd2-5683-4a25-a8d1-3883d498c99c', #HsapDv:0000226/prime adult stage
+	'19-24 years': '1ef63c6e-5c3d-4553-8574-8993ab74a8a9', #HsapDv:0000266/young adult stage
+	'2-12 years': '26baa152-415b-4f45-a232-8f2a390aa4e3', #HsapDv:0000264/pediatric stage
+	'30-60 years': 'a8e80fd2-5683-4a25-a8d1-3883d498c99c', #HsapDv:0000226/prime adult stage
+	'50-80 years': 'e7399eed-71f6-4336-8bc0-30c25fdd9ed6', #HsapDv:0000258/adult stage
+	'0-1 days': '0bfc892e-13ef-4cf3-a1ca-6a365c8ea880', #HsapDv:0000262/newborn stage (0-28 days)
+	'2 days': '0bfc892e-13ef-4cf3-a1ca-6a365c8ea880', #HsapDv:0000262/newborn stage (0-28 days)
+	'6 days': '0bfc892e-13ef-4cf3-a1ca-6a365c8ea880', #HsapDv:0000262/newborn stage (0-28 days)
+	'7 days': '0bfc892e-13ef-4cf3-a1ca-6a365c8ea880', #HsapDv:0000262/newborn stage (0-28 days)
+	'16 days': '0bfc892e-13ef-4cf3-a1ca-6a365c8ea880', #HsapDv:0000262/newborn stage (0-28 days)
+	'1 month': 'b4a843f2-4401-4d56-9225-d4f429b5100a', #HsapDv:0000273/1-month-old stage
+	'1-23 months': '26baa152-415b-4f45-a232-8f2a390aa4e3', #HsapDv:0000264/pediatric stage
+	'>0 years': '6b94bf2b-e009-4864-8ff8-6bc168b5de4c' #HsapDv:0010000/postnatal stage
+}
+
+@upgrade_step('human_postnatal_donor', '9', '10')
+def human_donor_dv_updates(value, system):
+	value['development_ontology'] = age_dv.get(value['age_display'], value['development_ontology'])

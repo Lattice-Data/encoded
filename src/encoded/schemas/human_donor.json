@@ -28,6 +28,7 @@
         "organism": {
             "title": "Organism",
             "description": "Common name of donor organism.",
+            "comment": "Do not submit. Will be filled in by default",
             "type": "string",
             "linkTo": "Organism",
             "default": "d4499d6e-bf11-41be-84e3-9e42919721a1"

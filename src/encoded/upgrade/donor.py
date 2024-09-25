@@ -1,6 +1,16 @@
 from snovault import upgrade_step
 
 
+def pluralize(value, value_units):
+    try:
+        if float(value) == 1:
+            return str(value) + ' ' + value_units
+        else:
+            return str(value) + ' ' + value_units + 's'
+    except:
+        return str(value) + ' ' + value_units + 's'
+
+
 @upgrade_step('human_postnatal_donor', '1', '2')
 def human_postnatal_donor_1_2(value, system):
 	if 'family_history_breast_cancer' in value:
@@ -98,4 +108,17 @@ age_dv = {
 
 @upgrade_step('human_postnatal_donor', '9', '10')
 def human_donor_dv_updates(value, system):
-	value['development_ontology'] = age_dv.get(value['age_display'], value['development_ontology'])
+	age = value['age']
+	age_units = value['age_units']
+	#plucked from types/donor.py age_display calculation
+	#only postnatal so removed conceptional_age logic
+	if age == 'unknown':
+		age_display = 'unknown'
+	elif age == 'variable':
+		age_display = 'variable'
+	elif age != None:
+		age_display = u'{}'.format(pluralize(age, age_units))
+	else:
+		age_display = None
+
+	value['development_ontology'] = age_dv.get(age_display, value['development_ontology'])

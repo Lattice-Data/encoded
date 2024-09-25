@@ -116,7 +116,7 @@ class HumanPostnatalDonor(HumanDonor):
 
 
     @calculated_property(schema={
-        "title": "Age development stage redunancy",
+        "title": "Age development stage redundancy",
         "description": "If true, the development_ontology term exactly defines the age.",
         "comment": "Do not submit. This is a calculated property",
         "permission": "import_items",
@@ -124,16 +124,16 @@ class HumanPostnatalDonor(HumanDonor):
     })
     def age_development_stage_redundancy(self, request, development_ontology, age, age_units=None):
         decades = {
-            'third decade human stage': '20-30 years',
-            'fourth decade human stage': '30-40 years',
-            'fifth decade human stage': '40-50 years',
-            'sixth decade human stage': '50-60 years',
-            'seventh decade human stage': '60-70 years',
-            'eighth decade human stage': '70-80 years'
+            'third decade stage': '20-30 years',
+            'fourth decade stage': '30-40 years',
+            'fifth decade stage': '40-50 years',
+            'sixth decade stage': '50-60 years',
+            'seventh decade stage': '60-70 years',
+            'eighth decade stage': '70-80 years'
 
         }
         dev_stage = request.embed(development_ontology, '@@object?skip_calculated=true').get('term_name')
-        if dev_stage == f'{age}-{str(age_units)}-old human stage':
+        if dev_stage == f'{age}-{str(age_units)}-old stage':
             return True
         elif decades.get(dev_stage) == age + ' ' + str(age_units) + 's':
             return True

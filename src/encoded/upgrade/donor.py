@@ -109,7 +109,7 @@ age_dv = {
 @upgrade_step('human_postnatal_donor', '9', '10')
 def human_donor_dv_updates(value, system):
 	age = value['age']
-	age_units = value['age_units']
+	age_units = value.get('age_units')
 	#plucked from types/donor.py age_display calculation
 	#only postnatal so removed conceptional_age logic
 	if age == 'unknown':

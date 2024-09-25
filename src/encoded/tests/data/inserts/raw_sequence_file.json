@@ -4544,12 +4544,6 @@
         "file_size": 5000000000,
         "read_length": 28,
         "read_count": 1500000,
-        "fastq_signature": [
-            "HKYCWDSXX:4:1:TTATTCGA:",
-            "HKYCWDSXX:4:1:TTGTCCTG:",
-            "HKYCWDSXX:4:1:TTGTCCAA:",
-            "HKYCWDSXX:4:1:TTGTCCGG:"
-        ],
         "read_name_structure": {
             "read_number_location": 2,
             "flowcell_id_location": 0,
@@ -4578,12 +4572,6 @@
         "file_size": 5000000000,
         "read_length": 98,
         "read_count": 1500000,
-        "fastq_signature": [
-            "HKYCWDSXX:4:1:TTATTCGA:",
-            "HKYCWDSXX:4:1:TTGTCCTG:",
-            "HKYCWDSXX:4:1:TTGTCCAA:",
-            "HKYCWDSXX:4:1:TTGTCCGG:"
-        ],
         "read_name_structure": {
             "read_number_location": 2,
             "flowcell_id_location": 0,
@@ -4612,12 +4600,6 @@
         "file_size": 5000000000,
         "read_length": 8,
         "read_count": 1500000,
-        "fastq_signature": [
-            "HKYCWDSXX:4:1:TTATTCGA:",
-            "HKYCWDSXX:4:1:TTGTCCTG:",
-            "HKYCWDSXX:4:1:TTGTCCAA:",
-            "HKYCWDSXX:4:1:TTGTCCGG:"
-        ],
         "read_name_structure": {
             "read_number_location": 2,
             "flowcell_id_location": 0,
@@ -4646,12 +4628,6 @@
         "file_size": 5000000000,
         "read_length": 28,
         "read_count": 1500000,
-        "fastq_signature": [
-            "HKYCWDSXX:3:1:AAATTCGA:",
-            "HKYCWDSXX:3:1:AAGTCCTG:",
-            "HKYCWDSXX:3:1:AAGTCCAA:",
-            "HKYCWDSXX:3:1:AAGTCCTT:"
-        ],
         "read_name_structure": {
             "read_number_location": 2,
             "flowcell_id_location": 0,
@@ -4680,12 +4656,6 @@
         "file_size": 5000000000,
         "read_length": 98,
         "read_count": 1500000,
-        "fastq_signature": [
-            "HKYCWDSXX:3:1:AAATTCGA:",
-            "HKYCWDSXX:3:1:AAGTCCTG:",
-            "HKYCWDSXX:3:1:AAGTCCAA:",
-            "HKYCWDSXX:3:1:AAGTCCTT:"
-        ],
         "read_name_structure": {
             "read_number_location": 2,
             "flowcell_id_location": 0,
@@ -4714,12 +4684,6 @@
         "file_size": 5000000000,
         "read_length": 8,
         "read_count": 1500000,
-        "fastq_signature": [
-            "HKYCWDSXX:3:1:AAATTCGA:",
-            "HKYCWDSXX:3:1:AAGTCCTG:",
-            "HKYCWDSXX:3:1:AAGTCCAA:",
-            "HKYCWDSXX:3:1:AAGTCCTT:"
-        ],
         "read_name_structure": {
             "read_number_location": 2,
             "flowcell_id_location": 0,
@@ -4748,12 +4712,6 @@
         "file_size": 5000000000,
         "read_length": 28,
         "read_count": 1500000,
-        "fastq_signature": [
-            "HKYCWDSXX:2:1:GGATTCGA:",
-            "HKYCWDSXX:2:1:GGGTCCTG:",
-            "HKYCWDSXX:2:1:GGGTCCAA:",
-            "HKYCWDSXX:2:1:GGGTCCTT:"
-        ],
         "read_name_structure": {
             "read_number_location": 2,
             "flowcell_id_location": 0,
@@ -4782,12 +4740,6 @@
         "file_size": 5000000000,
         "read_length": 98,
         "read_count": 1500000,
-        "fastq_signature": [
-            "HKYCWDSXX:2:1:GGATTCGA:",
-            "HKYCWDSXX:2:1:GGGTCCTG:",
-            "HKYCWDSXX:2:1:GGGTCCAA:",
-            "HKYCWDSXX:2:1:GGGTCCTT:"
-        ],
         "read_name_structure": {
             "read_number_location": 2,
             "flowcell_id_location": 0,
@@ -4816,12 +4768,6 @@
         "file_size": 5000000000,
         "read_length": 8,
         "read_count": 1500000,
-        "fastq_signature": [
-            "HKYCWDSXX:2:1:GGATTCGA:",
-            "HKYCWDSXX:2:1:GGGTCCTG:",
-            "HKYCWDSXX:2:1:GGGTCCAA:",
-            "HKYCWDSXX:2:1:GGGTCCTT:"
-        ],
         "read_name_structure": {
             "read_number_location": 2,
             "flowcell_id_location": 0,
@@ -4850,12 +4796,6 @@
         "file_size": 5000000000,
         "read_length": 28,
         "read_count": 1500000,
-        "fastq_signature": [
-            "HGJWFDSXY:4:1:TAACAAGG:",
-            "HGJWFDSXY:4:1:TAACAATT:",
-            "HGJWFDSXY:4:1:TAACTTGG:",
-            "HGJWFDSXY:4:1:TATTAAGG:"
-        ],
         "read_name_structure": {
             "read_number_location": 2,
             "flowcell_id_location": 0,
@@ -4884,12 +4824,6 @@
         "file_size": 5000000000,
         "read_length": 98,
         "read_count": 1500000,
-        "fastq_signature": [
-            "HGJWFDSXY:4:1:TAACAAGG:",
-            "HGJWFDSXY:4:1:TAACAATT:",
-            "HGJWFDSXY:4:1:TAACTTGG:",
-            "HGJWFDSXY:4:1:TATTAAGG:"
-        ],
         "read_name_structure": {
             "read_number_location": 2,
             "flowcell_id_location": 0,
@@ -4918,12 +4852,6 @@
         "file_size": 5000000000,
         "read_length": 8,
         "read_count": 1500000,
-        "fastq_signature": [
-            "HGJWFDSXY:4:1:TAACAAGG:",
-            "HGJWFDSXY:4:1:TAACAATT:",
-            "HGJWFDSXY:4:1:TAACTTGG:",
-            "HGJWFDSXY:4:1:TATTAAGG:"
-        ],
         "read_name_structure": {
             "read_number_location": 2,
             "flowcell_id_location": 0,
@@ -4952,12 +4880,6 @@
         "file_size": 5000000000,
         "read_length": 28,
         "read_count": 1500000,
-        "fastq_signature": [
-            "HGJWFDSXY:3:1:GGACAAGG:",
-            "HGJWFDSXY:3:1:GGACAATT:",
-            "HGJWFDSXY:3:1:GGACTTGG:",
-            "HGJWFDSXY:3:1:GGTTAAGG:"
-        ],
         "read_name_structure": {
             "read_number_location": 2,
             "flowcell_id_location": 0,
@@ -4986,12 +4908,6 @@
         "file_size": 5000000000,
         "read_length": 98,
         "read_count": 1500000,
-        "fastq_signature": [
-            "HGJWFDSXY:3:1:GGACAAGG:",
-            "HGJWFDSXY:3:1:GGACAATT:",
-            "HGJWFDSXY:3:1:GGACTTGG:",
-            "HGJWFDSXY:3:1:GGTTAAGG:"
-        ],
         "read_name_structure": {
             "read_number_location": 2,
             "flowcell_id_location": 0,
@@ -5020,12 +4936,6 @@
         "file_size": 5000000000,
         "read_length": 8,
         "read_count": 1500000,
-        "fastq_signature": [
-            "HGJWFDSXY:3:1:GGACAAGG:",
-            "HGJWFDSXY:3:1:GGACAATT:",
-            "HGJWFDSXY:3:1:GGACTTGG:",
-            "HGJWFDSXY:3:1:GGTTAAGG:"
-        ],
         "read_name_structure": {
             "read_number_location": 2,
             "flowcell_id_location": 0,
@@ -5054,12 +4964,6 @@
         "file_size": 5000000000,
         "read_length": 28,
         "read_count": 1500000,
-        "fastq_signature": [
-            "HGJWFDSXY:2:1:TTACAAGG:",
-            "HGJWFDSXY:2:1:TTACAATT:",
-            "HGJWFDSXY:2:1:TTACTTGG:",
-            "HGJWFDSXY:2:1:TTTTAAGG:"
-        ],
         "read_name_structure": {
             "read_number_location": 2,
             "flowcell_id_location": 0,
@@ -5088,12 +4992,6 @@
         "file_size": 5000000000,
         "read_length": 98,
         "read_count": 1500000,
-        "fastq_signature": [
-            "HGJWFDSXY:2:1:TTACAAGG:",
-            "HGJWFDSXY:2:1:TTACAATT:",
-            "HGJWFDSXY:2:1:TTACTTGG:",
-            "HGJWFDSXY:2:1:TTTTAAGG:"
-        ],
         "read_name_structure": {
             "read_number_location": 2,
             "flowcell_id_location": 0,
@@ -5122,12 +5020,6 @@
         "file_size": 5000000000,
         "read_length": 8,
         "read_count": 1500000,
-        "fastq_signature": [
-            "HGJWFDSXY:2:1:TTACAAGG:",
-            "HGJWFDSXY:2:1:TTACAATT:",
-            "HGJWFDSXY:2:1:TTACTTGG:",
-            "HGJWFDSXY:2:1:TTTTAAGG:"
-        ],
         "read_name_structure": {
             "read_number_location": 2,
             "flowcell_id_location": 0,
@@ -5156,12 +5048,6 @@
         "file_size": 5000000000,
         "read_length": 28,
         "read_count": 1500000,
-        "fastq_signature": [
-            "H7FM2DRXX:4:1:AACTAACA:",
-            "H7FM2DRXX:4:1:AAAGGACC:",
-            "H7FM2DRXX:4:1:AACTAATT:",
-            "H7FM2DRXX:4:1:AACTTTCA:"
-        ],
         "read_name_structure": {
             "read_number_location": 2,
             "flowcell_id_location": 0,
@@ -5190,12 +5076,6 @@
         "file_size": 5000000000,
         "read_length": 98,
         "read_count": 1500000,
-        "fastq_signature": [
-            "H7FM2DRXX:4:1:AACTAACA:",
-            "H7FM2DRXX:4:1:AAAGGACC:",
-            "H7FM2DRXX:4:1:AACTAATT:",
-            "H7FM2DRXX:4:1:AACTTTCA:"
-        ],
         "read_name_structure": {
             "read_number_location": 2,
             "flowcell_id_location": 0,
@@ -5224,12 +5104,6 @@
         "file_size": 5000000000,
         "read_length": 8,
         "read_count": 1500000,
-        "fastq_signature": [
-            "H7FM2DRXX:4:1:AACTAACA:",
-            "H7FM2DRXX:4:1:AAAGGACC:",
-            "H7FM2DRXX:4:1:AACTAATT:",
-            "H7FM2DRXX:4:1:AACTTTCA:"
-        ],
         "read_name_structure": {
             "read_number_location": 2,
             "flowcell_id_location": 0,
@@ -5258,12 +5132,6 @@
         "file_size": 5000000000,
         "read_length": 28,
         "read_count": 1500000,
-        "fastq_signature": [
-            "H7FM2DRXX:3:1:TTCTAACA:",
-            "H7FM2DRXX:3:1:TTAGGACC:",
-            "H7FM2DRXX:3:1:TTCTAATT:",
-            "H7FM2DRXX:3:1:TTCTTTCA:"
-        ],
         "read_name_structure": {
             "read_number_location": 2,
             "flowcell_id_location": 0,
@@ -5292,12 +5160,6 @@
         "file_size": 5000000000,
         "read_length": 98,
         "read_count": 1500000,
-        "fastq_signature": [
-            "H7FM2DRXX:3:1:TTCTAACA:",
-            "H7FM2DRXX:3:1:TTAGGACC:",
-            "H7FM2DRXX:3:1:TTCTAATT:",
-            "H7FM2DRXX:3:1:TTCTTTCA:"
-        ],
         "read_name_structure": {
             "read_number_location": 2,
             "flowcell_id_location": 0,
@@ -5326,12 +5188,6 @@
         "file_size": 5000000000,
         "read_length": 8,
         "read_count": 1500000,
-        "fastq_signature": [
-            "H7FM2DRXX:3:1:TTCTAACA:",
-            "H7FM2DRXX:3:1:TTAGGACC:",
-            "H7FM2DRXX:3:1:TTCTAATT:",
-            "H7FM2DRXX:3:1:TTCTTTCA:"
-        ],
         "read_name_structure": {
             "read_number_location": 2,
             "flowcell_id_location": 0,
@@ -5360,12 +5216,6 @@
         "file_size": 5000000000,
         "read_length": 28,
         "read_count": 1500000,
-        "fastq_signature": [
-            "H7FM2DRXX:2:1:GGCTAACA:",
-            "H7FM2DRXX:2:1:GGAGGACC:",
-            "H7FM2DRXX:2:1:GGCTAATT:",
-            "H7FM2DRXX:2:1:GGCTTTCA:"
-        ],
         "read_name_structure": {
             "read_number_location": 2,
             "flowcell_id_location": 0,
@@ -5394,12 +5244,6 @@
         "file_size": 5000000000,
         "read_length": 98,
         "read_count": 1500000,
-        "fastq_signature": [
-            "H7FM2DRXX:2:1:GGCTAACA:",
-            "H7FM2DRXX:2:1:GGAGGACC:",
-            "H7FM2DRXX:2:1:GGCTAATT:",
-            "H7FM2DRXX:2:1:GGCTTTCA:"
-        ],
         "read_name_structure": {
             "read_number_location": 2,
             "flowcell_id_location": 0,
@@ -5428,12 +5272,6 @@
         "file_size": 5000000000,
         "read_length": 8,
         "read_count": 1500000,
-        "fastq_signature": [
-            "H7FM2DRXX:2:1:GGCTAACA:",
-            "H7FM2DRXX:2:1:GGAGGACC:",
-            "H7FM2DRXX:2:1:GGCTAATT:",
-            "H7FM2DRXX:2:1:GGCTTTCA:"
-        ],
         "read_name_structure": {
             "read_number_location": 2,
             "flowcell_id_location": 0,

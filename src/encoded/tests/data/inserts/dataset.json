@@ -22,7 +22,10 @@
             "varodom-charoensawan:the_one",
             "yulia-medvedeva:the_one",
             "donna-farber:the_other_one",
-            "diogo-troggian-veiga:my_dataset"
+            "diogo-troggian-veiga:my_dataset",
+            "melanie-neeland:mydataset",
+            "jay-thiagarajah:theonedataset",
+            "jingjing-li:dataset24"
         ],
         "dataset_title": "Dataset with a multiplexed Library",
         "description": "Used to test tools with pooling and demultiplexing",

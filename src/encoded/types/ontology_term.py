@@ -86,7 +86,7 @@ organ_slim_terms = {
     'UBERON:0001690': 'ear',
     'UBERON:0000922': 'embryo',
     'UBERON:0003889': 'fallopian tube',
-    'UBERON:0002110': 'gall bladder',
+    'UBERON:0002110': 'gallbladder',
     'UBERON:0000948': 'heart',
     'UBERON:0002113': 'kidney',
     'UBERON:0001737': 'larynx',
@@ -128,7 +128,7 @@ cell_slim_terms = {
     'CL:0000115': 'endothelial cell', #subclass of CL:0000066
     'CL:0000066': 'epithelial cell',
     'CL:0000057': 'fibroblast', #subclass of CL:0002320
-    'CL:0000669': 'pericyte cell', #subclass of CL:0002320
+    'CL:0000669': 'pericyte', #subclass of CL:0002320
     'CL:0002320': 'connective tissue cell',
     'CL:0002321': 'embryonic cell (metazoa)',
     'CL:0002494': 'cardiocyte',
@@ -142,28 +142,28 @@ cell_slim_terms = {
 }
 
 disease_slim_terms = {
-    'MONDO:0005015': 'diabetes mellitus (disease)', #subclass of MONDO:0004335,MONDO:0005066
-    'MONDO:0004335': 'digestive system disease',
+    'MONDO:0005015': 'diabetes mellitus', #subclass of MONDO:0004335,MONDO:0005066
+    'MONDO:0004335': 'digestive system disorder',
     'MONDO:0005066': 'metabolic disease',
-    'MONDO:0002280': 'anemia (disease)',
+    'MONDO:0002280': 'anemia',
     'MONDO:0005578': 'arthritic joint disease',
     'MONDO:0005113': 'bacterial infectious disease',
     'MONDO:0004992': 'cancer',
     'MONDO:0005044': 'hypertensive disorder',
-    'MONDO:0005240': 'kidney disease',
+    'MONDO:0005240': 'kidney disorder',
     'MONDO:0005084': 'mental disorder',
     'MONDO:0100081': 'sleep disorder',
     'MONDO:0007179': 'autoimmune disease'
 }
 
 development_slim_terms = {
-    "HsapDv:0000002": "embryonic human stage",
+    "HsapDv:0000002": "embryonic stage",
     "HsapDv:0000037": "fetal stage",
-    "HsapDv:0000260": "newborn human stage",
-    "HsapDv:0000262": "infant stage",
-    "HsapDv:0000265": "child stage",
-    "HsapDv:0000271": "adolescent stage",
-    "HsapDv:0000258": "human adult stage"
+    "HsapDv:0000262": "newborn stage (0-28 days)",
+    "HsapDv:0000260": "nursing stage (0-11 months)",
+    "HsapDv:0000265": "child stage (1-4 yo)",
+    "HsapDv:0000271": "juvenile stage (5-14 yo)",
+    "HsapDv:0000258": "adult stage"
 }
 
 ethnicity_slim_terms = {

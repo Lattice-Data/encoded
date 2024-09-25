@@ -83,9 +83,9 @@ def audit_donor_dev_stage(value, system):
         return
 
     dev = value['development_ontology']['term_name']
-    post_term_end_mo = '-month-old human stage'
-    post_term_end_yr = '-year-old human stage'
-    pre_term_end_wk = ' week post-fertilization human stage'
+    post_term_end_mo = '-month-old stage'
+    post_term_end_yr = '-year-old stage'
+    pre_term_end_wk = ' week post-fertilization stage'
 
     if dev == 'variable' and value['age_display'] != 'variable':
         detail = ('Donor {} of development_ontology variable expected age variable.'.format(
@@ -130,7 +130,7 @@ def audit_donor_dev_stage(value, system):
             return
     elif value.get('age_units') == 'year':
         if value['age'] == '>89':
-            expected = '80 year-old and over human stage'
+            expected = '80 year-old and over stage'
         else:
             if 'month' in dev:
                 expected = str(int(float(value['age'])*12)) + post_term_end_mo
@@ -144,7 +144,7 @@ def audit_donor_dev_stage(value, system):
             expected = str(years) + post_term_end_yr
     elif value.get('age_units') == 'day':
         if float(value['age']) <= 30:
-            expected = 'newborn human stage'
+            expected = 'newborn stage (0-28 days)'
         else:
             months = value['age'] //30
             if months <= 23:
@@ -195,7 +195,7 @@ def ontology_check_eth(value, system):
     if value['status'] in ['deleted'] or field not in value:
         return
 
-    dbs = ['HANCESTRO']
+    dbs = ['HANCESTRO', 'AfPO']
     terms = ['NCIT:C17998']
 
     for e in value[field]:
@@ -243,7 +243,7 @@ def audit_ancestry(value, system):
     if value['status'] in ['deleted'] or field not in value:
         return
 
-    dbs = ['HANCESTRO', 'NTR']
+    dbs = ['HANCESTRO', 'AfPO', 'NTR']
 
     invalid = []
     for d in value.get(field):

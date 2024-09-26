@@ -58,13 +58,15 @@ def audit_library_protocol_standards(value, system):
             if not value.get('read_length'):
                 audit_level = 'ERROR'
                 fail_flag = True
-            elif rl_spec == 'exact':
+            elif rl_spec == 'exact' and value.get('read_length') > my_standard['read_length']:
                 rl_spec = 'exactly'
+                audit_level = 'WARNING'
+                fail_flag = True
+            elif rl_spec in ['minimum','exact'] and value.get('read_length') < my_standard['read_length']:
                 audit_level = 'ERROR'
                 fail_flag = True
-            elif rl_spec == 'minimum' and value.get('read_length') < my_standard['read_length']:
-                audit_level = 'ERROR'
-                fail_flag = True
+                if rl_spec == 'exact':
+                    rl_spec = 'exactly'
             elif rl_spec == 'ideal' and value.get('read_length') < my_standard['read_length']:
                 rl_spec = 'ideally'
                 audit_level = 'WARNING'

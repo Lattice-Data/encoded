@@ -430,44 +430,6 @@
     },
     {
         "aliases": [
-            "anna-greka:snATAC_donorA1_filtered_tf_bc_matrix"
-        ],
-        "status": "released",
-        "uuid": "804e3d5c-7e42-4460-93c3-8320cac5c275",
-        "file_format": "hdf5",
-        "file_size": 150000,
-        "lab": "anna-greka",
-        "output_types": [
-            "transcription factor quantifications"
-        ],
-        "feature_keys": [
-            "motif ID"
-        ],
-        "observation_count": 20332,
-        "dataset": "anna-greka:large_test_dataset",
-        "derived_from": [
-            "anna-greka:snATAC_donorA1_S1_L003_I1_001.fastq",
-            "anna-greka:snATAC_donorA1_S1_L003_R1_001.fastq",
-            "anna-greka:snATAC_donorA1_S1_L003_R2_001.fastq",
-            "anna-greka:snATAC_donorA1_S1_L003_R3_001.fastq"
-        ],
-        "assembly": "GRCh38",
-        "genome_annotation": "GENCODE 32",
-        "derivation_process": [
-            "alignment",
-            "peak calling",
-            "quantification",
-            "cell calling"
-        ],
-        "software": [
-            "cellranger-atac count 1.2"
-        ],
-        "md5sum": "5d95e57866378889cdb3fe3f7ece7d91",
-        "accession": "LATDF961KKC",
-        "background_barcodes_included": false
-    },
-    {
-        "aliases": [
             "anna-greka:snATAC_donorA2_raw_peak_bc_matrix"
         ],
         "status": "released",
@@ -539,43 +501,6 @@
         ],
         "md5sum": "2991358e34d1fc9a4d0123ad8c5e7b3f",
         "accession": "LATDF448OYQ",
-        "background_barcodes_included": false
-    },
-    {
-        "aliases": [
-            "anna-greka:snATAC_donorA2_filtered_tf_bc_matrix"
-        ],
-        "status": "released",
-        "uuid": "3583aabe-b434-43aa-8ed5-2b373c60bd9f",
-        "file_format": "hdf5",
-        "file_size": 150000,
-        "lab": "anna-greka",
-        "output_types": [
-            "transcription factor quantifications"
-        ],
-        "feature_keys": [
-            "motif ID"
-        ],
-        "observation_count": 10655,
-        "dataset": "anna-greka:large_test_dataset",
-        "derived_from": [
-            "anna-greka:snATAC_donorA2_S2_L003_I1_001.fastq",
-            "anna-greka:snATAC_donorA2_S2_L003_R1_001.fastq",
-            "anna-greka:snATAC_donorA2_S2_L003_R2_001.fastq",
-            "anna-greka:snATAC_donorA2_S2_L003_R3_001.fastq"
-        ],
-        "assembly": "GRCh38",
-        "genome_annotation": "GENCODE 32",
-        "derivation_process": [
-            "alignment",
-            "quantification",
-            "cell calling"
-        ],
-        "software": [
-            "cellranger-atac count 1.2"
-        ],
-        "md5sum": "a5edf082c71bf697b12034b785344be9",
-        "accession": "LATDF785XLS",
         "background_barcodes_included": false
     },
     {
@@ -655,43 +580,6 @@
     },
     {
         "aliases": [
-            "anna-greka:snATAC_donorB1_filtered_tf_bc_matrix"
-        ],
-        "status": "released",
-        "uuid": "00f76bee-b5d3-4745-92fb-36e1ae6d864a",
-        "file_format": "hdf5",
-        "file_size": 150000,
-        "lab": "anna-greka",
-        "output_types": [
-            "transcription factor quantifications"
-        ],
-        "feature_keys": [
-            "motif ID"
-        ],
-        "observation_count": 9387,
-        "dataset": "anna-greka:large_test_dataset",
-        "derived_from": [
-            "anna-greka:snATAC_donorB1_S3_L003_I1_001.fastq",
-            "anna-greka:snATAC_donorB1_S3_L003_R1_001.fastq",
-            "anna-greka:snATAC_donorB1_S3_L003_R2_001.fastq",
-            "anna-greka:snATAC_donorB1_S3_L003_R3_001.fastq"
-        ],
-        "assembly": "GRCh38",
-        "genome_annotation": "GENCODE 32",
-        "derivation_process": [
-            "alignment",
-            "quantification",
-            "cell calling"
-        ],
-        "software": [
-            "cellranger-atac count 1.2"
-        ],
-        "md5sum": "6ff1ed6b1aed8e606bdae1095a34e240",
-        "accession": "LATDF981IGN",
-        "background_barcodes_included": false
-    },
-    {
-        "aliases": [
             "anna-greka:snATAC_donorB2_raw_peak_bc_matrix"
         ],
         "status": "released",
@@ -763,43 +651,6 @@
         ],
         "md5sum": "527175445d30ebfdf549fa3d3c2899db",
         "accession": "LATDF160CUF",
-        "background_barcodes_included": false
-    },
-    {
-        "aliases": [
-            "anna-greka:snATAC_donorB2_filtered_tf_bc_matrix"
-        ],
-        "status": "released",
-        "uuid": "4cbfd58d-8de4-49a5-b229-79c22e694c60",
-        "file_format": "hdf5",
-        "file_size": 150000,
-        "lab": "anna-greka",
-        "output_types": [
-            "transcription factor quantifications"
-        ],
-        "feature_keys": [
-            "motif ID"
-        ],
-        "observation_count": 9833,
-        "dataset": "anna-greka:large_test_dataset",
-        "derived_from": [
-            "anna-greka:snATAC_donorB2_S4_L003_I1_001.fastq",
-            "anna-greka:snATAC_donorB2_S4_L003_R1_001.fastq",
-            "anna-greka:snATAC_donorB2_S4_L003_R2_001.fastq",
-            "anna-greka:snATAC_donorB2_S4_L003_R3_001.fastq"
-        ],
-        "assembly": "GRCh38",
-        "genome_annotation": "GENCODE 32",
-        "derivation_process": [
-            "alignment",
-            "quantification",
-            "cell calling"
-        ],
-        "software": [
-            "cellranger-atac count 1.2"
-        ],
-        "md5sum": "de69cd4312f07478d21c36198e13b7cb",
-        "accession": "LATDF632ONR",
         "background_barcodes_included": false
     },
     {
@@ -879,43 +730,6 @@
     },
     {
         "aliases": [
-            "anna-greka:snATAC_donorC1_filtered_tf_bc_matrix"
-        ],
-        "status": "released",
-        "uuid": "7106c7f2-31e7-434d-bda5-a36907b35ceb",
-        "file_format": "hdf5",
-        "file_size": 150000,
-        "lab": "anna-greka",
-        "output_types": [
-            "transcription factor quantifications"
-        ],
-        "feature_keys": [
-            "motif ID"
-        ],
-        "observation_count": 8342,
-        "dataset": "anna-greka:large_test_dataset",
-        "derived_from": [
-            "anna-greka:snATAC_donorC1_S1_L001_I1_001.fastq",
-            "anna-greka:snATAC_donorC1_S1_L001_R1_001.fastq",
-            "anna-greka:snATAC_donorC1_S1_L001_R2_001.fastq",
-            "anna-greka:snATAC_donorC1_S1_L001_R3_001.fastq"
-        ],
-        "assembly": "GRCh38",
-        "genome_annotation": "GENCODE 32",
-        "derivation_process": [
-            "alignment",
-            "quantification",
-            "cell calling"
-        ],
-        "software": [
-            "cellranger-atac count 1.2"
-        ],
-        "md5sum": "478c983e2c88818e089d2509b56970c9",
-        "accession": "LATDF144WKH",
-        "background_barcodes_included": false
-    },
-    {
-        "aliases": [
             "anna-greka:snATAC_donorC2_raw_peak_bc_matrix"
         ],
         "status": "released",
@@ -987,43 +801,6 @@
         ],
         "md5sum": "69f6e698ed84a669460fb541c1fcdcfd",
         "accession": "LATDF967VFS",
-        "background_barcodes_included": false
-    },
-    {
-        "aliases": [
-            "anna-greka:snATAC_donorC2_filtered_tf_bc_matrix"
-        ],
-        "status": "released",
-        "uuid": "1987a0b1-0ccc-4fd3-9662-0aca4b8e58d5",
-        "file_format": "hdf5",
-        "file_size": 150000,
-        "lab": "anna-greka",
-        "output_types": [
-            "transcription factor quantifications"
-        ],
-        "feature_keys": [
-            "motif ID"
-        ],
-        "observation_count": 9283,
-        "dataset": "anna-greka:large_test_dataset",
-        "derived_from": [
-            "anna-greka:snATAC_donorC2_S2_L001_I1_001.fastq",
-            "anna-greka:snATAC_donorC2_S2_L001_R1_001.fastq",
-            "anna-greka:snATAC_donorC2_S2_L001_R2_001.fastq",
-            "anna-greka:snATAC_donorC2_S2_L001_R3_001.fastq"
-        ],
-        "assembly": "GRCh38",
-        "genome_annotation": "GENCODE 32",
-        "derivation_process": [
-            "alignment",
-            "quantification",
-            "cell calling"
-        ],
-        "software": [
-            "cellranger-atac count 1.2"
-        ],
-        "md5sum": "418afe4cc7f6577acea329736c8e3a45",
-        "accession": "LATDF765BIJ",
         "background_barcodes_included": false
     },
     {
@@ -1103,43 +880,6 @@
     },
     {
         "aliases": [
-            "anna-greka:snATAC_donorD1_filtered_tf_bc_matrix"
-        ],
-        "status": "released",
-        "uuid": "938d243d-36a3-4754-965e-3d239ec4194c",
-        "file_format": "hdf5",
-        "file_size": 150000,
-        "lab": "anna-greka",
-        "output_types": [
-            "transcription factor quantifications"
-        ],
-        "feature_keys": [
-            "motif ID"
-        ],
-        "observation_count": 9284,
-        "dataset": "anna-greka:large_test_dataset",
-        "derived_from": [
-            "anna-greka:snATAC_donorD1_S3_L001_I1_001.fastq",
-            "anna-greka:snATAC_donorD1_S3_L001_R1_001.fastq",
-            "anna-greka:snATAC_donorD1_S3_L001_R2_001.fastq",
-            "anna-greka:snATAC_donorD1_S3_L001_R3_001.fastq"
-        ],
-        "assembly": "GRCh38",
-        "genome_annotation": "GENCODE 32",
-        "derivation_process": [
-            "alignment",
-            "quantification",
-            "cell calling"
-        ],
-        "software": [
-            "cellranger-atac count 1.2"
-        ],
-        "md5sum": "8d10f823023a57a1013401ebee09e3e0",
-        "accession": "LATDF114BAW",
-        "background_barcodes_included": false
-    },
-    {
-        "aliases": [
             "anna-greka:snATAC_donorD2_raw_peak_bc_matrix"
         ],
         "status": "released",
@@ -1211,43 +951,6 @@
         ],
         "md5sum": "438b7e0bfd7ef14e975a2ccbe7a2ecc7",
         "accession": "LATDF471NNM",
-        "background_barcodes_included": false
-    },
-    {
-        "aliases": [
-            "anna-greka:snATAC_donorD2_filtered_tf_bc_matrix"
-        ],
-        "status": "released",
-        "uuid": "aa0861ce-1dcc-49c2-a5c3-61f3a006adf5",
-        "file_format": "hdf5",
-        "file_size": 150000,
-        "lab": "anna-greka",
-        "output_types": [
-            "transcription factor quantifications"
-        ],
-        "feature_keys": [
-            "motif ID"
-        ],
-        "observation_count": 9838,
-        "dataset": "anna-greka:large_test_dataset",
-        "derived_from": [
-            "anna-greka:snATAC_donorD2_S4_L001_I1_001.fastq",
-            "anna-greka:snATAC_donorD2_S4_L001_R1_001.fastq",
-            "anna-greka:snATAC_donorD2_S4_L001_R2_001.fastq",
-            "anna-greka:snATAC_donorD2_S4_L001_R3_001.fastq"
-        ],
-        "assembly": "GRCh38",
-        "genome_annotation": "GENCODE 32",
-        "derivation_process": [
-            "alignment",
-            "quantification",
-            "cell calling"
-        ],
-        "software": [
-            "cellranger-atac count 1.2"
-        ],
-        "md5sum": "ceae622351e08bca8a11013640b05a4f",
-        "accession": "LATDF187AXP",
         "background_barcodes_included": false
     },
     {
@@ -1327,43 +1030,6 @@
     },
     {
         "aliases": [
-            "anna-greka:snATAC_donorE1_filtered_tf_bc_matrix"
-        ],
-        "status": "released",
-        "uuid": "eb51763b-4e79-492e-bcf9-2a00baf4bea5",
-        "file_format": "hdf5",
-        "file_size": 150000,
-        "lab": "anna-greka",
-        "output_types": [
-            "transcription factor quantifications"
-        ],
-        "feature_keys": [
-            "motif ID"
-        ],
-        "observation_count": 8234,
-        "dataset": "anna-greka:large_test_dataset",
-        "derived_from": [
-            "anna-greka:snATAC_donorE1_S1_L004_I1_001.fastq",
-            "anna-greka:snATAC_donorE1_S1_L004_R1_001.fastq",
-            "anna-greka:snATAC_donorE1_S1_L004_R2_001.fastq",
-            "anna-greka:snATAC_donorE1_S1_L004_R3_001.fastq"
-        ],
-        "assembly": "GRCh38",
-        "genome_annotation": "GENCODE 32",
-        "derivation_process": [
-            "alignment",
-            "quantification",
-            "cell calling"
-        ],
-        "software": [
-            "cellranger-atac count 1.2"
-        ],
-        "md5sum": "c7b6a486158edc42c1080b688afe2a47",
-        "accession": "LATDF105YEX",
-        "background_barcodes_included": false
-    },
-    {
-        "aliases": [
             "anna-greka:snATAC_donorE2_raw_peak_bc_matrix"
         ],
         "status": "released",
@@ -1435,43 +1101,6 @@
         ],
         "md5sum": "b461a1df2f8479ec0a491b8de9e8ea58",
         "accession": "LATDF070KSJ",
-        "background_barcodes_included": false
-    },
-    {
-        "aliases": [
-            "anna-greka:snATAC_donorE2_filtered_tf_bc_matrix"
-        ],
-        "status": "released",
-        "uuid": "f07516a7-541e-45d5-8f60-01c272c2f23e",
-        "file_format": "hdf5",
-        "file_size": 150000,
-        "lab": "anna-greka",
-        "output_types": [
-            "transcription factor quantifications"
-        ],
-        "feature_keys": [
-            "motif ID"
-        ],
-        "observation_count": 8431,
-        "dataset": "anna-greka:large_test_dataset",
-        "derived_from": [
-            "anna-greka:snATAC_donorE2_S2_L004_I1_001.fastq",
-            "anna-greka:snATAC_donorE2_S2_L004_R1_001.fastq",
-            "anna-greka:snATAC_donorE2_S2_L004_R2_001.fastq",
-            "anna-greka:snATAC_donorE2_S2_L004_R3_001.fastq"
-        ],
-        "assembly": "GRCh38",
-        "genome_annotation": "GENCODE 32",
-        "derivation_process": [
-            "alignment",
-            "quantification",
-            "cell calling"
-        ],
-        "software": [
-            "cellranger-atac count 1.2"
-        ],
-        "md5sum": "1691e994fac00f56c365bf37d6caab85",
-        "accession": "LATDF376VXJ",
         "background_barcodes_included": false
     },
     {
@@ -1551,43 +1180,6 @@
     },
     {
         "aliases": [
-            "anna-greka:snATAC_donorF1_filtered_tf_bc_matrix"
-        ],
-        "status": "released",
-        "uuid": "95e8dcfa-da4d-454d-9f9f-f3d65d065354",
-        "file_format": "hdf5",
-        "file_size": 150000,
-        "lab": "anna-greka",
-        "output_types": [
-            "transcription factor quantifications"
-        ],
-        "feature_keys": [
-            "motif ID"
-        ],
-        "observation_count": 9210,
-        "dataset": "anna-greka:large_test_dataset",
-        "derived_from": [
-            "anna-greka:snATAC_donorF1_S3_L004_I1_001.fastq",
-            "anna-greka:snATAC_donorF1_S3_L004_R1_001.fastq",
-            "anna-greka:snATAC_donorF1_S3_L004_R2_001.fastq",
-            "anna-greka:snATAC_donorF1_S3_L004_R3_001.fastq"
-        ],
-        "assembly": "GRCh38",
-        "genome_annotation": "GENCODE 32",
-        "derivation_process": [
-            "alignment",
-            "quantification",
-            "cell calling"
-        ],
-        "software": [
-            "cellranger-atac count 1.2"
-        ],
-        "md5sum": "4f175e02e359f2a1eb683879191f15eb",
-        "accession": "LATDF464KAD",
-        "background_barcodes_included": false
-    },
-    {
-        "aliases": [
             "anna-greka:snATAC_donorF2_raw_peak_bc_matrix"
         ],
         "status": "released",
@@ -1659,43 +1251,6 @@
         ],
         "md5sum": "a01fe5c058eaf74f619948a6cd66c6ac",
         "accession": "LATDF550GEX",
-        "background_barcodes_included": false
-    },
-    {
-        "aliases": [
-            "anna-greka:snATAC_donorF2_filtered_tf_bc_matrix"
-        ],
-        "status": "released",
-        "uuid": "0f53fbc1-2b67-4353-9343-9bfbe8eaea28",
-        "file_format": "hdf5",
-        "file_size": 150000,
-        "lab": "anna-greka",
-        "output_types": [
-            "transcription factor quantifications"
-        ],
-        "feature_keys": [
-            "motif ID"
-        ],
-        "observation_count": 8837,
-        "dataset": "anna-greka:large_test_dataset",
-        "derived_from": [
-            "anna-greka:snATAC_donorF2_S4_L004_I1_001.fastq",
-            "anna-greka:snATAC_donorF2_S4_L004_R1_001.fastq",
-            "anna-greka:snATAC_donorF2_S4_L004_R2_001.fastq",
-            "anna-greka:snATAC_donorF2_S4_L004_R3_001.fastq"
-        ],
-        "assembly": "GRCh38",
-        "genome_annotation": "GENCODE 32",
-        "derivation_process": [
-            "alignment",
-            "quantification",
-            "cell calling"
-        ],
-        "software": [
-            "cellranger-atac count 1.2"
-        ],
-        "md5sum": "f65b01abad5b21a92c6ff5c83e18ad41",
-        "accession": "LATDF277WDX",
         "background_barcodes_included": false
     },
     {
@@ -1775,43 +1330,6 @@
     },
     {
         "aliases": [
-            "anna-greka:snATAC_donorG1_filtered_tf_bc_matrix"
-        ],
-        "status": "released",
-        "uuid": "6689e93f-473b-4a64-a79b-95b89106da98",
-        "file_format": "hdf5",
-        "file_size": 150000,
-        "lab": "anna-greka",
-        "output_types": [
-            "transcription factor quantifications"
-        ],
-        "feature_keys": [
-            "motif ID"
-        ],
-        "observation_count": 723,
-        "dataset": "anna-greka:large_test_dataset",
-        "derived_from": [
-            "anna-greka:snATAC_donorG1_S5_L004_I1_001.fastq",
-            "anna-greka:snATAC_donorG1_S5_L004_R1_001.fastq",
-            "anna-greka:snATAC_donorG1_S5_L004_R2_001.fastq",
-            "anna-greka:snATAC_donorG1_S5_L004_R3_001.fastq"
-        ],
-        "assembly": "GRCh38",
-        "genome_annotation": "GENCODE 32",
-        "derivation_process": [
-            "alignment",
-            "quantification",
-            "cell calling"
-        ],
-        "software": [
-            "cellranger-atac count 1.2"
-        ],
-        "md5sum": "be7a22b3db14382eef69507e0ec7c9da",
-        "accession": "LATDF808JAV",
-        "background_barcodes_included": false
-    },
-    {
-        "aliases": [
             "anna-greka:snATAC_donorG2_raw_peak_bc_matrix"
         ],
         "status": "released",
@@ -1883,43 +1401,6 @@
         ],
         "md5sum": "468dabd840c01a9327cb83388c170927",
         "accession": "LATDF062EAM",
-        "background_barcodes_included": false
-    },
-    {
-        "aliases": [
-            "anna-greka:snATAC_donorG2_filtered_tf_bc_matrix"
-        ],
-        "status": "released",
-        "uuid": "7d28498a-1a36-4faa-ba01-91fb0e079b3b",
-        "file_format": "hdf5",
-        "file_size": 150000,
-        "lab": "anna-greka",
-        "output_types": [
-            "transcription factor quantifications"
-        ],
-        "feature_keys": [
-            "motif ID"
-        ],
-        "observation_count": 8772,
-        "dataset": "anna-greka:large_test_dataset",
-        "derived_from": [
-            "anna-greka:snATAC_donorG2_S6_L004_I1_001.fastq",
-            "anna-greka:snATAC_donorG2_S6_L004_R1_001.fastq",
-            "anna-greka:snATAC_donorG2_S6_L004_R2_001.fastq",
-            "anna-greka:snATAC_donorG2_S6_L004_R3_001.fastq"
-        ],
-        "assembly": "GRCh38",
-        "genome_annotation": "GENCODE 32",
-        "derivation_process": [
-            "alignment",
-            "quantification",
-            "cell calling"
-        ],
-        "software": [
-            "cellranger-atac count 1.2"
-        ],
-        "md5sum": "f2c2bd6ecc8e015cda0837e040fddc57",
-        "accession": "LATDF053ZTA",
         "background_barcodes_included": false
     },
     {
@@ -1999,43 +1480,6 @@
     },
     {
         "aliases": [
-            "anna-greka:snATAC_donorH1_filtered_tf_bc_matrix"
-        ],
-        "status": "released",
-        "uuid": "61d01c6a-b000-4185-86bd-216c4a3ccd48",
-        "file_format": "hdf5",
-        "file_size": 150000,
-        "lab": "anna-greka",
-        "output_types": [
-            "transcription factor quantifications"
-        ],
-        "feature_keys": [
-            "motif ID"
-        ],
-        "observation_count": 9282,
-        "dataset": "anna-greka:large_test_dataset",
-        "derived_from": [
-            "anna-greka:snATAC_donorH1_S7_L004_I1_001.fastq",
-            "anna-greka:snATAC_donorH1_S7_L004_R1_001.fastq",
-            "anna-greka:snATAC_donorH1_S7_L004_R2_001.fastq",
-            "anna-greka:snATAC_donorH1_S7_L004_R3_001.fastq"
-        ],
-        "assembly": "GRCh38",
-        "genome_annotation": "GENCODE 32",
-        "derivation_process": [
-            "alignment",
-            "quantification",
-            "cell calling"
-        ],
-        "software": [
-            "cellranger-atac count 1.2"
-        ],
-        "md5sum": "4fce4de132386bc0ff8f62f4b8485b49",
-        "accession": "LATDF851YTF",
-        "background_barcodes_included": false
-    },
-    {
-        "aliases": [
             "anna-greka:snATAC_donorH2_raw_peak_bc_matrix"
         ],
         "status": "released",
@@ -2107,43 +1551,6 @@
         ],
         "md5sum": "42963bbbfa5fef9b7499488c9a67c9e0",
         "accession": "LATDF977MIS",
-        "background_barcodes_included": false
-    },
-    {
-        "aliases": [
-            "anna-greka:snATAC_donorH2_filtered_tf_bc_matrix"
-        ],
-        "status": "released",
-        "uuid": "9abef18d-9b89-4c3e-ae8c-fbeb34739a64",
-        "file_format": "hdf5",
-        "file_size": 150000,
-        "lab": "anna-greka",
-        "output_types": [
-            "transcription factor quantifications"
-        ],
-        "feature_keys": [
-            "motif ID"
-        ],
-        "observation_count": 9281,
-        "dataset": "anna-greka:large_test_dataset",
-        "derived_from": [
-            "anna-greka:snATAC_donorH2_S8_L004_I1_001.fastq",
-            "anna-greka:snATAC_donorH2_S8_L004_R1_001.fastq",
-            "anna-greka:snATAC_donorH2_S8_L004_R2_001.fastq",
-            "anna-greka:snATAC_donorH2_S8_L004_R3_001.fastq"
-        ],
-        "assembly": "GRCh38",
-        "genome_annotation": "GENCODE 32",
-        "derivation_process": [
-            "alignment",
-            "quantification",
-            "cell calling"
-        ],
-        "software": [
-            "cellranger-atac count 1.2"
-        ],
-        "md5sum": "699e92af12999925056ef9e411d5c20e",
-        "accession": "LATDF522SEY",
         "background_barcodes_included": false
     },
     {
@@ -3192,339 +2599,6 @@
         "genome_annotation": "GENCODE 32",
         "md5sum": "399aa3bc4f1009addf1067cd8892ecfd",
         "accession": "LATDF906JPG",
-        "background_barcodes_included": false
-    },
-    {
-        "aliases": [
-            "jimmie-ye:filtered_tf_matrix_1a"
-        ],
-        "accession": "LATDF937GJN",
-        "uuid": "2040b7ed-5ad9-4de2-968e-fa8e6a908761",
-        "status": "in progress",
-        "file_format": "hdf5",
-        "file_size": 50000,
-        "lab": "jimmie-ye",
-        "output_types": [
-            "transcription factor quantifications"
-        ],
-        "feature_keys": [
-            "motif ID"
-        ],
-        "observation_count": 5399,
-        "dataset": "jimmie-ye:snATACseq_atac_dataset",
-        "derived_from": [
-            "jimmie-ye:prenatal_1a_R1.fastq",
-            "jimmie-ye:prenatal_1a_R2.fastq",
-            "jimmie-ye:prenatal_1a_R3.fastq",
-            "jimmie-ye:prenatal_1a_I1.fastq"
-        ],
-        "assembly": "GRCh38",
-        "genome_annotation": "GENCODE 32",
-        "derivation_process": [
-            "alignment",
-            "quantification",
-            "cell calling"
-        ],
-        "software": [
-            "cellranger-atac count 1.2"
-        ],
-        "md5sum": "1dad2d4dffe26a4b09a0fddc6fc52bd0",
-        "background_barcodes_included": false
-    },
-    {
-        "aliases": [
-            "jimmie-ye:filtered_tf_matrix_1b"
-        ],
-        "accession": "LATDF580WMI",
-        "uuid": "e1932055-e775-4b56-8cc4-a6b1c069cee0",
-        "status": "in progress",
-        "file_format": "hdf5",
-        "file_size": 50000,
-        "lab": "jimmie-ye",
-        "output_types": [
-            "transcription factor quantifications"
-        ],
-        "feature_keys": [
-            "motif ID"
-        ],
-        "observation_count": 4939,
-        "dataset": "jimmie-ye:snATACseq_atac_dataset",
-        "derived_from": [
-            "jimmie-ye:prenatal_1b_R1.fastq",
-            "jimmie-ye:prenatal_1b_R2.fastq",
-            "jimmie-ye:prenatal_1b_R3.fastq",
-            "jimmie-ye:prenatal_1b_I1.fastq"
-        ],
-        "assembly": "GRCh38",
-        "genome_annotation": "GENCODE 32",
-        "derivation_process": [
-            "alignment",
-            "quantification",
-            "cell calling"
-        ],
-        "software": [
-            "cellranger-atac count 1.2"
-        ],
-        "md5sum": "9417f1615b2b78a5c11e15093f562e69",
-        "background_barcodes_included": false
-    },
-    {
-        "aliases": [
-            "jimmie-ye:filtered_tf_matrix_1c"
-        ],
-        "accession": "LATDF083YKV",
-        "uuid": "265ef860-698c-4368-ba15-cffd5238c158",
-        "status": "in progress",
-        "file_format": "hdf5",
-        "file_size": 50000,
-        "lab": "jimmie-ye",
-        "output_types": [
-            "transcription factor quantifications"
-        ],
-        "feature_keys": [
-            "motif ID"
-        ],
-        "observation_count": 5533,
-        "dataset": "jimmie-ye:snATACseq_atac_dataset",
-        "derived_from": [
-            "jimmie-ye:prenatal_1c_R1.fastq",
-            "jimmie-ye:prenatal_1c_R2.fastq",
-            "jimmie-ye:prenatal_1c_R3.fastq",
-            "jimmie-ye:prenatal_1c_I1.fastq"
-        ],
-        "assembly": "GRCh38",
-        "genome_annotation": "GENCODE 32",
-        "derivation_process": [
-            "alignment",
-            "quantification",
-            "cell calling"
-        ],
-        "software": [
-            "cellranger-atac count 1.2"
-        ],
-        "md5sum": "5b04114fa2a5cc26c717c5ece363534f",
-        "background_barcodes_included": false
-    },
-    {
-        "aliases": [
-            "jimmie-ye:filtered_tf_matrix_2a"
-        ],
-        "accession": "LATDF888FZR",
-        "uuid": "8bbe5a65-57ae-43bc-bc95-2b3e7b618a7e",
-        "status": "in progress",
-        "file_format": "hdf5",
-        "file_size": 50000,
-        "lab": "jimmie-ye",
-        "output_types": [
-            "transcription factor quantifications"
-        ],
-        "feature_keys": [
-            "motif ID"
-        ],
-        "observation_count": 7238,
-        "dataset": "jimmie-ye:snATACseq_atac_dataset",
-        "derived_from": [
-            "jimmie-ye:prenatal_2a_R1.fastq",
-            "jimmie-ye:prenatal_2a_R2.fastq",
-            "jimmie-ye:prenatal_2a_R3.fastq",
-            "jimmie-ye:prenatal_2a_I1.fastq"
-        ],
-        "assembly": "GRCh38",
-        "genome_annotation": "GENCODE 32",
-        "derivation_process": [
-            "alignment",
-            "quantification",
-            "cell calling"
-        ],
-        "software": [
-            "cellranger-atac count 1.2"
-        ],
-        "md5sum": "de9f4501f7d812f43bd5121e83928641",
-        "background_barcodes_included": false
-    },
-    {
-        "aliases": [
-            "jimmie-ye:filtered_tf_matrix_2b"
-        ],
-        "accession": "LATDF484GQN",
-        "uuid": "631c4d53-d44f-4fad-bf39-f4a3a0c49a62",
-        "status": "in progress",
-        "file_format": "hdf5",
-        "file_size": 50000,
-        "lab": "jimmie-ye",
-        "output_types": [
-            "transcription factor quantifications"
-        ],
-        "feature_keys": [
-            "motif ID"
-        ],
-        "observation_count": 5122,
-        "dataset": "jimmie-ye:snATACseq_atac_dataset",
-        "derived_from": [
-            "jimmie-ye:prenatal_2b_R1.fastq",
-            "jimmie-ye:prenatal_2b_R2.fastq",
-            "jimmie-ye:prenatal_2b_R3.fastq",
-            "jimmie-ye:prenatal_2b_I1.fastq"
-        ],
-        "assembly": "GRCh38",
-        "genome_annotation": "GENCODE 32",
-        "derivation_process": [
-            "alignment",
-            "quantification",
-            "cell calling"
-        ],
-        "software": [
-            "cellranger-atac count 1.2"
-        ],
-        "md5sum": "e44dc98c2ad7ce7b3e9c0701e0b817a9",
-        "background_barcodes_included": false
-    },
-    {
-        "aliases": [
-            "jimmie-ye:filtered_tf_matrix_2c"
-        ],
-        "accession": "LATDF482WSX",
-        "uuid": "6673ef75-e243-43e5-b872-9f6249013a7c",
-        "status": "in progress",
-        "file_format": "hdf5",
-        "file_size": 50000,
-        "lab": "jimmie-ye",
-        "output_types": [
-            "transcription factor quantifications"
-        ],
-        "feature_keys": [
-            "motif ID"
-        ],
-        "observation_count": 4992,
-        "dataset": "jimmie-ye:snATACseq_atac_dataset",
-        "derived_from": [
-            "jimmie-ye:prenatal_2c_R1.fastq",
-            "jimmie-ye:prenatal_2c_R2.fastq",
-            "jimmie-ye:prenatal_2c_R3.fastq",
-            "jimmie-ye:prenatal_2c_I1.fastq"
-        ],
-        "assembly": "GRCh38",
-        "genome_annotation": "GENCODE 32",
-        "derivation_process": [
-            "alignment",
-            "quantification",
-            "cell calling"
-        ],
-        "software": [
-            "cellranger-atac count 1.2"
-        ],
-        "md5sum": "f9f7c568df684ed4aef14410d82b49d4",
-        "background_barcodes_included": false
-    },
-    {
-        "aliases": [
-            "jimmie-ye:filtered_tf_matrix_3a"
-        ],
-        "accession": "LATDF130WCY",
-        "uuid": "49af2a2a-4770-4878-84ca-91b6b68952cf",
-        "status": "in progress",
-        "file_format": "hdf5",
-        "file_size": 50000,
-        "lab": "jimmie-ye",
-        "output_types": [
-            "transcription factor quantifications"
-        ],
-        "feature_keys": [
-            "motif ID"
-        ],
-        "observation_count": 6331,
-        "dataset": "jimmie-ye:snATACseq_atac_dataset",
-        "derived_from": [
-            "jimmie-ye:prenatal_3a_R1.fastq",
-            "jimmie-ye:prenatal_3a_R2.fastq",
-            "jimmie-ye:prenatal_3a_R3.fastq",
-            "jimmie-ye:prenatal_3a_I1.fastq"
-        ],
-        "assembly": "GRCh38",
-        "genome_annotation": "GENCODE 32",
-        "derivation_process": [
-            "alignment",
-            "quantification",
-            "cell calling"
-        ],
-        "software": [
-            "cellranger-atac count 1.2"
-        ],
-        "md5sum": "b39448f475500107355f229ecccb027b",
-        "background_barcodes_included": false
-    },
-    {
-        "aliases": [
-            "jimmie-ye:filtered_tf_matrix_3b"
-        ],
-        "accession": "LATDF754RHQ",
-        "uuid": "43a7e68b-44c3-4201-ae1c-b3283aad9f92",
-        "status": "in progress",
-        "file_format": "hdf5",
-        "file_size": 50000,
-        "lab": "jimmie-ye",
-        "output_types": [
-            "transcription factor quantifications"
-        ],
-        "feature_keys": [
-            "motif ID"
-        ],
-        "observation_count": 5100,
-        "dataset": "jimmie-ye:snATACseq_atac_dataset",
-        "derived_from": [
-            "jimmie-ye:prenatal_3b_R1.fastq",
-            "jimmie-ye:prenatal_3b_R2.fastq",
-            "jimmie-ye:prenatal_3b_R3.fastq",
-            "jimmie-ye:prenatal_3b_I1.fastq"
-        ],
-        "assembly": "GRCh38",
-        "genome_annotation": "GENCODE 32",
-        "derivation_process": [
-            "alignment",
-            "quantification",
-            "cell calling"
-        ],
-        "software": [
-            "cellranger-atac count 1.2"
-        ],
-        "md5sum": "11aa5183f93bf123c387ef7e0e0dd444",
-        "background_barcodes_included": false
-    },
-    {
-        "aliases": [
-            "jimmie-ye:filtered_tf_matrix_3c"
-        ],
-        "accession": "LATDF766HPX",
-        "uuid": "009e4a9c-1153-4594-945d-8785472f9a5c",
-        "status": "in progress",
-        "file_format": "hdf5",
-        "file_size": 50000,
-        "lab": "jimmie-ye",
-        "output_types": [
-            "transcription factor quantifications"
-        ],
-        "feature_keys": [
-            "motif ID"
-        ],
-        "observation_count": 4992,
-        "dataset": "jimmie-ye:snATACseq_atac_dataset",
-        "derived_from": [
-            "jimmie-ye:prenatal_3c_R1.fastq",
-            "jimmie-ye:prenatal_3c_R2.fastq",
-            "jimmie-ye:prenatal_3c_R3.fastq",
-            "jimmie-ye:prenatal_3c_I1.fastq"
-        ],
-        "assembly": "GRCh38",
-        "genome_annotation": "GENCODE 32",
-        "derivation_process": [
-            "alignment",
-            "quantification",
-            "cell calling"
-        ],
-        "software": [
-            "cellranger-atac count 1.2"
-        ],
-        "md5sum": "2fdbca0bb312f02efdc84fef82b914a6",
         "background_barcodes_included": false
     },
     {

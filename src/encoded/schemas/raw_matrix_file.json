@@ -105,9 +105,7 @@
                 "type": "string",
                 "enum": [
                     "gene quantifications",
-                    "transcript quantifications",
                     "peak quantifications",
-                    "transcription factor quantifications",
                     "antibody capture quantifications"
                 ]
             }
@@ -137,8 +135,7 @@
                     "Ensembl gene ID",
                     "gene symbol",
                     "antibody target",
-                    "genomic coordinates",
-                    "motif ID"
+                    "genomic coordinates"
                 ]
             }
         },
@@ -161,7 +158,6 @@
                         "enum": [
                             "gene",
                             "peak",
-                            "transcription factor",
                             "antibody capture"
                         ]
                     },

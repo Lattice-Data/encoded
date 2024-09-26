@@ -58,14 +58,13 @@ def audit_analysis_library_types(value, system):
 				)
 				yield AuditFailure('library, feature_type inconsistency', detail, level="ERROR")
 
-	if 'RNA-seq' in lib_types:
-	    if value.get('cellranger_assay_chemistry'):
-	        detail = ('File {} has {} and does not derive from any RNA-seq library'.format(
-	            audit_link(path_to_text(value['@id']), value['@id']),
-	            'cellranger_assay_chemistry',
-	            )
-	        )
-	        yield AuditFailure('cellranger spec inconsistent with library_type', detail, level="ERROR")
+	if 'RNA-seq' not in lib_types and value.get('cellranger_assay_chemistry'):
+        detail = ('File {} has {} and does not derive from any RNA-seq library'.format(
+            audit_link(path_to_text(value['@id']), value['@id']),
+            'cellranger_assay_chemistry',
+            )
+        )
+        yield AuditFailure('cellranger spec inconsistent with library_type', detail, level="ERROR")
 
 
 def audit_complete_derived_from(value, system):

@@ -9,18 +9,56 @@ from .formatter import (
 
 
 def audit_analysis_library_types(value, system):
-    '''
-    An AnalysisFile should only have cellranger_assay_chemistry metadata
-    if it is from an RNA-seq library.
-    We expect CITE-seq libraries to be paired with RNA-seq libraries.
-    '''
-    if value['status'] in ['deleted']:
-        return
+	'''
+	An AnalysisFile should only have cellranger_assay_chemistry metadata
+	if it is from an RNA-seq library.
+	We expect CITE-seq libraries to be paired with RNA-seq libraries.
+	'''
+	lib_feature = {
+		'RNA-seq': 'gene',
+		'CITE-seq': 'antibody capture',
+		'ATAC-seq': 'peak',
+		'Methyl-seq': 'peak'
+	}
 
-    lib_types = set()
-    for l in value.get('libraries'):
-        lib_types.add(l['protocol'].get('library_type'))
-    if 'RNA-seq' not in lib_types:
+	if value['status'] in ['deleted']:
+		return
+
+	lib_types = set()
+	for l in value.get('libraries'):
+		lib_types.add(l['protocol'].get('library_type'))
+
+	if value['validated'] == True:
+		peak_audit = False
+		feature_types = [f['feature_type'] for f in value['feature_counts']]
+		for k,v in lib_feature.items():
+			if k in lib_types and v not in feature_types:
+				detail = ('File {} derives from at least one {} library but does not contain {} features'.format(
+					audit_link(path_to_text(value['@id']), value['@id']),
+					k,
+					v,
+					)
+				)
+				yield AuditFailure('library, feature_type inconsistency', detail, level="ERROR")
+			if k not in lib_types and v in feature_types:
+				if v == 'peak':
+					if 'ATAC-seq' in lib_types or 'Methyl-seq' in lib_types:
+						return
+					else:
+						if peak_audit:
+							return
+						else:
+							k = 'ATAC-seq or Methyl-seq'
+							peak_audit = True
+				detail = ('File {} contains {} features but does not derive from at least one {} library'.format(
+					audit_link(path_to_text(value['@id']), value['@id']),
+					v,
+					k,
+					)
+				)
+				yield AuditFailure('library, feature_type inconsistency', detail, level="ERROR")
+
+	if 'RNA-seq' in lib_types:
 	    if value.get('cellranger_assay_chemistry'):
 	        detail = ('File {} has {} and does not derive from any RNA-seq library'.format(
 	            audit_link(path_to_text(value['@id']), value['@id']),
@@ -28,15 +66,6 @@ def audit_analysis_library_types(value, system):
 	            )
 	        )
 	        yield AuditFailure('cellranger spec inconsistent with library_type', detail, level="ERROR")
-
-	    if 'CITE-seq' in lib_types:
-	        detail = ('File {} derives from at least one CITE-seq library but does not derive from any RNA-seq library'.format(
-	            audit_link(path_to_text(value['@id']), value['@id']),
-	            'cellranger_assay_chemistry',
-	            )
-	        )
-	        yield AuditFailure('no RNA-seq Library with CITE-seq Library', detail, level="ERROR")
-	        return
 
 
 def audit_complete_derived_from(value, system):

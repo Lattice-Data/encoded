@@ -12,7 +12,18 @@
         "age_units": "year",
         "ethnicity": ["AfPO_0000171"],
         "development_ontology": "HsapDv_0000124",
-        "sex": "male"
+        "sex": "male",
+        "country_of_birth": "USA",
+        "country_of_birth_parents": [
+            "USA",
+            "Germany"
+        ],
+        "country_of_birth_grandparents": [
+            "Germany",
+            "Germany",
+            "India",
+            "USA"
+        ]
     },
     {
         "accession": "LATHD483BOB",

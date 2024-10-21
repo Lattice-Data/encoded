@@ -196,6 +196,12 @@
             "description": "The number of entries found in the matrix considered as observations (eg: cell barcodes)",
             "comment":  "Do not submit. This will be filled in during checkfiles validation.",
             "type": "integer"
+        },
+        "fragment_file_s3_uri": {
+            "title": "Fragment file s3 URI",
+            "description": "The S3 URI of fragment file for ATAC-seq data.",
+            "type": "string",
+            "pattern": "^(s3:\/\/submissions-)"
         }
     },
     "facets": {

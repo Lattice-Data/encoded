@@ -42,7 +42,8 @@
         "cellranger_assay_chemistry": "SC3Pv2",
         "accession": "LATDF633JNH",
         "background_barcodes_included": true,
-        "value_units": ["UMI"]
+        "value_units": ["UMI"],
+        "fragment_file_s3_uri": "s3://submissions-czi000aaa/my_lib/fragments.tsv.gz"
     },
     {
         "aliases": [

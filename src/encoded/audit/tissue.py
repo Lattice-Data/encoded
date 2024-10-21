@@ -36,7 +36,7 @@ def ontology_check_bio(value, system):
     field = 'biosample_ontology'
     if value['status'] in ['deleted'] or field not in value:
         return
-    dbs = ['UBERON','NTR']
+    dbs = ['UBERON']
 
     term = value[field]['term_id']
     ont_db = term.split(':')[0]

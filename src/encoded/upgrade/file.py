@@ -123,3 +123,27 @@ def file_fill_platform(value, system):
 def file_block_X_spatial(value, system):
 	if value.get('default_embedding') == 'X_spatial':
 		value['default_embedding'] = 'spatial'
+
+
+new_plat_enum = [
+	"Illumina NextSeq 500 (EFO:0009173)",
+	"Illumina NextSeq 550 (EFO:0008566)",
+	"Illumina NextSeq 2000 (EFO:0010963)",
+	"Illumina NovaSeq 6000 (EFO:0008637)",
+	"Illumina NovaSeq X Plus (EFO:0022841)",
+	"Illumina HiSeq X (EFO:0008567)",
+	"Illumina HiSeq 4000 (EFO:0008563)",
+	"Illumina HiSeq 3000 (EFO:0008564)",
+	"Illumina HiSeq 2500 (EFO:0008565)",
+	"Illumina HiSeq 1500 (EFO:0011027)",
+	"MGI DNBSEQ-G400"
+]
+old_new_map = {p.split(' (')[0]:p for p in new_plat_enum}
+
+@upgrade_step('raw_sequence_file', '6', '7')
+def file_update_platform(value, system):
+	if 'platform' in value:
+		new_plat = []
+		for p in value['platform']:
+			new_plat.append(old_new_map[p])
+		value['platform'] = new_plat

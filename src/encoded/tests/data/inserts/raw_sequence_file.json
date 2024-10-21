@@ -13,7 +13,7 @@
             "lattice:demux_run_3"
         ],
         "platform": [
-            "Illumina HiSeq 4000"
+            "Illumina HiSeq 4000 (EFO:0008563)"
         ],
         "derivation_process": [
             "demultiplexing"
@@ -47,7 +47,7 @@
             "lattice:demux_run_3"
         ],
         "platform": [
-            "Illumina HiSeq 4000"
+            "Illumina HiSeq 4000 (EFO:0008563)"
         ],
         "derivation_process": [
             "demultiplexing"
@@ -81,8 +81,8 @@
             "lattice:demux_run_2"
         ],
         "platform": [
-            "Illumina NextSeq 500",
-            "Illumina NextSeq 550"
+            "Illumina NextSeq 500 (EFO:0009173)",
+            "Illumina NextSeq 550 (EFO:0008566)"
         ],
         "derivation_process": [
             "demultiplexing"
@@ -116,8 +116,8 @@
             "lattice:demux_run_2"
         ],
         "platform": [
-            "Illumina NextSeq 500",
-            "Illumina NextSeq 550"
+            "Illumina NextSeq 500 (EFO:0009173)",
+            "Illumina NextSeq 550 (EFO:0008566)"
         ],
         "derivation_process": [
             "demultiplexing"
@@ -151,7 +151,7 @@
             "lattice:demux_run_1"
         ],
         "platform": [
-            "Illumina NovaSeq X Plus"
+            "Illumina NovaSeq X Plus (EFO:0022841)"
         ],
         "derivation_process": [
             "demultiplexing"
@@ -185,7 +185,7 @@
             "lattice:demux_run_1"
         ],
         "platform": [
-            "Illumina NovaSeq X Plus"
+            "Illumina NovaSeq X Plus (EFO:0022841)"
         ],
         "derivation_process": [
             "demultiplexing"

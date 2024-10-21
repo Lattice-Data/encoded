@@ -272,6 +272,34 @@
             "description": "Notes on medical procedures/treatments, length of time associated with a diagnosis, or past diseases from which the donor is healed or cured.",
             "type": "string"
         },
+        "country_of_birth": {
+            "title": "Country of birth",
+            "description": "The country that the donor was born in.",
+            "comment": "Use NCIT Country label when possible, https://www.ebi.ac.uk/ols4/ontologies/ncit/classes/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FNCIT_C25464",
+            "type": "string"
+        },
+        "country_of_birth_parents": {
+            "title": "Parents' country of birth",
+            "description": "The country that the donor's parents were born in.",
+            "comment": "Use NCIT Country label when possible, https://www.ebi.ac.uk/ols4/ontologies/ncit/classes/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FNCIT_C25464",
+            "type": "array",
+            "minItems": 2,
+            "maxItems": 2,
+            "items": {
+                "type": "string"
+            }
+        },
+        "country_of_birth_grandparents": {
+            "title": "Grandparents' country of birth",
+            "description": "The country that the donor's grandparents were born in.",
+            "comment": "Use NCIT Country label when possible, https://www.ebi.ac.uk/ols4/ontologies/ncit/classes/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FNCIT_C25464",
+            "type": "array",
+            "minItems": 4,
+            "maxItems": 4,
+            "items": {
+                "type": "string"
+            }
+        },
         "test_results": {
             "title": "Test results",
             "description": "The results from any test to measure the donor's health in the format of key (test name):value (test results)",

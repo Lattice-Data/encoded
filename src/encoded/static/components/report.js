@@ -133,7 +133,11 @@ function lookupColumn(result, column) {
         nodes = nodes.map(item => (typeof item === 'object' ? JSON.stringify(item) : item));
     }
 
-    return _.uniq(nodes).join(', ');
+    if (names.length > 1) {
+        nodes = _.uniq(nodes);
+    }
+
+    return nodes.join(', ');
 }
 
 

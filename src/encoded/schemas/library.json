@@ -116,15 +116,9 @@
         },
         "starting_quantity_units": {
             "enum": [
-                "cell-equivalent",
                 "cells",
                 "nuclei",
-                "mg",
-                "ng",
-                "pg",
-                "μg",
                 "cells/μl",
-                "cells/ml",
                 "nuclei/μl"
             ]
         },

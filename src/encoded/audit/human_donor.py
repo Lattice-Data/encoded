@@ -174,7 +174,7 @@ def ontology_check_dev(value, system):
         return
 
     dbs = ['HsapDv']
-    terms = ['NCIT:C17998','NCIT:C54166']
+    terms = ['NCIT:C54166']
 
     term = value[field]['term_id']
     ont_db = term.split(':')[0]

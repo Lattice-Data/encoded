@@ -268,7 +268,7 @@
             "SRA:SRX122321"
         ],
         "starting_quantity": "110000",
-        "starting_quantity_units": "cell-equivalent",
+        "starting_quantity_units": "cells",
         "rna_integrity_number": 9,
         "chip_id": "chip_102",
         "channel_id": "A",
@@ -295,7 +295,7 @@
             "SRA:SRX122322"
         ],
         "starting_quantity": "110000",
-        "starting_quantity_units": "cell-equivalent",
+        "starting_quantity_units": "cells",
         "rna_integrity_number": 9,
         "chip_id": "chip_102",
         "channel_id": "B",
@@ -322,7 +322,7 @@
             "SRA:SRX122323"
         ],
         "starting_quantity": "110000",
-        "starting_quantity_units": "cell-equivalent",
+        "starting_quantity_units": "cells",
         "rna_integrity_number": 9,
         "chip_id": "chip_102",
         "channel_id": "C",
@@ -349,7 +349,7 @@
             "SRA:SRX122324"
         ],
         "starting_quantity": "110000",
-        "starting_quantity_units": "cell-equivalent",
+        "starting_quantity_units": "cells",
         "rna_integrity_number": 9,
         "chip_id": "chip_102",
         "channel_id": "D",
@@ -592,7 +592,7 @@
             "SRA:SRX122333"
         ],
         "starting_quantity": "9500",
-        "starting_quantity_units": "cell-equivalent",
+        "starting_quantity_units": "cells",
         "rna_integrity_number": 9,
         "chip_id": "chip_104",
         "channel_id": "A",
@@ -619,7 +619,7 @@
             "SRA:SRX122334"
         ],
         "starting_quantity": "9500",
-        "starting_quantity_units": "cell-equivalent",
+        "starting_quantity_units": "cells",
         "rna_integrity_number": 9,
         "chip_id": "chip_104",
         "channel_id": "B",
@@ -646,7 +646,7 @@
             "SRA:SRX122335"
         ],
         "starting_quantity": "9500",
-        "starting_quantity_units": "cell-equivalent",
+        "starting_quantity_units": "cells",
         "rna_integrity_number": 9,
         "chip_id": "chip_104",
         "channel_id": "C",
@@ -673,7 +673,7 @@
             "SRA:SRX122336"
         ],
         "starting_quantity": "9500",
-        "starting_quantity_units": "cell-equivalent",
+        "starting_quantity_units": "cells",
         "rna_integrity_number": 9,
         "chip_id": "chip_104",
         "channel_id": "D",
@@ -971,7 +971,7 @@
             "SRA:SRX122351"
         ],
         "starting_quantity": "92000",
-        "starting_quantity_units": "cell-equivalent",
+        "starting_quantity_units": "cells",
         "rna_integrity_number": 9,
         "chip_id": "chip_107",
         "channel_id": "A",
@@ -998,7 +998,7 @@
             "SRA:SRX122352"
         ],
         "starting_quantity": "92000",
-        "starting_quantity_units": "cell-equivalent",
+        "starting_quantity_units": "cells",
         "rna_integrity_number": 9,
         "chip_id": "chip_107",
         "channel_id": "B",
@@ -1025,7 +1025,7 @@
             "SRA:SRX122353"
         ],
         "starting_quantity": "92000",
-        "starting_quantity_units": "cell-equivalent",
+        "starting_quantity_units": "cells",
         "rna_integrity_number": 9,
         "chip_id": "chip_107",
         "channel_id": "C",
@@ -1052,7 +1052,7 @@
             "SRA:SRX122354"
         ],
         "starting_quantity": "92000",
-        "starting_quantity_units": "cell-equivalent",
+        "starting_quantity_units": "cells",
         "rna_integrity_number": 9,
         "chip_id": "chip_107",
         "channel_id": "D",
@@ -1079,7 +1079,7 @@
             "SRA:SRX122355"
         ],
         "starting_quantity": "92000",
-        "starting_quantity_units": "cell-equivalent",
+        "starting_quantity_units": "cells",
         "rna_integrity_number": 9,
         "chip_id": "chip_107",
         "channel_id": "E",
@@ -1106,7 +1106,7 @@
             "SRA:SRX122356"
         ],
         "starting_quantity": "92000",
-        "starting_quantity_units": "cell-equivalent",
+        "starting_quantity_units": "cells",
         "rna_integrity_number": 9,
         "chip_id": "chip_107",
         "channel_id": "F",
@@ -1133,7 +1133,7 @@
             "SRA:SRX122357"
         ],
         "starting_quantity": "92000",
-        "starting_quantity_units": "cell-equivalent",
+        "starting_quantity_units": "cells",
         "rna_integrity_number": 9,
         "chip_id": "chip_107",
         "channel_id": "G",
@@ -1160,7 +1160,7 @@
             "SRA:SRX122358"
         ],
         "starting_quantity": "92000",
-        "starting_quantity_units": "cell-equivalent",
+        "starting_quantity_units": "cells",
         "rna_integrity_number": 9,
         "chip_id": "chip_107",
         "channel_id": "H",
@@ -1188,7 +1188,7 @@
         "chip_id": "chip_a",
         "channel_id": "A",
         "starting_quantity": "100",
-        "starting_quantity_units": "\u03bcg"
+        "starting_quantity_units": "cells"
     },
     {
         "accession": "LATLB701ABA",
@@ -1209,7 +1209,7 @@
         "chip_id": "chip_a",
         "channel_id": "B",
         "starting_quantity": "100",
-        "starting_quantity_units": "\u03bcg"
+        "starting_quantity_units": "cells"
     },
     {
         "accession": "LATLB702ABA",
@@ -1230,7 +1230,7 @@
         "chip_id": "chip_a",
         "channel_id": "C",
         "starting_quantity": "100",
-        "starting_quantity_units": "\u03bcg"
+        "starting_quantity_units": "cells"
     },
     {
         "accession": "LATLB703ABA",
@@ -1251,7 +1251,7 @@
         "chip_id": "chip_a",
         "channel_id": "D",
         "starting_quantity": "100",
-        "starting_quantity_units": "\u03bcg"
+        "starting_quantity_units": "cells"
     },
     {
         "accession": "LATLB704ABA",
@@ -1272,7 +1272,7 @@
         "chip_id": "chip_a",
         "channel_id": "E",
         "starting_quantity": "100",
-        "starting_quantity_units": "\u03bcg"
+        "starting_quantity_units": "cells"
     },
     {
         "accession": "LATLB705ABA",
@@ -1293,7 +1293,7 @@
         "chip_id": "chip_a",
         "channel_id": "F",
         "starting_quantity": "100",
-        "starting_quantity_units": "\u03bcg"
+        "starting_quantity_units": "cells"
     },
     {
         "accession": "LATLB706ABA",
@@ -1314,7 +1314,7 @@
         "chip_id": "chip_b",
         "channel_id": "A",
         "starting_quantity": "100",
-        "starting_quantity_units": "\u03bcg"
+        "starting_quantity_units": "cells"
     },
     {
         "accession": "LATLB707ABA",
@@ -1335,7 +1335,7 @@
         "chip_id": "chip_b",
         "channel_id": "B",
         "starting_quantity": "100",
-        "starting_quantity_units": "\u03bcg"
+        "starting_quantity_units": "cells"
     },
     {
         "accession": "LATLB708ABA",
@@ -1356,7 +1356,7 @@
         "chip_id": "chip_b",
         "channel_id": "C",
         "starting_quantity": "100",
-        "starting_quantity_units": "\u03bcg"
+        "starting_quantity_units": "cells"
     },
     {
         "accession": "LATLB600AAA",

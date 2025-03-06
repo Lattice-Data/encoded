@@ -86,7 +86,7 @@ organ_slim_terms = {
     'UBERON:0001690': 'ear',
     'UBERON:0000922': 'embryo',
     'UBERON:0003889': 'fallopian tube',
-    'UBERON:0002110': 'gallbladder',
+    'UBERON:0002110': 'gall bladder',
     'UBERON:0000948': 'heart',
     'UBERON:0002113': 'kidney',
     'UBERON:0001737': 'larynx',
@@ -142,15 +142,15 @@ cell_slim_terms = {
 }
 
 disease_slim_terms = {
-    'MONDO:0005015': 'diabetes mellitus', #subclass of MONDO:0004335,MONDO:0005066
-    'MONDO:0004335': 'digestive system disorder',
+    'MONDO:0005015': 'diabetes mellitus  (disease)', #subclass of MONDO:0004335,MONDO:0005066
+    'MONDO:0004335': 'digestive system disease',
     'MONDO:0005066': 'metabolic disease',
-    'MONDO:0002280': 'anemia',
+    'MONDO:0002280': 'anemia (disease)',
     'MONDO:0005578': 'arthritic joint disease',
     'MONDO:0005113': 'bacterial infectious disease',
     'MONDO:0004992': 'cancer',
     'MONDO:0005044': 'hypertensive disorder',
-    'MONDO:0005240': 'kidney disorder',
+    'MONDO:0005240': 'kidney disease',
     'MONDO:0005084': 'mental disorder',
     'MONDO:0100081': 'sleep disorder',
     'MONDO:0007179': 'autoimmune disease'
@@ -164,20 +164,6 @@ development_slim_terms = {
     "HsapDv:0000265": "child stage (1-4 yo)",
     "HsapDv:0000271": "juvenile stage (5-14 yo)",
     "HsapDv:0000258": "adult stage"
-}
-
-ethnicity_slim_terms = {
-    "HANCESTRO:0009": "East Asian",
-    "HANCESTRO:0006": "South Asian",
-    "HANCESTRO:0007": "South East Asian",
-    "HANCESTRO:0008": "Asian",
-    "HANCESTRO:0005": "European",
-    "HANCESTRO:0014": "Hispanic or Latin American",
-    "HANCESTRO:0010": "African",
-    "HANCESTRO:0017": "Oceanian",
-    "HANCESTRO:0016": "African American or Afro-Caribbean",
-    "HANCESTRO:0015": "Greater Middle Eastern (Middle Eastern, North African or Persian)",
-    "HANCESTRO:0013": "Native American"
 }
 
 qa_slim_terms = {
@@ -301,19 +287,6 @@ class OntologyTerm(SharedItem):
     })
     def development_slims(self, registry, term_id):
         return self._get_ontology_slims(registry, term_id, development_slim_terms)
-
-
-    @calculated_property(condition='term_id', schema={
-        "title": "Ethncitiy slims",
-        "description": "The ethnicities that this term is an ontological descendent of.",
-        "comment": "Do not submit. This is a calculated property",
-        "type": "array",
-        "items": {
-            "type": "string",
-        },
-    })
-    def ethnicity_slims(self, registry, term_id):
-        return self._get_ontology_slims(registry, term_id, ethnicity_slim_terms, list_ids=True)
 
 
     @calculated_property(condition='term_id', schema={

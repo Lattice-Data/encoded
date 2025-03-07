@@ -40,6 +40,10 @@
         },
         "references": {
             "items": {
+                "title": "Reference",
+                "description": "A publication that provide smore information about the object.",
+                "type": "string",
+                "linkTo": "Publication",
                 "maxItems": 1
             }
         },

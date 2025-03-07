@@ -12,7 +12,7 @@ def audit_cxg_urls(value, system):
     if value['status'] in ['deleted']:
         return
 
-    if len(value.get('cellxgene_urls',[])) > 1::
+    if len(value.get('cellxgene_urls',[])) > 1:
         detail = ('Dataset {} contains multiple cellxgene_urls.'.format(
                 audit_link(path_to_text(value['@id']), value['@id'])
             )

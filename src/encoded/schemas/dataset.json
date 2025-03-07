@@ -37,7 +37,12 @@
                 "format": "accession",
                 "pattern": "^(LATDS\\d{3}[A-Z]{3})$"
             }
-        },        
+        },
+        "references": {
+            "items": {
+                "maxItems": 1
+            }
+        },
         "award": {
             "title": "Award",
             "description": "The HCA Seed Network or HCA Pilot Project award used to fund this data generation.",

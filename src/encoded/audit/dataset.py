@@ -8,6 +8,19 @@ from .formatter import (
 )
 
 
+def audit_cxg_urls(value, system):
+    if value['status'] in ['deleted']:
+        return
+
+    if len(value.get('cellxgene_urls',[])) > 1::
+        detail = ('Dataset {} contains multiple cellxgene_urls.'.format(
+                audit_link(path_to_text(value['@id']), value['@id'])
+            )
+        )
+        yield AuditFailure('multiple cellxgene urls', detail, level='ERROR')
+        return
+
+
 def audit_contributor_email(value, system):
     if value['status'] in ['deleted']:
         return
@@ -99,6 +112,7 @@ def audit_dataset_dcp_required_properties(value, system):
 
 
 function_dispatcher_with_files = {
+    'audit_cxg_urls': audit_cxg_urls,
     'audit_contributor_email': audit_contributor_email,
     'audit_contributor_lists': audit_contributor_lists,
     'audit_dataset_raw_files': audit_dataset_raw_files,

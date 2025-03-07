@@ -128,7 +128,7 @@ export const ObjectAuditIcon = ({ object, audit, isAuthorized }) => {
             const sortedAuditLevels = _(Object.keys(objectAudit)).sortBy(level => -objectAudit[level][0].level);
 
             // Only authorized users should see ambulance icon (INTERNAL_ACTION)
-            highestAuditLevel = !isAuthorized && sortedAuditLevels[0] === 'INTERNAL_ACTION' ? 'OK' : sortedAuditLevels[0];
+            highestAuditLevel = !isAuthorized ? 'OK' : sortedAuditLevels[0];
         } else {
             highestAuditLevel = 'OK';
         }
@@ -278,7 +278,7 @@ export const AuditCounts = ({ audits, useWrapper, isAuthorized }) => {
         const sortedAuditLevels = _(Object.keys(audits)).sortBy(level => -audits[level][0].level);
         const auditCountsContent = (
             sortedAuditLevels.map((level) => {
-                if (isAuthorized || level !== 'INTERNAL_ACTION') {
+                if (isAuthorized) {
                     // Calculate the CSS class for the icon.
                     const levelName = level.toLowerCase();
                     const btnClass = `audit-counts__level audit-counts__level--${levelName}`;
@@ -354,7 +354,7 @@ export const auditDecor = AuditComponent => class extends React.Component {
             const auditItems = Object.keys(audits);
 
             // special case for unauthorized users
-            if (!isAuthorized && auditItems.length === 1 && auditItems[0] === 'INTERNAL_ACTION') {
+            if (!isAuthorized && auditItems.length === 1) {
                 return null;
             }
 
@@ -382,7 +382,7 @@ export const auditDecor = AuditComponent => class extends React.Component {
             return (
                 <div className="audit-detail" id={id.replace(/\W/g, '')} aria-hidden={!this.state.auditDetailOpen}>
                     {sortedAuditLevelNames.map((auditLevelName) => {
-                        if (isAuthorized || auditLevelName !== 'INTERNAL_ACTION') {
+                        if (isAuthorized) {
                             const audit = audits[auditLevelName];
 
                             // Group audits within a level by their category ('name' corresponds to

@@ -142,7 +142,7 @@ cell_slim_terms = {
 }
 
 disease_slim_terms = {
-    'MONDO:0005015': 'diabetes mellitus  (disease)', #subclass of MONDO:0004335,MONDO:0005066
+    'MONDO:0005015': 'diabetes mellitus (disease)', #subclass of MONDO:0004335,MONDO:0005066
     'MONDO:0004335': 'digestive system disease',
     'MONDO:0005066': 'metabolic disease',
     'MONDO:0002280': 'anemia (disease)',

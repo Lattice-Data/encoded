@@ -101,10 +101,8 @@
             "enum": [
                 "activation",
                 "control",
-                "deactivation",
-                "medication",
-                "intervention",
                 "immunization",
+                "medication",
                 "stimulation"
             ]
         },
@@ -152,13 +150,10 @@
             "description": "The classification of the treatment.",
             "type": "string",
             "enum": [
-                "antibody",
-                "cells",
                 "chemical",
-                "irradiation",
-                "protein",
                 "fasting",
-                "virus",
+                "pathogen",
+                "protein",
                 "vaccine"
             ]
         },

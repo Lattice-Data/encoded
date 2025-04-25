@@ -49,12 +49,12 @@
     {
         "uuid": "11f29b2d-de32-444d-b2e1-e5e11a19ba79",
         "aliases": [
-            "lattice:vax"
+            "lattice:pathogen"
         ],
         "status": "released",
         "treatment_term_name": "mRNA COVID-19 Vaccine",
         "treatment_term_id": "NCIT:C181140",
-        "treatment_type": "vaccine",
+        "treatment_type": "pathogen",
         "purpose": "immunization"
     }
 ]

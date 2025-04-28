@@ -23,7 +23,13 @@
             "Germany",
             "India",
             "USA"
-        ]
+        ],
+        "symptoms": [
+            "fever",
+            "rash"
+        ],
+        "residence_environment": "urban",
+        "residence_location": "Ireland"
     },
     {
         "accession": "LATHD483BOB",
@@ -37,7 +43,12 @@
         "age": "75",
         "age_units": "year",
         "development_ontology": "HsapDv_0000169",
-        "sex": "male"
+        "sex": "male",
+        "symptoms": [
+            "fever"
+        ],
+        "residence_environment": "highland",
+        "residence_location": "Palo Alto"
     },
     {
         "accession": "LATHD085DDD",

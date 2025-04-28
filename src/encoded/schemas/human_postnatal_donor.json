@@ -300,6 +300,30 @@
                 "type": "string"
             }
         },
+        "symptoms": {
+            "title": "Symptoms",
+            "description": "Any reported evidence of disease or condition.",
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "residence_environment": {
+            "title": "Residence environment",
+            "description": "The type of environment that the donor lived in.",
+            "type": "string",
+            "enum": [
+                "urban",
+                "rural",
+                "lowland",
+                "highland"
+            ]
+        },
+        "residence_location": {
+            "title": "Residence location",
+            "description": "The geographic location where the donor lived.",
+            "type": "string"
+        },
         "test_results": {
             "title": "Test results",
             "description": "The results from any test to measure the donor's health in the format of key (test name):value (test results)",

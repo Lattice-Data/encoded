@@ -95,7 +95,17 @@ def audit_donor_dev_stage(value, system):
         yield AuditFailure('inconsistent age, development', detail, level='ERROR')
         return
     elif value['age_display'] == 'unknown' or '-' in value['age_display'].replace('post-conception','') or '>' in value['age_display'] or '<' in value['age_display']:
-        if dev.endswith(post_term_end_yr) or dev.endswith(post_term_end_mo) or dev.endswith(pre_term_end_wk):
+        if value['age_display'] == '>89 years' and dev != '90 year-old and over stage':
+            detail = ('Donor {} of age {} expected development_ontology {}, not {}.'.format(
+                audit_link(value['accession'], value['@id']),
+                value.get('age_display'),
+                '90 year-old and over stage',
+                dev
+                )
+            )
+            yield AuditFailure('inconsistent age, development', detail, level='ERROR')
+            return
+        elif dev.endswith(post_term_end_yr) or dev.endswith(post_term_end_mo) or dev.endswith(pre_term_end_wk):
             detail = ('Donor {} of age {} not expected age-specific development_ontology ({}).'.format(
                 audit_link(value['accession'], value['@id']),
                 value.get('age_display'),
@@ -129,13 +139,10 @@ def audit_donor_dev_stage(value, system):
         else:
             return
     elif value.get('age_units') == 'year':
-        if value['age'] == '>89':
-            expected = '80 year-old and over stage'
+        if 'month' in dev:
+            expected = str(int(float(value['age'])*12)) + post_term_end_mo
         else:
-            if 'month' in dev:
-                expected = str(int(float(value['age'])*12)) + post_term_end_mo
-            else:
-                expected = value['age'].split('.')[0] + post_term_end_yr
+            expected = value['age'].split('.')[0] + post_term_end_yr
     elif value.get('age_units') == 'month':
         if float(value['age']) <= 23:
             expected = str(int(float(value['age']))) + post_term_end_mo

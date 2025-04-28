@@ -67,7 +67,6 @@
                 "description": "A biosample that nucleic acid was isolated from to generate the library.",
                 "type": "string",
                 "linkTo": [
-                    "Biosample",
                     "Suspension",
                     "TissueSection"
                 ]

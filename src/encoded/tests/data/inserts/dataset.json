@@ -26,7 +26,14 @@
             "melanie-neeland:mydataset",
             "jay-thiagarajah:theonedataset",
             "jingjing-li:dataset24",
-            "elisabetta-mereu:another-test-alias"
+            "elisabetta-mereu:another-test-alias",
+            "irene-gallego-romero:dataset1",
+            "luis-barreiro:dataset1",
+            "arnold-kriegstein:dataset1",
+            "semir-beyaz:dataset1",
+            "carey-lumeng:dataset1",
+            "aki-minoda:dataset1",
+            "tomasz-nowakowski:dataset1"
         ],
         "dataset_title": "Dataset with a multiplexed Library",
         "description": "Used to test tools with pooling and demultiplexing",

@@ -150,6 +150,7 @@
             "description": "The classification of the treatment.",
             "type": "string",
             "enum": [
+                "antibody",
                 "chemical",
                 "fasting",
                 "pathogen",

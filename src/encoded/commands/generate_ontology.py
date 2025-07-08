@@ -1,4 +1,4 @@
-from rdflib import ConjunctiveGraph, exceptions, Namespace
+from rdflib import Graph, exceptions, Namespace
 from rdflib import RDFS, RDF, BNode
 from rdflib.collection import Collection
 from ntr_terms import ntrs
@@ -33,7 +33,7 @@ class Inspector(object):
 
     def __init__(self, uri, language=""):
         super(Inspector, self).__init__()
-        self.rdfGraph = ConjunctiveGraph()
+        self.rdfGraph = Graph()
         try:
             self.rdfGraph.parse(uri, format="application/rdf+xml")
         except:
@@ -356,10 +356,8 @@ def main():
                             terms[term_id] = getTermStructure()
                         terms[term_id]['id'] = term_id
 
-                        try:
-                            terms[term_id]['name'] = data.rdfGraph.label(c).__str__()
-                        except:
-                            terms[term_id]['name'] = ''
+                        for s, p, o in data.rdfGraph.triples((c, RDFS.label, None)):
+                            terms[term_id]['name'] = o.__str__()
 
                         # Get all parents
                         for parent in data.get_classDirectSupers(c, excludeBnodes=False):

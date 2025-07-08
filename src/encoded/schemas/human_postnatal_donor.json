@@ -114,7 +114,7 @@
                 {
                     "properties": {
                         "smoker": {
-                            "enum": ["former","current"]
+                            "enum": ["former","current","not current","former or current"]
                         }
                     }
                 }
@@ -136,7 +136,7 @@
                 {
                     "properties": {
                         "smoker": {
-                            "enum": ["former","current"]
+                            "enum": ["former","current","not current","former or current"]
                         }
                     },
                     "not": {
@@ -218,7 +218,9 @@
             "enum": [
                 "never",
                 "current",
-                "former"
+                "former",
+                "not current",
+                "former or current"
             ]
         },
         "smoking_history": {
@@ -304,6 +306,7 @@
             "title": "Symptoms",
             "description": "Any reported evidence of disease or condition.",
             "type": "array",
+            "uniqueItems": true,
             "items": {
                 "type": "string"
             }

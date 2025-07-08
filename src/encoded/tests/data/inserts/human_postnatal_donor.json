@@ -44,6 +44,7 @@
         "age_units": "year",
         "development_ontology": "HsapDv_0000169",
         "sex": "male",
+        "smoker": "former or current",
         "symptoms": [
             "fever"
         ],
@@ -216,7 +217,7 @@
         "height_unit": "in",
         "times_pregnant": 1,
         "smoking_history": "2 packs a week, 1 year since cessation",
-        "smoker": "former",
+        "smoker": "not current",
         "alcohol_history": "3 drinks a week",
         "test_results": {
             "HIV-1/HBV/HCV": "negative"

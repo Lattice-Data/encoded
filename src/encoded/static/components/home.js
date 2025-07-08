@@ -62,9 +62,9 @@ class HomeContent extends React.Component {
 
                     <div className="site-banner main-content">
                         <div className="site-banner__intro text-side">
-                            <p>Lattice is the Data Coordination Center for the Human Cell Atlas <a href="https://chanzuckerberg.com/science/programs-resources/humancellatlas/seednetworks/" target="_blank">Seed Networks</a>, <a href="https://chanzuckerberg.com/science/programs-resources/single-cell-biology/pediatric-networks/" target="_blank">Pediatric Networks</a>, and <a href="https://chanzuckerberg.com/science/programs-resources/single-cell-biology/ancestry-networks/" target="_blank">Ancestry Networks</a>.</p>
-                            <p>The Lattice team collaborates with researchers to represent sample acquisition, experimental procedures, and data processing steps in structured metadata [<a href="/data-organization">learn more about our Data Organization</a>]. We wrangle metadata, raw data, and analysis outputs into the limited-access Lattice database which provides contributors the opportunity pre-release data sharing.</p>
-    		                    <p>As stewards for the Seed, Pediatric, and Ancestry Network data, the Lattice team actively seeks out opportunities to maximize the value of the data through enhanced findability and reuse. We collaborate with other single-cell data centers to migrate the standardized data corpus from the Lattice database to their open data resources, allowing for data to be easily integrated with community tools and data collections.</p>
+                            <p>Lattice is a data coordination project specializing in the standardization of single-cell genomic data.</p>
+                            <p>As Data Stewards for the <a href="https://chanzuckerberg.com/science/programs-resources/humancellatlas/seednetworks/" target="_blank">Seed Networks</a>, <a href="https://chanzuckerberg.com/science/programs-resources/single-cell-biology/pediatric-networks/" target="_blank">Pediatric Networks</a>, and <a href="https://chanzuckerberg.com/science/programs-resources/single-cell-biology/ancestry-networks/" target="_blank">Ancestry Networks</a> for the Human Cell Atlas, as well as the <a href="https://chanzuckerberg.com/newsroom/billion-cells-project-launches-advance-ai-biology/" target="_blank">Billion Cells Project</a>, the Lattice team actively seeks out opportunities to maximize the value of the data through enhanced findability and reuse. We collaborate with other single-cell data centers to migrate the standardized data corpus from the Lattice database to their open resource, allowing for data to be easily integrated with community tools and data collections.</p>
+    		                    <p>The Lattice team collaborates with researchers to represent sample acquisition, experimental procedures, and data processing steps in structured metadata. We wrangle metadata, raw data, and analysis outputs into the limited-access Lattice database which enables thorough QA and provides contributors the opportunity pre-release data sharing. <a href="/data-organization">Learn more about our Data Organization</a>.</p>
                         </div>
                         <div className="img-side">
                             <img src="static/img/lattice-banner.png" alt="Lattice DB" />
@@ -76,8 +76,8 @@ class HomeContent extends React.Component {
                             <img src="static/img/tabula_sapiens_cxg.png" alt="CXG UMAP" />
                         </div>
                         <div className="site-banner__intro text-side">
-                            <p>Lattice is also the Lead Curation Team for <a href="https://cellxgene.cziscience.com/" target="_blank">CZ CELLxGENE Discover</a>.</p>
-                            <p>Lattice work with CELLxGENE developers and computational biologists at the Chan Zuckerberg Initiative to develop a cell-based schema that captures and standardizes key biological and technical variables that impact single-cell data.</p>
+                            <p>Lattice is also the Curation Team for <a href="https://cellxgene.cziscience.com/" target="_blank">CZ CELLxGENE Discover</a>.</p>
+                            <p>Lattice wranglers work with CELLxGENE developers and computational biologists at the Chan Zuckerberg Initiative to develop a cell-based schema that captures and standardizes key biological and technical variables that impact single-cell data.</p>
                             <p>We facilitate the submission of data as a means to enhance the data sharing and exploration of a each dataset, individually, while ensuring a harmonized data corpus that can be readily searched, filtered, and integrated.</p>
                             <p>Image to the left is from the <a href="https://cellxgene.cziscience.com/e/53d208b0-2cfd-4366-9866-c3c6114081bc.cxg/" target="_blank">Tabula Sapiens dataset</a>.</p>
                         </div>
@@ -86,7 +86,7 @@ class HomeContent extends React.Component {
                         <p className="email-us">Contact the Lattice team at <a href="mailto:lattice-info@lists.stanford.edu"> lattice-info@lists.stanford.edu</a></p>
                     </div>
                     <div className="site-banner__intro credits">
-                        <p>The Lattice team consists of data wranglers & software developers within the Cherry Lab at the Stanford University Department of Genetics. <a href="https://cherrylab.stanford.edu/people/lattice-human-cell-atlas-staff" target="_bank">Meet the team</a></p>
+                        <p>The Lattice team was formed in 2019 within the Cherry Lab at the Stanford University Department of Genetics and moved to the GECKO group in 2025 at the Department of Biomedical Data Science. <a href="https://cherrylab.stanford.edu/people/lattice-human-cell-atlas-staff" target="_bank">Meet the team</a></p>
                         <p className="italic">Lattice is funded by the Chan Zuckerberg Initiative (CZI).</p>
                         <p className="italic">Lattice logo by Idan Gabdank, Ph.D.</p>
                     </div>

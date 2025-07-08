@@ -1,4 +1,4 @@
-from rdflib import ConjunctiveGraph, exceptions, Namespace
+from rdflib import Graph, exceptions, Namespace
 from rdflib import RDFS, RDF, BNode
 from rdflib.collection import Collection
 from ntr_terms import ntrs
@@ -33,7 +33,7 @@ class Inspector(object):
 
     def __init__(self, uri, language=""):
         super(Inspector, self).__init__()
-        self.rdfGraph = ConjunctiveGraph()
+        self.rdfGraph = Graph()
         try:
             self.rdfGraph.parse(uri, format="application/rdf+xml")
         except:
@@ -305,12 +305,12 @@ def getTermStructure():
 def main():
     ''' Downloads various ontologies and create a JSON file '''
 
-    cl_url = 'https://github.com/obophenotype/cell-ontology/releases/download/v2025-02-13/cl.owl'
-    efo_url = 'https://github.com/EBISPOT/efo/releases/download/v3.75.0/efo.owl'
+    cl_url = 'https://github.com/obophenotype/cell-ontology/releases/download/v2025-04-10/cl.owl'
+    efo_url = 'https://github.com/EBISPOT/efo/releases/download/v3.78.0/efo.owl'
     hancestro_url = 'https://raw.githubusercontent.com/EBISPOT/hancestro/3.0/hancestro-base.owl'
     hsapdv_url = 'https://github.com/obophenotype/developmental-stage-ontologies/releases/download/v2025-01-23/hsapdv.owl'
-    mondo_url = 'https://github.com/monarch-initiative/mondo/releases/download/v2025-02-04/mondo.owl'
-    uberon_url = 'https://github.com/obophenotype/uberon/releases/download/v2025-01-15/uberon.owl'
+    mondo_url = 'https://github.com/monarch-initiative/mondo/releases/download/v2025-05-06/mondo.owl'
+    uberon_url = 'https://github.com/obophenotype/uberon/releases/download/v2025-05-28/uberon.owl'
     ncit_url = 'http://purl.obolibrary.org/obo/ncit/releases/2024-05-07/ncit.owl'
 
     url_whitelist = {
@@ -356,10 +356,8 @@ def main():
                             terms[term_id] = getTermStructure()
                         terms[term_id]['id'] = term_id
 
-                        try:
-                            terms[term_id]['name'] = data.rdfGraph.label(c).__str__()
-                        except:
-                            terms[term_id]['name'] = ''
+                        for s, p, o in data.rdfGraph.triples((c, RDFS.label, None)):
+                            terms[term_id]['name'] = o.__str__()
 
                         # Get all parents
                         for parent in data.get_classDirectSupers(c, excludeBnodes=False):

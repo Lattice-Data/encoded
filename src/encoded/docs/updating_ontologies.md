@@ -8,15 +8,15 @@ Ontologies used
 
 | Ontology |  File used | Version in use |
 |:--|:--|:--|
-| [Cell Ontology (CL)] | `cl.owl` from [CL] | v2025-02-13 |
-| [Experimental Factor Ontology (EFO)] | `efo.owl` from [EFO] | v3.75.0 |
+| [Cell Ontology (CL)] | `cl.owl` from [CL] | v2025-04-10 |
+| [Experimental Factor Ontology (EFO)] | `efo.owl` from [EFO] | v3.78.0 |
 | [Human Ancestry Ontology (HANCESTRO)] | `hancestro.owl` from [HANCESTRO] | 3.0 |
 | [Human Developmental Stage Ontology (HsapDv)] | `hsapdv.owl` from [HsapDv] | v2025-01-23 |
-| [Mondo Disease Ontology (MONDO)] | `mondo.owl` from [MONDO] | v2025-02-04 |
-| [Uber-anatomy ontology (UBERON)] | `uberon.owl` from [UBERON] | v2025-01-15 |
+| [Mondo Disease Ontology (MONDO)] | `mondo.owl` from [MONDO] | v2025-05-06 |
+| [Uber-anatomy ontology (UBERON)] | `uberon.owl` from [UBERON] | v2025-05-28 |
 | [NCI Thesaurus (NCIT)] | `ncit.owl` from [NCIT] | v2024-05-07 |
 
-**Current ontology.json:** `ontology-2025-03-06.json`
+**Current ontology.json:** `ontology-2025-07-07.json`
 
 How to update the ontology versions
 ---------------- 
@@ -36,18 +36,18 @@ How to update the ontology versions
 5. Update the links for **File used**, **Version in use** and **Current ontology.json:** above
 
 
-[Uber-anatomy ontology (UBERON)]: http://obophenotype.github.io/uberon/
-[UBERON]: https://github.com/obophenotype/uberon/releases/tag/v2025-01-15
 [Cell Ontology (CL)]: https://github.com/obophenotype/cell-ontology
-[CL]: https://github.com/obophenotype/cell-ontology/releases/tag/v2025-02-13
+[CL]: https://github.com/obophenotype/cell-ontology/releases/tag/v2025-04-10
 [Experimental Factor Ontology (EFO)]: http://www.ebi.ac.uk/efo
-[EFO]: https://github.com/EBISPOT/efo/releases/tag/v3.75.0
-[Mondo Disease Ontology (MONDO)]: http://obofoundry.org/ontology/mondo.html
-[MONDO]: https://github.com/monarch-initiative/mondo/releases/tag/v2025-02-04
+[EFO]: https://github.com/EBISPOT/efo/releases/tag/v3.78.0
 [Human Ancestry Ontology (HANCESTRO)]: https://github.com/EBISPOT/ancestro
 [HANCESTRO]: https://github.com/EBISPOT/hancestro/releases/tag/3.0
 [Human Developmental Stage Ontology (HsapDv)]: https://github.com/obophenotype/developmental-stage-ontologies/wiki/HsapDv
 [HsapDv]: https://github.com/obophenotype/developmental-stage-ontologies/releases/tag/v2025-01-23
+[Mondo Disease Ontology (MONDO)]: http://obofoundry.org/ontology/mondo.html
+[MONDO]: https://github.com/monarch-initiative/mondo/releases/tag/v2025-05-06
+[Uber-anatomy ontology (UBERON)]: http://obophenotype.github.io/uberon/
+[UBERON]: https://github.com/obophenotype/uberon/releases/tag/v2025-05-28
 [NCI Thesaurus (NCIT)]: https://github.com/NCI-Thesaurus/thesaurus-obo-edition
 [NCIT]: https://github.com/NCI-Thesaurus/thesaurus-obo-edition/releases/tag/v2024-05-07
 [generate_ontology.py]: ../commands/generate_ontology.py#L302

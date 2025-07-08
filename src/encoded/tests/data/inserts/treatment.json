@@ -43,7 +43,7 @@
         ],
         "status": "released",
         "treatment_term_name": "mock epidermal growth factor",
-        "treatment_type": "protein",
+        "treatment_type": "antibody",
         "purpose": "control"
     },
     {

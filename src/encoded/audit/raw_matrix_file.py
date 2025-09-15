@@ -108,12 +108,14 @@ def audit_read_count_compare(value, system):
 			seqrun = df['derived_from'][0]['uuid']
 			in_reads = 0
 			assay = df['libraries'][0]['assay']
+			tcr_bcr = df['libraries'][0]['protocol']['name'].startswith('TCR') \
+					df['libraries'][0]['protocol']['name'].startswith('BCR')
 			if assay in ['snATAC-seq']:
 				if seqrun not in input_reads['ATAC'].keys():
 					seqrun_reads = df.get('read_count')
 					input_reads['ATAC'][seqrun] = seqrun_reads
 			elif assay in ['scRNA-seq','snRNA-seq','spatial transcriptomics']:
-				if seqrun not in input_reads['RNA'].keys():
+				if seqrun not in input_reads['RNA'].keys() and not tcr_bcr:
 					seqrun_reads = df.get('read_count')
 					input_reads['RNA'][seqrun] = seqrun_reads
 			elif assay in ['CITE-seq']:

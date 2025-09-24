@@ -16,7 +16,7 @@ Ontologies used
 | [Uber-anatomy ontology (UBERON)] | `uberon.owl` from [UBERON] | v2025-08-15 |
 | [NCI Thesaurus (NCIT)] | `ncit.owl` from [NCIT] | v2024-05-07 |
 
-**Current ontology.json:** `ontology-2025-09-22.json`
+**Current ontology.json:** `ontology-2025-09-24.json`
 
 How to update the ontology versions
 ---------------- 

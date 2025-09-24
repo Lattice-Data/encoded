@@ -307,7 +307,7 @@ def main():
 
     cl_url = 'https://github.com/obophenotype/cell-ontology/releases/download/v2025-07-30/cl.owl'
     efo_url = 'https://github.com/EBISPOT/efo/releases/download/v3.82.0/efo.owl'
-    hancestro_url = 'https://github.com/EBISPOT/hancestro/raw/refs/tags/v2025-04-01/hancestro-base.owl'
+    hancestro_url = 'https://github.com/EBISPOT/hancestro/raw/refs/tags/v2025-04-01/hancestro.owl'
     hsapdv_url = 'https://github.com/obophenotype/developmental-stage-ontologies/releases/download/v2025-01-23/hsapdv.owl'
     mondo_url = 'https://github.com/monarch-initiative/mondo/releases/download/v2025-09-02/mondo.owl'
     uberon_url = 'https://github.com/obophenotype/uberon/releases/download/v2025-08-15/uberon.owl'

@@ -108,7 +108,7 @@ def audit_read_count_compare(value, system):
 			seqrun = df['derived_from'][0]['uuid']
 			in_reads = 0
 			assay = df['libraries'][0]['assay']
-			tcr_bcr = df['libraries'][0]['protocol']['name'].startswith(('TCR','BCR'))
+			tcr_bcr = df['libraries'][0]['protocol'].split('/')[2].startswith(('TCR','BCR'))
 			if assay in ['snATAC-seq']:
 				if seqrun not in input_reads['ATAC'].keys():
 					seqrun_reads = df.get('read_count')

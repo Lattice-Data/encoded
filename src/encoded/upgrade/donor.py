@@ -1,6 +1,11 @@
 import json
 from snovault import upgrade_step
-from .upgrade_data.donor_ethn import donor_ethnicity_mapping
+from .upgrade_data.donor_ethn import (
+	ethnicity_term_id,
+	donor_ethnicity_mapping,
+	dep_terms,
+	auto_map
+)
 
 
 def pluralize(value, value_units):
@@ -126,23 +131,6 @@ def human_donor_dv_updates(value, system):
 	value['development_ontology'] = age_dv.get(age_display, value['development_ontology'])
 
 
-dep_terms = [
-	'HANCESTRO:0005', #European
-	'HANCESTRO:0010', #African
-	'HANCESTRO:0011', #Sub-Saharan African
-	'HANCESTRO:0016', #African American or Afro-Caribbean
-	'HANCESTRO:0017' #Oceanian
-]
-auto_map = {
-	'HANCESTRO:0008': '91401202-525d-42e5-b8cc-d617b61122f0', #HANCESTRO:0847/Asian
-	'HANCESTRO:0006': 'a0e679ab-53dd-4324-aa69-3b0ec67b3df3', #HANCESTRO:0848/South Asian
-	'HANCESTRO:0009': 'e66108be-8d18-46b9-9b6e-93b4026c5690', #HANCESTRO:0849/East Asian
-	'HANCESTRO:0007': '677ace14-1eba-4d81-bbd2-5fcf4e81d413', #HANCESTRO:0850/South East Asian
-	'HANCESTRO:0015': '634a30c7-e7fc-4061-bdae-1ed5b7f897ab', #HANCESTRO:0852/Greater Middle Eastern  (Middle Eastern or North African or Persian)
-	'HANCESTRO:0013': 'be99dccf-03bc-4f6c-8ade-0d4410460824', #HANCESTRO:0846/Native American
-	'HANCESTRO:0014': '4f94dce9-ed57-4198-8b57-8077919699d3' #HANCESTRO:0612/Hispanic or Latin American
-}
-
 @upgrade_step('human_postnatal_donor', '10', '11')
 @upgrade_step('human_prenatal_donor', '4', '5')
 def human_donor_hancestro_updates(value, system):
@@ -151,7 +139,7 @@ def human_donor_hancestro_updates(value, system):
 	else:
 		new_ethn = []
 		for e in value['ethnicity']:
-			term_id = e.split('/')[2].replace('_',':')
+			term_id = ethnicity_term_id[e]
 			if term_id in dep_terms:
 				new_ethn.append('unknown')
 			elif term_id in auto_map.keys():

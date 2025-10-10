@@ -151,13 +151,13 @@ def human_donor_hancestro_updates(value, system):
 	else:
 		new_ethn = []
 		for e in value['ethnicity']:
-			term_id = e['term_id']
+			term_id = e.split('/')[2].replace('_',':')
 			if term_id in dep_terms:
 				new_ethn.append('unknown')
 			elif term_id in auto_map.keys():
 				new_ethn.append(auto_map[term_id])
 			else:
-				new_ethn.append(e['uuid'])
+				new_ethn.append(e)
 		if 'unknown' in new_ethn:
 			new_ethn = ['9ccb9d0b-1747-4ad1-969a-769286937021']
 		value['ethnicity'] = new_ethn

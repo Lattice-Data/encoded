@@ -1,4 +1,4 @@
-{
+donor_ethnicity_mapping = {
     "LATHD601IMS": [
         "12c74344-a6bd-426b-9b78-7a9456f417eb"
     ],

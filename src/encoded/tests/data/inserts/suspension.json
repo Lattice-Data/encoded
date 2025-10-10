@@ -247,8 +247,7 @@
         ],
         "description": "scRNAseq human suspension from organoid donorD1",
         "derivation_process": [
-            "enzymatic dissociation",
-            "mechanical dissociation"
+            "magnetic levitation"
         ],
         "suspension_type": "cell",
         "starting_quantity": "1000",

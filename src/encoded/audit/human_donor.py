@@ -204,6 +204,7 @@ def ontology_check_eth(value, system):
 
     dbs = ['HANCESTRO', 'AfPO']
     terms = ['NCIT:C17998']
+    req_anc = ['geography-based population category','ethnicity category']
 
     for e in value[field]:
         term = e['term_id']
@@ -218,6 +219,17 @@ def ontology_check_eth(value, system):
                 )
             )
             yield AuditFailure('incorrect ontology term', detail, 'ERROR')
+        elif ont_db in dbs:
+            matching = [a for a in req_anc if a in e.get('qa_slims',[])]
+            if not matching:
+                detail = ('Ethnicity {} {} {} not a descendent of {}.'.format(
+                    audit_link(value['@id'], value['@id']),
+                    field,
+                    e['term_id'],
+                    ' or '.join(req_anc)
+                    )
+                )
+                yield AuditFailure('incorrect ontology term', detail, 'ERROR')
 
 
 def ontology_check_dis(value, system):

@@ -63,7 +63,7 @@
     },
     "properties": {
         "schema_version": {
-            "default": "4"
+            "default": "5"
         },
         "conceptional_age_units": {
             "enum": [

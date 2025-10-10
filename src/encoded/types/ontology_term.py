@@ -169,6 +169,8 @@ development_slim_terms = {
 qa_slim_terms = {
     "CL:0000000": "cell",
     "EFO:0010183": "single cell library construction",
+    "HANCESTRO:0602": "geography-based population category",
+    "HANCESTRO:0601": "ethnicity category",
     'NCIT:C81239': 'Cause of Death',
     'NCIT:C7057': 'Disease, Disorder or Finding',
     'NCIT:C3394': 'Suicide',

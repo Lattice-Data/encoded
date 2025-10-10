@@ -1,5 +1,6 @@
 import json
 from snovault import upgrade_step
+from .upgrade_data.donor_ethn import donor_ethnicity_mapping
 
 
 def pluralize(value, value_units):
@@ -125,7 +126,6 @@ def human_donor_dv_updates(value, system):
 	value['development_ontology'] = age_dv.get(age_display, value['development_ontology'])
 
 
-donor_map = json.load(open('/app/src/encoded/upgrade/donor_ethn.json'))
 dep_terms = [
 	'HANCESTRO:0005', #European
 	'HANCESTRO:0010', #African
@@ -146,8 +146,8 @@ auto_map = {
 @upgrade_step('human_postnatal_donor', '10', '11')
 @upgrade_step('human_prenatal_donor', '4', '5')
 def human_donor_hancestro_updates(value, system):
-	if value['accession'] in donor_map:
-		value['ethnicity'] = donor_map[value['accession']]
+	if value['accession'] in donor_ethnicity_mapping:
+		value['ethnicity'] = donor_ethnicity_mapping[value['accession']]
 	else:
 		new_ethn = []
 		for e in value['ethnicity']:

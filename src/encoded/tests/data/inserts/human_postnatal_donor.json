@@ -3,7 +3,11 @@
         "accession": "LATHD483JIM",
         "uuid": "3c912886-abcd-41fa-837c-336170b2d425",
         "aliases": [
-            "anna-greka:adult_human_donorE"
+            "anna-greka:adult_human_donorE",
+            "alex-cuenca:donor7812",
+            "jim-hagood:53AI",
+            "kai-tan:BLUE",
+            "muzlifah-haniffa:donor_X142"
         ],
         "donor_id": "donorE",
         "status": "released",

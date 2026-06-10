@@ -75,8 +75,7 @@
                 "type": "string",
                 "linkTo": [
                     "Biosample",
-                    "Suspension",
-                    "Donor"
+                    "Suspension"
                 ]
             }
         },

@@ -33,7 +33,9 @@
             "semir-beyaz:dataset1",
             "carey-lumeng:dataset1",
             "aki-minoda:dataset1",
-            "tomasz-nowakowski:dataset1"
+            "tomasz-nowakowski:dataset1",
+            "sarah-taylor:new_dataset",
+            "lluis-quintana-murci:new_dataset"
         ],
         "dataset_title": "Dataset with a multiplexed Library",
         "description": "Used to test tools with pooling and demultiplexing",
